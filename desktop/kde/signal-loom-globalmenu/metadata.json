@@ -1,0 +1,24 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "kde@privat.broulik.de",
+                "Name": "Kai Uwe Broulik (original Global Menu applet)"
+            },
+            {
+                "Email": "hello@sloom.studio",
+                "Name": "Sloom Software (Signal Loom fallback patch)"
+            }
+        ],
+        "Category": "Windows and Tasks",
+        "Description": "Global menubar for every application — plus Signal Loom on native Wayland. Fork of the stock Global Menu (org.kde.plasma.appmenu).",
+        "FormFactors": [
+            "desktop"
+        ],
+        "Icon": "show-menu",
+        "License": "GPL-2.0+",
+        "Name": "Signal Loom Global Menu (Universal)",
+        "Website": "https://sloom.studio"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

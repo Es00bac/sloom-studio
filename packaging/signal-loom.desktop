@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Signal Loom
+GenericName=AI Multimedia Editor
+Comment=Generative AI media flow builder and timeline editor
+Exec=signal-loom-electron
+Icon=signal-loom
+Terminal=false
+Categories=AudioVideo;AudioVideoEditing;
+Keywords=video;audio;multimedia;editor;timeline;AI;generation;
+StartupNotify=true
+StartupWMClass=Signal Loom

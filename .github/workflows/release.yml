@@ -1,0 +1,154 @@
+name: Build & Release (all platforms)
+
+# One workflow that builds every platform and, on a version tag, attaches the
+# installers to a single GitHub Release. Supersedes mac-build.yml.
+#
+#   • Push a tag  v0.9.11  → builds Windows/Linux/macOS/Android and publishes a Release.
+#   • Or run manually from the Actions tab (workflow_dispatch) to get artifacts
+#     without cutting a release.
+#
+# Everything here is UNSIGNED for now. Signing is added later by setting secrets,
+# without touching the build logic:
+#   • Windows : distribute via the Microsoft Store (it signs), or add a cert.
+#   • macOS   : CSC_LINK / CSC_KEY_PASSWORD / APPLE_ID / APPLE_APP_SPECIFIC_PASSWORD
+#   • Android : ANDROID_KEYSTORE_BASE64 + keystore.properties for a signed release AAB.
+
+on:
+  workflow_dispatch: {}
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: write            # the release step needs this on tag builds
+
+jobs:
+  # Build one exact, verified redistributable font artifact for every desktop target.
+  # The recipe is pinned to immutable upstream revisions and checked against the
+  # audited 116-family/430-face inventory before any installer job can start.
+  font-pack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Restore immutable font source cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/sloom-font-sources
+          key: sloom-font-sources-26c5c976d82d50c24a8f0a7ac455e0a7c639c226-liberation-2.1.5
+      - name: Acquire and verify redistributable font pack
+        shell: bash
+        env:
+          SOURCE_DIR: ${{ runner.temp }}/sloom-font-sources/google-fonts
+          SLOOM_FONT_PACK_BUILD_ROOT: ${{ runner.temp }}/sloom-font-pack
+        run: npm run acquire:font-library
+      - name: Stage electron-builder font resource
+        env:
+          SLOOM_FONT_PACK_DIR: ${{ runner.temp }}/sloom-font-pack
+        run: npm run prepare:font-library
+      - name: Verify staged font resource
+        run: npm run verify:font-library
+      - name: Upload verified font resource
+        uses: actions/upload-artifact@v4
+        with:
+          name: sloom-font-pack-31507e786066f973e1b01fb479d6d718cd433a6c
+          if-no-files-found: error
+          path: build/font-library
+
+  # ---- Windows, Linux, macOS via electron-builder on native runners ----
+  desktop:
+    needs: font-pack
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            platform: linux
+            ebargs: --linux AppImage deb
+          - os: windows-latest
+            platform: windows
+            ebargs: --win nsis
+          - os: macos-14
+            platform: mac
+            ebargs: --mac dmg zip --x64 --arm64 -c.mac.icon=build/icons/icon.png
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Download verified font resource
+        uses: actions/download-artifact@v4
+        with:
+          name: sloom-font-pack-31507e786066f973e1b01fb479d6d718cd433a6c
+          path: build/font-library
+      - name: Verify downloaded font resource
+        run: npm run verify:font-library
+      - name: Build renderer + main
+        run: npm run build
+      - name: Package installers (${{ matrix.platform }}, unsigned)
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'   # skip mac signing when no cert is present
+        run: npx electron-builder ${{ matrix.ebargs }} --publish never
+      - name: Verify packaged font resource and exact face request
+        run: npm run smoke:packaged-font-library -- release
+      - name: List artifacts
+        shell: bash
+        run: ls -lh release/ || dir release
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sloom-studio-${{ matrix.platform }}
+          if-no-files-found: error
+          path: |
+            release/*.exe
+            release/*.dmg
+            release/*.zip
+            release/*.AppImage
+            release/*.deb
+      - name: Attach to GitHub Release (tag builds only)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            release/*.exe
+            release/*.dmg
+            release/*.zip
+            release/*.AppImage
+            release/*.deb
+
+  # ---- Android (Capacitor + Gradle). Debug APK for now; release AAB once a keystore secret exists. ----
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build web + sync + assemble APK
+        run: npm run build:android
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sloom-studio-android-apk
+          if-no-files-found: error
+          path: android/app/build/outputs/apk/**/*.apk
+      - name: Attach APK to GitHub Release (tag builds only)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: android/app/build/outputs/apk/**/*.apk

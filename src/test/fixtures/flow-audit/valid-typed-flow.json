@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "number-source",
+      "type": "numberNode",
+      "position": { "x": 0, "y": 0 },
+      "data": { "numberValue": 4 }
+    },
+    {
+      "id": "math-target",
+      "type": "mathNode",
+      "position": { "x": 320, "y": 0 },
+      "data": { "mathOperation": "add" }
+    }
+  ],
+  "edges": [
+    {
+      "id": "number-to-math",
+      "source": "number-source",
+      "target": "math-target",
+      "sourceHandle": null,
+      "targetHandle": "A"
+    }
+  ]
+}

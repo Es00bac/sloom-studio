@@ -1,0 +1,398 @@
+/*
+    SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2016 Chinmoy Ranjan Pradhan <chinmoyrp65@gmail.com>
+    SPDX-FileCopyrightText: 2026 Sloom Software <hello@sloom.studio> (Signal Loom fallback patch)
+
+    SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+    MODIFIED from plasma-workspace v6.6.5 applets/appmenu: adds a fallback that serves Signal Loom's
+    com.canonical.dbusmenu object for its native-Wayland windows (which cannot register a menu with
+    KWin). All other behavior is unchanged. See README.md in this directory.
+*/
+
+#include "appmenumodel.h"
+
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
+#include <QGuiApplication>
+#include <QMenu>
+
+// Includes for the menu search.
+#include <KLocalizedString>
+#include <QLineEdit>
+#include <QListView>
+#include <QWidgetAction>
+#include <algorithm>
+
+#include <abstracttasksmodel.h>
+#include <dbusmenuimporter.h>
+
+class KDBusMenuImporter : public DBusMenuImporter
+{
+public:
+    KDBusMenuImporter(const QString &service, const QString &path)
+        : DBusMenuImporter(service, path)
+    {
+    }
+
+protected:
+    QIcon iconForName(const QString &name) override
+    {
+        return QIcon::fromTheme(name);
+    }
+};
+
+AppMenuModel::AppMenuModel(QObject *parent)
+    : QAbstractListModel(parent)
+    , m_tasksModel(new TaskManager::TasksModel(this))
+    , m_serviceWatcher(new QDBusServiceWatcher(this))
+{
+    m_tasksModel->setFilterByScreen(true);
+    connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, this, &AppMenuModel::onActiveWindowChanged);
+    connect(m_tasksModel,
+            &TaskManager::TasksModel::dataChanged,
+            [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles = QList<int>()) {
+                Q_UNUSED(topLeft)
+                Q_UNUSED(bottomRight)
+                if (roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuObjectPath)
+                    || roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuServiceName) || roles.isEmpty()) {
+                    onActiveWindowChanged();
+                }
+            });
+    connect(m_tasksModel, &TaskManager::TasksModel::activityChanged, this, &AppMenuModel::onActiveWindowChanged);
+    connect(m_tasksModel, &TaskManager::TasksModel::virtualDesktopChanged, this, &AppMenuModel::onActiveWindowChanged);
+    connect(m_tasksModel, &TaskManager::TasksModel::countChanged, this, &AppMenuModel::onActiveWindowChanged);
+    connect(m_tasksModel, &TaskManager::TasksModel::screenGeometryChanged, this, &AppMenuModel::screenGeometryChanged);
+
+    connect(this, &AppMenuModel::modelNeedsUpdate, this, [this] {
+        if (!m_updatePending) {
+            m_updatePending = true;
+            QMetaObject::invokeMethod(this, "update", Qt::QueuedConnection);
+        }
+    });
+
+    onActiveWindowChanged();
+
+    m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
+    // if our current DBus connection gets lost, close the menu
+    // we'll select the new menu when the focus changes
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &serviceName) {
+        if (serviceName == m_serviceName) {
+            setMenuAvailable(false);
+            Q_EMIT modelNeedsUpdate();
+        }
+    });
+
+    // SIGNAL LOOM FORK: re-evaluate the active window's menu when Signal Loom's menu service comes or
+    // goes. Its window can already be focused when the service appears (app startup), and the fallback
+    // in onActiveWindowChanged() would otherwise only re-run on the next focus change.
+    auto *signalLoomWatcher = new QDBusServiceWatcher(QStringLiteral("org.signalloom.PanelMenu"),
+                                                      QDBusConnection::sessionBus(),
+                                                      QDBusServiceWatcher::WatchForRegistration | QDBusServiceWatcher::WatchForUnregistration,
+                                                      this);
+    connect(signalLoomWatcher, &QDBusServiceWatcher::serviceRegistered, this, &AppMenuModel::onActiveWindowChanged);
+    connect(signalLoomWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &AppMenuModel::onActiveWindowChanged);
+
+    // X11 has funky menu behaviour that prevents this from working properly.
+    if (KWindowSystem::isPlatformWayland()) {
+        m_searchAction = new QAction(this);
+        m_searchAction->setText(i18n("Search"));
+        m_searchAction->setObjectName(QStringLiteral("appmenu"));
+
+        m_searchMenu.reset(new QMenu);
+        auto searchAction = new QWidgetAction(this);
+        auto searchBar = new QLineEdit;
+        searchBar->setClearButtonEnabled(true);
+        searchBar->setPlaceholderText(i18n("Search…"));
+        searchBar->setMinimumWidth(200);
+        searchBar->setContentsMargins(4, 4, 4, 4);
+        connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, searchBar, [searchBar]() {
+            searchBar->setText(QString());
+        });
+        connect(searchBar, &QLineEdit::textChanged, this, [searchBar, this]() mutable {
+            insertSearchActionsIntoMenu(searchBar->text());
+        });
+        connect(searchBar, &QLineEdit::returnPressed, this, [this]() mutable {
+            if (!m_currentSearchActions.empty()) {
+                m_currentSearchActions.constFirst()->trigger();
+            }
+        });
+        connect(this, &AppMenuModel::modelNeedsUpdate, searchBar, [this, searchBar]() mutable {
+            insertSearchActionsIntoMenu(searchBar->text());
+        });
+        searchAction->setDefaultWidget(searchBar);
+        m_searchMenu->addAction(searchAction);
+        m_searchMenu->addSeparator();
+        m_searchAction->setMenu(m_searchMenu.get());
+    }
+}
+
+AppMenuModel::~AppMenuModel() = default;
+
+bool AppMenuModel::menuAvailable() const
+{
+    return m_menuAvailable;
+}
+
+void AppMenuModel::setMenuAvailable(bool set)
+{
+    if (m_menuAvailable != set) {
+        m_menuAvailable = set;
+        setVisible(true);
+        Q_EMIT menuAvailableChanged();
+    }
+}
+
+bool AppMenuModel::visible() const
+{
+    return m_visible;
+}
+
+void AppMenuModel::setVisible(bool visible)
+{
+    if (m_visible != visible) {
+        m_visible = visible;
+        Q_EMIT visibleChanged();
+    }
+}
+
+QRect AppMenuModel::screenGeometry() const
+{
+    return m_tasksModel->screenGeometry();
+}
+
+void AppMenuModel::setScreenGeometry(QRect geometry)
+{
+    m_tasksModel->setScreenGeometry(geometry);
+}
+
+int AppMenuModel::rowCount(const QModelIndex &parent) const
+{
+    Q_UNUSED(parent);
+    if (!m_menuAvailable || !m_menu) {
+        return 0;
+    }
+
+    return m_menu->actions().count() + (m_searchAction ? 1 : 0);
+}
+
+void AppMenuModel::removeSearchActionsFromMenu()
+{
+    for (auto action : std::as_const(m_currentSearchActions)) {
+        m_searchAction->menu()->removeAction(action);
+    }
+    m_currentSearchActions = QList<QAction *>();
+}
+
+void AppMenuModel::insertSearchActionsIntoMenu(const QString &filter)
+{
+    removeSearchActionsFromMenu();
+    if (filter.isEmpty()) {
+        return;
+    }
+    const auto actions = flatActionList();
+    for (const auto &action : actions) {
+        if (action->text().contains(filter, Qt::CaseInsensitive)) {
+            m_searchAction->menu()->addAction(action);
+            m_currentSearchActions << action;
+        }
+    }
+}
+
+void AppMenuModel::update()
+{
+    beginResetModel();
+    endResetModel();
+    m_updatePending = false;
+}
+
+void AppMenuModel::onActiveWindowChanged()
+{
+    // Do not change active window when panel gets focus
+    // See ShellCorona::init() in shell/shellcorona.cpp
+    if (m_containmentStatus == Plasma::Types::AcceptingInputStatus) {
+        return;
+    }
+
+    const QModelIndex activeTaskIndex = m_tasksModel->activeTask();
+    QString objectPath = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuObjectPath).toString();
+    QString serviceName = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuServiceName).toString();
+
+    // SIGNAL LOOM FORK — the whole point of this fork. Native-Wayland Electron windows cannot announce
+    // a menu through KWin's appmenu protocol (Chromium never implements it), so the stock applet shows
+    // nothing for them. Signal Loom instead publishes a spec-compliant com.canonical.dbusmenu object on
+    // the session bus (opt-in: SIGNAL_LOOM_ELECTRON_PANEL_MENU=1). When the focused window is Signal
+    // Loom, has no native appmenu, and that service is up, feed the importer Signal Loom's menu object.
+    // The object's content always reflects the app's FOCUSED WORKSPACE (Flow/Image/Paper/Video each
+    // publish their own full menu set, exactly like four separate applications), and the app emits
+    // LayoutUpdated on workspace switches so the bar swaps instantly. Every other window: byte-identical
+    // stock behavior.
+    if (serviceName.isEmpty() || objectPath.isEmpty()) {
+        const QString appId = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::AppId).toString().toLower();
+        const QString appName = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::AppName).toString().toLower();
+        static const QStringList signalLoomIds = {
+            QStringLiteral("signal-loom"),
+            QStringLiteral("signalloom"),
+            QStringLiteral("signal loom"),
+            QStringLiteral("studio.sloom.signalloom"),
+        };
+        const bool isSignalLoom = std::any_of(signalLoomIds.cbegin(), signalLoomIds.cend(), [&](const QString &id) {
+            return appId.contains(id) || appName.contains(id);
+        });
+        if (isSignalLoom
+            && QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.signalloom.PanelMenu"))) {
+            serviceName = QStringLiteral("org.signalloom.PanelMenu");
+            objectPath = QStringLiteral("/org/signalloom/menus/active");
+        }
+    }
+
+    updateApplicationMenu(serviceName, objectPath);
+}
+
+QHash<int, QByteArray> AppMenuModel::roleNames() const
+{
+    QHash<int, QByteArray> roleNames;
+    roleNames[MenuRole] = QByteArrayLiteral("activeMenu");
+    roleNames[ActionRole] = QByteArrayLiteral("activeActions");
+    return roleNames;
+}
+
+QList<QAction *> AppMenuModel::flatActionList()
+{
+    QList<QAction *> ret;
+    if (!m_menuAvailable || !m_menu) {
+        return ret;
+    }
+    const auto actions = m_menu->findChildren<QAction *>();
+    for (auto &action : actions) {
+        if (action->menu() == nullptr) {
+            ret << action;
+        }
+    }
+    return ret;
+}
+
+QVariant AppMenuModel::data(const QModelIndex &index, int role) const
+{
+    if (!m_menuAvailable || !m_menu) {
+        return {};
+    }
+
+    if (!index.isValid()) {
+        if (role == MenuRole) {
+            return QString();
+        } else if (role == ActionRole) {
+            return QVariant::fromValue(m_menu->menuAction());
+        }
+    }
+
+    const auto actions = m_menu->actions();
+    const int row = index.row();
+    if (row == actions.count() && m_searchAction) {
+        if (role == MenuRole) {
+            return m_searchAction->text();
+        } else if (role == ActionRole) {
+            return QVariant::fromValue(m_searchAction.data());
+        }
+    }
+    if (row >= actions.count()) {
+        return {};
+    }
+
+    if (role == MenuRole) { // TODO this should be Qt::DisplayRole
+        return actions.at(row)->text();
+    } else if (role == ActionRole) {
+        return QVariant::fromValue(actions.at(row));
+    }
+
+    return {};
+}
+
+void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QString &menuObjectPath)
+{
+    if (m_serviceName == serviceName && m_menuObjectPath == menuObjectPath) {
+        if (m_importer) {
+            QMetaObject::invokeMethod(m_importer.get(), "updateMenu", Qt::QueuedConnection);
+        }
+        return;
+    }
+
+    if (serviceName.isEmpty() || menuObjectPath.isEmpty()) {
+        setMenuAvailable(false);
+        setVisible(false);
+
+        m_serviceName = QString();
+        m_menuObjectPath = QString();
+        m_serviceWatcher->setWatchedServices({});
+        m_importer.reset();
+    } else {
+        m_serviceName = serviceName;
+        m_menuObjectPath = menuObjectPath;
+        m_serviceWatcher->setWatchedServices(QStringList({m_serviceName}));
+
+        m_importer = std::make_unique<KDBusMenuImporter>(serviceName, menuObjectPath);
+        QMetaObject::invokeMethod(m_importer.get(), "updateMenu", Qt::QueuedConnection);
+
+        connect(m_importer.get(), &DBusMenuImporter::menuUpdated, this, [=, this](QMenu *menu) {
+            m_menu = m_importer->menu();
+            if (m_menu.isNull() || menu != m_menu) {
+                return;
+            }
+
+            if (m_menu->isEmpty()) {
+                // naughty apps may pretend to have a menu but then don't actually give us one.
+                // let's disable it in that case
+                setMenuAvailable(false);
+                return;
+            } else {
+                // if it somehow comes later, make it available again
+                setMenuAvailable(true);
+            }
+
+            // cache first layer of sub menus, which we'll be popping up
+            const auto actions = m_menu->actions();
+            for (QAction *a : actions) {
+                // signal dataChanged when the action changes
+                connect(a, &QAction::changed, this, [this, a] {
+                    if (m_menuAvailable && m_menu) {
+                        const int actionIdx = m_menu->actions().indexOf(a);
+                        if (actionIdx > -1) {
+                            const QModelIndex modelIdx = index(actionIdx, 0);
+                            Q_EMIT dataChanged(modelIdx, modelIdx);
+                        }
+                    }
+                });
+
+                connect(a, &QAction::destroyed, this, &AppMenuModel::modelNeedsUpdate);
+
+                if (a->menu()) {
+                    m_importer->updateMenu(a->menu());
+                }
+            }
+
+            setMenuAvailable(true);
+            Q_EMIT modelNeedsUpdate();
+        });
+
+        connect(m_importer.get(), &DBusMenuImporter::actionActivationRequested, this, [this](QAction *action) {
+            // TODO submenus
+            if (!m_menuAvailable || !m_menu) {
+                return;
+            }
+
+            const auto actions = m_menu->actions();
+            auto it = std::ranges::find(actions, action);
+            if (it != actions.end()) {
+                Q_EMIT requestActivateIndex(it - actions.begin());
+            }
+        });
+
+        setMenuAvailable(true);
+        setVisible(true);
+
+        Q_EMIT modelNeedsUpdate();
+    }
+}
+
+#include "moc_appmenumodel.cpp"

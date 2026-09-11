@@ -1,0 +1,12 @@
+{
+  "node": {
+    "id": "legacy-image",
+    "type": "imageGen",
+    "position": { "x": 0, "y": 0 },
+    "data": {
+      "mediaMode": "generate",
+      "provider": "gemini",
+      "modelId": "gemini-3.1-flash-image-preview"
+    }
+  }
+}

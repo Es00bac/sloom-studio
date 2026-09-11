@@ -1,0 +1,9 @@
+{
+  "geminiCredentialMode": "vertex-adc",
+  "vertexAuthMode": "gcloud-adc",
+  "vertexProjectId": "fixture-project",
+  "vertexLocation": "us-central1",
+  "vertexQuotaProjectId": "fixture-quota",
+  "vertexEnvironmentVariables": "",
+  "vertexServiceAccountJson": "{\"type\":\"authorized_user\",\"client_id\":\"fixture-client\",\"client_secret\":\"fixture-secret\",\"refresh_token\":\"fixture-refresh\",\"quota_project_id\":\"fixture-quota\"}"
+}

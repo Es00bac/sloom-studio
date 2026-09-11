@@ -1,0 +1,117 @@
+collection	family	slug
+base	Source Sans 3	sourcesans3
+base	Source Serif 4	sourceserif4
+base	Source Code Pro	sourcecodepro
+base	IBM Plex Sans	ibmplexsans
+base	IBM Plex Serif	ibmplexserif
+base	IBM Plex Mono	ibmplexmono
+base	IBM Plex Sans Condensed	ibmplexsanscondensed
+base	Inter	inter
+base	Noto Sans	notosans
+base	Noto Serif	notoserif
+base	Noto Sans Mono	notosansmono
+base	Liberation Sans	liberationsans
+base	Liberation Serif	liberationserif
+base	Liberation Mono	liberationmono
+base	EB Garamond	ebgaramond
+base	Libre Baskerville	librebaskerville
+base	Crimson Pro	crimsonpro
+base	Cormorant Garamond	cormorantgaramond
+base	Spectral	spectral
+base	Lora	lora
+base	Merriweather	merriweather
+base	Alegreya	alegreya
+base	Literata	literata
+base	Newsreader	newsreader
+base	Vollkorn	vollkorn
+base	Cardo	cardo
+base	Gentium Plus	gentiumplus
+base	Charis SIL	charissil
+base	Andada Pro	andadapro
+base	Fraunces	fraunces
+base	Bodoni Moda	bodonimoda
+base	Playfair Display	playfairdisplay
+base	Open Sans	opensans
+base	Lato	lato
+base	Montserrat	montserrat
+base	Poppins	poppins
+base	Raleway	raleway
+base	Work Sans	worksans
+base	Manrope	manrope
+base	Fira Sans	firasans
+base	Archivo	archivo
+base	Barlow	barlow
+base	Nunito Sans	nunitosans
+base	PT Sans	ptsans
+base	Roboto	roboto
+base	Roboto Condensed	robotocondensed
+base	Roboto Slab	robotoslab
+base	Oswald	oswald
+base	Josefin Sans	josefinsans
+base	Mulish	mulish
+base	Rubik	rubik
+base	Space Grotesk	spacegrotesk
+base	Bebas Neue	bebasneue
+base	Anton	anton
+base	Cinzel	cinzel
+base	Abril Fatface	abrilfatface
+base	DM Serif Display	dmserifdisplay
+base	Unbounded	unbounded
+base	Syne	syne
+base	Alfa Slab One	alfaslabone
+base	Black Ops One	blackopsone
+base	Limelight	limelight
+base	Staatliches	staatliches
+base	Lilita One	lilitaone
+base	JetBrains Mono	jetbrainsmono
+base	Fira Code	firacode
+base	Inconsolata	inconsolata
+base	Space Mono	spacemono
+base	Roboto Mono	robotomono
+base	Cousine	cousine
+base	Anonymous Pro	anonymouspro
+base	Comic Neue	comicneue
+base	Bangers	bangers
+base	Luckiest Guy	luckiestguy
+base	Boogaloo	boogaloo
+base	Chewy	chewy
+base	Patrick Hand	patrickhand
+base	Permanent Marker	permanentmarker
+base	Kalam	kalam
+base	Shantell Sans	shantellsans
+base	Caveat	caveat
+base	Dancing Script	dancingscript
+base	Pacifico	pacifico
+base	Sacramento	sacramento
+base	Great Vibes	greatvibes
+base	Architects Daughter	architectsdaughter
+base	Indie Flower	indieflower
+base	Noto Sans JP	notosansjp
+base	Noto Serif JP	notoserifjp
+base	BIZ UDPGothic	bizudpgothic
+base	BIZ UDPMincho	bizudpmincho
+base	M PLUS 1	mplus1
+base	M PLUS 2	mplus2
+base	M PLUS Rounded 1c	mplusrounded1c
+base	IBM Plex Sans JP	ibmplexsansjp
+base	Zen Kaku Gothic New	zenkakugothicnew
+base	Zen Old Mincho	zenoldmincho
+base	Zen Maru Gothic	zenmarugothic
+base	Shippori Mincho	shipporimincho
+base	Kosugi Maru	kosugimaru
+base	Klee One	kleeone
+base	Dela Gothic One	delagothicone
+base	DotGothic16	dotgothic16
+base	Reggae One	reggaeone
+base	RocknRoll One	rocknrollone
+base	Yomogi	yomogi
+base	Yuji Syuku	yujisyuku
+optional-chinese	Noto Sans CJK SC	notosanssc
+optional-chinese	Noto Sans CJK TC	notosanstc
+optional-chinese	Noto Serif CJK SC	notoserifsc
+optional-chinese	Noto Serif CJK TC	notoseriftc
+optional-korean	Noto Sans KR	notosanskr
+optional-korean	Noto Serif KR	notoserifkr
+optional-korean	IBM Plex Sans KR	ibmplexsanskr
+optional-korean	Nanum Gothic	nanumgothic
+optional-korean	Nanum Myeongjo	nanummyeongjo

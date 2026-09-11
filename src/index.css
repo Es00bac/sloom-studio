@@ -1,0 +1,375 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --sl-bg: #0b0c10;
+    --sl-surface: #11141d;
+    --sl-panel: #1a1b23;
+    --sl-border: #263244;
+    --sl-text: #f3f7fb;
+    --sl-muted: #92a3b8;
+    --sl-accent: #22d3ee;
+    --sl-accent-contrast: #061018;
+    --sl-danger: #fb7185;
+  }
+
+  body {
+    @apply font-sans;
+    background: var(--sl-bg);
+    color: var(--sl-text);
+    margin: 0;
+    overflow: hidden;
+    color-scheme: dark;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+  }
+
+  * {
+    scrollbar-color: color-mix(in srgb, var(--sl-accent) 38%, transparent) color-mix(in srgb, var(--sl-surface) 82%, black);
+    scrollbar-width: thin;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: color-mix(in srgb, var(--sl-surface) 82%, black);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, color-mix(in srgb, var(--sl-accent) 42%, transparent), color-mix(in srgb, var(--sl-accent) 24%, var(--sl-panel)));
+    border: 2px solid color-mix(in srgb, var(--sl-surface) 82%, black);
+    border-radius: 999px;
+  }
+
+  input,
+  select,
+  textarea,
+  [contenteditable="true"],
+  .select-text {
+    accent-color: var(--sl-accent);
+    user-select: text;
+    -webkit-user-select: text;
+  }
+}
+
+@layer components {
+  .signal-loom-themed {
+    background: var(--sl-bg) !important;
+    color: var(--sl-text) !important;
+  }
+
+  .signal-loom-themed .theme-surface {
+    background: var(--sl-surface) !important;
+  }
+
+  .signal-loom-themed .theme-panel {
+    background: var(--sl-panel) !important;
+  }
+
+  .signal-loom-themed .theme-border {
+    border-color: var(--sl-border) !important;
+  }
+
+  .signal-loom-themed .theme-topbar {
+    background: color-mix(in srgb, var(--sl-surface) 92%, black) !important;
+    border-color: color-mix(in srgb, var(--sl-accent) 22%, transparent) !important;
+  }
+
+  .signal-loom-themed .theme-accent-text {
+    color: var(--sl-accent) !important;
+  }
+
+  .signal-loom-themed .theme-muted-text {
+    color: var(--sl-muted) !important;
+  }
+
+  .signal-loom-themed .theme-control {
+    background: color-mix(in srgb, var(--sl-panel) 72%, transparent) !important;
+    border-color: color-mix(in srgb, var(--sl-accent) 18%, transparent) !important;
+    color: var(--sl-text) !important;
+  }
+
+  .signal-loom-themed .theme-control:hover {
+    background: color-mix(in srgb, var(--sl-accent) 12%, var(--sl-panel)) !important;
+    border-color: color-mix(in srgb, var(--sl-accent) 42%, transparent) !important;
+  }
+
+  .signal-loom-themed .theme-card {
+    background: color-mix(in srgb, var(--sl-panel) 88%, black) !important;
+    border-color: color-mix(in srgb, var(--sl-border) 88%, var(--sl-accent)) !important;
+    color: var(--sl-text) !important;
+  }
+
+  .signal-loom-themed .theme-card-soft {
+    background: color-mix(in srgb, var(--sl-panel) 62%, transparent) !important;
+    border-color: color-mix(in srgb, var(--sl-border) 70%, transparent) !important;
+    color: var(--sl-text) !important;
+  }
+
+  .signal-loom-themed .theme-popover {
+    background: color-mix(in srgb, var(--sl-surface) 96%, black) !important;
+    border-color: color-mix(in srgb, var(--sl-border) 85%, var(--sl-accent)) !important;
+    color: var(--sl-text) !important;
+    box-shadow: 0 18px 48px color-mix(in srgb, var(--sl-bg) 68%, black);
+  }
+
+  .signal-loom-themed .theme-header {
+    background: color-mix(in srgb, var(--sl-panel) 78%, var(--sl-surface)) !important;
+    border-color: color-mix(in srgb, var(--sl-border) 82%, transparent) !important;
+    color: var(--sl-muted) !important;
+  }
+
+  .signal-loom-themed .theme-button,
+  .signal-loom-themed .theme-icon-button {
+    background: color-mix(in srgb, var(--sl-panel) 72%, transparent) !important;
+    border-color: color-mix(in srgb, var(--sl-border) 82%, transparent) !important;
+    color: color-mix(in srgb, var(--sl-text) 82%, var(--sl-muted)) !important;
+  }
+
+  .signal-loom-themed .theme-button:hover,
+  .signal-loom-themed .theme-icon-button:hover {
+    background: color-mix(in srgb, var(--sl-accent) 13%, var(--sl-panel)) !important;
+    border-color: color-mix(in srgb, var(--sl-accent) 42%, transparent) !important;
+    color: var(--sl-text) !important;
+  }
+
+  .signal-loom-themed .theme-button-accent {
+    background: color-mix(in srgb, var(--sl-accent) 18%, var(--sl-panel)) !important;
+    border-color: color-mix(in srgb, var(--sl-accent) 54%, transparent) !important;
+    color: var(--sl-text) !important;
+  }
+
+  .signal-loom-themed .theme-button-accent:hover {
+    background: color-mix(in srgb, var(--sl-accent) 28%, var(--sl-panel)) !important;
+    border-color: color-mix(in srgb, var(--sl-accent) 76%, transparent) !important;
+  }
+
+  .signal-loom-themed .theme-input {
+    background: color-mix(in srgb, var(--sl-bg) 66%, var(--sl-panel)) !important;
+    border-color: color-mix(in srgb, var(--sl-border) 78%, transparent) !important;
+    color: var(--sl-text) !important;
+  }
+
+  .signal-loom-themed .theme-input:focus {
+    border-color: color-mix(in srgb, var(--sl-accent) 62%, transparent) !important;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--sl-accent) 20%, transparent);
+  }
+
+  .signal-loom-themed .theme-pill {
+    background: color-mix(in srgb, var(--sl-panel) 65%, transparent) !important;
+    border-color: color-mix(in srgb, var(--sl-border) 72%, transparent) !important;
+    color: var(--sl-muted) !important;
+  }
+
+  .signal-loom-themed .theme-workspace-loading {
+    background: color-mix(in srgb, var(--sl-bg) 82%, transparent) !important;
+    color: var(--sl-muted) !important;
+  }
+
+  .signal-loom-themed .theme-danger {
+    color: var(--sl-danger) !important;
+  }
+
+  .signal-loom-themed [class*="bg-[#111217]"],
+  .signal-loom-themed [class*="bg-[#0d0f15]"],
+  .signal-loom-themed [class*="bg-[#10151f]"],
+  .signal-loom-themed [class*="bg-[#0f131b]"],
+  .signal-loom-themed [class*="bg-[#101722]"],
+  .signal-loom-themed [class*="bg-[#131821]"],
+  .signal-loom-themed [class*="bg-[#171922]"],
+  .signal-loom-themed [class*="bg-[#191c24]"],
+  .signal-loom-themed [class*="bg-[#1c1e26]"],
+  .signal-loom-themed [class*="bg-[#252830]"],
+  .signal-loom-themed [class*="bg-[#0b121d]"],
+  .signal-loom-themed [class*="bg-[#0d1118]"],
+  .signal-loom-themed [class*="bg-[#090a0f]"],
+  .signal-loom-themed [class*="bg-[#090d13]"] {
+    background-color: color-mix(in srgb, var(--sl-panel) 76%, transparent) !important;
+  }
+
+  .signal-loom-themed [class*="bg-[#05080d]"],
+  .signal-loom-themed [class*="bg-[#070a12]"],
+  .signal-loom-themed [class*="bg-[#07111d]"],
+  .signal-loom-themed [class*="bg-[#0b0c10]"] {
+    background-color: color-mix(in srgb, var(--sl-bg) 86%, var(--sl-panel)) !important;
+  }
+
+  .signal-loom-themed [class*="bg-cyan-"],
+  .signal-loom-themed [class*="bg-blue-"] {
+    background-color: color-mix(in srgb, var(--sl-accent) 18%, var(--sl-panel)) !important;
+  }
+
+  .signal-loom-themed [class*="border-gray-700"],
+  .signal-loom-themed [class*="border-gray-800"],
+  .signal-loom-themed [class*="border-cyan-300"],
+  .signal-loom-themed [class*="border-cyan-400"],
+  .signal-loom-themed [class*="border-blue-400"],
+  .signal-loom-themed [class*="border-blue-500"] {
+    border-color: color-mix(in srgb, var(--sl-border) 76%, var(--sl-accent)) !important;
+  }
+
+  .signal-loom-themed [class*="text-gray-100"],
+  .signal-loom-themed [class*="text-gray-200"],
+  .signal-loom-themed [class*="text-cyan-50"],
+  .signal-loom-themed [class*="text-blue-50"] {
+    color: var(--sl-text) !important;
+  }
+
+  .signal-loom-themed [class*="text-gray-300"],
+  .signal-loom-themed [class*="text-gray-400"],
+  .signal-loom-themed [class*="text-gray-500"],
+  .signal-loom-themed [class*="text-gray-600"] {
+    color: var(--sl-muted) !important;
+  }
+
+  .signal-loom-themed [class*="text-cyan-100"],
+  .signal-loom-themed [class*="text-cyan-200"],
+  .signal-loom-themed [class*="text-cyan-300"],
+  .signal-loom-themed [class*="text-blue-100"],
+  .signal-loom-themed [class*="text-blue-200"] {
+    color: var(--sl-accent) !important;
+  }
+
+  .signal-loom-themed [class*="focus:ring-blue-500"]:focus,
+  .signal-loom-themed [class*="focus:ring-cyan-300"]:focus {
+    --tw-ring-color: color-mix(in srgb, var(--sl-accent) 48%, transparent) !important;
+  }
+
+  .react-flow__node-input,
+  .react-flow__node-input.selectable:hover,
+  .react-flow__node-input.selectable.selected,
+  .react-flow__node-input.selectable:focus,
+  .react-flow__node-input.selectable:focus-visible {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .react-flow__controls button {
+    background: var(--sl-panel);
+    border-bottom: 1px solid color-mix(in srgb, var(--sl-accent) 22%, transparent);
+    color: var(--sl-text);
+  }
+
+  .react-flow__controls button:hover {
+    background: color-mix(in srgb, var(--sl-accent) 16%, var(--sl-panel));
+    color: var(--sl-text);
+  }
+
+  .react-flow__edge .typed-flow-edge-path {
+    transition: filter 120ms ease, opacity 120ms ease, stroke-width 120ms ease;
+  }
+
+  .react-flow__edge.selectable:hover .typed-flow-edge-path,
+  .react-flow__edge.selected .typed-flow-edge-path {
+    filter: drop-shadow(0 0 3px rgb(255 255 255 / 36%));
+    opacity: 1;
+  }
+
+  .react-flow__edge:not(.selected) .typed-flow-edge-path {
+    opacity: 0.9;
+  }
+
+  /*
+   * Flow connections are an editing surface, not background decoration.
+   * Wires paint above the node layer so the run into a handle stays visible
+   * across the card that owns it. Cards a wire is NOT attached to still cover
+   * it: TypedFlowEdge clips each wire against the other card rectangles
+   * published by FlowCardOcclusionDefs, which reads as "under those cards".
+   */
+  .flow-wires-over-cards .react-flow__edges,
+  .flow-wires-over-cards .react-flow__connectionline {
+    z-index: 10000 !important;
+  }
+
+  .react-flow__handle.typed-flow-handle {
+    background-color: var(--flow-port-color, #9ca3af) !important;
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 12%), 0 0 7px color-mix(in srgb, var(--flow-port-color, #9ca3af) 48%, transparent);
+    transition: filter 120ms ease, opacity 120ms ease, transform 120ms ease;
+  }
+
+  .react-flow__handle.typed-flow-handle--target {
+    border-radius: 9999px !important;
+  }
+
+  .react-flow__handle.typed-flow-handle--source.react-flow__handle-right {
+    border-radius: 0 !important;
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+  }
+
+  .react-flow__handle.typed-flow-handle--source.react-flow__handle-left {
+    border-radius: 0 !important;
+    clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  }
+
+  .react-flow__handle.typed-flow-handle--source.react-flow__handle-top {
+    border-radius: 0 !important;
+    clip-path: polygon(0 100%, 100% 100%, 50% 0);
+  }
+
+  .react-flow__handle.typed-flow-handle--source.react-flow__handle-bottom {
+    border-radius: 0 !important;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+
+  .react-flow__handle.typed-flow-handle--disabled {
+    cursor: not-allowed !important;
+    filter: grayscale(0.55);
+    opacity: 0.42;
+  }
+
+  .paper-input {
+    @apply w-full rounded-md border px-2 py-1.5 text-xs outline-none transition-colors;
+    background: color-mix(in srgb, var(--sl-bg) 66%, var(--sl-panel)) !important;
+    border-color: color-mix(in srgb, var(--sl-border) 78%, transparent) !important;
+    color: var(--sl-text) !important;
+  }
+
+  .paper-input:focus {
+    border-color: color-mix(in srgb, var(--sl-accent) 62%, transparent) !important;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--sl-accent) 20%, transparent);
+  }
+
+  .paper-dropcap::first-letter {
+    float: left;
+    font-size: calc(var(--sl-dropcap-lines, 3) * 1em);
+    line-height: 0.78;
+    padding-right: 0.08em;
+    padding-top: 0.02em;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .sl-handle-triangle {
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+    border-radius: 0 !important;
+  }
+}
+
+/*
+ * Comfortable interface density (Settings > Runtime Options): floors the
+ * smallest UI text at ~11-12px and lifts the dimmest secondary text one step.
+ * Root-scoped overrides beat sweeping ~90 files of per-chip arbitrary sizes;
+ * 'compact' (the default) leaves today's layout untouched.
+ */
+.density-comfortable [class*='text-[8px]'],
+.density-comfortable [class*='text-[9px]'],
+.density-comfortable [class*='text-[10px]'] {
+  font-size: 0.6875rem !important; /* 11px */
+  line-height: 1.3 !important;
+}
+
+.density-comfortable [class*='text-[11px]'] {
+  font-size: 0.75rem !important; /* 12px */
+  line-height: 1.3 !important;
+}
+
+.density-comfortable .text-gray-500 {
+  color: rgb(156 163 175) !important; /* gray-400: lift the dimmest secondary text */
+}

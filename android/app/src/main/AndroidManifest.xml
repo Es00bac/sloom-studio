@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode|navigation|density"
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBarLaunch"
+            android:launchMode="singleTask"
+            android:resizeableActivity="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Open Sloom Studio documents tapped in a file manager / "Open with".
+                 Custom extensions (.sloom/.slimg/.slppr) have no registered MIME type, so we match
+                 by URI path. The repeated pathPatterns cover filenames with extra dots (Android's
+                 PatternMatcher .* does not backtrack). Some content:// providers omit the filename
+                 from the path; those cannot be matched by extension — an Android limitation. -->
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:host="*" />
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.sloom" />
+                <data android:pathPattern=".*\\.slimg" />
+                <data android:pathPattern=".*\\.slppr" />
+                <data android:pathPattern=".*\\..*\\.sloom" />
+                <data android:pathPattern=".*\\..*\\.slimg" />
+                <data android:pathPattern=".*\\..*\\.slppr" />
+                <data android:pathPattern=".*\\..*\\..*\\.sloom" />
+                <data android:pathPattern=".*\\..*\\..*\\.slimg" />
+                <data android:pathPattern=".*\\..*\\..*\\.slppr" />
+            </intent-filter>
+
+            <!-- Same, for file managers that send the VIEW intent without a MIME type. -->
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.sloom" />
+                <data android:pathPattern=".*\\.slimg" />
+                <data android:pathPattern=".*\\.slppr" />
+                <data android:pathPattern=".*\\..*\\.sloom" />
+                <data android:pathPattern=".*\\..*\\.slimg" />
+                <data android:pathPattern=".*\\..*\\.slppr" />
+                <data android:pathPattern=".*\\..*\\..*\\.sloom" />
+                <data android:pathPattern=".*\\..*\\..*\\.slimg" />
+                <data android:pathPattern=".*\\..*\\..*\\.slppr" />
+            </intent-filter>
+
+            <!-- "Share to Sloom Studio" from another app's share sheet (e.g. Gallery -> Share ->
+                 Sloom Studio, or a file manager's Share action). ACTION_SEND carries the shared
+                 item's content:// URI in EXTRA_STREAM, not the intent's data/path, so Android can
+                 only match it here by MIME type (@capacitor/app's appUrlOpen never sees this —
+                 SignalLoomShareIntentPlugin reads EXTRA_STREAM directly; see that class).
+                 image/* covers photos/generated images shared in as a source image; the
+                 octet-stream/zip entries cover our own .sloom/.slimg/.slppr containers (which,
+                 like the VIEW intent above, have no registered MIME type of their own — a sending
+                 app typically falls back to one of these generic types for an unrecognized
+                 extension). SEND_MULTIPLE is intentionally not registered (out of scope). -->
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/octet-stream" />
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/zip" />
+            </intent-filter>
+
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+
+        <!-- Keeps the LAN app server (Serve to Desktop) alive while the app is backgrounded or
+             the screen is off; without it Android freezes the process and served browsers see
+             connection-refused mid-session (docs/notes/822). Started/stopped strictly with the
+             serving toggle. -->
+        <service
+            android:name=".LanServerForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <!-- ChromeOS and desktop-windowing Android builds must resize Sloom in place rather than
+             placing it in a phone-shaped compatibility container. -->
+        <meta-data android:name="android.supports_size_changes" android:value="true" />
+    </application>
+
+    <!-- A Chromebook may have only a mouse/trackpad. Declaring PC input as optional lets ChromeOS
+         deliver real mouse events (hover, right-click, wheel) instead of emulated touch events. -->
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.type.pc" android:required="false" />
+
+    <!-- Permissions -->
+    <!-- Talk to the AI providers the user configures. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Serve to Desktop keep-alive: the LAN host runs as a data-sync foreground service with a
+         partial wakelock + Wi-Fi lock so cross-device sync survives backgrounding/screen-off. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Legacy public-storage access for @capacitor/filesystem writes to the public
+         Documents folder (project saves / exports). Scoped by maxSdkVersion to exactly
+         where the plugin still requests it:
+           - API <= 32: READ_EXTERNAL_STORAGE  (plugin's publicStorage / publicStorageAboveAPI29)
+           - API <= 29: WRITE_EXTERNAL_STORAGE  (plugin's publicStorage)
+         On API 33+ the plugin needs no storage permission, and media import uses the
+         system file picker (<input type="file">), which needs no permission. -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
+</manifest>

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "fontPackRevision": "31507e786066f973e1b01fb479d6d718cd433a6c",
+  "googleFonts": {
+    "repository": "https://github.com/google/fonts.git",
+    "commit": "26c5c976d82d50c24a8f0a7ac455e0a7c639c226"
+  },
+  "liberationFonts": {
+    "version": "2.1.5",
+    "url": "https://github.com/liberationfonts/liberation-fonts/files/7261482/liberation-fonts-ttf-2.1.5.tar.gz",
+    "sha256": "7191c669bf38899f73a2094ed00f7b800553364f90e2637010a69c0e268f25d0"
+  },
+  "mplusLicense": {
+    "commit": "0d4459efc913a91f33c3f08b219a5a95d282c7b8",
+    "sha256": "1bd6eceefce3edcb25cad3d5a4fbec6405d66946a6672daf69fe667c7e52f591"
+  },
+  "inventory": {
+    "catalogFamilyCount": 116,
+    "faceCount": 430,
+    "criticalErrorCount": 0,
+    "fontInventorySha256": "f9902cc342471b4c58147347fc5a51ed8e6826fa04712ed37c54867105908cff",
+    "sha256SumsSha256": "c1e2ea9159dbb7f3c73d3f720210b625ce36d8273989ec53eed6646bb2dedb1c"
+  },
+  "metadataSha256": {
+    "README.md": "fdb81dda83c37de55e2ab69673ffebb485b6d4cd8773a2aec9994e20d1fad499",
+    "DISTRIBUTION.md": "cc43fa7642520418f331fd5202ba4ac4245c8f731ce5370856994640992c92ac",
+    "catalog/families.tsv": "6c599e380296fa625ed70dbdc64c20e09f00ca0af296bc340b06f95f98ea7c96",
+    "inventory/README.md": "2cace0b2ad966919f8d32f69e8ea93f45b334e720e53a4b265af491baad5f17e"
+  },
+  "packageSmokeFace": {
+    "family": "Liberation Sans",
+    "subfamily": "Regular",
+    "postscriptName": "LiberationSans",
+    "file": "collection/base/liberationsans/LiberationSans-Regular.ttf",
+    "sha256": "76d04c18ea243f426b7de1f3ad208e927008f961dc5945e5aad352d0dfde8ee8"
+  },
+  "packageSmokeLicense": {
+    "file": "collection/base/liberationsans/LICENSE",
+    "sha256": "93fed46019c38bbe566b479d22148e2e8a1e85ada614accb0211c37b2c61c19b",
+    "byteLength": 4414
+  }
+}

@@ -1,0 +1,42 @@
+.provider-pack-library {
+  background: #0a111b !important;
+}
+
+.provider-pack-summary-grid {
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)) !important;
+}
+
+.provider-card-builder {
+  container-type: inline-size;
+}
+
+.provider-card-builder-pane-tabs {
+  display: flex !important;
+}
+
+.provider-card-builder-grid {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.provider-card-builder-pane[data-pane-active='false'] {
+  display: none !important;
+}
+
+.provider-card-builder-pane[data-pane-active='true'] {
+  display: block !important;
+}
+
+@container (min-width: 64rem) {
+  .provider-card-builder-pane-tabs {
+    display: none !important;
+  }
+
+  .provider-card-builder-grid {
+    grid-template-columns: 15.625rem minmax(26.25rem, 1fr) 18.75rem !important;
+  }
+
+  .provider-card-builder-pane[data-pane-active='false'],
+  .provider-card-builder-pane[data-pane-active='true'] {
+    display: block !important;
+  }
+}

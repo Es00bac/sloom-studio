@@ -1,0 +1,21 @@
+plugins {
+    id 'com.android.asset-pack'
+}
+
+assetPack {
+    packName = "sloom_fonts"
+    dynamicDelivery {
+        deliveryType = "on-demand"
+    }
+}
+
+def prepareFontPackAssets = tasks.register('prepareFontPackAssets', Exec) {
+    workingDir rootProject.projectDir.parentFile
+    commandLine 'node', 'scripts/prepare-android-font-asset-pack.mjs'
+}
+
+tasks.configureEach { task ->
+    if (task.name.startsWith('merge') && task.name.endsWith('Assets')) {
+        task.dependsOn prepareFontPackAssets
+    }
+}

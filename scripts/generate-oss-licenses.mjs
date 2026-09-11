@@ -1,0 +1,172 @@
+// Generates src/generated/ossLicenses.ts — the data behind Settings → Open-Source Licenses.
+//
+// Coverage = every unique production npm package (the full transitive tree that ships in
+// app bundles, via `npm ls --omit=dev --all`) plus the hand-maintained non-npm inventory
+// in shared/third-party-components.json (native binaries, runtime downloads, Electron).
+//
+// Usage: npm run generate:oss-licenses   (commit the regenerated file)
+import { execSync } from 'node:child_process';
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
+import path from 'node:path';
+
+const repoRoot = process.cwd();
+const outputPath = path.join(repoRoot, 'src/generated/ossLicenses.ts');
+const MAX_LICENSE_TEXT = 40_000;
+
+function collectProductionPackageSet() {
+  const raw = execSync('npm ls --omit=dev --all --json', {
+    cwd: repoRoot,
+    maxBuffer: 64 * 1024 * 1024,
+    stdio: ['ignore', 'pipe', 'ignore'],
+  }).toString();
+  const tree = JSON.parse(raw);
+  const wanted = new Set();
+  const walk = (deps) => {
+    for (const [name, info] of Object.entries(deps ?? {})) {
+      if (info?.version) wanted.add(`${name}@${info.version}`);
+      walk(info?.dependencies);
+    }
+  };
+  walk(tree.dependencies);
+  return wanted;
+}
+
+function* iteratePackageDirs(nodeModulesDir) {
+  if (!existsSync(nodeModulesDir)) return;
+  for (const entry of readdirSync(nodeModulesDir)) {
+    if (entry.startsWith('.')) continue;
+    const entryPath = path.join(nodeModulesDir, entry);
+    if (entry.startsWith('@')) {
+      for (const scoped of readdirSync(entryPath)) {
+        yield path.join(entryPath, scoped);
+      }
+    } else {
+      yield entryPath;
+    }
+  }
+}
+
+function findLicenseText(packageDir) {
+  let files;
+  try {
+    files = readdirSync(packageDir);
+  } catch {
+    return undefined;
+  }
+  const candidate = files.find((file) => /^(licen[cs]e|copying)(\.|$)/i.test(file));
+  if (!candidate) return undefined;
+  const candidatePath = path.join(packageDir, candidate);
+  try {
+    if (!statSync(candidatePath).isFile()) return undefined;
+    const text = readFileSync(candidatePath, 'utf8');
+    return text.length > MAX_LICENSE_TEXT ? `${text.slice(0, MAX_LICENSE_TEXT)}\n[truncated]` : text;
+  } catch {
+    return undefined;
+  }
+}
+
+function normalizeLicenseField(pkg) {
+  if (typeof pkg.license === 'string') return pkg.license;
+  if (pkg.license?.type) return pkg.license.type;
+  if (Array.isArray(pkg.licenses)) return pkg.licenses.map((l) => l.type ?? l).join(' OR ');
+  return 'UNKNOWN';
+}
+
+function normalizeRepositoryUrl(pkg) {
+  const raw = typeof pkg.repository === 'string' ? pkg.repository : pkg.repository?.url;
+  if (!raw) return pkg.homepage;
+  return raw
+    .replace(/^git\+/, '')
+    .replace(/^git:\/\//, 'https://')
+    .replace(/^ssh:\/\/git@/, 'https://')
+    .replace(/\.git$/, '');
+}
+
+function collectNpmEntries(wanted) {
+  const entries = new Map();
+  const queue = [path.join(repoRoot, 'node_modules')];
+  while (queue.length > 0) {
+    const nodeModulesDir = queue.pop();
+    for (const packageDir of iteratePackageDirs(nodeModulesDir)) {
+      const manifestPath = path.join(packageDir, 'package.json');
+      if (!existsSync(manifestPath)) continue;
+      let pkg;
+      try {
+        pkg = JSON.parse(readFileSync(manifestPath, 'utf8'));
+      } catch {
+        continue;
+      }
+      const key = `${pkg.name}@${pkg.version}`;
+      if (wanted.has(key) && !entries.has(key)) {
+        entries.set(key, {
+          name: pkg.name,
+          version: pkg.version,
+          license: normalizeLicenseField(pkg),
+          url: normalizeRepositoryUrl(pkg),
+          kind: 'npm',
+          licenseText: findLicenseText(packageDir),
+        });
+      }
+      const nested = path.join(packageDir, 'node_modules');
+      if (existsSync(nested)) queue.push(nested);
+    }
+  }
+  return [...entries.values()].sort((a, b) => a.name.localeCompare(b.name));
+}
+
+function collectNativeEntries() {
+  const inventoryPath = path.join(repoRoot, 'shared/third-party-components.json');
+  const inventory = JSON.parse(readFileSync(inventoryPath, 'utf8'));
+  return inventory.components.map((component) => ({
+    name: component.name,
+    version: component.version,
+    license: component.license,
+    url: component.url,
+    kind: 'native',
+    scope: component.scope,
+    flagged: component.flagged === true,
+    notes: component.notes,
+    licenseText: component.licenseText,
+  }));
+}
+
+const wanted = collectProductionPackageSet();
+const npmEntries = collectNpmEntries(wanted);
+const nativeEntries = collectNativeEntries();
+const missing = [...wanted].filter(
+  (key) => !npmEntries.some((entry) => `${entry.name}@${entry.version}` === key),
+);
+if (missing.length > 0) {
+  console.warn(`WARNING: ${missing.length} production packages not found on disk:`, missing.join(', '));
+}
+
+const banner = `// AUTO-GENERATED by scripts/generate-oss-licenses.mjs — do not edit by hand.
+// Regenerate with: npm run generate:oss-licenses
+// Sources: production npm dependency tree + shared/third-party-components.json
+`;
+
+const body = `${banner}
+export interface OssLicenseEntry {
+  name: string;
+  version?: string;
+  license: string;
+  url?: string;
+  kind: 'npm' | 'native';
+  scope?: string;
+  flagged?: boolean;
+  notes?: string;
+  licenseText?: string;
+}
+
+export const OSS_LICENSE_GENERATED_AT = ${JSON.stringify(new Date().toISOString().slice(0, 10))};
+
+export const OSS_NATIVE_COMPONENTS: OssLicenseEntry[] = ${JSON.stringify(nativeEntries, null, 2)};
+
+export const OSS_NPM_PACKAGES: OssLicenseEntry[] = ${JSON.stringify(npmEntries, null, 2)};
+`;
+
+mkdirSync(path.dirname(outputPath), { recursive: true });
+writeFileSync(outputPath, body);
+console.log(
+  `Wrote ${path.relative(repoRoot, outputPath)}: ${nativeEntries.length} native components, ${npmEntries.length} npm packages (${missing.length} missing).`,
+);

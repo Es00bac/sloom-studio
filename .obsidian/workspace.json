@@ -1,0 +1,259 @@
+{
+  "main": {
+    "id": "34945dbb99b00696",
+    "type": "split",
+    "children": [
+      {
+        "id": "28f859362d897806",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ab5b1728f577dcce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/ELEVENLABS_FEATURES.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ELEVENLABS_FEATURES"
+            }
+          }
+        ]
+      },
+      {
+        "id": "e6a60a047b1bd1fb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6052aed7db75847b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/user-manual-bilingual/en/06-paper-workspace.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06-paper-workspace"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a11e74ab46e30d50",
+    "type": "split",
+    "children": [
+      {
+        "id": "35fbd7f285c870ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7047d18c61d64e95",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "fb9106be5e301f56",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e2e65d5b0002510d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cb885c0ad964ffc8",
+    "type": "split",
+    "children": [
+      {
+        "id": "ba6827b70fed7bbd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9c825778e4f1b073",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/user-manual-bilingual/en/06-paper-workspace.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "623a94ca9ac9dbc9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/user-manual-bilingual/en/06-paper-workspace.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "70b406d62d581475",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e36edf708a6f25f3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "6ee04f9915e684de",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/user-manual-bilingual/en/06-paper-workspace.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "6052aed7db75847b",
+  "lastOpenFiles": [
+    "docs/notes/1111-mntd-worker-retirement.md",
+    "docs/notes/1110-complete-documentation-truth-refresh.md",
+    "dist/assets/harfbuzz.wasm",
+    "dist/index.html",
+    "dist/assets/worker-BzdDEeh7.js",
+    "dist/assets/web-D5TP6G_r.js",
+    "dist/assets/web-9IXu9nI8.js",
+    "dist/assets/web--gGsJFzS.js",
+    "dist/assets/videoTimelineNativeSync-CEHXDGUm.js",
+    "dist/assets/videoSyncChannel-RgwhYEIK.js",
+    "dist/assets/videoDockablePanels-BFZijeSR.js",
+    "dist/assets/vendor-xyflow-SFAW6-1p.css",
+    "dist/assets/icon-paper-Bzdxmjr_.png",
+    "dist/assets/icon-image-Ch0f94co.png",
+    "dist/assets/icon-flow--UcXm3BG.png",
+    "dist/assets/icon-editor-DLT4XCsU.png",
+    "output/playwright/sloom-manual-ja-paper-mobile-0.9.16-b.png",
+    "output/playwright/sloom-manual-ja-paper-0.9.16-b.png",
+    "output/playwright/sloom-manual-en-video-0.9.16-b.png",
+    "docs/README.md",
+    "docs/PRINT-STATUS.md",
+    "docs/HANDOFF.md",
+    "docs/user-manual-bilingual/ja/02-settings.md",
+    "docs/user-manual-bilingual/en/02-settings.md",
+    "docs/user-manual-bilingual/ja/00-introduction.md",
+    "docs/userguide/07-video.md",
+    "docs/user-manual-bilingual/en/00-introduction.md",
+    "docs/ELEVENLABS_FEATURES.md",
+    "output/playwright/sloom-docs-ja-0.9.16-b.png",
+    "output/playwright/sloom-docs-en-0.9.16-b.png",
+    "docs/FEATURE_BREAKDOWN.md",
+    "docs/PROJECT_DOCUMENTATION.md",
+    "docs/userguide/13-accessibility-collaboration-and-automation.md",
+    "docs/userguide/12-troubleshooting-and-recovery.md",
+    "ops/team/messages/video-render-preview-global-menu/1787890572-sol-arden-final-integration.md",
+    "docs/notes/2026-08-27-sloom-video-kdenlive-full-feature-comparison.md",
+    "ops/team/messages/video-render-preview-global-menu/1787889139-sol-arden-production-eligibility-correction.md",
+    "ops/team/messages/video-render-preview-global-menu/1787888307-sol-arden-gpu-fast-path.md",
+    "docs/notes/2026-08-27-video-render-preview-global-menu-repair.md",
+    "ops/team/messages/video-render-preview-global-menu/1787886438-sol-arden-claim-and-findings.md",
+    "docs/notes/1109-sloom-0916b-application-menu-install.md",
+    "ops/team/messages/program-closeout/1787880483-sol-arden-program-complete.md",
+    "ops/team/messages/mh-039-nested-groups/1787880229-maris-vale-terminal-pass.md",
+    "ops/team/messages/mh-039-nested-groups/1787879294-sol-arden-cache-signature-severity-correction.md",
+    "ops/team/messages/mh-039-nested-groups/1787878754-sol-arden-cache-signature-p2-routing.md"
+  ]
+}

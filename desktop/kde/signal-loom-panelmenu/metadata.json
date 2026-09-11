@@ -1,0 +1,20 @@
+{
+    "KPlugin": {
+        "Id": "org.signalloom.panelmenu",
+        "Name": "Signal Loom Global Menu",
+        "Description": "Shows Signal Loom's application menu in the panel over D-Bus — no XWayland, so hardware acceleration stays on native Wayland.",
+        "Icon": "application-menu",
+        "Authors": [
+            {
+                "Name": "Sloom Software",
+                "Email": "hello@sloom.studio"
+            }
+        ],
+        "Category": "Windows and Tasks",
+        "License": "MIT",
+        "Version": "1.0.0",
+        "Website": "https://sloom.studio"
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

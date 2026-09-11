@@ -1,0 +1,54 @@
+{
+  "format": "signal-loom-image",
+  "formatVersion": 2,
+  "kind": "image",
+  "generator": {
+    "name": "Hane golden",
+    "brushEngine": "Tiltmark",
+    "version": 2
+  },
+  "document": {
+    "id": "golden-document",
+    "title": "v2 golden",
+    "width": 64,
+    "height": 48,
+    "dpi": 300,
+    "background": "paper",
+    "activeLayerId": "paint",
+    "layers": [
+      {
+        "id": "paint",
+        "name": "Paint",
+        "kind": "raster",
+        "visible": true,
+        "locked": false,
+        "alphaLocked": false,
+        "opacity": 1,
+        "blendMode": "normal",
+        "clippingMask": false,
+        "transform": {
+          "affine": [1, 0, 0, 1, 0, 0]
+        },
+        "pixels": {
+          "assetId": "pixels.png",
+          "width": 64,
+          "height": 48
+        }
+      }
+    ],
+    "guides": [],
+    "color": {
+      "workingSpace": "srgb"
+    },
+    "sourceApplication": "Hane golden"
+  },
+  "assets": [
+    {
+      "id": "pixels.png",
+      "sha256": "6ec9c2b0eb14010746c8bce8939303b382344b296206612eb8a907a37b2b2f37",
+      "byteLength": 6,
+      "mimeType": "image/png",
+      "role": "pixels"
+    }
+  ]
+}

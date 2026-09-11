@@ -1,0 +1,239 @@
+{
+  "name": "sloom-studio",
+  "private": true,
+  "version": "0.9.16-b",
+  "description": "Sloom Studio: a local-first, GPL creative suite for illustration, comics and book layout, and video editing.",
+  "license": "GPL-3.0-or-later",
+  "author": {
+    "name": "Sloom Software",
+    "email": "support@sloom.studio"
+  },
+  "type": "module",
+  "main": "electron/main.mjs",
+  "scripts": {
+    "dev": "vite",
+    "dashboard": "node ops/dev-dashboard/dashboard.mjs",
+    "electron": "node electron/launcher.cjs",
+    "electron:dev": "node electron/launcher.cjs --dev",
+    "electron:preview": "node electron/launcher.cjs",
+    "generate:comic-panels": "node scripts/headless-comic-panel-art.mjs",
+    "project:cli": "node scripts/sloom-project-cli.mjs",
+    "place:comic-panels": "node scripts/place-comic-panels-in-paper.mjs",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "verify:paper-production": "node scripts/verify-paper-production.mjs",
+    "verify:flow-production": "vitest run src/lib/flowRuntimePortCapabilities.test.ts src/lib/flowNodeContracts.test.ts src/lib/flowConnectionContracts.test.ts src/lib/flowSignals.test.ts src/lib/imageEditConnections.test.ts src/lib/videoFrameConnections.test.ts src/lib/sourceBin.test.ts src/store/flowStore.test.ts src/components/Nodes/AdvancedImageEditorNode.test.tsx && node scripts/verify-flow-production.mjs",
+    "test:smoke": "vitest run src/lib/appSmoke.test.ts",
+    "smoke:native": "node scripts/native-smoke.mjs",
+    "smoke:native:video-render": "node scripts/native-video-render-smoke.mjs",
+    "smoke:native:paper:pdf-parity": "node scripts/native-paper-pdf-parity.mjs",
+    "smoke:native:project": "node scripts/native-real-project-smoke.mjs",
+    "smoke:native:project:soak": "node scripts/native-real-project-soak.mjs",
+    "smoke:native:stress": "node scripts/native-smoke.mjs --stress",
+    "probe:electron-single-instance": "node scripts/electron-single-instance-probe.mjs",
+    "gate:local": "node scripts/release-gate.mjs local",
+    "gate:native": "node scripts/release-gate.mjs native",
+    "gate:android-localdream": "node scripts/android-localdream-gate.mjs",
+    "setup:android-localdream": "node scripts/android-localdream-setup.mjs",
+    "gate:release": "node scripts/release-gate.mjs release",
+    "android:prepare-localdream-runtime": "node scripts/prepare-android-localdream-runtime.mjs",
+    "generate:oss-licenses": "node scripts/generate-oss-licenses.mjs",
+    "acquire:font-library": "bash scripts/acquire-bundled-font-library.sh",
+    "prepare:font-library": "node scripts/prepare-bundled-font-library.mjs",
+    "verify:font-library": "node scripts/verify-bundled-font-library.mjs",
+    "docs:build-public-manual": "node scripts/build-public-user-manual.mjs",
+    "verify:docs": "node scripts/verify-user-docs.mjs && node scripts/verify-qualified-feature-guide.mjs && node scripts/verify-provider-packs.mjs && node docs/release/website/sloom-studio/verify-site.mjs && vitest run src/lib/helpContent.test.ts",
+    "smoke:packaged-font-library": "node scripts/package-font-library-smoke.mjs",
+    "sync:catalog": "node scripts/sync-provider-catalog.mjs",
+    "sync:catalog:check": "node scripts/sync-provider-catalog.mjs --check",
+    "serve:self-hosted-project-sync": "node server/self-hosted-project-sync-server.cjs",
+    "test:self-hosted-project-sync": "node --test server/self-hosted-project-sync-server.test.cjs",
+    "sync:android": "npm run build && cap sync android",
+    "build:android": "npm run android:prepare-localdream-runtime && npm run sync:android && cd android && ./gradlew assembleDebug",
+    "dist:win": "npm run build && npm run prepare:font-library && electron-builder --win nsis",
+    "dist:mac": "npm run build && npm run prepare:font-library && electron-builder --mac dmg zip",
+    "dist:mac:zip": "npm run build && npm run prepare:font-library && electron-builder --mac zip",
+    "dist:linux": "npm run build && npm run prepare:font-library && electron-builder --linux AppImage deb",
+    "dist:linux:snap": "npm run build && npm run prepare:font-library && electron-builder --linux snap",
+    "install:linux": "bash scripts/install-desktop-launcher.sh",
+    "icons:mac": "bash scripts/create-mac-icon.sh",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.4.0",
+    "@capacitor/app": "^8.1.0",
+    "@capacitor/core": "^8.4.0",
+    "@capacitor/filesystem": "^8.1.2",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "@google/genai": "^1.50.1",
+    "@google/generative-ai": "^0.24.1",
+    "@huggingface/inference": "^4.13.15",
+    "@noble/hashes": "2.2.0",
+    "@pdf-lib/fontkit": "^1.1.1",
+    "@xyflow/react": "^12.10.2",
+    "ag-psd": "^30.1.1",
+    "clsx": "^2.1.1",
+    "dbus-next": "^0.10.2",
+    "fabric": "^7.3.1",
+    "fflate": "0.8.3",
+    "google-auth-library": "^10.6.2",
+    "harfbuzzjs": "1.4.0",
+    "hyphenated": "^1.2.0",
+    "lcms-wasm": "^1.0.5",
+    "lucide-react": "^1.8.0",
+    "openai": "^6.34.0",
+    "pako": "2.1.0",
+    "pdf-lib": "^1.17.1",
+    "peerjs": "^1.5.5",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "spectral.js": "^3.0.0",
+    "tailwind-merge": "^3.5.0",
+    "y-webrtc": "^10.3.0",
+    "yjs": "^13.6.31",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.4.0",
+    "@csstools/postcss-cascade-layers": "^6.0.0",
+    "@eslint/js": "^9.39.4",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/fabric": "^5.3.11",
+    "@types/node": "^24.12.2",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.5.0",
+    "electron": "^41.3.0",
+    "electron-builder": "^26.15.2",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "fake-indexeddb": "6.2.5",
+    "globals": "^17.5.0",
+    "googleapis": "^173.0.0",
+    "lightningcss": "^1.32.0",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^4.2.2",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.2",
+    "vite": "^8.0.9",
+    "vitest": "^4.1.5"
+  },
+  "build": {
+    "appId": "studio.sloom.signalloom",
+    "productName": "Sloom Studio",
+    "artifactName": "SloomStudio-${version}-${arch}.${ext}",
+    "asar": true,
+    "beforePack": "scripts/electron-builder-before-pack.cjs",
+    "afterPack": "scripts/electron-builder-after-pack.cjs",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "shared/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "ops/native-render",
+        "to": "ops/native-render",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "ops/local-upscaler",
+        "to": "ops/local-upscaler",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "build/font-library",
+        "to": "font-library",
+        "filter": [
+          "README.md",
+          "DISTRIBUTION.md",
+          "source-artifact.json",
+          "catalog/**/*",
+          "inventory/README.md",
+          "inventory/SHA256SUMS",
+          "inventory/font-inventory.json",
+          "collection/**/*"
+        ]
+      }
+    ],
+    "win": {
+      "icon": "build/icons/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "SloomStudio-Setup-${version}.${ext}"
+    },
+    "mac": {
+      "category": "public.app-category.graphics-design",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/mac/entitlements.mac.plist",
+      "entitlementsInherit": "build/mac/entitlements.mac.plist",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "linux": {
+      "category": "AudioVideo",
+      "icon": "build/icons/icon.png",
+      "target": [
+        "AppImage",
+        "deb",
+        "snap"
+      ]
+    },
+    "fileAssociations": [
+      {
+        "ext": "sloom",
+        "name": "Sloom Studio Project",
+        "description": "Sloom Studio project",
+        "mimeType": "application/x-sloom",
+        "role": "Editor"
+      },
+      {
+        "ext": "slppr",
+        "name": "Sloom Studio Paper Layout",
+        "description": "Sloom Studio Paper layout",
+        "mimeType": "application/x-slppr",
+        "role": "Editor"
+      }
+    ],
+    "protocols": [
+      {
+        "name": "Sloom Studio",
+        "schemes": [
+          "signal-loom"
+        ]
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Es00bac/sloom-studio.git"
+  }
+}

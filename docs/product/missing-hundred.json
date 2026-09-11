@@ -1,0 +1,815 @@
+{
+  "schemaVersion": 1,
+  "title": "The Missing Hundred",
+  "source": {
+    "kind": "claude-artifact",
+    "url": "https://claude.ai/code/artifact/71998ef4-7687-46f7-b81a-2ca9d7abf031",
+    "authoredFileSha256": "078093f9c6761a85e07b697407fe49410d189aa7fa6277df1dfd61c86c0049f3",
+    "authoredFileBytes": 40057,
+    "capturedAt": "2026-08-24",
+    "note": "Imported source claims are evidence leads, not verified product truth."
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "workspace": "Suite",
+      "severity": 1,
+      "title": "Autosave",
+      "professionalImpact": "Work is only as safe as the last manual save. Every comparable tool writes a recovery copy on a timer and on focus loss.",
+      "evidenceProse": "No autosave timer exists anywhere in the app; the only occurrence of the word is a comment in src/lib/projectLibrary.ts:122."
+    },
+    {
+      "rank": 2,
+      "workspace": "Suite",
+      "severity": 1,
+      "title": "Crash recovery of unsaved documents",
+      "professionalImpact": "After a crash, reopen and get the document back — not an empty canvas.",
+      "evidenceProse": "src/components/Recovery/ contains only ErrorBoundary.tsx. No journal, scratch snapshot, or restore-on-launch path."
+    },
+    {
+      "rank": 3,
+      "workspace": "Video",
+      "severity": 1,
+      "title": "Pointer drag-trim on clip edges",
+      "professionalImpact": "Grab a cut and drag it. Today trimming is keyboard-only, which reads to an editor as broken rather than unfinished.",
+      "evidenceProse": "TASK_LIST.md:845 still open — trimEdit.ts math is described as the ready engine; Q/W/E keyboard trim shipped instead."
+    },
+    {
+      "rank": 4,
+      "workspace": "Flow",
+      "severity": 1,
+      "title": "Undo and redo in Flow",
+      "professionalImpact": "Every other workspace has undo. Rewiring a graph is destructive and currently irreversible.",
+      "evidenceProse": "edit:undo is handled by App.tsx, ImageEditorWorkspace and PaperWorkspace; paperStore is the only store with an undo history. No flow history store exists."
+    },
+    {
+      "rank": 5,
+      "workspace": "Suite",
+      "severity": 1,
+      "title": "Project version history and named snapshots",
+      "professionalImpact": "Revert to yesterday's cut, compare two versions, branch a variant without cloning the file.",
+      "evidenceProse": "versionHistory appears only in ImageSourceDocument.ts. No project-level version store."
+    },
+    {
+      "rank": 6,
+      "workspace": "Suite",
+      "severity": 1,
+      "title": "Projects that stay a sane size",
+      "professionalImpact": "Embedded base64 assets are 97–98% of .sloom file size, so real projects become slow to open and impossible to send.",
+      "evidenceProse": "TASK_LIST.md:507 open — externalize embedded assets, measured on the Root & Relay and Weights & Measures projects."
+    },
+    {
+      "rank": 7,
+      "workspace": "Suite",
+      "severity": 1,
+      "title": "Customizable keyboard shortcuts",
+      "professionalImpact": "Pros remap keys and carry muscle memory between apps. A Photoshop/Premiere/InDesign keymap preset removes the first day of friction.",
+      "evidenceProse": "No shortcut-remapping or keybinding-editor code found across src and electron."
+    },
+    {
+      "rank": 8,
+      "workspace": "Image",
+      "severity": 1,
+      "title": "True Smart Objects and smart filters",
+      "professionalImpact": "Place once, scale freely, replace contents, edit the original, re-open filter settings later.",
+      "evidenceProse": "Parity smart-source-linked-layers scores 63: \"true native Smart Object semantics, Embedded native Smart Objects, and native smart filters are not implemented.\""
+    },
+    {
+      "rank": 9,
+      "workspace": "Image",
+      "severity": 1,
+      "title": "16- and 32-bit per channel documents",
+      "professionalImpact": "Anything graded, composited, or destined for print degrades in 8-bit. Banding shows in every gradient.",
+      "evidenceProse": "Parity bit-depth-workflow scores 32: \"true high-bit document storage, edits, filters, and export remain missing.\""
+    },
+    {
+      "rank": 10,
+      "workspace": "Image",
+      "severity": 1,
+      "title": "Real CMYK document mode with ICC conversion",
+      "professionalImpact": "Print work lives in CMYK. Converting only at export means the artist never sees what the press will print.",
+      "evidenceProse": "Parity color-management 55 and cmyk-lab-grayscale 46: \"true ICC conversion, separations, profile transforms… native CMYK export remain missing.\""
+    },
+    {
+      "rank": 11,
+      "workspace": "Paper",
+      "severity": 1,
+      "title": "A print job that a real shop has accepted",
+      "professionalImpact": "PDF/X, spot plates and KDP output have never been through an actual RIP, Acrobat preflight, or printed proof.",
+      "evidenceProse": "docs/notes/861: validated only by our own tooling plus Ghostscript; the KDP pipeline has a landing page and zero real proof copies."
+    },
+    {
+      "rank": 12,
+      "workspace": "Suite",
+      "severity": 1,
+      "title": "Signed and notarized installers",
+      "professionalImpact": "On macOS and Windows an unsigned build shows a scary warning. Professionals on managed machines simply cannot install it.",
+      "evidenceProse": "docs/notes/861 lists unsigned/un-notarized Windows and macOS installers among its high-risk rows."
+    },
+    {
+      "rank": 13,
+      "workspace": "Suite",
+      "severity": 1,
+      "title": "Screen-reader and keyboard accessibility",
+      "professionalImpact": "Studios and public-sector clients increasingly require it, and a keyboard-only path is a working requirement, not a courtesy.",
+      "evidenceProse": "No aria-live, screen-reader or a11y handling found; docs/notes/861 lists app-wide accessibility as never audited."
+    },
+    {
+      "rank": 14,
+      "workspace": "Suite",
+      "severity": 1,
+      "title": "Crash reporting",
+      "professionalImpact": "Without it, a crash on a client's machine is invisible and unfixable.",
+      "evidenceProse": "No crash reporter, Sentry, Breakpad, or minidump handling found; docs/notes/861 treats it as absent."
+    },
+    {
+      "rank": 15,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "Timeline and clip markers with labels and colours",
+      "professionalImpact": "Notes, sync points, and client feedback all hang off markers.",
+      "evidenceProse": "TASK_LIST.md:846 open, carried over from the ranked gap audit in docs/notes/808 (need 74/100)."
+    },
+    {
+      "rank": 16,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "Audio crossfades per cut",
+      "professionalImpact": "Video has opacity ramps; audio cuts still pop.",
+      "evidenceProse": "TASK_LIST.md:846 open (need 72/100 in docs/notes/808)."
+    },
+    {
+      "rank": 17,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "Waveforms on video clips' embedded audio",
+      "professionalImpact": "Standalone audio clips draw peaks; audio living inside a video clip does not, so sync-by-eye fails.",
+      "evidenceProse": "TASK_LIST.md:846 lists this as the remaining sliver of the waveform work."
+    },
+    {
+      "rank": 18,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "A real colour grading workspace",
+      "professionalImpact": "Lift/gamma/gain wheels, curves, secondary/HSL qualifiers. Clip colour today is exposure, contrast, saturation, temperature, tint and a LUT reference.",
+      "evidenceProse": "src/lib/videoColorPipeline.ts carries the correction model and LUT reference; TASK_LIST.md:18 names \"real Color/Audio/VFX workspaces\" as remaining. No colour wheels or qualifiers exist."
+    },
+    {
+      "rank": 19,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "Scopes driven by decoded frames",
+      "professionalImpact": "A waveform or vectorscope is only useful if it reads the actual picture.",
+      "evidenceProse": "Scope handling appears only inside src/lib/videoColorPipeline.ts as pipeline stages; there is no scope panel fed from decoded pixels."
+    },
+    {
+      "rank": 20,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "A real audio mixer",
+      "professionalImpact": "Channel strips, per-track EQ and compression, buses, and meters. The engine exists; the desk does not.",
+      "evidenceProse": "src/lib/videoAudioMixer.ts (407 lines) is engine-only; TASK_LIST.md:18 lists the Audio workspace as remaining."
+    },
+    {
+      "rank": 21,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "Loudness normalization and true-peak limiting",
+      "professionalImpact": "Every platform and broadcaster specifies a LUFS target. Delivering without it means rejection.",
+      "evidenceProse": "docs/notes/999 honest boundaries: true-peak and related analysis \"still needs native decoded-media analyzers.\""
+    },
+    {
+      "rank": 22,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "Speed ramping that actually renders",
+      "professionalImpact": "Retiming state is persisted; keyframed ramps do not execute in the monitor or the export.",
+      "evidenceProse": "Retiming appears across ~10 runtime modules as state and planning; TASK_LIST.md:18 keeps the executing Runtime IR as remaining work."
+    },
+    {
+      "rank": 23,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "Nested sequences and adjustment layers that execute",
+      "professionalImpact": "Both are represented in the project model but do not composite in the Program Monitor or on export.",
+      "evidenceProse": "TASK_LIST.md:18: remaining work is \"one monitor/export Runtime IR for linked/nested/adjustment/multicam/transcript editing.\""
+    },
+    {
+      "rank": 24,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "Relink and consolidate offline media",
+      "professionalImpact": "When a file moves, the project must be repairable rather than broken.",
+      "evidenceProse": "TASK_LIST.md:18 states remaining program work \"starts with relink/consolidation UI.\""
+    },
+    {
+      "rank": 25,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "Transcript-based editing",
+      "professionalImpact": "Cut dialogue by deleting words. For interview and narration work this is now the expected default.",
+      "evidenceProse": "TASK_LIST.md:18 lists transcript editing among the remaining Runtime IR work."
+    },
+    {
+      "rank": 26,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "Multicam switching in playback and export",
+      "professionalImpact": "The multicam model is persisted; live angle switching and flattening are not runnable.",
+      "evidenceProse": "Multicam appears in ~6 runtime modules as state; TASK_LIST.md:18 lists multicam among the remaining Runtime IR work."
+    },
+    {
+      "rank": 27,
+      "workspace": "Video",
+      "severity": 2,
+      "title": "A render queue that survives a restart",
+      "professionalImpact": "Queue tonight's deliveries, close the laptop, come back to finished files.",
+      "evidenceProse": "docs/notes/999: \"A restart-safe background queue needs native persisted scheduling over immutable render snapshots.\" No export/render queue module exists."
+    },
+    {
+      "rank": 28,
+      "workspace": "Flow",
+      "severity": 2,
+      "title": "Result caching and partial rerun",
+      "professionalImpact": "Change one prompt at the end of a graph and every upstream paid node runs again.",
+      "evidenceProse": "src/store/flowStore.ts:434 — shouldReuseExistingNodeOutput returns false unconditionally, by design, so a root run re-executes the whole dependency traversal."
+    },
+    {
+      "rank": 29,
+      "workspace": "Flow",
+      "severity": 2,
+      "title": "Enforced spend caps",
+      "professionalImpact": "Estimation and a usage ledger exist, but nothing stops a runaway loop at a dollar limit.",
+      "evidenceProse": "src/lib/costEstimation.ts estimates and confirms cost; no budget ceiling blocks execution."
+    },
+    {
+      "rank": 30,
+      "workspace": "Suite",
+      "severity": 2,
+      "title": "Font discovery and management",
+      "professionalImpact": "Image cannot see the fonts installed on the machine, and there is no activation, substitution, or per-client collection across the suite.",
+      "evidenceProse": "Parity text-tool 72: \"installed-font discovery… still lag badly.\" Managed-font handling exists only as a Video registration gate."
+    },
+    {
+      "rank": 31,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Bézier text on a path",
+      "professionalImpact": "Type follows only straight segments today. Comic and poster lettering needs curves.",
+      "evidenceProse": "Parity text-tool 72 names \"Bezier text-on-path editing\" as missing; only straight-segment attachment is retained."
+    },
+    {
+      "rank": 32,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Editable text warps",
+      "professionalImpact": "Arc, bulge, flag — reversible, still-editable type distortion.",
+      "evidenceProse": "Parity text-tool 72 lists \"editable text warps\" as missing."
+    },
+    {
+      "rank": 33,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Spellcheck in Image type",
+      "professionalImpact": "Typos in shipped lettering are expensive and embarrassing.",
+      "evidenceProse": "Parity text-tool 72 lists \"dictionary spellcheck\" as missing; spellcheck exists only in Paper's story editor."
+    },
+    {
+      "rank": 34,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Vertical Japanese type in Image",
+      "professionalImpact": "Paper handles 縦書き properly; Image, where the lettering is actually drawn, does not.",
+      "evidenceProse": "Parity text-tool 72 lists \"vertical type\" as missing. Paper's vertical writing shipped via writing-mode on the frame content container."
+    },
+    {
+      "rank": 35,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Canvas view rotation",
+      "professionalImpact": "Rotate the view, not the artwork, so a hand can draw a comfortable arc. Standard in every drawing app.",
+      "evidenceProse": "No canvas view-rotation handling found in the Image editor's gesture or camera code."
+    },
+    {
+      "rank": 36,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "PSD export with live editable text",
+      "professionalImpact": "Any handoff to a client or collaborator flattens the type, so the other side cannot fix a typo.",
+      "evidenceProse": "Parity text-tool 72 and psd-roundtrip 60: \"native PSD editable text export\" missing."
+    },
+    {
+      "rank": 37,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "PSD round-trip that keeps structure editable",
+      "professionalImpact": "Groups, effects, adjustment layers, masks and smart objects should survive both directions.",
+      "evidenceProse": "Parity file-interop 61: \"native PSD Smart Object/editable text/adjustment/effect/mask/filter constructs remain flattened/partial.\""
+    },
+    {
+      "rank": 38,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "XCF import",
+      "professionalImpact": "GIMP files are recognised and then refused.",
+      "evidenceProse": "Parity xcf-interoperability 42: \"XCF import is explicitly detected but not decoded.\""
+    },
+    {
+      "rank": 39,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Nested groups with pass-through blending",
+      "professionalImpact": "Deep layer organisation is how large comic and composite files stay navigable.",
+      "evidenceProse": "Parity layer-groups 55: \"nested group UI, pass-through blending fidelity, live group masks… remain incomplete.\""
+    },
+    {
+      "rank": 40,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Transforming several layers as one",
+      "professionalImpact": "Select five layers, scale them together, keep relative positions.",
+      "evidenceProse": "Parity layer-stack 76: \"full multi-select linked-transform semantics remain incomplete.\""
+    },
+    {
+      "rank": 41,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "A magnetic lasso that actually snaps to edges",
+      "professionalImpact": "Cutting a figure out of a background is the single most common retouching task.",
+      "evidenceProse": "Parity lasso 57: \"true image-edge magnetic snapping and refinement workflows remain missing.\""
+    },
+    {
+      "rank": 42,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Select Subject that works offline and well",
+      "professionalImpact": "The lowest-scoring capability in the whole Image parity table.",
+      "evidenceProse": "Parity select-subject-object 31: the cloud route is blocked without a configured provider; the local fallback is luminance-based."
+    },
+    {
+      "rank": 43,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Puppet Warp and Perspective Warp",
+      "professionalImpact": "Repose a limb, straighten a building. There is no mesh interface at all.",
+      "evidenceProse": "Parity puppet-warp-advanced-warp 36: \"no mesh UI, on-canvas pin editor, true live triangulated Puppet Warp, Perspective Warp plane handles… exists yet.\""
+    },
+    {
+      "rank": 44,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Perspective crop",
+      "professionalImpact": "Straighten a photographed page or panel in one step.",
+      "evidenceProse": "Parity crop 66 names perspective crop as incomplete."
+    },
+    {
+      "rank": 45,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Content-aware fill of corners after straightening",
+      "professionalImpact": "Rotate to level and the corners come back transparent, needing manual repair every time.",
+      "evidenceProse": "Parity crop 66: \"true content-aware fill of transparent corners remain incomplete.\""
+    },
+    {
+      "rank": 46,
+      "workspace": "Image",
+      "severity": 2,
+      "title": "Content-aware fill with real controls",
+      "professionalImpact": "Editable sampling area, live patch source, output to a new layer.",
+      "evidenceProse": "Parity content-aware-fill-remove-patch 54: \"editable sampling-area preview, live manual patch-source controls, output-to-new-layer… remain missing.\""
+    },
+    {
+      "rank": 47,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Professional path editing",
+      "professionalImpact": "Curvature pen, smooth/corner anchor conversion, and separate Direct and Path Selection tools.",
+      "evidenceProse": "Parity pen-tool 49 and path-anchor-editing 51: \"curvature mode, anchor conversion… independent direct/path selection tools… remain missing.\""
+    },
+    {
+      "rank": 48,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Work paths and saved paths independent of layers",
+      "professionalImpact": "Reusable paths for selections, strokes and masks are a core vector workflow.",
+      "evidenceProse": "Parity paths-panel 64: \"true work paths, saved paths independent of layers… remain missing.\""
+    },
+    {
+      "rank": 49,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Smart filter masks",
+      "professionalImpact": "Paint where a non-destructive filter applies instead of committing it everywhere.",
+      "evidenceProse": "Parity layer-filters 60: \"smart-filter masks, richer filter families, and deeper preview/control parity remain incomplete.\""
+    },
+    {
+      "rank": 50,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "LUT and gradient-map adjustment layers",
+      "professionalImpact": "Look development and duotone work both start here. Video carries a LUT reference model; Image has none.",
+      "evidenceProse": "Parity adjustment-layers 71: \"native PSD/Camera Raw/LUT/gradient-map adjustment execution… remain incomplete.\""
+    },
+    {
+      "rank": 51,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Advanced blending and the missing adjustment staples",
+      "professionalImpact": "Blend If, Bevel & Emboss, channel mixer, selective colour, and layer comps — each a routine part of retouch and comic colour work.",
+      "evidenceProse": "The eight shipped adjustment kinds skip these; Bevel & Emboss is the one Photoshop layer effect not implemented."
+    },
+    {
+      "rank": 52,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "GPU live preview while adjusting",
+      "professionalImpact": "Dragging a curve on a large file should update immediately, not after the release.",
+      "evidenceProse": "Parity adjustment-layers 71 names GPU live preview and live preview visualization as incomplete."
+    },
+    {
+      "rank": 53,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "A histogram that updates as you work",
+      "professionalImpact": "A static histogram cannot guide an exposure or levels decision.",
+      "evidenceProse": "Parity histogram-panel 53: \"live preview wiring remains incomplete.\""
+    },
+    {
+      "rank": 54,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Live boolean operations on vector shapes",
+      "professionalImpact": "Combine, subtract and intersect shapes and still be able to change your mind.",
+      "evidenceProse": "Parity custom-vector-shapes 52: \"overlapping polygon/Bezier booleans, and retained live boolean operation stacks remain missing.\""
+    },
+    {
+      "rank": 55,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Custom shape libraries",
+      "professionalImpact": "Balloon tails, panel furniture, logo marks — saved once, reused everywhere.",
+      "evidenceProse": "Parity custom-vector-shapes 52: \"native custom-shape library instances, broader shape libraries… remain missing.\""
+    },
+    {
+      "rank": 56,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Background Eraser and Magic Eraser",
+      "professionalImpact": "The fast path for knocking out a flat background.",
+      "evidenceProse": "Parity eraser 52: \"Background Eraser and Magic Eraser mask/channel/QuickMask routes remain missing.\""
+    },
+    {
+      "rank": 57,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Mask refinement workspace and linked masks",
+      "professionalImpact": "Hair and fur edges need a refine pass; linked masks keep a mask travelling with its layer.",
+      "evidenceProse": "Parity layer-masks 71: \"refine workspace and true linked-mask workflows remain incomplete.\""
+    },
+    {
+      "rank": 58,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Spot channels and press-ready separations",
+      "professionalImpact": "Spot inks and separation proofs are what a comic or poster printer actually asks for.",
+      "evidenceProse": "Parity channels 63 and channels-panel-alpha 65: \"native spot plates, and press-ready separations remain missing.\""
+    },
+    {
+      "rank": 59,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Print output from Image artboards",
+      "professionalImpact": "Bleed, slices, printer marks, PDF/X and a packaged folder, without exporting through Paper.",
+      "evidenceProse": "Parity artboards-print-proof 48: \"bleed extension, slices, printer marks, PDF-X, packaged print folders, ICC conversion/embedding… remain unsupported.\""
+    },
+    {
+      "rank": 60,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Unattended batch actions over a folder",
+      "professionalImpact": "Record once, run on two hundred files overnight.",
+      "evidenceProse": "Parity actions-batch-processor 64: \"actual unattended native execution, import/export UI… real filesystem execution logs remain incomplete.\""
+    },
+    {
+      "rank": 61,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Camera Raw development",
+      "professionalImpact": "RAW files are detected and politely refused rather than developed.",
+      "evidenceProse": "Parity camera-raw 34: detection, policy descriptors and \"a clear unsupported import path\" only."
+    },
+    {
+      "rank": 62,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Photographic correction",
+      "professionalImpact": "Lens profile distortion, chromatic aberration, defringe, and denoise.",
+      "evidenceProse": "No lens-correction, chromatic-aberration, defringe or denoise filters found in the Image editor; the only denoise reference is a Flow node name."
+    },
+    {
+      "rank": 63,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "HDR merge, panorama stitch, focus stacking",
+      "professionalImpact": "The three standard multi-shot photographic compositing jobs.",
+      "evidenceProse": "No HDR-merge, panorama-stitch or focus-stack implementations found."
+    },
+    {
+      "rank": 64,
+      "workspace": "Image",
+      "severity": 3,
+      "title": "Frame animation and onion skinning",
+      "professionalImpact": "Animatics, motion comics, GIF work and any hand-drawn animation all need a frame timeline with onion skin.",
+      "evidenceProse": "No onion-skin handling found anywhere in the repository; Image has no animation timeline."
+    },
+    {
+      "rank": 65,
+      "workspace": "Suite",
+      "severity": 3,
+      "title": "A vector design discipline",
+      "professionalImpact": "Precise Béziers, shape builder, symbols, scalable effects and clean SVG/PDF round-trip — logo, cover and packaging work has nowhere to live.",
+      "evidenceProse": "Vector capability is split across Image's paths and shapes (parity 49–52 and 68) and Paper's frames; there is no vector design workspace."
+    },
+    {
+      "rank": 66,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "Table of contents, index and cross-references",
+      "professionalImpact": "Every book-length document needs generated navigation whose page numbers update themselves.",
+      "evidenceProse": "No table-of-contents, index-marker or cross-reference implementations found in Paper; every xref hit is PDF file structure."
+    },
+    {
+      "rank": 67,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "Footnotes and endnotes you can author",
+      "professionalImpact": "Footnotes exist only as an imported artefact, not as something you can create in Paper.",
+      "evidenceProse": "Only occurrence is the DOCX import model — src/lib/paperDocumentFormats.ts:83 footnoteRefs."
+    },
+    {
+      "rank": 68,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "Anchored objects that flow with text",
+      "professionalImpact": "Figures, sidebars and inline panels must move when the text reflows.",
+      "evidenceProse": "No anchored-object or inline-anchor handling found."
+    },
+    {
+      "rank": 69,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "GREP and nested styles",
+      "professionalImpact": "Automatic formatting by pattern — the feature that makes long-document typesetting survivable.",
+      "evidenceProse": "No GREP-style or nested-style implementation found."
+    },
+    {
+      "rank": 70,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "Text variables and conditional text",
+      "professionalImpact": "Running heads, chapter names, and one document producing several editions.",
+      "evidenceProse": "No text-variable or conditional-text handling found."
+    },
+    {
+      "rank": 71,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "Data merge",
+      "professionalImpact": "Catalogue pages, card decks, certificates, personalised print runs.",
+      "evidenceProse": "No data-merge or mail-merge implementation found."
+    },
+    {
+      "rank": 72,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "Book files across multiple documents",
+      "professionalImpact": "A graphic novel is chapters. They need synchronised styles and continuous page numbering across files.",
+      "evidenceProse": "No book-file or multi-document-book handling found."
+    },
+    {
+      "rank": 73,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "Object libraries and snippets",
+      "professionalImpact": "Save a balloon style, a credits block, a title treatment; reuse it in the next issue.",
+      "evidenceProse": "Style catalogues are per-document; no cross-document object library exists."
+    },
+    {
+      "rank": 74,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "Optical margin alignment",
+      "professionalImpact": "Hanging punctuation is the difference between typeset and word-processed.",
+      "evidenceProse": "Appears only as a hardcoded OpticalMarginAlignment=\"false\" in src/lib/paperIdmlExport.ts:274."
+    },
+    {
+      "rank": 75,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "Track changes and editorial redlining",
+      "professionalImpact": "Editors mark up; writers accept or reject. Without it the edit happens in another app.",
+      "evidenceProse": "Appears only as a hardcoded TrackChanges=\"false\" in src/lib/paperIdmlExport.ts:273."
+    },
+    {
+      "rank": 76,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "In-document review comments",
+      "professionalImpact": "Client and editor notes pinned to the page they refer to.",
+      "evidenceProse": "No Paper comment or annotation model found; Video's review annotations are separate and local-only."
+    },
+    {
+      "rank": 77,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "EPUB export",
+      "professionalImpact": "Reflowable ebook output is half of independent publishing revenue.",
+      "evidenceProse": "EPUB appears only as an import extension in src/lib/mediaFormatRegistry.ts:53; no export path exists."
+    },
+    {
+      "rank": 78,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "IDML import",
+      "professionalImpact": "Export to InDesign works; coming back from a collaborator does not.",
+      "evidenceProse": "docs/notes/861: IDML export is real and Scribus-verified; import remains an honest-error stub."
+    },
+    {
+      "rank": 79,
+      "workspace": "Paper",
+      "severity": 3,
+      "title": "Barcode and ISBN placement",
+      "professionalImpact": "Every printed book cover needs a correctly sized, quiet-zoned barcode.",
+      "evidenceProse": "No barcode or ISBN generation found."
+    },
+    {
+      "rank": 80,
+      "workspace": "Suite",
+      "severity": 4,
+      "title": "Real-time collaboration",
+      "professionalImpact": "Two people in one document, with presence and live cursors.",
+      "evidenceProse": "yjs, y-webrtc and peerjs sit unused in package.json; the shipped model is a single-active-editor LAN baton handoff."
+    },
+    {
+      "rank": 81,
+      "workspace": "Suite",
+      "severity": 4,
+      "title": "Cloud project sync",
+      "professionalImpact": "Start on the desktop, continue on the laptop, without carrying a file.",
+      "evidenceProse": "Cross-device continuity is LAN-paired; no cloud project store exists."
+    },
+    {
+      "rank": 82,
+      "workspace": "Video",
+      "severity": 4,
+      "title": "Team review with server authority",
+      "professionalImpact": "A share link, timecoded client comments, approvals that everyone can see.",
+      "evidenceProse": "docs/notes/999: review is \"local file exchange only\" and makes \"no cloud/team-authority claim.\""
+    },
+    {
+      "rank": 83,
+      "workspace": "Suite",
+      "severity": 4,
+      "title": "A plugin and extension SDK",
+      "professionalImpact": "Third-party effects, brush packs, node packs, custom panels — the thing that makes a tool an ecosystem.",
+      "evidenceProse": "No plugin host or extension API found; provider packs are the only extension point. TASK_LIST.md:18 defers sandboxed plug-ins past the qualified core."
+    },
+    {
+      "rank": 84,
+      "workspace": "Suite",
+      "severity": 4,
+      "title": "Scripting and headless automation",
+      "professionalImpact": "A studio wants to drive exports from a script or a build server, not by hand.",
+      "evidenceProse": "No public scripting API, user-script runtime, or headless CLI entry point found."
+    },
+    {
+      "rank": 85,
+      "workspace": "Suite",
+      "severity": 4,
+      "title": "A cross-project asset catalogue",
+      "professionalImpact": "Tags, ratings, EXIF/XMP, duplicate detection and search across every project, not one at a time.",
+      "evidenceProse": "Smart bins and media logging exist inside Video's Source Library only (docs/notes/999); no cross-project catalogue or metadata read/write exists."
+    },
+    {
+      "rank": 86,
+      "workspace": "Video",
+      "severity": 4,
+      "title": "AAF and broadcast wrappers",
+      "professionalImpact": "OTIO, FCP7 XML and CMX 3600 EDL all round-trip. AAF, MXF, IMF and DCP do not.",
+      "evidenceProse": "src/lib/videoProfessionalInterchange.ts:305 — importAaf() returns never, with the explicit reason that AAF is \"not implemented\". No MXF/IMF/DCP packaging exists."
+    },
+    {
+      "rank": 87,
+      "workspace": "Video",
+      "severity": 4,
+      "title": "Broadcast caption embedding",
+      "professionalImpact": "CEA-608/708 and SCC muxed into the file, not shipped beside it.",
+      "evidenceProse": "docs/notes/999: \"CEA-608/708, SCC, and embedded caption muxing remain explicitly unavailable.\""
+    },
+    {
+      "rank": 88,
+      "workspace": "Video",
+      "severity": 4,
+      "title": "Decoded-signal QC",
+      "professionalImpact": "Automatic detection of black frames, freezes, silence, flash hazards and gamut violations before delivery.",
+      "evidenceProse": "docs/notes/999: \"Black/freeze/silence/flash/true-peak/gamut analysis still needs native decoded-media analyzers.\""
+    },
+    {
+      "rank": 89,
+      "workspace": "Video",
+      "severity": 4,
+      "title": "External monitoring and control surfaces",
+      "professionalImpact": "An SDI, NDI or HDMI reference monitor, and a jog/shuttle or fader panel.",
+      "evidenceProse": "docs/notes/999: \"External SDI monitoring and control surfaces need device-specific native work.\""
+    },
+    {
+      "rank": 90,
+      "workspace": "Video",
+      "severity": 4,
+      "title": "Rotoscoping and tracking that run",
+      "professionalImpact": "Mask keyframes and tracking planners are modelled; no analysis engine solves them.",
+      "evidenceProse": "Tracking and stabilization exist as planners across ~10 modules with no solver; TASK_LIST.md:18 defers the VFX workspace."
+    },
+    {
+      "rank": 91,
+      "workspace": "Video",
+      "severity": 4,
+      "title": "Production-grade chroma key",
+      "professionalImpact": "Spill suppression, matte refinement, garbage masks and edge control — not just a preview.",
+      "evidenceProse": "Only src/lib/chromaKeyPreview.ts exists; no full keyer."
+    },
+    {
+      "rank": 92,
+      "workspace": "Video",
+      "severity": 4,
+      "title": "Audio repair and auto-ducking",
+      "professionalImpact": "De-noise, de-hum, de-ess, and music that steps back under dialogue.",
+      "evidenceProse": "No audio-repair or sidechain/ducking processing found in the audio pipeline."
+    },
+    {
+      "rank": 93,
+      "workspace": "Video",
+      "severity": 4,
+      "title": "Broader hardware encoding and alpha export",
+      "professionalImpact": "NVENC, QuickSync and VideoToolbox alongside VAAPI, plus a transparent-video preset.",
+      "evidenceProse": "Hardware encode ships VAAPI and CPU only; no alpha-capable export preset is shipped."
+    },
+    {
+      "rank": 94,
+      "workspace": "Flow",
+      "severity": 4,
+      "title": "Starter templates and a recipe gallery",
+      "professionalImpact": "An empty graph teaches nothing. Working examples are how a node tool gets adopted.",
+      "evidenceProse": "No cross-project flow template library; TASK_LIST.md:834 F10 keeps \"actionable empty states + starter templates\" open."
+    },
+    {
+      "rank": 95,
+      "workspace": "Flow",
+      "severity": 4,
+      "title": "Scheduled and triggered runs",
+      "professionalImpact": "A watch folder, a webhook, a nightly run — turning a graph into a service.",
+      "evidenceProse": "No webhook, HTTP-trigger or scheduled-run entry point exists for graphs; watch folders serve video ingest only."
+    },
+    {
+      "rank": 96,
+      "workspace": "Flow",
+      "severity": 4,
+      "title": "Resumable batch runs over a dataset",
+      "professionalImpact": "Point a graph at 500 rows, walk away, resume after a failure without starting over.",
+      "evidenceProse": "No run queue or resumable batch execution found."
+    },
+    {
+      "rank": 97,
+      "workspace": "Flow",
+      "severity": 4,
+      "title": "Shareable node packs",
+      "professionalImpact": "Publish a graph or a custom node so someone else can install it.",
+      "evidenceProse": "Flows live only inside .sloom projects; no packaging or import path for user-authored nodes exists."
+    },
+    {
+      "rank": 98,
+      "workspace": "Paper",
+      "severity": 4,
+      "title": "Tagged PDF and PDF/UA",
+      "professionalImpact": "Accessible reading order, alt text and language — increasingly a contract requirement for institutional publishing.",
+      "evidenceProse": "No tagged-PDF structure or PDF/UA validation in the Paper PDF pipeline."
+    },
+    {
+      "rank": 99,
+      "workspace": "Mobile",
+      "severity": 4,
+      "title": "An iPad and iOS build",
+      "professionalImpact": "The tablet market for drawing and layout apps is overwhelmingly iPad.",
+      "evidenceProse": "The mobile target is Android-only — capacitor.config.ts, android/, and the Play pipeline."
+    },
+    {
+      "rank": 100,
+      "workspace": "Mobile",
+      "severity": 4,
+      "title": "A usable phone Video timeline and Flow shell",
+      "professionalImpact": "On a phone the Video timeline crams to the point of hiding tracks, and Flow has no phone layout at all.",
+      "evidenceProse": "TASK_LIST.md:170 open — \"the Video mobile-shell timeline cramming (can't see a track)\"; Flow lacks a phone shell."
+    }
+  ]
+}
+

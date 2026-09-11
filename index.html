@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sloom Studio</title>
+    <style>
+      #app-boot-splash {
+        position: fixed;
+        inset: 0;
+        z-index: 2147483647;
+        display: grid;
+        place-items: center;
+        background: #020711;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 260ms ease, visibility 0s linear 260ms;
+      }
+
+      #app-boot-splash img {
+        width: min(100vw, 100vh);
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      html[data-app-ready="true"] #app-boot-splash {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app-boot-splash" aria-hidden="true">
+      <img src="/signal-loom-splash.png" alt="" />
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,497 @@
+{
+  "_comment": "Single source of truth for per-workspace application menus. Consumed by electron/menu.cjs (native, require) and src/lib/appMenuModel.ts (integrated, import). Item kinds: command {command,label,accelerator?}; separator {type:'separator'}; submenu {label,items}; role {role, nativeOnly:true}. Accelerators in neutral Ctrl+ form. See docs/superpowers/specs/2026-06-16-per-workspace-application-menus-design.md",
+  "flow": [
+    {
+      "id": "project",
+      "label": "Project", "labelJa": "プロジェクト",
+      "items": [
+        { "command": "file:new", "label": "New Project", "labelJa": "新規プロジェクト", "accelerator": "Ctrl+N" },
+        { "command": "file:open", "label": "Open...", "labelJa": "開く...", "accelerator": "Ctrl+O" },
+        { "command": "file:save", "label": "Save", "labelJa": "保存", "accelerator": "Ctrl+S" },
+        { "command": "file:save-as", "label": "Save As...", "labelJa": "名前を付けて保存...", "accelerator": "Ctrl+Shift+S" },
+        { "type": "separator" },
+        { "command": "file:import-media", "label": "Import Media...", "labelJa": "メディアを読み込み...", "accelerator": "Ctrl+I" },
+        { "command": "file:set-scratch-folder", "label": "Set Scratch Folder...", "labelJa": "スクラッチフォルダーを設定..." },
+        { "command": "settings:keyboard-shortcuts", "label": "Keyboard Shortcuts...", "labelJa": "キーボードショートカット..." },
+        { "command": "settings:gamepad-bindings", "label": "Gamepad Bindings...", "labelJa": "ゲームパッドの割り当て..." },
+        { "type": "separator" },
+        { "command": "file:export-project", "label": "Export .sloom Project...", "labelJa": ".sloom プロジェクトを書き出し..." },
+        { "command": "file:export-assets", "label": "Export Assets...", "labelJa": "アセットを書き出し..." },
+        { "type": "separator" },
+        { "role": "close", "nativeOnly": true },
+        { "role": "quit", "nativeOnly": true }
+      ]
+    },
+    {
+      "id": "flow",
+      "label": "Flow",
+      "items": [
+        { "command": "flow:add-source-bin", "label": "Add Source Bin Node", "labelJa": "ソースビンノードを追加" },
+        { "type": "separator" },
+        { "command": "file:export-assets", "label": "Export Flow Assets...", "labelJa": "Flow アセットを書き出し..." }
+      ]
+    },
+    { "id": "view", "label": "View", "labelJa": "表示", "items": "$viewBase" },
+    { "id": "window", "label": "Window", "labelJa": "ウィンドウ", "items": "$window" },
+    { "id": "help", "label": "Help", "labelJa": "ヘルプ", "items": "$help" }
+  ],
+  "editor": [
+    { "id": "project", "label": "Project", "labelJa": "プロジェクト", "items": "$project" },
+    {
+      "id": "edit",
+      "label": "Edit", "labelJa": "編集",
+      "items": [
+        { "command": "edit:undo", "label": "Undo", "labelJa": "元に戻す", "accelerator": "Ctrl+Z" },
+        { "command": "edit:redo", "label": "Redo", "labelJa": "やり直し", "accelerator": "Ctrl+Shift+Z" },
+        { "type": "separator" },
+        { "command": "edit:cut", "label": "Cut", "labelJa": "切り取り", "accelerator": "Ctrl+X" },
+        { "command": "edit:copy", "label": "Copy", "labelJa": "コピー", "accelerator": "Ctrl+C" },
+        { "command": "edit:paste", "label": "Paste", "labelJa": "貼り付け", "accelerator": "Ctrl+V" },
+        { "command": "edit:delete", "label": "Delete", "labelJa": "削除", "accelerator": "Del" }
+      ]
+    },
+    {
+      "id": "timeline",
+      "label": "Timeline", "labelJa": "タイムライン",
+      "items": [
+        { "command": "timeline:select", "label": "Select Tool", "labelJa": "選択ツール", "accelerator": "V" },
+        { "command": "timeline:cut", "label": "Cut Tool", "labelJa": "カットツール", "accelerator": "C" },
+        { "command": "timeline:marquee", "label": "Marquee Tool", "labelJa": "マーキーツール", "accelerator": "G" },
+        { "command": "timeline:ripple", "label": "Ripple Edit Tool", "labelJa": "リップル編集ツール", "accelerator": "B" },
+        { "command": "timeline:roll", "label": "Rolling Edit Tool", "labelJa": "ローリング編集ツール", "accelerator": "N" },
+        { "command": "timeline:slip", "label": "Slip Tool", "labelJa": "スリップツール", "accelerator": "S" },
+        { "command": "timeline:slide", "label": "Slide Tool", "labelJa": "スライドツール", "accelerator": "U" },
+        { "command": "timeline:rate-stretch", "label": "Rate Stretch Tool", "labelJa": "レートストレッチツール", "accelerator": "R" },
+        { "command": "timeline:hand", "label": "Hand Tool", "labelJa": "手のひらツール", "accelerator": "H" },
+        { "command": "timeline:snap", "label": "Snap Marker Tool", "labelJa": "スナップマーカーツール", "accelerator": "M" },
+        { "type": "separator" },
+        {
+          "label": "Playback", "labelJa": "再生",
+          "items": [
+            { "command": "timeline:play-pause", "label": "Play / Pause", "labelJa": "再生／一時停止", "accelerator": "Space" },
+            { "command": "timeline:shuttle-reverse", "label": "Shuttle Reverse", "labelJa": "逆方向シャトル", "accelerator": "J" },
+            { "command": "timeline:shuttle-stop", "label": "Stop Shuttle", "labelJa": "シャトル停止", "accelerator": "K" },
+            { "command": "timeline:shuttle-forward", "label": "Shuttle Forward", "labelJa": "順方向シャトル", "accelerator": "L" }
+          ]
+        },
+        {
+          "label": "Source / Record", "labelJa": "ソース／レコード",
+          "items": [
+            { "command": "timeline:mark-in", "label": "Mark In", "labelJa": "イン点を設定", "accelerator": "I" },
+            { "command": "timeline:mark-out", "label": "Mark Out", "labelJa": "アウト点を設定", "accelerator": "O" },
+            { "command": "timeline:insert", "label": "Insert Edit", "labelJa": "挿入編集", "accelerator": "," },
+            { "command": "timeline:overwrite", "label": "Overwrite Edit", "labelJa": "上書き編集", "accelerator": "." },
+            { "command": "timeline:lift", "label": "Lift", "labelJa": "リフト", "accelerator": ";" },
+            { "command": "timeline:extract", "label": "Extract", "labelJa": "抽出", "accelerator": "'" },
+            { "command": "timeline:add-edit", "label": "Add Edit", "labelJa": "編集点を追加", "accelerator": "Ctrl+Shift+K" }
+          ]
+        },
+        {
+          "label": "Navigation", "labelJa": "ナビゲーション",
+          "items": [
+            { "command": "timeline:previous-edit", "label": "Previous Edit", "labelJa": "前の編集点", "accelerator": "Up" },
+            { "command": "timeline:next-edit", "label": "Next Edit", "labelJa": "次の編集点", "accelerator": "Down" },
+            { "command": "timeline:add-marker", "label": "Add Marker", "labelJa": "マーカーを追加", "accelerator": "Ctrl+M" },
+            { "command": "timeline:zoom-selection", "label": "Zoom To Selection", "labelJa": "選択範囲にズーム", "accelerator": "\\" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keyframes",
+      "label": "Keyframes", "labelJa": "キーフレーム",
+      "items": [
+        { "command": "timeline:add-keyframe", "label": "Add or Update Keyframe", "labelJa": "キーフレームを追加／更新", "accelerator": "Shift+K" },
+        { "command": "timeline:previous-keyframe", "label": "Previous Keyframe", "labelJa": "前のキーフレーム", "accelerator": "[" },
+        { "command": "timeline:next-keyframe", "label": "Next Keyframe", "labelJa": "次のキーフレーム", "accelerator": "]" }
+      ]
+    },
+    { "id": "view", "label": "View", "labelJa": "表示", "items": "$viewBase" },
+    {
+      "id": "window",
+      "label": "Window", "labelJa": "ウィンドウ",
+      "items": [
+        { "command": "view:flow", "label": "Open/Focus Flow Window", "labelJa": "Flow ウィンドウを開く／前面へ", "accelerator": "Ctrl+1" },
+        { "command": "view:editor", "label": "Open/Focus Video Window", "labelJa": "Video ウィンドウを開く／前面へ", "accelerator": "Ctrl+2" },
+        { "command": "view:image", "label": "Open/Focus Image Window", "labelJa": "Image ウィンドウを開く／前面へ", "accelerator": "Ctrl+3" },
+        { "command": "view:paper", "label": "Open/Focus Paper Window", "labelJa": "Paper ウィンドウを開く／前面へ", "accelerator": "Ctrl+4" },
+        { "type": "separator" },
+        { "command": "view:command-palette", "label": "Command Palette...", "labelJa": "コマンドパレット...", "accelerator": "Ctrl+K" },
+        { "command": "view:activity-trail", "label": "Activity Trail...", "labelJa": "アクティビティ履歴..." },
+        { "type": "separator" },
+        {
+          "label": "Panels", "labelJa": "パネル",
+          "items": [
+            { "command": "editor:toggle-source-bin-panel", "label": "Project Source Bin", "labelJa": "プロジェクトソースビン" },
+            { "command": "editor:toggle-source-monitor-panel", "label": "Source Monitor", "labelJa": "ソースモニター" },
+            { "command": "editor:toggle-program-monitor-panel", "label": "Program Monitor", "labelJa": "プログラムモニター" },
+            { "command": "editor:toggle-inspector-panel", "label": "Inspector", "labelJa": "インスペクター" },
+            { "command": "editor:toggle-timeline-panel", "label": "Timeline", "labelJa": "タイムライン" },
+            { "command": "editor:toggle-sequence-settings-panel", "label": "Sequence Settings", "labelJa": "シーケンス設定" },
+            { "command": "editor:toggle-export-preset-panel", "label": "Export Presets", "labelJa": "書き出しプリセット" },
+            { "command": "editor:toggle-premiere-parity-panel", "label": "Professional Video Tools", "labelJa": "プロフェッショナル映像ツール" },
+            { "command": "editor:toggle-diagnostics-panel", "label": "Diagnostics", "labelJa": "診断" },
+            { "type": "separator" },
+            { "command": "editor:reset-panels", "label": "Reset Video Panels", "labelJa": "Video パネルをリセット" }
+          ]
+        }
+      ]
+    },
+    { "id": "help", "label": "Help", "labelJa": "ヘルプ", "items": "$help" }
+  ],
+  "image": [
+    { "id": "project", "label": "Project", "labelJa": "プロジェクト", "items": "$project" },
+    {
+      "id": "file",
+      "label": "File", "labelJa": "ファイル",
+      "items": [
+        { "command": "image:file-new", "label": "New...", "labelJa": "新規...", "accelerator": "Ctrl+N" },
+        { "command": "image:file-open", "label": "Open...", "labelJa": "開く...", "accelerator": "Ctrl+O" },
+        { "command": "image:file-save-as", "label": "Save As...", "labelJa": "名前を付けて保存...", "accelerator": "Ctrl+Shift+S" },
+        { "type": "separator" },
+        { "command": "image:file-export-v1-compatibility", "label": "Export .slimg v1 Compatibility Copy...", "labelJa": ".slimg v1 互換コピーを書き出し..." }
+      ]
+    },
+    {
+      "id": "edit",
+      "label": "Edit", "labelJa": "編集",
+      "items": [
+        { "command": "edit:undo", "label": "Undo", "labelJa": "元に戻す", "accelerator": "Ctrl+Z" },
+        { "command": "edit:redo", "label": "Redo", "labelJa": "やり直し", "accelerator": "Ctrl+Shift+Z" },
+        { "type": "separator" },
+        { "command": "edit:cut", "label": "Cut", "labelJa": "切り取り", "accelerator": "Ctrl+X" },
+        { "command": "edit:copy", "label": "Copy", "labelJa": "コピー", "accelerator": "Ctrl+C" },
+        { "command": "edit:paste", "label": "Paste", "labelJa": "貼り付け", "accelerator": "Ctrl+V" },
+        { "command": "edit:delete", "label": "Delete", "labelJa": "削除", "accelerator": "Del" }
+      ]
+    },
+    {
+      "id": "image",
+      "label": "Image", "labelJa": "画像",
+      "items": [
+        { "command": "image:tool-crop", "label": "Crop", "labelJa": "切り抜き", "accelerator": "C" },
+        { "type": "separator" },
+        {
+          "label": "Adjustments", "labelJa": "色調補正",
+          "items": [
+            { "command": "image:adjust-brightness-contrast", "label": "Brightness/Contrast...", "labelJa": "明るさ・コントラスト..." },
+            { "command": "image:adjust-levels", "label": "Levels...", "labelJa": "レベル補正...", "accelerator": "Ctrl+L" },
+            { "command": "image:adjust-curves", "label": "Curves...", "labelJa": "トーンカーブ...", "accelerator": "Ctrl+M" },
+            { "command": "image:adjust-hue-saturation", "label": "Hue/Saturation...", "labelJa": "色相・彩度...", "accelerator": "Ctrl+U" },
+            { "type": "separator" },
+            { "command": "image:adjust-exposure", "label": "Exposure...", "labelJa": "露光量..." },
+            { "command": "image:adjust-temperature-tint", "label": "Color Temperature...", "labelJa": "色温度..." },
+            { "command": "image:adjust-black-white", "label": "Black & White...", "labelJa": "白黒..." },
+            { "command": "image:adjust-invert", "label": "Invert", "labelJa": "階調の反転" }
+          ]
+        },
+        { "type": "separator" },
+        { "command": "image:export-visible", "label": "Download Image File...", "labelJa": "画像ファイルをダウンロード..." },
+        { "command": "image:export-psd", "label": "Download PSD...", "labelJa": "PSD をダウンロード..." }
+      ]
+    },
+    {
+      "id": "select",
+      "label": "Select", "labelJa": "選択",
+      "items": [
+        { "command": "edit:select-all", "label": "Select All", "labelJa": "すべて選択", "accelerator": "Ctrl+A" },
+        { "command": "edit:deselect", "label": "Deselect", "labelJa": "選択を解除", "accelerator": "Ctrl+D" },
+        { "command": "edit:invert-selection", "label": "Invert Selection", "labelJa": "選択範囲を反転", "accelerator": "Ctrl+Shift+I" }
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Tools", "labelJa": "ツール",
+      "items": [
+        {
+          "label": "Selection", "labelJa": "選択",
+          "items": [
+            { "command": "image:tool-hand", "label": "Hand Tool", "labelJa": "手のひらツール", "accelerator": "H" },
+            { "command": "image:tool-move", "label": "Move Tool", "labelJa": "移動ツール", "accelerator": "V" },
+            { "command": "image:tool-marquee", "label": "Marquee Tool", "labelJa": "選択範囲ツール", "accelerator": "M" },
+            { "command": "image:tool-lasso", "label": "Lasso Tool", "labelJa": "なげなわツール", "accelerator": "L" },
+            { "command": "image:tool-magic-wand", "label": "Magic Wand Tool", "labelJa": "自動選択ツール", "accelerator": "W" }
+          ]
+        },
+        {
+          "label": "Paint", "labelJa": "ペイント",
+          "items": [
+            { "command": "image:tool-brush", "label": "Brush Tool", "labelJa": "ブラシツール", "accelerator": "B" },
+            { "command": "image:tool-pen", "label": "Pen Tool", "labelJa": "ペンツール", "accelerator": "Shift+B" },
+            { "command": "image:tool-eraser", "label": "Eraser Tool", "labelJa": "消しゴムツール", "accelerator": "E" },
+            { "command": "image:tool-background-eraser", "label": "Background Eraser Tool", "labelJa": "背景消しゴムツール", "accelerator": "Alt+E" },
+            { "command": "image:tool-magic-eraser", "label": "Magic Eraser Tool", "labelJa": "マジック消しゴムツール", "accelerator": "Shift+E" },
+            { "command": "image:tool-paint-bucket", "label": "Paint Bucket Tool", "labelJa": "塗りつぶしツール", "accelerator": "G" },
+            { "command": "image:tool-gradient", "label": "Gradient Tool", "labelJa": "グラデーションツール", "accelerator": "Shift+G" }
+          ]
+        },
+        {
+          "label": "Retouch", "labelJa": "レタッチ",
+          "items": [
+            { "command": "image:tool-clone-stamp", "label": "Clone Stamp Tool", "labelJa": "コピースタンプツール", "accelerator": "S" },
+            { "command": "image:tool-spot-heal", "label": "Spot Heal Tool", "labelJa": "スポット修復ツール", "accelerator": "J" },
+            { "command": "image:tool-blur-brush", "label": "Blur Brush", "labelJa": "ぼかしブラシ", "accelerator": "R" },
+            { "command": "image:tool-sharpen-brush", "label": "Sharpen Brush", "labelJa": "シャープブラシ", "accelerator": "Shift+R" },
+            { "command": "image:tool-smudge-brush", "label": "Smudge Brush", "labelJa": "指先ブラシ", "accelerator": "U" },
+            { "command": "image:tool-dodge-brush", "label": "Dodge Brush", "labelJa": "覆い焼きブラシ", "accelerator": "O" },
+            { "command": "image:tool-burn-brush", "label": "Burn Brush", "labelJa": "焼き込みブラシ", "accelerator": "Shift+O" },
+            { "command": "image:tool-sponge-saturate", "label": "Sponge Saturate Brush", "labelJa": "スポンジ（彩度上げ）ブラシ", "accelerator": "P" },
+            { "command": "image:tool-sponge-desaturate", "label": "Sponge Desaturate Brush", "labelJa": "スポンジ（彩度下げ）ブラシ", "accelerator": "Shift+P" }
+          ]
+        },
+        {
+          "label": "Shape & Type", "labelJa": "シェイプと文字",
+          "items": [
+            { "command": "image:tool-rectangle-shape", "label": "Rectangle Shape Tool", "labelJa": "長方形シェイプツール", "accelerator": "X" },
+            { "command": "image:tool-ellipse-shape", "label": "Ellipse Shape Tool", "labelJa": "楕円形シェイプツール", "accelerator": "Shift+X" },
+            { "command": "image:tool-text", "label": "Text Tool", "labelJa": "文字ツール", "accelerator": "T" },
+            { "command": "image:tool-eyedropper", "label": "Eyedropper Tool", "labelJa": "スポイトツール", "accelerator": "I" }
+          ]
+        }
+      ]
+    },
+    { "id": "view", "label": "View", "labelJa": "表示", "items": "$viewBase" },
+    {
+      "id": "window",
+      "label": "Window", "labelJa": "ウィンドウ",
+      "items": [
+        { "command": "view:flow", "label": "Open/Focus Flow Window", "labelJa": "Flow ウィンドウを開く／前面へ", "accelerator": "Ctrl+1" },
+        { "command": "view:editor", "label": "Open/Focus Video Window", "labelJa": "Video ウィンドウを開く／前面へ", "accelerator": "Ctrl+2" },
+        { "command": "view:image", "label": "Open/Focus Image Window", "labelJa": "Image ウィンドウを開く／前面へ", "accelerator": "Ctrl+3" },
+        { "command": "view:paper", "label": "Open/Focus Paper Window", "labelJa": "Paper ウィンドウを開く／前面へ", "accelerator": "Ctrl+4" },
+        { "type": "separator" },
+        { "command": "view:command-palette", "label": "Command Palette...", "labelJa": "コマンドパレット...", "accelerator": "Ctrl+K" },
+        { "command": "view:activity-trail", "label": "Activity Trail...", "labelJa": "アクティビティ履歴..." },
+        { "type": "separator" },
+        {
+          "label": "Panels", "labelJa": "パネル",
+          "items": [
+            { "command": "image:toggle-tools-panel", "label": "Tools", "labelJa": "ツール" },
+            { "command": "image:toggle-brushes-panel", "label": "Brushes", "labelJa": "ブラシ" },
+            { "command": "image:toggle-layers-panel", "label": "Layers", "labelJa": "レイヤー" },
+            { "command": "image:toggle-channels-panel", "label": "Channels", "labelJa": "チャンネル" },
+            { "command": "image:toggle-paths-panel", "label": "Paths", "labelJa": "パス" },
+            { "command": "image:toggle-properties-panel", "label": "Properties", "labelJa": "プロパティ" },
+            { "command": "image:toggle-history-panel", "label": "History", "labelJa": "ヒストリー" },
+            { "command": "image:toggle-assets-panel", "label": "Assets", "labelJa": "アセット" },
+            { "type": "separator" },
+            { "command": "image:reset-panels", "label": "Reset Image Panels", "labelJa": "Image パネルをリセット" }
+          ]
+        }
+      ]
+    },
+    { "id": "help", "label": "Help", "labelJa": "ヘルプ", "items": "$help" }
+  ],
+  "paper": [
+    {
+      "id": "project",
+      "label": "Project", "labelJa": "プロジェクト",
+      "items": [
+        { "command": "file:new", "label": "New Project", "labelJa": "新規プロジェクト", "accelerator": "Ctrl+N" },
+        { "command": "file:open", "label": "Open...", "labelJa": "開く...", "accelerator": "Ctrl+O" },
+        { "command": "file:save", "label": "Save", "labelJa": "保存", "accelerator": "Ctrl+S" },
+        { "command": "file:save-as", "label": "Save As...", "labelJa": "名前を付けて保存...", "accelerator": "Ctrl+Shift+S" },
+        { "type": "separator" },
+        { "command": "file:import-media", "label": "Import Media...", "labelJa": "メディアを読み込み...", "accelerator": "Ctrl+I" },
+        { "command": "file:set-scratch-folder", "label": "Set Scratch Folder...", "labelJa": "スクラッチフォルダーを設定..." },
+        { "command": "settings:keyboard-shortcuts", "label": "Keyboard Shortcuts...", "labelJa": "キーボードショートカット..." },
+        { "command": "settings:gamepad-bindings", "label": "Gamepad Bindings...", "labelJa": "ゲームパッドの割り当て..." },
+        { "type": "separator" },
+        {
+          "label": "Export", "labelJa": "書き出し",
+          "items": [
+            { "command": "paper:export-pdf", "label": "Export Print PDF...", "labelJa": "印刷用 PDF を書き出し...", "accelerator": "Ctrl+P" },
+            { "command": "paper:export-epub", "label": "Export EPUB...", "labelJa": "EPUB を書き出し..." },
+            { "command": "paper:export-reader-spreads-pdf", "label": "Export Reader Spreads PDF...", "labelJa": "見開き PDF を書き出し..." },
+            { "command": "paper:export-booklet-proof-pdf", "label": "Export Booklet Proof PDF...", "labelJa": "中綴じ校正 PDF を書き出し..." },
+            { "command": "paper:export-kdp-assets", "label": "Export KDP Assets...", "labelJa": "KDP アセットを書き出し..." },
+            { "command": "paper:export-webcomic-images", "label": "Export Webcomic Page Images...", "labelJa": "Web コミック用ページ画像を書き出し..." },
+            { "command": "paper:export-cbz", "label": "Export CBZ...", "labelJa": "CBZ を書き出し..." },
+            { "command": "paper:export-idml", "label": "Export IDML...", "labelJa": "IDML を書き出し..." },
+            { "type": "separator" },
+            { "command": "paper:export-html", "label": "Export Print HTML...", "labelJa": "印刷用 HTML を書き出し..." },
+            { "command": "paper:export-reader-spreads-html", "label": "Export Reader Spreads HTML...", "labelJa": "見開き HTML を書き出し..." },
+            { "command": "paper:export-booklet-proof-html", "label": "Export Booklet Proof HTML...", "labelJa": "中綴じ校正 HTML を書き出し..." },
+            { "type": "separator" },
+            {
+              "label": "Stories", "labelJa": "ストーリー",
+              "items": [
+                { "command": "paper:export-stories-txt", "label": "Export Stories TXT...", "labelJa": "ストーリーを TXT で書き出し..." },
+                { "command": "paper:export-stories-html", "label": "Export Stories HTML...", "labelJa": "ストーリーを HTML で書き出し..." },
+                { "command": "paper:export-stories-rtf", "label": "Export Stories RTF...", "labelJa": "ストーリーを RTF で書き出し..." },
+                { "command": "paper:export-stories-docx", "label": "Export Stories DOCX...", "labelJa": "ストーリーを DOCX で書き出し..." }
+              ]
+            },
+            { "type": "separator" },
+            { "command": "paper:package-print", "label": "Package for Print...", "labelJa": "印刷入稿用にパッケージ..." },
+            { "command": "paper:export-json", "label": "Export Paper JSON...", "labelJa": "Paper JSON を書き出し..." },
+            { "command": "paper:import-json", "label": "Import Paper JSON...", "labelJa": "Paper JSON を読み込み..." }
+          ]
+        },
+        { "command": "file:export-project", "label": "Export .sloom Project...", "labelJa": ".sloom プロジェクトを書き出し..." },
+        { "command": "file:export-assets", "label": "Export Assets...", "labelJa": "アセットを書き出し..." },
+        { "type": "separator" },
+        { "role": "close", "nativeOnly": true },
+        { "role": "quit", "nativeOnly": true }
+      ]
+    },
+    {
+      "id": "file",
+      "label": "File", "labelJa": "ファイル",
+      "items": [
+        { "command": "paper:file-open", "label": "Open...", "labelJa": "開く...", "accelerator": "Ctrl+O" },
+        { "command": "paper:file-save", "label": "Save", "labelJa": "保存", "accelerator": "Ctrl+S" },
+        { "command": "paper:file-save-as", "label": "Save As...", "labelJa": "名前を付けて保存...", "accelerator": "Ctrl+Shift+S" }
+      ]
+    },
+    {
+      "id": "edit",
+      "label": "Edit", "labelJa": "編集",
+      "items": [
+        { "command": "edit:undo", "label": "Undo", "labelJa": "元に戻す", "accelerator": "Ctrl+Z" },
+        { "command": "edit:redo", "label": "Redo", "labelJa": "やり直し", "accelerator": "Ctrl+Shift+Z" },
+        { "type": "separator" },
+        { "command": "edit:cut", "label": "Cut", "labelJa": "切り取り", "accelerator": "Ctrl+X" },
+        { "command": "edit:copy", "label": "Copy", "labelJa": "コピー", "accelerator": "Ctrl+C" },
+        { "command": "edit:paste", "label": "Paste", "labelJa": "貼り付け", "accelerator": "Ctrl+V" },
+        { "command": "edit:delete", "label": "Delete", "labelJa": "削除", "accelerator": "Del" },
+        { "type": "separator" },
+        { "command": "edit:select-all", "label": "Select All", "labelJa": "すべて選択", "accelerator": "Ctrl+A" },
+        { "command": "edit:deselect", "label": "Deselect", "labelJa": "選択を解除", "accelerator": "Ctrl+D" },
+        { "command": "edit:invert-selection", "label": "Invert Selection", "labelJa": "選択範囲を反転", "accelerator": "Ctrl+Shift+I" }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "Layout", "labelJa": "レイアウト",
+      "items": [
+        { "command": "paper:new-document", "label": "New Paper Document", "labelJa": "新規 Paper ドキュメント", "accelerator": "Ctrl+Alt+N" },
+        { "command": "paper:add-page", "label": "Add Page", "labelJa": "ページを追加", "accelerator": "Ctrl+Alt+P" },
+        { "type": "separator" },
+        { "command": "paper:toggle-spreads", "label": "Toggle Spreads", "labelJa": "見開き表示の切り替え" },
+        { "command": "paper:toggle-start-on-right", "label": "Toggle Start on Right", "labelJa": "右起点の切り替え" }
+      ]
+    },
+    {
+      "id": "insert",
+      "label": "Insert", "labelJa": "挿入",
+      "items": [
+        { "command": "paper:add-text-frame", "label": "Add Text Frame", "labelJa": "テキストフレームを追加" },
+        { "command": "paper:add-image-frame", "label": "Add Image Frame", "labelJa": "画像フレームを追加" },
+        { "type": "separator" },
+        { "command": "paper:add-speech-bubble", "label": "Add Speech Bubble", "labelJa": "吹き出しを追加" },
+        { "command": "paper:add-thought-bubble", "label": "Add Thought Bubble", "labelJa": "思考の吹き出しを追加" },
+        { "command": "paper:add-caption", "label": "Add Caption", "labelJa": "キャプションを追加" }
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Tools", "labelJa": "ツール",
+      "items": [
+        { "command": "paper:tool-select", "label": "Select Tool", "labelJa": "選択ツール", "accelerator": "V" },
+        { "command": "paper:tool-hand", "label": "Hand Tool", "labelJa": "手のひらツール", "accelerator": "H" },
+        { "command": "paper:tool-text", "label": "Text Tool", "labelJa": "文字ツール", "accelerator": "T" },
+        { "command": "paper:tool-image", "label": "Image Tool", "labelJa": "画像ツール", "accelerator": "Shift+I" },
+        { "command": "paper:tool-eyedropper", "label": "Eyedropper Tool", "labelJa": "スポイトツール", "accelerator": "I" }
+      ]
+    },
+    {
+      "id": "view",
+      "label": "View", "labelJa": "表示",
+      "items": [
+        { "command": "paper:toggle-rulers", "label": "Toggle Rulers", "labelJa": "定規の切り替え" },
+        { "command": "paper:toggle-guides", "label": "Toggle Guides", "labelJa": "ガイドの切り替え" },
+        { "command": "paper:toggle-grid", "label": "Toggle Grid", "labelJa": "グリッドの切り替え" },
+        { "type": "separator" },
+        { "command": "paper:toggle-snap-to-guides", "label": "Toggle Snap to Guides", "labelJa": "ガイドにスナップの切り替え" },
+        { "command": "paper:toggle-snap-to-grid", "label": "Toggle Snap to Grid", "labelJa": "グリッドにスナップの切り替え" },
+        { "type": "separator" },
+        {
+          "label": "Panels", "labelJa": "パネル",
+          "items": [
+            { "command": "paper:toggle-tools-panel", "label": "Toggle Paper Tools Panel", "labelJa": "Paper ツールパネルの切り替え" },
+            { "command": "paper:toggle-document-strip-panel", "label": "Document / Export Bar (Pinned)", "labelJa": "ドキュメント／書き出しバー（固定）" },
+            { "command": "paper:toggle-inspector-panel", "label": "Toggle Inspector Panel", "labelJa": "インスペクターパネルの切り替え" },
+            { "command": "paper:toggle-preflight-panel", "label": "Toggle Preflight Panel", "labelJa": "プリフライトパネルの切り替え" },
+            { "command": "paper:toggle-linked-assets-panel", "label": "Toggle Linked Assets Panel", "labelJa": "リンクアセットパネルの切り替え" },
+            { "command": "paper:toggle-dtp-parity-panel", "label": "Toggle Print Production Panel", "labelJa": "印刷制作パネルの切り替え" },
+            { "command": "paper:reset-panels", "label": "Reset Paper Panels", "labelJa": "Paper パネルをリセット" }
+          ]
+        },
+        { "type": "separator" },
+        { "command": "view:toggle-interface", "label": "Toggle Interface", "labelJa": "インターフェースの切り替え", "accelerator": "Tab" },
+        { "command": "view:toggle-source-bin", "label": "Toggle Source Bin", "labelJa": "ソースビンの切り替え" },
+        { "command": "view:toggle-inspector", "label": "Toggle Inspector", "labelJa": "インスペクターの切り替え" },
+        { "type": "separator" },
+        {
+          "label": "Workspace Layout Defaults", "labelJa": "ワークスペースレイアウト初期設定",
+          "items": [
+            { "command": "view:layout-reset", "label": "Reset Current Workspace Panels", "labelJa": "現在のワークスペースパネルをリセット" },
+            { "command": "view:layout-balanced", "label": "Balanced Default", "labelJa": "バランス配置（既定）" },
+            { "command": "view:layout-focus", "label": "Focus Canvas", "labelJa": "キャンバスに集中" },
+            { "command": "view:layout-all-panels", "label": "Show All Panels", "labelJa": "すべてのパネルを表示" }
+          ]
+        },
+        { "type": "separator" },
+        { "role": "togglefullscreen", "nativeOnly": true },
+        { "role": "reload", "nativeOnly": true }
+      ]
+    },
+    { "id": "window", "label": "Window", "labelJa": "ウィンドウ", "items": "$window" },
+    { "id": "help", "label": "Help", "labelJa": "ヘルプ", "items": "$help" }
+  ],
+  "$shared": {
+    "project": [
+      { "command": "file:new", "label": "New Project", "labelJa": "新規プロジェクト", "accelerator": "Ctrl+N" },
+      { "command": "file:open", "label": "Open...", "labelJa": "開く...", "accelerator": "Ctrl+O" },
+      { "command": "file:save", "label": "Save", "labelJa": "保存", "accelerator": "Ctrl+S" },
+      { "command": "file:save-as", "label": "Save As...", "labelJa": "名前を付けて保存...", "accelerator": "Ctrl+Shift+S" },
+      { "type": "separator" },
+      { "command": "file:import-media", "label": "Import Media...", "labelJa": "メディアを読み込み...", "accelerator": "Ctrl+I" },
+      { "command": "file:set-scratch-folder", "label": "Set Scratch Folder...", "labelJa": "スクラッチフォルダーを設定..." },
+      { "command": "settings:keyboard-shortcuts", "label": "Keyboard Shortcuts...", "labelJa": "キーボードショートカット..." },
+      { "command": "settings:gamepad-bindings", "label": "Gamepad Bindings...", "labelJa": "ゲームパッドの割り当て..." },
+      { "type": "separator" },
+      { "command": "file:export-project", "label": "Export .sloom Project...", "labelJa": ".sloom プロジェクトを書き出し..." },
+      { "command": "file:export-assets", "label": "Export Assets...", "labelJa": "アセットを書き出し..." },
+      { "type": "separator" },
+      { "role": "close", "nativeOnly": true },
+      { "role": "quit", "nativeOnly": true }
+    ],
+    "window": [
+      { "command": "view:flow", "label": "Open/Focus Flow Window", "labelJa": "Flow ウィンドウを開く／前面へ", "accelerator": "Ctrl+1" },
+      { "command": "view:editor", "label": "Open/Focus Video Window", "labelJa": "Video ウィンドウを開く／前面へ", "accelerator": "Ctrl+2" },
+      { "command": "view:image", "label": "Open/Focus Image Window", "labelJa": "Image ウィンドウを開く／前面へ", "accelerator": "Ctrl+3" },
+      { "command": "view:paper", "label": "Open/Focus Paper Window", "labelJa": "Paper ウィンドウを開く／前面へ", "accelerator": "Ctrl+4" },
+      { "type": "separator" },
+      { "command": "view:command-palette", "label": "Command Palette...", "labelJa": "コマンドパレット...", "accelerator": "Ctrl+K" },
+      { "command": "view:activity-trail", "label": "Activity Trail...", "labelJa": "アクティビティ履歴..." }
+    ],
+    "viewBase": [
+      { "command": "view:toggle-interface", "label": "Toggle Interface", "labelJa": "インターフェースの切り替え", "accelerator": "Tab" },
+      { "command": "view:toggle-source-bin", "label": "Toggle Source Bin", "labelJa": "ソースビンの切り替え" },
+      { "command": "view:toggle-inspector", "label": "Toggle Inspector", "labelJa": "インスペクターの切り替え" },
+      { "type": "separator" },
+      {
+        "label": "Workspace Layout Defaults", "labelJa": "ワークスペースレイアウト初期設定",
+        "items": [
+          { "command": "view:layout-reset", "label": "Reset Current Workspace Panels", "labelJa": "現在のワークスペースパネルをリセット" },
+          { "command": "view:layout-balanced", "label": "Balanced Default", "labelJa": "バランス配置（既定）" },
+          { "command": "view:layout-focus", "label": "Focus Canvas", "labelJa": "キャンバスに集中" },
+          { "command": "view:layout-all-panels", "label": "Show All Panels", "labelJa": "すべてのパネルを表示" }
+        ]
+      },
+      { "type": "separator" },
+      { "role": "togglefullscreen", "nativeOnly": true },
+      { "role": "reload", "nativeOnly": true }
+    ],
+    "help": [
+      { "command": "help:project-documentation", "label": "Project Documentation", "labelJa": "プロジェクトのドキュメント" },
+      { "command": "help:tutorial", "label": "Tutorial", "labelJa": "チュートリアル" },
+      { "command": "help:feature-help", "label": "Feature Help", "labelJa": "機能ヘルプ" },
+      { "type": "separator" },
+      { "command": "help:keyboard-shortcuts", "label": "Keyboard Shortcuts", "labelJa": "キーボードショートカット", "accelerator": "F1" },
+      { "command": "help:about", "label": "About Signal Loom", "labelJa": "Signal Loom について" }
+    ]
+  }
+}

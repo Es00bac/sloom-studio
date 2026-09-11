@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "legacy-text",
+      "type": "textNode",
+      "position": { "x": 0, "y": 0 },
+      "data": { "mode": "prompt", "prompt": "four" }
+    },
+    {
+      "id": "legacy-math",
+      "type": "mathNode",
+      "position": { "x": 320, "y": 0 },
+      "data": { "mathOperation": "add" }
+    }
+  ],
+  "edges": [
+    {
+      "id": "legacy-text-to-number",
+      "source": "legacy-text",
+      "target": "legacy-math",
+      "sourceHandle": null,
+      "targetHandle": "A"
+    }
+  ]
+}
