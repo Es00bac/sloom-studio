@@ -13,7 +13,7 @@
 <header class="site"><div class="wrap">
   <a class="brand" href="/"><img src="/assets/sloom-studio.svg" alt="">Sloom Studio</a>
   <nav class="primary" aria-label="Site">
-    <a href="/">Overview</a><a href="/download/">Download</a><a href="/docs/">User guide</a><a href="/develop/" aria-current="page">Developers</a><a href="/contribute/">Contribute</a><a href="/license/">Licence</a><a href="/hane/">Hane for Android</a>
+    <a href="/">Overview</a><a href="/download/">Download</a><a href="/docs/">User guide</a><a href="/develop/" aria-current="page">Developers</a><a href="/contribute/">Contribute</a><a href="/donate/">Support</a><a href="/license/">Licence</a><a href="/hane/">Hane for Android</a>
   </nav>
 </div></header>
 
@@ -74,7 +74,7 @@ npm run dist:linux     # AppImage and deb into release/</code></pre>
   <p>Electron with a sandboxed renderer and a small preload bridge. On Linux the app runs on native Wayland; because Chromium cannot register a menu with KWin there, the main process exports the menu bar as a <code>com.canonical.dbusmenu</code> object on the session bus, and the forked Plasma applet in <code>desktop/kde/sloom-globalmenu</code> picks it up. That fork changes about 25 lines of KDE's stock applet.</p>
 
   <h2 id="engine">The engine seam</h2>
-  <p>Sloom Studio's Image workspace has a built-in brush engine, the Studio engine, which is GPL like everything else here. A second, physical-media engine called Tiltmark powers <a href="/hane/">Hane</a> on Android and is proprietary; it is not in this repository. What remains is a seam: <code>src/components/ImageEditor/tiltmark/</code> holds the document-format code that lets files with physical-media layers open read-only, plus no-op stubs that report the engine as absent. If you are looking for the interesting brush code, start at <code>ImageBrushEngine.ts</code> and <code>tools/brushTool.ts</code>.</p>
+  <p>Sloom Studio's Image workspace has a built-in brush engine, the Studio engine, which is GPL like everything else here. A second, physical-media engine called Tiltmark powers <a href="/hane/">Hane</a> on Android and is proprietary; it is not in this repository. What remains is a seam: <code>src/components/ImageEditor/tiltmark/</code> holds the document-format code that lets files with physical-media layers open read-only, plus no-op stubs that report the engine as absent. If you are looking for the interesting brush code, start at <code>ImageBrushEngine.ts</code> and <code>tools/brushTool.ts</code>. A commercial Tiltmark plugin that attaches at this seam is planned; contributions that keep the seam stable and testable are welcome, contributions that reimplement the engine are not the goal of this repository.</p>
 
   <h2 id="packaging">Packaging</h2>
   <p><code>scripts/package-linux-release.sh</code> builds the web bundle, stages fonts, runs electron-builder for AppImage and deb (and rpm when <code>rpmbuild</code> exists), then produces the <code>/opt</code> tarball and the applet tarballs with checksums. The Gentoo ebuilds and Arch PKGBUILDs consume those exact artifacts.</p>

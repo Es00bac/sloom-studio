@@ -118,3 +118,4 @@ marketing/sim-videos/
 
 # Local isolated branches created by coding agents
 /.worktrees/
+/release-next/

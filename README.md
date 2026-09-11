@@ -219,6 +219,14 @@ do not commit the real environment file.
 - Complete maturity reference: `docs/userguide/16-feature-maturity-reference.md`
 - Technical orientation: `docs/PROJECT_DOCUMENTATION.md`
 
+## Support the project
+
+Sloom Studio is free software written by one person. It is funded by [Hane](https://sloom.studio/hane/),
+our Android painting app (USD 9.99 one-time for Full), and by donations at
+[sloom.studio/donate](https://sloom.studio/donate/). Hane's physical-media brush engine, Tiltmark, is
+proprietary; a paid Tiltmark plugin for Sloom Studio's Image workspace is planned as a separate,
+closed-source add-on. Sloom Studio does not depend on it and never will.
+
 ## License
 
 Sloom Studio is free software: you can redistribute it and/or modify it under the terms of the
