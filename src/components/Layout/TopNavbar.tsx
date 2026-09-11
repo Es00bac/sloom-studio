@@ -45,10 +45,10 @@ import { useI18n } from '../../lib/useI18n';
 import type { MessageKey } from '../../lib/i18n';
 import { WorkspaceLayoutControl } from './WorkspaceLayoutControl';
 
-const flowIcon = new URL('../../assets/icon-flow.png', import.meta.url).href;
-const editorIcon = new URL('../../assets/icon-editor.png', import.meta.url).href;
-const imageIcon = new URL('../../assets/icon-image.png', import.meta.url).href;
-const paperIcon = new URL('../../assets/icon-paper.png', import.meta.url).href;
+const flowIcon = new URL('../../assets/icon-flow.svg', import.meta.url).href;
+const editorIcon = new URL('../../assets/icon-editor.svg', import.meta.url).href;
+const imageIcon = new URL('../../assets/icon-image.svg', import.meta.url).href;
+const paperIcon = new URL('../../assets/icon-paper.svg', import.meta.url).href;
 
 const WORKSPACE_TABS = [
   {

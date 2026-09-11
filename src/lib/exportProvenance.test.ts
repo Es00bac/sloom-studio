@@ -77,9 +77,9 @@ function readPngChunks(png: Uint8Array): Array<{ type: string; offset: number; d
 }
 
 describe('export provenance metadata', () => {
-  it('labels Community vs licensed builds', () => {
-    expect(buildProvenanceLabel({ licensed: false })).toMatch(/Community \(unlicensed\)$/);
-    expect(buildProvenanceLabel({ licensed: true, email: 'buyer@x.com' })).toMatch(/\(licensed to buyer@x\.com\)$/);
+  it('labels every build as free software', () => {
+    expect(buildProvenanceLabel({ licensed: false })).toMatch(/\(free software, GPL-3\.0-or-later\)$/);
+    expect(buildProvenanceLabel({ licensed: true, email: 'buyer@x.com' })).toMatch(/\(free software, GPL-3\.0-or-later\)$/);
   });
 
   it('inserts a CRC-valid tEXt Software chunk after IHDR without touching pixel data', () => {
@@ -93,7 +93,7 @@ describe('export provenance metadata', () => {
     const textChunk = chunks[1];
     const decoded = new TextDecoder('latin1').decode(textChunk.data);
     expect(decoded.startsWith('Software\0')).toBe(true);
-    expect(decoded).toContain('Community (unlicensed)');
+    expect(decoded).toContain('free software, GPL-3.0-or-later');
 
     // inserted chunk carries a correct CRC (decoders reject bad CRCs)
     const view = new DataView(stamped.buffer, stamped.byteOffset + textChunk.offset);
@@ -119,7 +119,7 @@ describe('export provenance metadata', () => {
     expect(stamped[21]).toBe(0xe1);
     const decoded = new TextDecoder('latin1').decode(stamped);
     expect(decoded).toContain('http://ns.adobe.com/xap/1.0/');
-    expect(decoded).toContain('licensed to pro@x.com');
+    expect(decoded).toContain('free software, GPL-3.0-or-later');
     // trailing bytes (DQT + EOI) intact
     expect([...stamped.subarray(stamped.length - 8)]).toEqual([...jpeg.subarray(jpeg.length - 8)]);
   });

@@ -5139,8 +5139,7 @@ function installIpcHandlers() {
     const win = getIpcWindow(event);
     const packageVersion = app.getVersion();
     const version = formatInternalBuildVersion(packageVersion);
-    // Edition line comes from the renderer's offline license verification
-    // ("Community edition" / "Licensed to <email>"); sanitized, never trusted for gating.
+    // Edition line is supplied by the renderer; sanitized.
     const edition = typeof options?.edition === 'string' && options.edition.trim()
       ? options.edition.trim().slice(0, 120)
       : 'Free software, GPL-3.0-or-later';

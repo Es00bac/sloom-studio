@@ -1,20 +1,16 @@
 /**
  * Invisible provenance metadata for exports (licensing spec Part 2 §6). Never touches pixels —
  * artists' shared work is the marketing engine. Honest-actor compliance + an enforcement paper
- * trail: every export records the app edition; licensed exports record the licensee.
+ * trail: every export records the application and its licence.
  *
  * PNG: a `tEXt` chunk (keyword "Software") inserted right after IHDR.
  * JPEG: an APP1 XMP segment inserted after SOI (and after JFIF's APP0 when present).
  */
-import { useSettingsStore } from '../store/settingsStore';
 
-export const SIGNAL_LOOM_EXPORT_VERSION = '0.9.9';
+export const SIGNAL_LOOM_EXPORT_VERSION = '0.9.16';
 
-export function buildProvenanceLabel(license?: { licensed: boolean; email?: string }): string {
-  const current = license ?? useSettingsStore.getState().license;
-  return current.licensed && current.email
-    ? `Sloom Studio ${SIGNAL_LOOM_EXPORT_VERSION} (licensed to ${current.email})`
-    : `Sloom Studio ${SIGNAL_LOOM_EXPORT_VERSION} Community (unlicensed)`;
+export function buildProvenanceLabel(_license?: { licensed: boolean; email?: string }): string {
+  return `Sloom Studio ${SIGNAL_LOOM_EXPORT_VERSION} (free software, GPL-3.0-or-later)`;
 }
 
 const PNG_SIGNATURE = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a];
