@@ -31,7 +31,8 @@ DEPEND="
 	>=kde-plasma/plasma-workspace-6.6:6
 	<kde-plasma/plasma-workspace-6.7
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!kde-misc/sloom-globalmenu"
 BDEPEND=">=kde-frameworks/extra-cmake-modules-${KFMIN}"
 
 pkg_postinst() {

@@ -17,6 +17,7 @@ IUSE="+globalmenu"
 RESTRICT="bindist mirror strip"
 
 RDEPEND="
+	!media-gfx/sloom-studio
 	app-accessibility/at-spi2-core
 	dev-libs/expat
 	dev-libs/nss
