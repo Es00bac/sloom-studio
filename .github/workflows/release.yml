@@ -91,6 +91,8 @@ jobs:
       - name: Verify downloaded font resource
         run: npm run verify:font-library
       - name: Build renderer + main
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
         run: npm run build
       - name: Package installers (${{ matrix.platform }}, unsigned)
         env:
