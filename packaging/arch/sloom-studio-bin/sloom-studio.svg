@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Sloom Studio, free-software edition icon: the loom knot drawn as four inked rings on paper. -->
+  <defs>
+    <clipPath id="rounded"><rect x="0" y="0" width="1024" height="1024" rx="224" ry="224"/></clipPath>
+  </defs>
+  <g clip-path="url(#rounded)">
+    <rect width="1024" height="1024" fill="#f3eee4"/>
+    <rect width="1024" height="1024" fill="none" stroke="#e2d9c6" stroke-width="40"/>
+  </g>
+  <g fill="none" stroke="#26201c" stroke-width="52" stroke-linecap="round">
+    <circle cx="418" cy="418" r="150"/>
+    <circle cx="606" cy="418" r="150"/>
+    <circle cx="418" cy="606" r="150"/>
+    <circle cx="606" cy="606" r="150"/>
+  </g>
+  <circle cx="512" cy="512" r="26" fill="#8a2f2a"/>
+</svg>

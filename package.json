@@ -204,8 +204,18 @@
       "target": [
         "AppImage",
         "deb",
-        "snap"
-      ]
+        "rpm"
+      ],
+      "desktop": {
+        "entry": {
+          "Name": "Sloom Studio",
+          "GenericName": "Creative Suite",
+          "Comment": "Illustration, comic and book layout, and video editing in one local-first suite",
+          "Categories": "Graphics;AudioVideo;AudioVideoEditing;Publishing;",
+          "Keywords": "illustration;comic;manga;layout;print;video;editor;",
+          "StartupWMClass": "Sloom Studio"
+        }
+      }
     },
     "fileAssociations": [
       {
@@ -235,5 +245,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Es00bac/sloom-studio.git"
-  }
+  },
+  "desktopName": "sloom-studio.desktop"
 }

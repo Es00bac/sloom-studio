@@ -1,0 +1,26 @@
+# Maintainer: Sloom Software LLC <support@sloom.studio>
+pkgname=sloom-studio-bin
+pkgver=0.9.16
+pkgrel=1
+pkgdesc="Local-first creative suite: illustration, comic and book layout, video (free software edition, binary build)"
+arch=('x86_64')
+url="https://sloom.studio"
+license=('GPL-3.0-or-later')
+depends=('gtk3' 'nss' 'alsa-lib' 'libxkbcommon' 'libdrm' 'mesa' 'at-spi2-core' 'libxcomposite' 'libxdamage' 'libxrandr')
+optdepends=('sloom-globalmenu: application menu in the Plasma panel on native Wayland')
+provides=('sloom-studio')
+conflicts=('sloom-studio')
+options=('!strip')
+source=("https://github.com/Es00bac/sloom-studio/releases/download/v${pkgver}/sloom-studio-${pkgver}-linux-x64.tar.zst"
+        "sloom-studio.desktop"
+        "sloom-studio.svg")
+sha256sums=('SKIP' 'SKIP' 'SKIP')
+
+package() {
+  install -dm755 "$pkgdir/opt/sloom-studio" "$pkgdir/usr/bin"
+  cp -a "$srcdir/sloom-studio-${pkgver}-linux-x64/." "$pkgdir/opt/sloom-studio/"
+  chmod 4755 "$pkgdir/opt/sloom-studio/chrome-sandbox"
+  ln -s /opt/sloom-studio/sloom-studio "$pkgdir/usr/bin/sloom-studio"
+  install -Dm644 "$srcdir/sloom-studio.desktop" "$pkgdir/usr/share/applications/sloom-studio.desktop"
+  install -Dm644 "$srcdir/sloom-studio.svg" "$pkgdir/usr/share/icons/hicolor/scalable/apps/sloom-studio.svg"
+}

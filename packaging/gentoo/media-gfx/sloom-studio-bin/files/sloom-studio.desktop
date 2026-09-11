@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Sloom Studio
+GenericName=Creative Suite
+Comment=Illustration, comic and book layout, and video editing in one local-first suite
+Exec=env SIGNAL_LOOM_ELECTRON_PANEL_MENU=1 sloom-studio %U
+Icon=sloom-studio
+Terminal=false
+Categories=Graphics;AudioVideo;AudioVideoEditing;Publishing;
+Keywords=illustration;comic;manga;layout;print;video;editor;timeline;
+StartupNotify=true
+StartupWMClass=Sloom Studio

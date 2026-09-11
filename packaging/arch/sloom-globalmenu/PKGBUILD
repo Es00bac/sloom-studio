@@ -1,0 +1,21 @@
+# Maintainer: Sloom Software LLC <support@sloom.studio>
+pkgname=sloom-globalmenu
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="KDE Plasma 6 Global Menu applet that also serves Sloom Studio's native-Wayland menus"
+arch=('x86_64')
+url="https://github.com/Es00bac/sloom-studio"
+license=('GPL-2.0-or-later' 'LGPL-2.1-or-later')
+depends=('plasma-workspace>=6.6' 'plasma-workspace<6.7' 'libplasma' 'kwindowsystem' 'ki18n' 'qt6-declarative')
+makedepends=('cmake' 'ninja' 'extra-cmake-modules')
+source=("https://github.com/Es00bac/sloom-studio/releases/download/globalmenu-v${pkgver}/sloom-globalmenu-${pkgver}.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+  cmake -S "sloom-globalmenu-${pkgver}" -B build -G Ninja -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_TESTING=OFF
+  cmake --build build
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+}

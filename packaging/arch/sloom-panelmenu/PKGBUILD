@@ -1,0 +1,16 @@
+# Maintainer: Sloom Software LLC <support@sloom.studio>
+pkgname=sloom-panelmenu
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Lightweight QML-only Plasma 6 applet showing Sloom Studio's menu bar over D-Bus"
+arch=('any')
+url="https://github.com/Es00bac/sloom-studio"
+license=('MIT')
+depends=('libplasma')
+source=("https://github.com/Es00bac/sloom-studio/releases/download/panelmenu-v${pkgver}/sloom-panelmenu-${pkgver}.tar.gz")
+sha256sums=('SKIP')
+
+package() {
+  install -dm755 "$pkgdir/usr/share/plasma/plasmoids/org.signalloom.panelmenu"
+  cp -a "$srcdir/sloom-panelmenu-${pkgver}/contents" "$srcdir/sloom-panelmenu-${pkgver}/metadata.json" "$pkgdir/usr/share/plasma/plasmoids/org.signalloom.panelmenu/"
+}

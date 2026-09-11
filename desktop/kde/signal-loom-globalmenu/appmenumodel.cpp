@@ -236,6 +236,9 @@ void AppMenuModel::onActiveWindowChanged()
             QStringLiteral("signalloom"),
             QStringLiteral("signal loom"),
             QStringLiteral("studio.sloom.signalloom"),
+            QStringLiteral("sloom-studio"),
+            QStringLiteral("sloom studio"),
+            QStringLiteral("sloomstudio"),
         };
         const bool isSignalLoom = std::any_of(signalLoomIds.cbegin(), signalLoomIds.cend(), [&](const QString &id) {
             return appId.contains(id) || appName.contains(id);

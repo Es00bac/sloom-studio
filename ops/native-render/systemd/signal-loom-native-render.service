@@ -1,0 +1,15 @@
+[Unit]
+Description=Signal Loom native FFmpeg render service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/SignalLoom
+ExecStart=/usr/bin/env node %h/SignalLoom/ops/native-render/local-renderer.mjs
+Environment=SIGNAL_LOOM_NATIVE_RENDER_HOST=127.0.0.1
+Environment=SIGNAL_LOOM_NATIVE_RENDER_PORT=41736
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target

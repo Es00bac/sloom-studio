@@ -1,13 +1,13 @@
 {
     "KPlugin": {
         "Id": "org.signalloom.panelmenu",
-        "Name": "Signal Loom Global Menu",
-        "Description": "Shows Signal Loom's application menu in the panel over D-Bus — no XWayland, so hardware acceleration stays on native Wayland.",
+        "Name": "Sloom Studio Global Menu",
+        "Description": "Shows Sloom Studio's application menu in the panel over D-Bus, no XWayland needed.",
         "Icon": "application-menu",
         "Authors": [
             {
-                "Name": "Sloom Software",
-                "Email": "hello@sloom.studio"
+                "Name": "Sloom Software LLC",
+                "Email": "support@sloom.studio"
             }
         ],
         "Category": "Windows and Tasks",
