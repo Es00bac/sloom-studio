@@ -10,7 +10,7 @@ inherit ecm
 
 DESCRIPTION="KDE Plasma 6 Global Menu applet that also serves Sloom Studio's native-Wayland menus"
 HOMEPAGE="https://github.com/Es00bac/sloom-studio"
-SRC_URI="https://github.com/Es00bac/sloom-studio/releases/download/globalmenu-v${PV}/sloom-globalmenu-${PV}.tar.gz"
+SRC_URI="https://github.com/Es00bac/sloom-studio/releases/download/v0.9.16/sloom-globalmenu-${PV}.tar.gz"
 S="${WORKDIR}/sloom-globalmenu-${PV}"
 
 # Stock plasma-workspace appmenu applet (GPL-2+ / LGPL-2.1+) plus the vendored libdbusmenuqt (LGPL-2.1+).

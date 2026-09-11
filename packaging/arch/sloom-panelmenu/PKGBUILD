@@ -7,8 +7,8 @@ arch=('any')
 url="https://github.com/Es00bac/sloom-studio"
 license=('MIT')
 depends=('libplasma')
-source=("https://github.com/Es00bac/sloom-studio/releases/download/panelmenu-v${pkgver}/sloom-panelmenu-${pkgver}.tar.gz")
-sha256sums=('SKIP')
+source=("https://github.com/Es00bac/sloom-studio/releases/download/v0.9.16/sloom-panelmenu-${pkgver}.tar.gz")
+sha256sums=('2e9a6a72ad64712fb5b25da779b9a5b55db62210374917bfac2142949a374c94')
 
 package() {
   install -dm755 "$pkgdir/usr/share/plasma/plasmoids/org.signalloom.panelmenu"

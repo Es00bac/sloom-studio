@@ -8,8 +8,8 @@ url="https://github.com/Es00bac/sloom-studio"
 license=('GPL-2.0-or-later' 'LGPL-2.1-or-later')
 depends=('plasma-workspace>=6.6' 'plasma-workspace<6.7' 'libplasma' 'kwindowsystem' 'ki18n' 'qt6-declarative')
 makedepends=('cmake' 'ninja' 'extra-cmake-modules')
-source=("https://github.com/Es00bac/sloom-studio/releases/download/globalmenu-v${pkgver}/sloom-globalmenu-${pkgver}.tar.gz")
-sha256sums=('SKIP')
+source=("https://github.com/Es00bac/sloom-studio/releases/download/v0.9.16/sloom-globalmenu-${pkgver}.tar.gz")
+sha256sums=('1b99c845859a1d0d5e986f567c7ecec8f9f2f2af7dfebc7b96b3b3e4f2161e05')
 
 build() {
   cmake -S "sloom-globalmenu-${pkgver}" -B build -G Ninja -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_TESTING=OFF
