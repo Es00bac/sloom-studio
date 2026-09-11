@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contribute — Sloom Studio</title>
+  <meta name="description" content="Help build a free creative suite. Where a first patch lands well, how review works, packaging and translation help wanted, and the DCO and CLA.">
+  <link rel="canonical" href="https://sloom.studio/contribute/">
+  <link rel="icon" type="image/svg+xml" href="/assets/sloom-studio.svg">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/"><img src="/assets/sloom-studio.svg" alt="">Sloom Studio</a>
+  <nav class="primary" aria-label="Site">
+    <a href="/">Overview</a><a href="/download/">Download</a><a href="/docs/">User guide</a><a href="/develop/">Developers</a><a href="/contribute/" aria-current="page">Contribute</a><a href="/license/">Licence</a><a href="/hane/">Hane for Android</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="tag">Help wanted</span>
+    <h1>One person built this far. It needs more.</h1>
+    <p class="lede">Sloom Studio went from a node graph to a four-workspace suite in a year, written by a single developer. Releasing it as free software is a bet that people who want a creative suite they own will help keep it moving. Here is where a first contribution lands well, and what to expect from review.</p>
+    <div class="actions">
+      <a class="btn" href="https://github.com/Es00bac/sloom-studio/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">Good first issues</a>
+      <a class="btn alt" href="https://github.com/Es00bac/sloom-studio/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>
+    </div>
+  </section>
+
+  <h2>Ways to help that are not code</h2>
+  <div class="grid">
+    <div class="card"><h3>Try it and report</h3><p>Open a real project of yours. Where it breaks, file an issue with the file (or a reduced one), your platform and pen. A reproducible bug report is the most valuable thing a non-developer can send.</p></div>
+    <div class="card" id="packaging"><h3>Packaging</h3><p>Flathub manifest. AUR submission of the three PKGBUILDs in <code>packaging/arch</code>. Nix. A Fedora COPR. Homebrew cask for the macOS build. Each of these is a self-contained afternoon.</p></div>
+    <div class="card"><h3>Translation</h3><p>The interface is English and Japanese today, with strings in <code>src/lib/i18n.ts</code>. Spanish, Portuguese, French, German and Korean speakers are on the First Hundred artist list already; a translation would meet them.</p></div>
+    <div class="card"><h3>Documentation</h3><p>The user guide under <code>docs/userguide</code> is complete but written by the developer. Walkthroughs of a real workflow, with screenshots, are missing.</p></div>
+    <div class="card"><h3>Testing on hardware we lack</h3><p>Wacom on Linux, pen displays, macOS on Intel, Windows with high-DPI mixed monitors. Report what works and what does not.</p></div>
+    <div class="card"><h3>Artwork</h3><p>Every screenshot on this site is a UI capture, on purpose. Real comics, illustrations and video edits made in Sloom Studio, credited to you, would be shown here with your link.</p></div>
+  </div>
+
+  <h2>Where a first patch lands well</h2>
+  <p>These are real, scoped, and not blocked on architecture decisions. Each corresponds to an entry in the gap register, <code>docs/userguide/15-qualified-missing-hundred-features.md</code>, which describes the intended behaviour.</p>
+  <ul>
+    <li><strong>Font discovery and management</strong> (MH-030): a font manager panel over the already-audited 116-family bundled library plus system fonts.</li>
+    <li><strong>Flow node keyboard accessibility</strong> (MH-013): full keyboard navigation of the node graph.</li>
+    <li><strong>Canvas view rotation</strong> (MH-035) in Image, including stylus behaviour when rotated.</li>
+    <li><strong>Bounded GIMP XCF import</strong> (MH-038): layers, masks and groups, nothing exotic.</li>
+    <li><strong>Starter templates and a recipe gallery</strong> for Flow (MH-094), which is mostly content and a picker.</li>
+    <li><strong>Scripting and headless automation</strong> (MH-084): a CLI entry point over the existing project and export code.</li>
+  </ul>
+  <p>Larger items, such as real-time collaboration (MH-080), a plugin SDK (MH-083) or a vector discipline (MH-065), need a design conversation first. Open an issue titled with the MH number and say what you are thinking before writing code.</p>
+
+  <h2>How review works</h2>
+  <ol>
+    <li>Open an issue or comment on an existing one so nobody duplicates work.</li>
+    <li>Branch, change, add or update the test next to the code. <code>npm run build</code> and <code>npm test</code> must pass.</li>
+    <li>Sign your commits with <code>git commit -s</code>. That is the Developer Certificate of Origin.</li>
+    <li>Open the pull request. Small and focused merges fast. The maintainer reviews within a few days; if the wait is longer, ping the thread.</li>
+  </ol>
+
+  <h2>The licence part, in plain words</h2>
+  <p>Your contribution is licensed under the GPL like the rest, and you keep your copyright. There is also a short <a href="https://github.com/Es00bac/sloom-studio/blob/main/CLA.md">Contributor License Agreement</a>: it lets the maintainer ship the GPL code alongside a proprietary engine plug-in and through app stores without asking every contributor again. The repository itself always stays GPL. Read it once; it is one page.</p>
+
+  <h2>Conduct</h2>
+  <p>Be direct and be kind. Review the work, not the person. Disagreements about design go in the issue, with reasons. See <a href="https://github.com/Es00bac/sloom-studio/blob/main/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a>.</p>
+
+  <h2>Where to talk</h2>
+  <p><a href="https://github.com/Es00bac/sloom-studio/issues">GitHub Issues</a> for bugs and proposals. <a href="https://github.com/Es00bac/sloom-studio/discussions">Discussions</a> for questions and show-and-tell. The <a href="https://sloom.studio/forum/">forum</a> for users who are not on GitHub. <a href="https://bsky.app/profile/sloom.studio">Bluesky</a> for news.</p>
+</main>
+
+<footer class="site"><div class="wrap">
+  <div>Sloom Software LLC · <a href="mailto:support@sloom.studio">support@sloom.studio</a></div>
+  <nav><a href="/license/">Licence and trademarks</a><a href="/develop/">Developers</a></nav>
+</div></footer>
+</body>
+</html>

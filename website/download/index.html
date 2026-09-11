@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download — Sloom Studio</title>
+  <meta name="description" content="Download Sloom Studio for Linux (AppImage, deb, Gentoo overlay, Arch), Windows and macOS. Free software, no account.">
+  <link rel="canonical" href="https://sloom.studio/download/">
+  <link rel="icon" type="image/svg+xml" href="/assets/sloom-studio.svg">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/"><img src="/assets/sloom-studio.svg" alt="">Sloom Studio</a>
+  <nav class="primary" aria-label="Site">
+    <a href="/">Overview</a><a href="/download/" aria-current="page">Download</a><a href="/docs/">User guide</a><a href="/develop/">Developers</a><a href="/contribute/">Contribute</a><a href="/license/">Licence</a><a href="/hane/">Hane for Android</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="tag">Version 0.9.16</span>
+    <h1>Download.</h1>
+    <p class="lede">Every build is the complete application under the GNU GPL. Nothing to unlock, nothing to register. Verify what you download against the <code>SHA256SUMS</code> file published with each release.</p>
+    <div class="actions">
+      <a class="btn" href="https://github.com/Es00bac/sloom-studio/releases/latest">All releases on GitHub</a>
+    </div>
+  </section>
+
+  <h2>Linux</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Format</th><th>Get it</th><th>Notes</th></tr>
+    <tr><td>AppImage</td><td><code>SloomStudio-0.9.16-x86_64.AppImage</code></td><td>Needs libfuse2 (<code>sys-fs/fuse:0</code> on Gentoo, <code>libfuse2</code> on Debian and Ubuntu). Without it, run with <code>--appimage-extract-and-run</code>.</td></tr>
+    <tr><td>Debian / Ubuntu</td><td><code>SloomStudio-0.9.16-amd64.deb</code></td><td><code>sudo apt install ./SloomStudio-0.9.16-amd64.deb</code></td></tr>
+    <tr><td>Gentoo</td><td>Portage overlay in <code>packaging/gentoo/</code></td><td><code>media-gfx/sloom-studio-bin</code> installs the prebuilt app to <code>/opt</code>; <code>kde-plasma/sloom-globalmenu</code> builds the Plasma applet from source. Setup steps are in <code>packaging/README.md</code>.</td></tr>
+    <tr><td>Arch</td><td>PKGBUILDs in <code>packaging/arch/</code></td><td><code>sloom-studio-bin</code>, <code>sloom-globalmenu</code>, <code>sloom-panelmenu</code>. AUR submission is on the contributor list.</td></tr>
+    <tr><td>Tarball</td><td><code>sloom-studio-0.9.16-linux-x64.tar.zst</code></td><td>The unpacked <code>/opt</code> layout for any distribution. Run <code>sloom-studio</code> inside it.</td></tr>
+    <tr><td>Flatpak</td><td>not yet</td><td>A Flathub manifest is <a href="/contribute/#packaging">wanted</a>.</td></tr>
+  </table></div>
+
+  <h3>KDE Plasma: menu bar in the panel, GPU intact</h3>
+  <p>Electron apps on native Wayland cannot register a menu with KWin, and forcing XWayland costs hardware acceleration on many AMD and Intel machines. Sloom Studio ships a fork of KDE's Global Menu applet that adds one fallback: it reads Sloom Studio's menu over D-Bus. Install <code>sloom-globalmenu</code>, add the widget to a panel, and launch the app with <code>SIGNAL_LOOM_ELECTRON_PANEL_MENU=1</code> (the packaged desktop entry sets it). Nothing else about the applet differs from stock.</p>
+
+  <h2>Windows</h2>
+  <p>An NSIS installer, <code>SloomStudio-0.9.16-x64.exe</code>, is attached to each release. The installer is not code-signed; SmartScreen will ask once.</p>
+
+  <h2>macOS</h2>
+  <p>A universal <code>.dmg</code> is attached to each release. It is not notarized: right-click, Open on first launch. Apple Silicon and Intel.</p>
+
+  <h2>Build from source</h2>
+  <p>If you would rather build it yourself, the <a href="/develop/#build">developer page</a> has the six commands. It takes about ten minutes on a laptop.</p>
+
+  <div class="callout info">
+    <strong>Android.</strong> The Android build of Sloom Studio on Google Play predates the free-software release and is being brought in line. For painting on Android, use <a href="/hane/">Hane</a>, which is the project's paid companion app.
+  </div>
+
+  <h2>Verify a download</h2>
+<pre><code>sha256sum -c SHA256SUMS --ignore-missing</code></pre>
+  <p class="fine">Release artifacts are built by <code>scripts/package-linux-release.sh</code> in the repository; the checksum file is generated in the same run.</p>
+</main>
+
+<footer class="site"><div class="wrap">
+  <div>Sloom Software LLC · <a href="mailto:support@sloom.studio">support@sloom.studio</a> · <a href="https://bsky.app/profile/sloom.studio">Bluesky</a> · <a href="https://sloom.studio/forum/">Forum</a></div>
+  <nav><a href="/license/">Licence and trademarks</a><a href="/privacy.html">Privacy</a><a href="/hane/">Hane</a></nav>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sloom Studio — free creative suite: illustration, comics and books, video</title>
+  <meta name="description" content="Sloom Studio is free software (GPL) for illustration, comic and book layout, and video editing. One project file, four workspaces, no account, no subscription. Windows, Linux, macOS.">
+  <link rel="canonical" href="https://sloom.studio/">
+  <link rel="icon" type="image/svg+xml" href="/assets/sloom-studio.svg">
+  <link rel="stylesheet" href="/assets/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sloom Studio — a free creative suite">
+  <meta property="og:description" content="Illustration, comic and book layout, and video editing in one GPL application. No account, no subscription.">
+  <meta property="og:url" content="https://sloom.studio/">
+  <meta property="og:image" content="https://sloom.studio/assets/og-sloom-studio.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sloom Studio","applicationCategory":"DesignApplication","operatingSystem":"Windows, Linux, macOS","license":"https://www.gnu.org/licenses/gpl-3.0.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://sloom.studio/","softwareVersion":"0.9.16","author":{"@type":"Organization","name":"Sloom Software LLC"}}
+  </script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/"><img src="/assets/sloom-studio.svg" alt="">Sloom Studio</a>
+  <nav class="primary" aria-label="Site">
+    <a href="/" aria-current="page">Overview</a>
+    <a href="/download/">Download</a>
+    <a href="/docs/">User guide</a>
+    <a href="/develop/">Developers</a>
+    <a href="/contribute/">Contribute</a>
+    <a href="/license/">Licence</a>
+    <a href="/hane/">Hane for Android</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="tag">Free software · GNU GPL v3 or later</span>
+    <h1>Draw it, letter it, lay it out, cut it. One file. Yours.</h1>
+    <p class="lede">Sloom Studio is a creative suite for people who make comics, books, illustrations and short video. Four workspaces share one project file and one asset library, so nothing is exported and re-imported between tools. It runs on your machine, keeps your work in files you own, and asks for no account.</p>
+    <div class="actions">
+      <a class="btn" href="/download/">Download for Linux, Windows, macOS</a>
+      <a class="btn alt" href="https://github.com/Es00bac/sloom-studio">Source on GitHub</a>
+    </div>
+    <p class="fine">Version 0.9.16. Formerly Signal Loom. Built by one person; <a href="/contribute/">help wanted</a>.</p>
+  </section>
+
+  <section>
+    <h2>Four workspaces, one project</h2>
+    <div class="grid">
+      <div class="card"><h3>Image</h3><p>Layered raster editing with masks, clipping, blend modes, adjustment layers, text on paths, vertical Japanese type, CMYK soft proofing and layered PSD import and export.</p></div>
+      <div class="card"><h3>Paper</h3><p>Page, comic and book composition: panels, speech balloons, lettering, tategaki typesetting, print-ready PDF/X-1a and PDF/X-4, KDP-ready PDF, EPUB, CBZ and IDML.</p></div>
+      <div class="card"><h3>Video</h3><p>A multitrack timeline with source and program monitors, keyframes, overlays, audio fades and render presets, with a native FFmpeg render service on the desktop.</p></div>
+      <div class="card"><h3>Flow</h3><p>An optional node graph for generative pipelines with your own provider keys. Off by default; you can build an entire project without opening it.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What it looks like</h2>
+    <div class="shots">
+      <figure><img src="/assets/screenshots/paper-comic-balloons.png" alt="Paper workspace: a two-page comic spread with speech balloons being lettered, resize handles visible on a selected bubble." loading="lazy"><figcaption>Paper: lettering a two-page spread.</figcaption></figure>
+      <figure><img src="/assets/screenshots/paper-jp-vertical.png" alt="Paper workspace: a manuscript page set in vertical Japanese with furigana." loading="lazy"><figcaption>Paper: vertical Japanese typesetting with furigana.</figcaption></figure>
+      <figure><img src="/assets/screenshots/video-timeline.png" alt="Video workspace: source and program monitors above a multitrack timeline mid-edit." loading="lazy"><figcaption>Video: a multitrack edit with four video tracks and audio.</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>What "free software" means here</h2>
+    <div class="grid">
+      <div class="card"><h3>Free to run</h3><p>Every download is the complete application. No trial, no watermark, no paid tier, no daily notice. The professional print exports are included.</p></div>
+      <div class="card"><h3>Free to study and change</h3><p>The full source is on GitHub under the GNU GPL. Build it yourself, fix what bothers you, send the fix back.</p></div>
+      <div class="card"><h3>Files you own</h3><p>Projects are <code>.sloom</code> files on your disk. Images are <code>.slimg</code>, layouts are <code>.slppr</code>. No cloud, no telemetry on your content, no lock-in.</p></div>
+      <div class="card"><h3>Funded by Hane</h3><p>The project is paid for by <a href="/hane/">Hane</a>, our Android painting app, whose physical brush engine stays proprietary. Buying Hane is how you support this.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Who it is for</h2>
+    <p><strong>Comic and manga makers</strong> who want lettering, panels and print-ready export in the same file as their pages. <strong>Self-publishers</strong> who need a KDP-ready interior and cover without a subscription. <strong>Illustrators</strong> who want a layered editor that round-trips PSD. <strong>Anyone on Linux</strong> tired of running creative software through compatibility layers: the desktop build is native, packaged as AppImage and deb, with a Gentoo overlay and Arch PKGBUILDs in the repository, and a KDE Plasma global-menu applet that keeps GPU acceleration on native Wayland.</p>
+  </section>
+
+  <section class="callout">
+    <strong>One developer, a lot of surface area.</strong> Sloom Studio is at 0.9.x and its <a href="/develop/">documentation is honest about what is finished and what is not</a>. If you can write TypeScript, test on a platform we lack, translate, or document, the <a href="/contribute/">contribute page</a> lists where a first patch lands well.
+  </section>
+</main>
+
+<footer class="site"><div class="wrap">
+  <div>Sloom Software LLC · <a href="mailto:support@sloom.studio">support@sloom.studio</a> · <a href="https://bsky.app/profile/sloom.studio">Bluesky</a> · <a href="https://sloom.studio/forum/">Forum</a></div>
+  <nav><a href="/license/">Licence and trademarks</a><a href="/privacy.html">Privacy</a><a href="/hane/">Hane</a><a href="/ja/">日本語</a></nav>
+</div></footer>
+</body>
+</html>

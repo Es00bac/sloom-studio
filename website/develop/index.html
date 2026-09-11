@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Developers — Sloom Studio</title>
+  <meta name="description" content="How Sloom Studio is built: TypeScript, React, Vite and Electron, four workspaces sharing one project model, 960 test files, and where the proprietary engine seam sits. Build, test and package from source.">
+  <link rel="canonical" href="https://sloom.studio/develop/">
+  <link rel="icon" type="image/svg+xml" href="/assets/sloom-studio.svg">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/"><img src="/assets/sloom-studio.svg" alt="">Sloom Studio</a>
+  <nav class="primary" aria-label="Site">
+    <a href="/">Overview</a><a href="/download/">Download</a><a href="/docs/">User guide</a><a href="/develop/" aria-current="page">Developers</a><a href="/contribute/">Contribute</a><a href="/license/">Licence</a><a href="/hane/">Hane for Android</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="tag">For developers</span>
+    <h1>How it is built, and how to build it.</h1>
+    <p class="lede">Sloom Studio is a TypeScript application: React 19 on Vite 8 for the interface, Electron 41 for the desktop shell, Capacitor for Android. One repository, one project model, four workspaces. About 2,400 tracked files and 960 test files run under Vitest.</p>
+    <div class="actions">
+      <a class="btn" href="https://github.com/Es00bac/sloom-studio">Repository</a>
+      <a class="btn alt" href="https://github.com/Es00bac/sloom-studio/blob/main/docs/PROJECT_DOCUMENTATION.md">Technical orientation</a>
+    </div>
+  </section>
+
+  <nav class="toc" aria-label="On this page">
+    <a href="#build">Build, run, test</a><a href="#layout">Repository layout</a><a href="#model">The project model</a><a href="#workspaces">Workspaces</a><a href="#desktop">Desktop shell</a><a href="#engine">The engine seam</a><a href="#packaging">Packaging</a><a href="#quality">Quality bar</a>
+  </nav>
+
+  <h2 id="build">Build, run, test</h2>
+  <p>Node 20 or newer. No native toolchain is needed for the web build; the desktop build downloads a matching Electron once.</p>
+<pre><code>git clone https://github.com/Es00bac/sloom-studio.git
+cd sloom-studio
+npm ci
+npm run dev            # the app in a browser at the Vite URL
+npm run build          # tsc -b && vite build
+npm test               # vitest, the whole suite
+npm run desktop:dev    # Electron shell against the dev server
+npm run dist:linux     # AppImage and deb into release/</code></pre>
+  <p>The desktop packager expects the bundled font library under <code>build/font-library</code>; <code>npm run prepare:font-library</code> stages it from a font-pack checkout described in <code>resources/font-pack/</code>. All bundled fonts are OFL or Apache licensed and the inventory records each one's source and hash.</p>
+
+  <h2 id="layout">Repository layout</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Path</th><th>What lives there</th></tr>
+    <tr><td><code>src/features/{flow,image*,paper,video}</code></td><td>Workspace-level feature code and their workspace shells.</td></tr>
+    <tr><td><code>src/components/</code></td><td>Shared UI: the dockable panel system, the Image editor, Paper, Flow nodes, settings, recovery.</td></tr>
+    <tr><td><code>src/store/</code></td><td>Zustand stores: one per workspace plus settings, confirmation and dock state.</td></tr>
+    <tr><td><code>src/lib/</code></td><td>Formats and engines without UI: <code>.sloom</code> project files, <code>.slimg</code> v1 and v2, PSD via ag-psd, PDF/X output on pdf-lib, HarfBuzz shaping, Little CMS colour management, i18n.</td></tr>
+    <tr><td><code>electron/</code></td><td>Main process: windows, menus, the D-Bus panel-menu exporter for KDE, crash reports, the native render and upscaler bridges.</td></tr>
+    <tr><td><code>shared/</code></td><td>Contracts shared by renderer and main: project schema, workspace menus, third-party notices.</td></tr>
+    <tr><td><code>ops/native-render</code>, <code>ops/local-upscaler</code></td><td>Optional desktop helpers: a local FFmpeg render service and the on-demand Real-ESRGAN upscaler.</td></tr>
+    <tr><td><code>desktop/kde/</code></td><td>The two Plasma applets.</td></tr>
+    <tr><td><code>packaging/</code></td><td>Desktop entry, Gentoo overlay, Arch PKGBUILDs.</td></tr>
+    <tr><td><code>docs/</code></td><td>User guide, bilingual manual, feature breakdown, the "Missing Hundred" gap register.</td></tr>
+  </table></div>
+
+  <h2 id="model">The project model</h2>
+  <p>A <code>.sloom</code> project is a ZIP container holding a JSON manifest validated against <code>shared/project-schema.json</code>, the four workspace states, and a source library of assets in named bins. Image and Paper also have standalone documents, <code>.slimg</code> and <code>.slppr</code>, so a single image or layout travels on its own. Everything is local: the only network code is the optional Flow provider layer and the opt-in LAN sync between a desktop and a phone.</p>
+
+  <h2 id="workspaces">Workspaces</h2>
+  <div class="grid">
+    <div class="card"><h3>Image</h3><p>Tiled undo with 64 px deltas, masks with feathering, nested groups with pass-through blending, high-bit documents, a true CMYK mode with ICC conversion, text on Bézier paths, editable warps, vertical Japanese text, PSD round-trip that keeps structure.</p></div>
+    <div class="card"><h3>Paper</h3><p>Page grids, panels and balloons, HarfBuzz shaping, tategaki with furigana, hyphenation, imposition-aware PDF/X-1a and PDF/X-4 with output intents, KDP interiors, EPUB, CBZ and IDML interchange.</p></div>
+    <div class="card"><h3>Video</h3><p>Timeline with keyframes and overlays, proxy playback, equal-power audio fades, ffmpeg.wasm in the browser and a native FFmpeg service on the desktop, with render parity checks between the two.</p></div>
+    <div class="card"><h3>Flow</h3><p>A node graph on xyflow with provider packs, spend caps, result caching and resumable batch runs. Provider keys are encrypted at rest and never leave the machine except to the provider you chose.</p></div>
+  </div>
+
+  <h2 id="desktop">Desktop shell</h2>
+  <p>Electron with a sandboxed renderer and a small preload bridge. On Linux the app runs on native Wayland; because Chromium cannot register a menu with KWin there, the main process exports the menu bar as a <code>com.canonical.dbusmenu</code> object on the session bus, and the forked Plasma applet in <code>desktop/kde/sloom-globalmenu</code> picks it up. That fork changes about 25 lines of KDE's stock applet.</p>
+
+  <h2 id="engine">The engine seam</h2>
+  <p>Sloom Studio's Image workspace has a built-in brush engine, the Studio engine, which is GPL like everything else here. A second, physical-media engine called Tiltmark powers <a href="/hane/">Hane</a> on Android and is proprietary; it is not in this repository. What remains is a seam: <code>src/components/ImageEditor/tiltmark/</code> holds the document-format code that lets files with physical-media layers open read-only, plus no-op stubs that report the engine as absent. If you are looking for the interesting brush code, start at <code>ImageBrushEngine.ts</code> and <code>tools/brushTool.ts</code>.</p>
+
+  <h2 id="packaging">Packaging</h2>
+  <p><code>scripts/package-linux-release.sh</code> builds the web bundle, stages fonts, runs electron-builder for AppImage and deb (and rpm when <code>rpmbuild</code> exists), then produces the <code>/opt</code> tarball and the applet tarballs with checksums. The Gentoo ebuilds and Arch PKGBUILDs consume those exact artifacts.</p>
+
+  <h2 id="quality">Quality bar</h2>
+  <p>Type-check and tests must pass; a behaviour change ships with a test change next to the code. The docs are written to describe what the code does today, and <code>docs/userguide/15-qualified-missing-hundred-features.md</code> is the register of gaps we know about, with a status for each. Read it before proposing a large feature; it may already be specified.</p>
+</main>
+
+<footer class="site"><div class="wrap">
+  <div>Sloom Software LLC · <a href="mailto:support@sloom.studio">support@sloom.studio</a> · <a href="https://github.com/Es00bac/sloom-studio/issues">Issues</a> · <a href="https://sloom.studio/forum/">Forum</a></div>
+  <nav><a href="/license/">Licence and trademarks</a><a href="/contribute/">Contribute</a></nav>
+</div></footer>
+</body>
+</html>

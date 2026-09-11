@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Licence — Sloom Studio</title>
+  <meta name="description" content="Sloom Studio is licensed under the GNU GPL v3 or later. What that means for users, packagers and forks; trademarks; why the Hane engine is separate.">
+  <link rel="canonical" href="https://sloom.studio/license/">
+  <link rel="icon" type="image/svg+xml" href="/assets/sloom-studio.svg">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/"><img src="/assets/sloom-studio.svg" alt="">Sloom Studio</a>
+  <nav class="primary" aria-label="Site">
+    <a href="/">Overview</a><a href="/download/">Download</a><a href="/docs/">User guide</a><a href="/develop/">Developers</a><a href="/contribute/">Contribute</a><a href="/license/" aria-current="page">Licence</a><a href="/hane/">Hane for Android</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="tag">GNU GPL v3 or later</span>
+    <h1>Free software, in the specific sense.</h1>
+    <p class="lede">Sloom Studio is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License</a>, version 3 or, at your option, any later version. This page says what that means in practice. The licence text itself is the only thing that binds; it ships as <code>LICENSE</code> in every download.</p>
+  </section>
+
+  <h2>If you use it</h2>
+  <p>Run it for anything, including paid work. Make money with what you make in it. Install it on as many machines as you like. There is no separate commercial licence and never will be for this code.</p>
+
+  <h2>If you package or redistribute it</h2>
+  <p>You may distribute unmodified builds through free-software channels such as distribution repositories, Flathub or the AUR, and call them Sloom Studio. You must pass on the licence and the source. If you modify it, you must offer your modified source under the same licence, and you should rename it; see trademarks below.</p>
+
+  <h2>If you fork it</h2>
+  <p>Please do. Keep the GPL, keep the copyright notices, and give your fork its own name and icon. Send improvements back if you can; a fork that merges upstream regularly is better for both of us.</p>
+
+  <h2>Trademarks</h2>
+  <p>"Sloom Studio", "Sloom", "Signal Loom", "Hane" and "Tiltmark" and their marks belong to Sloom Software LLC. The GPL covers copyright, not names. The <a href="https://github.com/Es00bac/sloom-studio/blob/main/TRADEMARKS.md">trademark policy</a> is short: describe and redistribute freely, do not sell builds under these names, and do not use them for modified software.</p>
+
+  <h2>Why Hane's engine is not here</h2>
+  <p>The physical-media brush engine in <a href="/hane/">Hane</a>, Tiltmark, is proprietary and funds this project. Sloom Studio does not depend on it: the Image workspace ships its own GPL brush engine, and files that contain physical-media layers still open. The seam where an engine could attach is in the source, documented on the <a href="/develop/#engine">developer page</a>. We would rather be honest about one closed component than pretend the whole thing is open when it is not.</p>
+
+  <h2>Contributions</h2>
+  <p>Contributions are accepted under the GPL with a Developer Certificate of Origin sign-off and a one-page <a href="https://github.com/Es00bac/sloom-studio/blob/main/CLA.md">Contributor License Agreement</a>. You keep your copyright. The agreement exists so the maintainer can ship the GPL code next to the proprietary engine plug-in and through app stores; it does not let anyone take the repository closed.</p>
+
+  <h2>Third-party components</h2>
+  <p>Bundled libraries are MIT, BSD, Apache or LGPL licensed and listed in <code>shared/third-party-components.json</code> with notices in <code>shared/third-party-notices/</code>. The 116 bundled font families are under the SIL Open Font License or Apache 2.0, each with its licence file beside the binaries. The KDE applet fork carries KDE's GPL-2+ and LGPL-2.1+ terms.</p>
+
+  <h2>History</h2>
+  <p>Earlier releases were published as Signal Loom under the AGPL-3.0, then under the PolyForm Noncommercial licence with a paid commercial key. As of version 0.9.16 the paid tier and the key system are gone, and the whole application is GPL. Old releases remain available under the terms they shipped with.</p>
+</main>
+
+<footer class="site"><div class="wrap">
+  <div>Sloom Software LLC · <a href="mailto:support@sloom.studio">support@sloom.studio</a></div>
+  <nav><a href="/privacy.html">Privacy</a><a href="/contribute/">Contribute</a></nav>
+</div></footer>
+</body>
+</html>
