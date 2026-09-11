@@ -145,7 +145,7 @@ export function buildAndroidLocalDreamGatePlan({
     }),
     commandStep({
       id: 'gradle-build',
-      label: 'Build Local Dream Signal Loom APK',
+      label: 'Build Local Dream Sloom Studio APK',
       executable: './gradlew',
       args: [':app:assembleFilterDebug', '--no-daemon'],
       displayPrefix: androidSdkEnv
@@ -156,13 +156,13 @@ export function buildAndroidLocalDreamGatePlan({
     }),
     commandStep({
       id: 'adb-install',
-      label: 'Install Local Dream Signal Loom APK',
+      label: 'Install Local Dream Sloom Studio APK',
       executable: 'adb',
       args: [...adbPrefix, 'install', '-r', resolvedApkPath],
     }),
     commandStep({
       id: 'start-server',
-      label: 'Start Signal Loom gateway through app activity',
+      label: 'Start Sloom Studio gateway through app activity',
       executable: 'adb',
       args: [
         ...adbPrefix,
@@ -204,7 +204,7 @@ export function buildAndroidLocalDreamGatePlan({
         '--data',
         JSON.stringify({
           modelId: 'local-dream-active',
-          prompt: 'Signal Loom Android gate smoke image',
+          prompt: 'Sloom Studio Android gate smoke image',
           width: 256,
           height: 256,
           steps: 4,
@@ -224,7 +224,7 @@ export function buildAndroidLocalDreamGatePlan({
         '--data',
         JSON.stringify({
           modelId: 'local-dream-active',
-          prompt: 'Signal Loom Android gate smoke image',
+          prompt: 'Sloom Studio Android gate smoke image',
           width: 256,
           height: 256,
           steps: 4,
@@ -397,7 +397,7 @@ export function analyzeAndroidLocalDreamCapabilitiesPayload(value, {
       downloadedUpscalers: 0,
       setupProofReady: !requiresSetupProof,
       warnings: ['Capabilities response was empty.'],
-      message: 'Signal Loom Android capabilities response was empty; cannot verify downloaded model/upscaler readiness.',
+      message: 'Sloom Studio Android capabilities response was empty; cannot verify downloaded model/upscaler readiness.',
     };
   }
 
@@ -411,7 +411,7 @@ export function analyzeAndroidLocalDreamCapabilitiesPayload(value, {
       downloadedUpscalers: 0,
       setupProofReady: !requiresSetupProof,
       warnings: [],
-      message: `Signal Loom Android capabilities response was not valid JSON: ${error instanceof Error ? error.message : String(error)}`,
+      message: `Sloom Studio Android capabilities response was not valid JSON: ${error instanceof Error ? error.message : String(error)}`,
     };
   }
 
@@ -449,17 +449,17 @@ export function analyzeAndroidLocalDreamCapabilitiesPayload(value, {
       downloadedUpscalers,
       setupProofReady,
       warnings,
-      message: `Android Local Dream replace-package setup proof is incomplete. Run Test API, Test Generate, and Test Upscale inside Signal Loom Android, then rerun npm run gate:android-localdream. ${formatSetupProofStatus(setupProof)}`,
+      message: `Android Local Dream replace-package setup proof is incomplete. Run Test API, Test Generate, and Test Upscale inside Sloom Studio Android, then rerun npm run gate:android-localdream. ${formatSetupProofStatus(setupProof)}`,
     };
   }
 
   let action;
   if (downloadedModels <= 0 && downloadedUpscalers <= 0) {
-    action = 'Download at least one model and at least one upscaler inside Signal Loom Android.';
+    action = 'Download at least one model and at least one upscaler inside Sloom Studio Android.';
   } else if (downloadedModels <= 0) {
-    action = 'Download at least one model inside Signal Loom Android.';
+    action = 'Download at least one model inside Sloom Studio Android.';
   } else {
-    action = 'Download at least one upscaler inside Signal Loom Android.';
+    action = 'Download at least one upscaler inside Sloom Studio Android.';
   }
   const warningSuffix = warnings.length > 0 ? ` Reported warning(s): ${warnings.join(' ')}` : '';
 
@@ -542,7 +542,7 @@ export function buildAndroidLocalDreamGateEvidence({ report, reportPath = '', er
   if (contractStale) {
     const rerunCommand = buildAndroidLocalDreamGateRerunCommand(report.options || {});
     warnings.push([
-      `Android Local Dream gate evidence is stale: /v1/capabilities report lacks current one-app contract marker(s): ${capabilitiesContract.missingMarkers.join(', ')}. Rerun npm run gate:android-localdream with the current Signal Loom Android companion.`,
+      `Android Local Dream gate evidence is stale: /v1/capabilities report lacks current one-app contract marker(s): ${capabilitiesContract.missingMarkers.join(', ')}. Rerun npm run gate:android-localdream with the current Sloom Studio Android companion.`,
       rerunCommand ? `Exact rerun command: ${rerunCommand}` : '',
     ].filter(Boolean).join('\n'));
   }

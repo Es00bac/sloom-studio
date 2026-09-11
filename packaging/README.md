@@ -30,4 +30,4 @@ sudo emerge -av media-gfx/sloom-studio-bin
 ./release/Sloom\ Studio-*.AppImage
 ```
 
-The KDE applet can also be installed per-user, no root: `desktop/kde/signal-loom-globalmenu/install.sh`.
+The KDE applet can also be installed per-user, no root: `desktop/kde/sloom-globalmenu/install.sh`.

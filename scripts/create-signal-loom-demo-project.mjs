@@ -10,7 +10,7 @@ import { promisify } from 'node:util';
 const execFileAsync = promisify(execFile);
 
 const DEFAULT_OUTPUT_DIR = 'output/signal-loom-demo/neon-grimoire';
-const DEFAULT_PROJECT_PATH = '/home/cabewse/Documents/Loom Workspace/Signal Loom Demos/Neon Grimoire Signal Loom Demo.sloom';
+const DEFAULT_PROJECT_PATH = '/home/cabewse/Documents/Loom Workspace/Sloom Studio Demos/Neon Grimoire Sloom Studio Demo.sloom';
 const TEXT_MODEL = 'gemini-2.5-flash';
 const VERIFY_MODEL = 'gemini-2.5-flash';
 const UPSCALE_MODEL = 'imagen-4.0-upscale-preview';
@@ -522,7 +522,7 @@ async function main() {
 
 async function generatePanelPlan(token) {
   const prompt = [
-    'Create production-ready script data for a two-page, ten-panel comic demo in Signal Loom.',
+    'Create production-ready script data for a two-page, ten-panel comic demo in Sloom Studio.',
     'Story: a hacker in a magic/cyberpunk hybrid world uses programming loops, branches, verification, fallback routing, and upscaling to free a corporate spellgrid.',
     'Return strict JSON only with this shape:',
     '{"title":string,"logline":string,"panels":[{"id":"p01","caption":string,"dialogue":string,"imagePrompt":string}...]}',
@@ -864,7 +864,7 @@ async function verifyPanel({ panel, token, references }) {
       parts: [
         {
           text: [
-            'Verify this generated comic panel for the Signal Loom demo.',
+            'Verify this generated comic panel for the Sloom Studio demo.',
             'Return JSON only: {"pass":boolean,"score":number,"notes":string,"assetCoverage":[{"id":string,"pass":boolean,"notes":string}],"continuityNotes":string}. Score must be between 0 and 1.',
             'Pass when the image looks like finished magic/cyberpunk comic panel art, substantially follows the requested beat, and has no readable natural-language text, panel IDs, captions, speech balloons, UI labels, signage text, or watermark.',
             'Also check style consistency, character consistency, environment consistency, object/prop consistency, effects consistency, and local continuity from listed previous frames.',
@@ -932,7 +932,7 @@ async function verifySequence({ panels, references, plan, token }) {
       parts: [
         {
           text: [
-            'Verify this full two-page, ten-panel Signal Loom demo comic sequence.',
+            'Verify this full two-page, ten-panel Sloom Studio demo comic sequence.',
             'Return JSON only: {"pass":boolean,"score":number,"notes":string,"pageContinuity":[{"page":number,"pass":boolean,"notes":string}],"neighborContinuity":[{"from":string,"to":string,"pass":boolean,"notes":string}]}',
             'Check that the panels read left to right as a coherent story, each panel follows from its previous neighbor, character state and object state remain understandable, environments progress logically, and the ending resolves the setup.',
             'Also check that reference-guided style, character, prop, environment, and effects consistency is broadly maintained.',
@@ -1026,7 +1026,7 @@ async function generateOriginalPanelImage({ spec, prompt, token, providerSecrets
   if (provider === 'bfl') {
     const apiKey = providerSecrets.bfl;
     if (!apiKey) {
-      throw new Error('BFL FLUX key is not configured in Signal Loom settings or environment.');
+      throw new Error('BFL FLUX key is not configured in Sloom Studio settings or environment.');
     }
     return {
       provider: 'bfl',
@@ -1046,7 +1046,7 @@ async function generateOriginalPanelImage({ spec, prompt, token, providerSecrets
   if (provider === 'atlas') {
     const apiKey = providerSecrets.atlas;
     if (!apiKey) {
-      throw new Error('Atlas Cloud key is not configured in Signal Loom settings or environment.');
+      throw new Error('Atlas Cloud key is not configured in Sloom Studio settings or environment.');
     }
 
     const models = [spec.model, ...(spec.fallbackModels ?? [])];
@@ -1440,7 +1440,7 @@ function buildProjectDocument({ now, panels, references, plan, sequenceVerificat
   return {
     schemaVersion: 1,
     id: 'neon-grimoire-signal-loom-demo',
-    name: 'Neon Grimoire - Signal Loom Demo',
+    name: 'Neon Grimoire - Sloom Studio Demo',
     savedAt: now,
     flow: { version: 3, nodes, edges },
     flowWorkspaces: [{
@@ -1605,7 +1605,7 @@ function buildFlowNodes({ panels, references, sourceItems, referenceItems, planT
     provider: 'gemini',
     modelId: TEXT_MODEL,
     prompt: [
-      'Neon Grimoire is a two-page Signal Loom demo comic.',
+      'Neon Grimoire is a two-page Sloom Studio demo comic.',
       'Goal: show a hacker-mage using real model generation, loops, branches, verification, fallback routing, upscaling, Source Library packaging, and Paper layout.',
       'Reading order: left to right like a book. Branches move up/down only where model choices diverge.',
     ].join('\n'),
@@ -2070,9 +2070,9 @@ function buildPaperSnapshot({ panels, sourceItems, now }) {
         packageFonts: false,
         packageLinkedAssets: true,
         metadataTitle: 'Neon Grimoire Demo Comic',
-        metadataAuthor: 'Signal Loom',
+        metadataAuthor: 'Sloom Studio',
         metadataSubject: 'Two-page AI workflow demo comic',
-        metadataKeywords: 'Signal Loom, comic, Vertex, Gemini, Imagen, BFL, FLUX, Atlas Cloud',
+        metadataKeywords: 'Sloom Studio, comic, Vertex, Gemini, Imagen, BFL, FLUX, Atlas Cloud',
       },
       view: {
         showRulers: true,
@@ -2464,8 +2464,8 @@ function loadSignalLoomProviderSecrets() {
 
 function extractSignalLoomSettings() {
   const roots = [
-    join(homedir(), '.config', 'Signal Loom'),
-    join(homedir(), '.config', 'Signal Loom', 'Default'),
+    join(homedir(), '.config', 'Sloom Studio'),
+    join(homedir(), '.config', 'Sloom Studio', 'Default'),
     join(homedir(), '.config', 'signal-loom'),
   ];
   const candidates = [];
@@ -2516,8 +2516,8 @@ function extractSignalLoomStorageSecret(provider) {
 
 function readSignalLoomStorageTexts() {
   const roots = [
-    join(homedir(), '.config', 'Signal Loom'),
-    join(homedir(), '.config', 'Signal Loom', 'Default'),
+    join(homedir(), '.config', 'Sloom Studio'),
+    join(homedir(), '.config', 'Sloom Studio', 'Default'),
     join(homedir(), '.config', 'signal-loom'),
   ];
   const texts = [];

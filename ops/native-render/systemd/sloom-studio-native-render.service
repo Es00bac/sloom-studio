@@ -1,5 +1,5 @@
 [Unit]
-Description=Signal Loom native FFmpeg render service
+Description=Sloom Studio native FFmpeg render service
 After=network.target
 
 [Service]

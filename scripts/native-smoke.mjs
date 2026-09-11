@@ -144,7 +144,7 @@ async function waitForSignalLoomTarget(electron, port) {
       if (flowTarget) {
         return flowTarget;
       }
-      const signalLoomTarget = targets.find((target) => target.title === 'Sloom Studio' || target.title === 'Signal Loom');
+      const signalLoomTarget = targets.find((target) => target.title === 'Sloom Studio' || target.title === 'Sloom Studio');
       if (signalLoomTarget?.webSocketDebuggerUrl) {
         return signalLoomTarget;
       }

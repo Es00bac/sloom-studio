@@ -5,7 +5,7 @@
  * Opens a real `.sloom` project read-only (same startup-project.json mechanism as
  * `native-real-project-smoke.mjs`), points the app's native render target at an
  * ALREADY-RUNNING local render service (does not spawn or manage one — call this against a
- * disposable test instance, never the production `signal-loom-native-render.service`),
+ * disposable test instance, never the production `sloom-studio-native-render.service`),
  * screenshots the Program Stage before rendering, drives a real render through the Video
  * workspace's actual render button, and saves the resulting mp4 next to a JSON report.
  *

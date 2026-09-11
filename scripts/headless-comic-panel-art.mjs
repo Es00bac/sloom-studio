@@ -122,7 +122,7 @@ async function main() {
 
   const apiKey = provider === 'vertex' ? 'vertex-adc' : await resolveApiKey(provider, options);
   if (provider !== 'vertex' && !apiKey) {
-    throw new Error(`No ${provider} API key found. Set GEMINI_API_KEY/GOOGLE_API_KEY or OPENAI_API_KEY, pass --api-key-file, or keep Signal Loom settings populated and use --use-signal-loom-settings.`);
+    throw new Error(`No ${provider} API key found. Set GEMINI_API_KEY/GOOGLE_API_KEY or OPENAI_API_KEY, pass --api-key-file, or keep Sloom Studio settings populated and use --use-signal-loom-settings.`);
   }
 
   await mkdir(scratchDirectory, { recursive: true });
@@ -867,7 +867,7 @@ async function readSignalLoomSettingsApiKey(provider) {
   const home = process.env.HOME;
   if (!home) return undefined;
   const roots = [
-    join(home, '.config/Signal Loom/Local Storage/leveldb'),
+    join(home, '.config/Sloom Studio/Local Storage/leveldb'),
     join(home, '.config/signal-loom/Local Storage/leveldb'),
   ];
 
@@ -1083,12 +1083,12 @@ function printHelp() {
   console.log(`Usage: node scripts/headless-comic-panel-art.mjs [options]
 
 Generates Issue #1 comic panel art headlessly and registers successful images
-in the Signal Loom .sloom Source Library.
+in the Sloom Studio .sloom Source Library.
 
 Options:
   --project PATH              .sloom project path
   --issue-dir PATH            issue_01 script/reference directory
-  --scratch-dir PATH          Signal Loom scratch directory
+  --scratch-dir PATH          Sloom Studio scratch directory
   --provider gemini|vertex|openai
                               generation provider (default: gemini)
   --model MODEL               image model id

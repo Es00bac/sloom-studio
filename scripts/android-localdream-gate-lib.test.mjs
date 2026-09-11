@@ -280,7 +280,7 @@ describe('Android Local Dream production gate helpers', () => {
       mode: 'local-dream-integrated',
       models: [
         { id: 'sdxl_base', name: 'SDXL Base', downloaded: true },
-        { id: 'local-dream-active', name: 'Signal Loom Android default model' },
+        { id: 'local-dream-active', name: 'Sloom Studio Android default model' },
       ],
       upscalers: [
         { id: 'upscaler_realistic', name: 'Realistic', downloaded: true },
@@ -292,7 +292,7 @@ describe('Android Local Dream production gate helpers', () => {
         generateSmokePassed: true,
         upscaleSmokePassed: true,
       },
-      warnings: ['Native backend is not currently running; Signal Loom will try to start it on the next generation or upscale request.'],
+      warnings: ['Native backend is not currently running; Sloom Studio will try to start it on the next generation or upscale request.'],
     }));
 
     expect(capabilitiesSummary).toContain('Capabilities operation readiness passed');
@@ -327,7 +327,7 @@ describe('Android Local Dream production gate helpers', () => {
       mode: 'local-dream-integrated',
       models: [{ id: 'sdxl_base', downloaded: true }, { id: 'local-dream-active' }],
       upscalers: [{ id: 'upscaler_realistic', downloaded: true }],
-      warnings: ['Native backend is not currently running; Signal Loom will try to start it on the next generation or upscale request.'],
+      warnings: ['Native backend is not currently running; Sloom Studio will try to start it on the next generation or upscale request.'],
     }))).toMatchObject({
       ready: true,
       downloadedModels: 2,
@@ -358,7 +358,7 @@ describe('Android Local Dream production gate helpers', () => {
       downloadedModels: 2,
       downloadedUpscalers: 1,
       setupProofReady: false,
-      message: expect.stringContaining('Run Test API, Test Generate, and Test Upscale inside Signal Loom Android'),
+      message: expect.stringContaining('Run Test API, Test Generate, and Test Upscale inside Sloom Studio Android'),
     });
 
     expect(analyzeAndroidLocalDreamCapabilitiesPayload(JSON.stringify({

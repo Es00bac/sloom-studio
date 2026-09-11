@@ -175,7 +175,7 @@ Art direction:
 - Keep Return House spaces gentle, warm-white, humane, and morally unsettling. Avoid prison/hospital grime unless the script explicitly asks for memory contrast.
 - In present-day Return House panels, every restored adult, including Samira, wears the same seamless blue-gray Return House garment system unless the script explicitly says this is a memory or otherwise specifies different clothing.
 - Keep the Architect non-humanoid: no AI avatar, no robot, no hologram, no face, no glowing orb, no screen mascot.
-- Do not include speech balloons, captions, dialogue lettering, SFX lettering, panel borders, page gutters, UI, watermarks, signatures, or logos. Signal Loom Paper will add lettering and layout.
+- Do not include speech balloons, captions, dialogue lettering, SFX lettering, panel borders, page gutters, UI, watermarks, signatures, or logos. Sloom Studio Paper will add lettering and layout.
 - If the panel includes physical documents, make the document layout look plausible and bureaucratic, with clean empty form rows and blank title/field areas that can receive exact text later. Do not render readable document text, names, dates, numbers, or fake glyphs unless the target-specific override gives exact literal text to draw.
 `);
 }

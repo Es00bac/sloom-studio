@@ -1,11 +1,11 @@
 /*
     SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2016 Chinmoy Ranjan Pradhan <chinmoyrp65@gmail.com>
-    SPDX-FileCopyrightText: 2026 Sloom Software <hello@sloom.studio> (Signal Loom fallback patch)
+    SPDX-FileCopyrightText: 2026 Sloom Software <hello@sloom.studio> (Sloom Studio fallback patch)
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-    MODIFIED from plasma-workspace v6.6.5 applets/appmenu: adds a fallback that serves Signal Loom's
+    MODIFIED from plasma-workspace v6.6.5 applets/appmenu: adds a fallback that serves Sloom Studio's
     com.canonical.dbusmenu object for its native-Wayland windows (which cannot register a menu with
     KWin). All other behavior is unchanged. See README.md in this directory.
 */
@@ -84,7 +84,7 @@ AppMenuModel::AppMenuModel(QObject *parent)
         }
     });
 
-    // SIGNAL LOOM FORK: re-evaluate the active window's menu when Signal Loom's menu service comes or
+    // SLOOM STUDIO FORK: re-evaluate the active window's menu when Sloom Studio's menu service comes or
     // goes. Its window can already be focused when the service appears (app startup), and the fallback
     // in onActiveWindowChanged() would otherwise only re-run on the next focus change.
     auto *signalLoomWatcher = new QDBusServiceWatcher(QStringLiteral("org.signalloom.PanelMenu"),
@@ -219,11 +219,11 @@ void AppMenuModel::onActiveWindowChanged()
     QString objectPath = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuObjectPath).toString();
     QString serviceName = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuServiceName).toString();
 
-    // SIGNAL LOOM FORK — the whole point of this fork. Native-Wayland Electron windows cannot announce
+    // SLOOM STUDIO FORK — the whole point of this fork. Native-Wayland Electron windows cannot announce
     // a menu through KWin's appmenu protocol (Chromium never implements it), so the stock applet shows
-    // nothing for them. Signal Loom instead publishes a spec-compliant com.canonical.dbusmenu object on
+    // nothing for them. Sloom Studio instead publishes a spec-compliant com.canonical.dbusmenu object on
     // the session bus (opt-in: SIGNAL_LOOM_ELECTRON_PANEL_MENU=1). When the focused window is Signal
-    // Loom, has no native appmenu, and that service is up, feed the importer Signal Loom's menu object.
+    // Loom, has no native appmenu, and that service is up, feed the importer Sloom Studio's menu object.
     // The object's content always reflects the app's FOCUSED WORKSPACE (Flow/Image/Paper/Video each
     // publish their own full menu set, exactly like four separate applications), and the app emits
     // LayoutUpdated on workspace switches so the bar swaps instantly. Every other window: byte-identical

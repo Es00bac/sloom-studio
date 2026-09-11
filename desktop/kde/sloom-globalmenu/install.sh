@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Build + install the Signal Loom Global Menu (Universal) — a fork of KDE's stock Global Menu applet
-# (plasma-workspace v6.6.5) that additionally serves Signal Loom's D-Bus menu for its native-Wayland
+# Build + install the Sloom Studio Global Menu (Universal) — a fork of KDE's stock Global Menu applet
+# (plasma-workspace v6.6.5) that additionally serves Sloom Studio's D-Bus menu for its native-Wayland
 # windows. Installs user-locally (no root, system packages untouched).
 #
 # Usage:  ./install.sh            # build + install + wire env + restart plasmashell
@@ -11,7 +11,7 @@ here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 build_dir="${here}/build"
 prefix="${HOME}/.local"
 plugin_so="${prefix}/lib/qt6/plugins/plasma/applets/org.signalloom.globalmenu.so"
-env_conf="${HOME}/.config/environment.d/90-signal-loom-globalmenu.conf"
+env_conf="${HOME}/.config/environment.d/90-sloom-globalmenu.conf"
 
 if [ "${1:-}" = "--remove" ]; then
     rm -f "$plugin_so" "$env_conf"
@@ -41,8 +41,8 @@ systemctl --user restart plasma-plasmashell.service
 
 cat <<'DONE'
 
-Installed. Add the widget: right-click a panel → Add or Manage Widgets → "Signal Loom Global Menu (Universal)".
+Installed. Add the widget: right-click a panel → Add or Manage Widgets → "Sloom Studio Global Menu (Universal)".
 It replaces the stock Global Menu 1:1 (Qt, GTK via appmenu-gtk-module, XWayland) and additionally shows
-Signal Loom's per-workspace menus when the app runs with SIGNAL_LOOM_ELECTRON_PANEL_MENU=1
+Sloom Studio's per-workspace menus when the app runs with SIGNAL_LOOM_ELECTRON_PANEL_MENU=1
 (the installed signal-loom.desktop launcher sets this). No XWayland is forced — GPU stays on.
 DONE

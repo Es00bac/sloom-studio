@@ -1,6 +1,6 @@
 name: Build macOS (.dmg)
 
-# Signal Loom ships Windows + Linux installers from a Linux box, but a macOS .dmg
+# Sloom Studio ships Windows + Linux installers from a Linux box, but a macOS .dmg
 # has to be packaged on macOS. This runs electron-builder on a GitHub-hosted mac
 # runner and produces UNSIGNED .dmg installers for both Intel (x64) and Apple
 # Silicon (arm64). Unsigned = users right-click → Open the first time to get past

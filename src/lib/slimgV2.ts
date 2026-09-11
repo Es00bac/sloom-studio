@@ -1569,7 +1569,7 @@ export async function readSlimgManifest(
     migrationBackupAssetId?: string;
   } = {},
 ): Promise<SlimgV2ReadResult> {
-  if (!isRecord(value) || value.format !== SLIMG_FORMAT) fail('not a Signal Loom image manifest.');
+  if (!isRecord(value) || value.format !== SLIMG_FORMAT) fail('not a Sloom Studio image manifest.');
   const entries = mapEntries(assetEntries);
   const hasher = options.hasher ?? sha256Hex;
   if (value.formatVersion === 2) {

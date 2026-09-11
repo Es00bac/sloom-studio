@@ -1,8 +1,8 @@
-# Signal Loom Global Menu (Universal) — KDE Plasma 6 applet
+# Sloom Studio Global Menu (Universal) — KDE Plasma 6 applet
 
 A fork of KDE's stock **Global Menu** applet (`org.kde.plasma.appmenu`, plasma-workspace v6.6.5) with
-one added behavior: it also shows **Signal Loom's** menus — which the stock applet never can, because
-Signal Loom runs as a **native-Wayland** Electron app and Chromium never registers a menu with KWin.
+one added behavior: it also shows **Sloom Studio's** menus — which the stock applet never can, because
+Sloom Studio runs as a **native-Wayland** Electron app and Chromium never registers a menu with KWin.
 
 One widget, truly global:
 
@@ -11,10 +11,10 @@ One widget, truly global:
 | Qt/KDE apps | KWin appmenu protocol → importer | identical |
 | GTK apps | `appmenu-gtk-module` → registrar | identical |
 | XWayland apps | X11 registrar | identical |
-| **Signal Loom** | `org.signalloom.PanelMenu` D-Bus service at `/org/signalloom/menus/active` | **the added fallback** |
+| **Sloom Studio** | `org.signalloom.PanelMenu` D-Bus service at `/org/signalloom/menus/active` | **the added fallback** |
 
 The fallback triggers only when the focused window has *no* native appmenu, its app id matches Signal
-Loom, and the service is on the bus — so it cannot affect any other application. Signal Loom publishes
+Loom, and the service is on the bus — so it cannot affect any other application. Sloom Studio publishes
 **per-workspace menus** (Flow/Image/Paper/Video each have their own full set, switched live on window
 focus, with `LayoutUpdated` re-fetch), exactly like four separate applications. No XWayland is involved
 anywhere: hardware acceleration stays on.
@@ -30,10 +30,10 @@ Installs user-locally (`~/.local/lib/qt6/plugins/plasma/applets/`) and wires `QT
 plasmashell systemd user service via `~/.config/environment.d/`. Root never required; the system
 package stays untouched.
 
-Then add **“Signal Loom Global Menu (Universal)”** to a panel (far left is the classic spot) and remove
+Then add **“Sloom Studio Global Menu (Universal)”** to a panel (far left is the classic spot) and remove
 the stock Global Menu widget if present — this one does everything it does.
 
-App side: launch Signal Loom with `SIGNAL_LOOM_ELECTRON_PANEL_MENU=1` (the installed
+App side: launch Sloom Studio with `SIGNAL_LOOM_ELECTRON_PANEL_MENU=1` (the installed
 `signal-loom.desktop` sets this). The flag exports the menu service only — it does **not** force
 XWayland (`shouldForceXWaylandForGlobalMenu` doesn't know it).
 
@@ -41,7 +41,7 @@ XWayland (`shouldForceXWaylandForGlobalMenu` doesn't know it).
 
 Only `appmenumodel.cpp`:
 1. `onActiveWindowChanged()` — the fallback described above (~25 lines).
-2. Constructor — a `QDBusServiceWatcher` on `org.signalloom.PanelMenu` so a Signal Loom window that is
+2. Constructor — a `QDBusServiceWatcher` on `org.signalloom.PanelMenu` so a Sloom Studio window that is
    already focused when the app starts (or quits) gets its menu attached/detached immediately.
 
 Everything else — `appmenuapplet.cpp`, all QML, the config schema — is verbatim stock, so behavior,
@@ -60,4 +60,4 @@ the libtaskmanager ABI is the usual break point.
 
 GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL — same as upstream, with SPDX headers and
 modification notices preserved. This directory is GPL-licensed KDE-derived code, independent of (and
-not linked into) the Signal Loom application; the app only talks to it over D-Bus.
+not linked into) the Sloom Studio application; the app only talks to it over D-Bus.

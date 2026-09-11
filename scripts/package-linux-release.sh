@@ -28,9 +28,9 @@ tar --zstd -cf "$artifacts/sloom-studio-${tag_version}-linux-x64.tar.zst" \
 
 # KDE applets, with the directory names the packaging expects.
 tar -czf "$artifacts/sloom-globalmenu-1.0.0.tar.gz" \
-  --exclude=build --transform 's|^signal-loom-globalmenu|sloom-globalmenu-1.0.0|' -C "$root/desktop/kde" signal-loom-globalmenu
+  --exclude=build --transform 's|^sloom-globalmenu|sloom-globalmenu-1.0.0|' -C "$root/desktop/kde" sloom-globalmenu
 tar -czf "$artifacts/sloom-panelmenu-1.0.0.tar.gz" \
-  --transform 's|^signal-loom-panelmenu|sloom-panelmenu-1.0.0|' -C "$root/desktop/kde" signal-loom-panelmenu
+  --transform 's|^sloom-panelmenu|sloom-panelmenu-1.0.0|' -C "$root/desktop/kde" sloom-panelmenu
 
 for f in "$out"/*.AppImage "$out"/*.deb "$out"/*.rpm; do [ -e "$f" ] && cp -f "$f" "$artifacts/"; done
 (cd "$artifacts" && sha256sum -- * > SHA256SUMS)

@@ -1,9 +1,9 @@
-// Signal Loom Global Menu — a KDE Plasma 6 panel applet that renders Signal Loom's application menu
+// Sloom Studio Global Menu — a KDE Plasma 6 panel applet that renders Sloom Studio's application menu
 // in the panel WITHOUT XWayland.
 //
 // The stock KDE global-menu applet learns a window's menu from the AppMenu registrar, which is keyed on
 // an X11 window id — so an Electron app has to force XWayland to use it, and on AMD/Mesa that drops the
-// GPU to software. This applet sidesteps all of that: Signal Loom (running native-Wayland, GPU intact)
+// GPU to software. This applet sidesteps all of that: Sloom Studio (running native-Wayland, GPU intact)
 // publishes the focused workspace's menu over a plain `org.signalloom.PanelMenu` D-Bus service, and this
 // applet polls that service and draws the menu. No X11 window id, no XWayland, full hardware
 // acceleration — plus the menu in the panel.
@@ -26,7 +26,7 @@ PlasmoidItem {
     readonly property int pollMs: 350
 
     // Service state.
-    property bool serviceActive: false      // a Signal Loom window is focused
+    property bool serviceActive: false      // a Sloom Studio window is focused
     property int menuRevision: -1           // last menu revision we fetched
     property var menuGroups: []             // [{ label, children:[…] }]
     property int openPopups: 0              // keep the bar visible while a menu is open

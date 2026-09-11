@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Signal Loom local AI upscaler — the runtime behind the "Local AI upscaler"
+ * Sloom Studio local AI upscaler — the runtime behind the "Local AI upscaler"
  * option. A zero-dependency HTTP wrapper around realesrgan-ncnn-vulkan (device
  * auto-selected by ncnn), speaking the protocol src/lib/localCpuUpscaler.ts expects:
  *

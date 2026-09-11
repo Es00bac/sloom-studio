@@ -120,7 +120,7 @@ const server = http.createServer(async (request, response) => {
 });
 
 server.listen(PORT, HOST, () => {
-  console.log(`Signal Loom native render service listening on http://${HOST}:${PORT}`);
+  console.log(`Sloom Studio native render service listening on http://${HOST}:${PORT}`);
 });
 
 async function probeCapabilities() {

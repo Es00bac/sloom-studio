@@ -1,4 +1,4 @@
-// A recursive QtQuick.Controls Menu built at runtime from Signal Loom's panel-menu JSON.
+// A recursive QtQuick.Controls Menu built at runtime from Sloom Studio's panel-menu JSON.
 //
 // Each entry is { label, separator?, enabled?, command?, shortcut?, children? }. Leaves emit
 // `activated(command)`; submenus are nested SlMenus whose `activated` bubbles up. Rebuilds itself
@@ -71,7 +71,7 @@ QQC2.Menu {
             property string command: ""
             property string shortcutText: ""
             // Show the accelerator right-aligned, greyed — the panel menu is display-only (the real
-            // shortcut is still handled by the focused Signal Loom window, not by this applet).
+            // shortcut is still handled by the focused Sloom Studio window, not by this applet).
             QQC2.Label {
                 anchors.right: parent.right
                 anchors.rightMargin: 12

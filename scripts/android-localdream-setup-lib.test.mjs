@@ -89,13 +89,13 @@ describe('Android Local Dream guided setup helpers', () => {
       'verify-source-only',
     ]);
     expect(plan.steps[0]).toMatchObject({
-      label: 'Prepare the source-only Signal Loom Local Dream fork',
+      label: 'Prepare the source-only Sloom Studio Local Dream fork',
       executable: '/repo/companions/android-local-dream-fork/prepare-signal-loom-localdream.sh',
       args: ['--source-only', '--package-mode', 'replace', '/tmp/source-fork'],
       command: '/repo/companions/android-local-dream-fork/prepare-signal-loom-localdream.sh --source-only --package-mode replace /tmp/source-fork',
     });
     expect(plan.steps[1]).toMatchObject({
-      label: 'Verify the source-only Signal Loom Local Dream fork',
+      label: 'Verify the source-only Sloom Studio Local Dream fork',
       args: ['--verify-prepared', '--source-only', '--package-mode', 'replace', '/tmp/source-fork'],
     });
     const plannedCommands = plan.steps.map((step) => step.command).join('\n');
@@ -118,7 +118,7 @@ describe('Android Local Dream guided setup helpers', () => {
     expect(plan.steps).toEqual([
       {
         id: 'prepare-and-gate',
-        label: 'Prepare, install, start, and validate the side-by-side Signal Loom Local Dream app',
+        label: 'Prepare, install, start, and validate the side-by-side Sloom Studio Local Dream app',
         command: 'node /repo/scripts/android-localdream-gate.mjs --prepare --package-mode=side-by-side --adb-serial=R5C0000 --android-sdk=/opt/android-sdk --token=<redacted>',
         executable: 'node',
         args: [
@@ -169,7 +169,7 @@ describe('Android Local Dream guided setup helpers', () => {
     expect(plan.steps[4]).toMatchObject({
       kind: 'manual',
       command: 'manual checkpoint',
-      label: 'Open Signal Loom Android, redownload assets, and run in-app operation smoke tests',
+      label: 'Open Sloom Studio Android, redownload assets, and run in-app operation smoke tests',
     });
     expect(plan.steps[4].manualActions.join('\n')).toContain('Test Generate');
     expect(plan.steps[4].manualActions.join('\n')).toContain('npm run gate:android-localdream -- --package-mode=replace --fork-dir=/tmp/fork --android-sdk=/opt/android-sdk');

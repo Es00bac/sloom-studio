@@ -117,13 +117,13 @@ export function buildAndroidLocalDreamSetupPlan({
       steps: [
         commandStep({
           id: 'prepare-source-only',
-          label: 'Prepare the source-only Signal Loom Local Dream fork',
+          label: 'Prepare the source-only Sloom Studio Local Dream fork',
           executable: prepareScript,
           args: ['--source-only', '--package-mode', mode, resolvedForkDir],
         }),
         commandStep({
           id: 'verify-source-only',
-          label: 'Verify the source-only Signal Loom Local Dream fork',
+          label: 'Verify the source-only Sloom Studio Local Dream fork',
           executable: prepareScript,
           args: ['--verify-prepared', '--source-only', '--package-mode', mode, resolvedForkDir],
         }),
@@ -138,7 +138,7 @@ export function buildAndroidLocalDreamSetupPlan({
       blocked: true,
       warnings: [
         'Replace-package setup uninstalls the Play Store Local Dream app and deletes its private downloaded model/upscaler data.',
-        'Rerun with --confirm-replace-uninstall only after the user has approved the destructive migration and understands models/upscalers must be redownloaded inside Signal Loom Android.',
+        'Rerun with --confirm-replace-uninstall only after the user has approved the destructive migration and understands models/upscalers must be redownloaded inside Sloom Studio Android.',
       ],
       steps: [],
     };
@@ -153,7 +153,7 @@ export function buildAndroidLocalDreamSetupPlan({
       steps: [
         commandStep({
           id: 'prepare-and-gate',
-          label: 'Prepare, install, start, and validate the side-by-side Signal Loom Local Dream app',
+          label: 'Prepare, install, start, and validate the side-by-side Sloom Studio Local Dream app',
           executable: 'node',
           args: [
             gateScript,
@@ -186,20 +186,20 @@ export function buildAndroidLocalDreamSetupPlan({
     packageMode: mode,
     blocked: false,
     warnings: [
-      'Replace-package setup will uninstall the Play Store Local Dream app before installing the Signal Loom build.',
-      'Model and upscaler files must be downloaded again inside the replacement Signal Loom Android app.',
+      'Replace-package setup will uninstall the Play Store Local Dream app before installing the Sloom Studio build.',
+      'Model and upscaler files must be downloaded again inside the replacement Sloom Studio Android app.',
       'Run npm run gate:android-localdream after the manual checkpoint passes.',
     ],
     steps: [
       commandStep({
         id: 'prepare-replace',
-        label: 'Prepare the replace-package Signal Loom Local Dream fork while Play Store Local Dream is still installed',
+        label: 'Prepare the replace-package Sloom Studio Local Dream fork while Play Store Local Dream is still installed',
         executable: prepareScript,
         args: ['--replace-package', resolvedForkDir],
       }),
       commandStep({
         id: 'build-replace',
-        label: 'Build the replace-package Signal Loom Local Dream APK',
+        label: 'Build the replace-package Sloom Studio Local Dream APK',
         executable: './gradlew',
         args: [':app:assembleFilterDebug', '--no-daemon'],
         cwd: resolvedForkDir,
@@ -217,16 +217,16 @@ export function buildAndroidLocalDreamSetupPlan({
       }),
       commandStep({
         id: 'install-replace',
-        label: 'Install the replace-package Signal Loom Local Dream APK',
+        label: 'Install the replace-package Sloom Studio Local Dream APK',
         executable: 'adb',
         args: [...adbPrefix, 'install', '-r', replaceApkPath],
       }),
       manualStep({
         id: 'first-run-redownload-and-smoke',
-        label: 'Open Signal Loom Android, redownload assets, and run in-app operation smoke tests',
+        label: 'Open Sloom Studio Android, redownload assets, and run in-app operation smoke tests',
         detail: 'The replacement app has a clean private data directory after uninstall/install. Complete this checkpoint before claiming replace-package live validation.',
         manualActions: [
-          'Open Signal Loom Android after install.',
+          'Open Sloom Studio Android after install.',
           'Confirm Runtime Assets shows QNN libraries, safety checker, and native diffusion core ready.',
           'Download at least one model and one upscaler inside the replacement app.',
           'Start the LAN API from the setup screen.',
@@ -240,7 +240,7 @@ export function buildAndroidLocalDreamSetupPlan({
 
 export function formatAndroidLocalDreamSetupPlan(plan) {
   const lines = [
-    `Signal Loom Android Local Dream setup: ${plan.status}`,
+    `Sloom Studio Android Local Dream setup: ${plan.status}`,
     `Package mode: ${plan.packageMode}`,
   ];
   if (plan.sourceOnly) {

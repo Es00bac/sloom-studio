@@ -44,7 +44,7 @@ let report = createAndroidLocalDreamGateReport({
 });
 
 await writeReport(report);
-console.log(`Signal Loom Android Local Dream gate: ${steps.length} step${steps.length === 1 ? '' : 's'}`);
+console.log(`Sloom Studio Android Local Dream gate: ${steps.length} step${steps.length === 1 ? '' : 's'}`);
 for (const [index, step] of steps.entries()) {
   console.log(`${index + 1}. ${step.command}${step.cwd ? ` (cwd ${step.cwd})` : ''}`);
 }

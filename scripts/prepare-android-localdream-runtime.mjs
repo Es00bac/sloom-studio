@@ -66,8 +66,8 @@ writeFileSync(provenancePath, `${JSON.stringify({
     'assets/qnnlibs/*',
   ],
   notes: [
-    'Used by Signal Loom Android for in-app Local Dream-style QNN image upscaling.',
-    'Upscaler model files are downloaded at runtime into Signal Loom app-private storage.',
+    'Used by Sloom Studio Android for in-app Local Dream-style QNN image upscaling.',
+    'Upscaler model files are downloaded at runtime into Sloom Studio app-private storage.',
   ],
 }, null, 2)}\n`);
 

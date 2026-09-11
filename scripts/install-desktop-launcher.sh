@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installs Signal Loom as a real desktop app: packages the current code with
+# Installs Sloom Studio as a real desktop app: packages the current code with
 # electron-builder, syncs the unpacked build into a stable install dir, and
 # points the application-menu entry at the installed binary. Re-run after any
 # change to refresh the installed app (or `--no-build` to just re-sync/repoint).

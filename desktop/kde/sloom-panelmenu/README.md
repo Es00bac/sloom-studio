@@ -1,6 +1,6 @@
-# Signal Loom Global Menu (KDE Plasma 6 applet)
+# Sloom Studio Global Menu (KDE Plasma 6 applet)
 
-Shows Signal Loom's application menu (**File · Edit · View · …**) in the Plasma panel **while the app
+Shows Sloom Studio's application menu (**File · Edit · View · …**) in the Plasma panel **while the app
 keeps hardware acceleration on native Wayland** — the "global menu *and* GPU" combination that the stock
 KDE global menu can't give an Electron app.
 
@@ -16,7 +16,7 @@ protocol without patching Chromium. This applet takes the other road — **it do
 all**:
 
 ```
- Signal Loom (native Wayland, GPU intact)          this applet (in the panel)
+ Sloom Studio (native Wayland, GPU intact)          this applet (in the panel)
  ────────────────────────────────────────          ──────────────────────────
  exports org.signalloom.PanelMenu on the   ───►     polls State() every ~350ms
  session bus:                                        when a SL window is focused:
@@ -25,7 +25,7 @@ all**:
    • Activate(command) → runs it                       Activate(command)
 ```
 
-No X11 window id is involved anywhere, so Signal Loom stays a native‑Wayland toplevel and the GPU is
+No X11 window id is involved anywhere, so Sloom Studio stays a native‑Wayland toplevel and the GPU is
 never touched. The menu content is built from the exact same `shared/workspaceMenus.json` as the
 in‑window menu, so the two can't drift.
 
@@ -40,7 +40,7 @@ installs with `kpackagetool6` — no compiler, no dev headers.
 
 Then:
 
-1. **Enable the service in Signal Loom.** Launch it with the opt‑in flag (this flag does **not** force
+1. **Enable the service in Sloom Studio.** Launch it with the opt‑in flag (this flag does **not** force
    XWayland — verify with `chrome://gpu` that the GPU is still on):
 
    ```bash
@@ -50,14 +50,14 @@ Then:
    To make it permanent, add `Environment=SIGNAL_LOOM_ELECTRON_PANEL_MENU=1` to the app's `.desktop`
    file, or export the variable from your shell profile.
 
-2. **Add the widget.** Right‑click the panel → *Add or Manage Widgets…* → search **“Signal Loom Global
+2. **Add the widget.** Right‑click the panel → *Add or Manage Widgets…* → search **“Sloom Studio Global
    Menu”** → drag it onto the panel. If it doesn't appear in the list yet, restart the shell:
 
    ```bash
    kquitapp6 plasmashell && kstart plasmashell
    ```
 
-3. Focus a Signal Loom window — its menu bar appears in the panel and disappears when you focus another
+3. Focus a Sloom Studio window — its menu bar appears in the panel and disappears when you focus another
    app.
 
 ## Verify it's working (without the applet)
@@ -65,7 +65,7 @@ Then:
 You can confirm the service side independently:
 
 ```bash
-# Is a Signal Loom window focused? → "1:<rev>" active, "0:<rev>" not.
+# Is a Sloom Studio window focused? → "1:<rev>" active, "0:<rev>" not.
 gdbus call --session --dest org.signalloom.PanelMenu \
   --object-path /org/signalloom/PanelMenu \
   --method org.signalloom.PanelMenu.State
@@ -84,7 +84,7 @@ files”*, the app isn't running with `SIGNAL_LOOM_ELECTRON_PANEL_MENU=1`.
 
 - **Nothing in the panel, but `State` works.** The applet is present but not added to the panel, or the
   shell needs a restart (`kquitapp6 plasmashell && kstart plasmashell`).
-- **Menu shows but a Signal Loom window has to be focused.** That's by design — it's a *global* menu; it
+- **Menu shows but a Sloom Studio window has to be focused.** That's by design — it's a *global* menu; it
   follows focus. Opening the applet's own menu briefly steals focus, which the app tolerates with a short
   grace window so the menu doesn't flicker away mid‑click.
 - **`gdbus: command not found`.** Install glib2 (`sudo pacman -S glib2` / `sudo apt install

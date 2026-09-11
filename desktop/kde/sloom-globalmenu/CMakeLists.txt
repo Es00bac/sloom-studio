@@ -1,10 +1,10 @@
-# Signal Loom Global Menu (Universal) — fork of plasma-workspace v6.6.5 applets/appmenu.
+# Sloom Studio Global Menu (Universal) — fork of plasma-workspace v6.6.5 applets/appmenu.
 #
 # A standalone out-of-tree build of KDE's stock Global Menu applet with one added behavior: when the
-# focused window is Signal Loom (native Wayland, so it can never register a menu with KWin) and Signal
-# Loom's org.signalloom.PanelMenu D-Bus service is up, the applet imports Signal Loom's
+# focused window is Sloom Studio (native Wayland, so it can never register a menu with KWin) and Signal
+# Loom's org.signalloom.PanelMenu D-Bus service is up, the applet imports Sloom Studio's
 # com.canonical.dbusmenu object. Everything else is byte-identical stock behavior, so this single
-# widget serves Qt apps, GTK apps (via appmenu-gtk-module), XWayland apps — and Signal Loom.
+# widget serves Qt apps, GTK apps (via appmenu-gtk-module), XWayland apps — and Sloom Studio.
 #
 # Two vendored pieces (both from the same plasma-workspace v6.6.5 tag, licenses preserved):
 #   third_party/libdbusmenuqt/    — the DBusMenu importer plasma-workspace builds as a static lib
@@ -12,7 +12,7 @@
 #                                    exact same version, so the ABI matches by construction
 
 cmake_minimum_required(VERSION 3.16)
-project(signal-loom-globalmenu VERSION 1.0.0)
+project(sloom-globalmenu VERSION 1.0.0)
 
 find_package(ECM 6.0 REQUIRED NO_MODULE)
 list(APPEND CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -46,7 +46,7 @@ ecm_qt_declare_logging_category(libdbusmenu_SRCS HEADER debug.h
     IDENTIFIER DBUSMENUQT
     CATEGORY_NAME org.kde.libdbusmenuqt
     DEFAULT_SEVERITY Info
-    DESCRIPTION "libdbusmenu debug (signal-loom-globalmenu vendored copy)"
+    DESCRIPTION "libdbusmenu debug (sloom-globalmenu vendored copy)"
 )
 
 set_source_files_properties(third_party/libdbusmenuqt/com.canonical.dbusmenu.xml PROPERTIES

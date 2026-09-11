@@ -47,7 +47,7 @@ export function buildReleaseGatePlan(profile) {
 }
 
 export function formatReleaseGatePlan(profile, steps) {
-  const lines = [`Signal Loom ${profile} gate: ${steps.length} step${steps.length === 1 ? '' : 's'}`];
+  const lines = [`Sloom Studio ${profile} gate: ${steps.length} step${steps.length === 1 ? '' : 's'}`];
 
   for (const [index, step] of steps.entries()) {
     lines.push(`${index + 1}. npm run ${step.script} - ${step.label}`);

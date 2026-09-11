@@ -491,7 +491,7 @@
       { "command": "help:feature-help", "label": "Feature Help", "labelJa": "機能ヘルプ" },
       { "type": "separator" },
       { "command": "help:keyboard-shortcuts", "label": "Keyboard Shortcuts", "labelJa": "キーボードショートカット", "accelerator": "F1" },
-      { "command": "help:about", "label": "About Signal Loom", "labelJa": "Signal Loom について" }
+      { "command": "help:about", "label": "About Sloom Studio", "labelJa": "Sloom Studio について" }
     ]
   }
 }

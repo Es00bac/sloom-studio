@@ -168,11 +168,11 @@ async function waitForSignalLoomTarget(electron, port) {
   const url = `http://127.0.0.1:${port}/json/list`;
   for (let attempt = 0; attempt < 100; attempt += 1) {
     if (electron.exitCode !== null) {
-      throw new Error(`Electron exited before the Signal Loom target appeared.\n${electron.logs.join('')}`);
+      throw new Error(`Electron exited before the Sloom Studio target appeared.\n${electron.logs.join('')}`);
     }
     try {
       const targets = await fetch(url).then((response) => response.json());
-      const signalLoomTarget = targets.find((target) => target.title === 'Sloom Studio' || target.title === 'Signal Loom');
+      const signalLoomTarget = targets.find((target) => target.title === 'Sloom Studio' || target.title === 'Sloom Studio');
       if (signalLoomTarget?.webSocketDebuggerUrl) {
         return signalLoomTarget;
       }

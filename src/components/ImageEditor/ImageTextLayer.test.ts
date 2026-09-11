@@ -200,7 +200,7 @@ describe('ImageTextLayer', () => {
   it('wraps text into source style box dimensions and preserves the box as raster bounds', () => {
     const layout = measureImageTextBlock(
       normalizeImageTextStyle({
-        content: 'Signal Loom captions wrap',
+        content: 'Sloom Studio captions wrap',
         fontSize: 20,
         boxWidth: 90,
         boxHeight: 120,
@@ -1273,7 +1273,7 @@ describe('ImageTextLayer', () => {
         bitmapVersion: 2,
         mask: null,
         text: normalizeImageTextStyle({
-          content: 'Signal Loom',
+          content: 'Sloom Studio',
           fontSize: 28,
           pathReference: {
             kind: 'vector-layer',
