@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254">
+  <rect width="1254" height="1254" fill="#f3eee4"/>
+  <g transform="translate(627 470) scale(0.42) translate(-512 -512)">
+    <g fill="none" stroke="#26201c" stroke-width="52" stroke-linecap="round">
+      <circle cx="418" cy="418" r="150"/><circle cx="606" cy="418" r="150"/><circle cx="418" cy="606" r="150"/><circle cx="606" cy="606" r="150"/>
+    </g>
+    <circle cx="512" cy="512" r="26" fill="#8a2f2a"/>
+  </g>
+  <text x="627" y="790" text-anchor="middle" font-family="IBM Plex Sans, Liberation Sans, sans-serif" font-weight="600" font-size="96" letter-spacing="14" fill="#26201c">SLOOM STUDIO</text>
+  <text x="627" y="862" text-anchor="middle" font-family="IBM Plex Sans, Liberation Sans, sans-serif" font-weight="400" font-size="36" letter-spacing="6" fill="#6b6259">ILLUSTRATION · COMICS &amp; BOOKS · VIDEO</text>
+  <line x1="467" y1="920" x2="787" y2="920" stroke="#c9bfab" stroke-width="3"/>
+  <text x="627" y="984" text-anchor="middle" font-family="IBM Plex Sans, Liberation Sans, sans-serif" font-weight="500" font-size="40" fill="#8a2f2a">Free software · GNU GPL v3 or later</text>
+  <text x="627" y="1040" text-anchor="middle" font-family="IBM Plex Sans, Liberation Sans, sans-serif" font-weight="400" font-size="30" fill="#6b6259">No licence keys. No account. Yours to run, study, share and change.</text>
+</svg>

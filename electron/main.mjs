@@ -342,11 +342,8 @@ function buildStartupSplashHtml() {
     imageUrl = pathToFileURL(SIGNAL_LOOM_SPLASH_IMAGE_PATH).href;
   }
 
-  // Bilingual, anime-title-style wordmark baked onto the splash: the Latin "Sloom Studio" over a faint
-  // oversized katakana ghost (スルーム・スタジオ) plus a small tracked katakana subtitle, on a scrim so
-  // it reads over the artwork. Kept in sync with the in-app BrandWordmark (src/components/Layout).
-  const BRAND_NAME = 'Sloom Studio';
-  const BRAND_KATAKANA = 'スルーム・スタジオ';
+  // The free-software splash artwork carries its own wordmark and licence line, so the page is
+  // just the image on the paper background. Kept in sync with public/signal-loom-splash.png.
 
   return `<!doctype html>
 <html>
@@ -361,7 +358,7 @@ function buildStartupSplashHtml() {
         height: 100%;
         margin: 0;
         overflow: hidden;
-        background: #020712;
+        background: #f3eee4;
       }
 
       body {
@@ -375,80 +372,15 @@ function buildStartupSplashHtml() {
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         user-select: none;
         -webkit-user-drag: none;
       }
 
-      .brand-scrim {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        padding: 16% 0 8%;
-        background: linear-gradient(to top, #020711 8%, rgba(2, 7, 17, 0.82) 42%, transparent);
-        pointer-events: none;
-      }
-
-      .brand { position: relative; text-align: center; line-height: 1; }
-      .brand__logo { position: relative; display: inline-block; padding-top: 0.35em; }
-      .brand__ghost {
-        position: absolute;
-        left: 50%;
-        top: -0.18em;
-        transform: translateX(-50%);
-        font-size: 76px;
-        font-weight: 800;
-        letter-spacing: 0.18em;
-        white-space: nowrap;
-        color: rgba(103, 232, 249, 0.10);
-      }
-      .brand__name {
-        position: relative;
-        display: block;
-        font-size: 40px;
-        font-weight: 800;
-        letter-spacing: -0.01em;
-        color: #eef6ff;
-        text-shadow: 0 2px 18px rgba(4, 10, 24, 0.65);
-      }
-      .brand__sub {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        margin-top: 10px;
-      }
-      .brand__rule { height: 1px; width: 30px; }
-      .brand__rule--l { background: linear-gradient(90deg, transparent, rgba(103, 232, 249, 0.55)); }
-      .brand__rule--r { background: linear-gradient(90deg, rgba(103, 232, 249, 0.55), transparent); }
-      .brand__kana {
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.42em;
-        padding-left: 0.42em;
-        color: rgba(125, 224, 245, 0.92);
-        white-space: nowrap;
-      }
     </style>
   </head>
   <body>
     <img src="${imageUrl}" alt="Sloom Studio is starting" />
-    <div class="brand-scrim">
-      <div class="brand">
-        <div class="brand__logo">
-          <span class="brand__ghost">${BRAND_KATAKANA}</span>
-          <span class="brand__name">${BRAND_NAME}</span>
-        </div>
-        <div class="brand__sub">
-          <span class="brand__rule brand__rule--l"></span>
-          <span class="brand__kana">${BRAND_KATAKANA}</span>
-          <span class="brand__rule brand__rule--r"></span>
-        </div>
-      </div>
-    </div>
   </body>
 </html>`;
 }
@@ -471,7 +403,7 @@ function createStartupSplashWindow() {
     maxHeight: 560,
     useContentSize: true,
     title: 'Sloom Studio is starting',
-    backgroundColor: '#020712',
+    backgroundColor: '#f3eee4',
     frame: false,
     resizable: false,
     movable: true,
