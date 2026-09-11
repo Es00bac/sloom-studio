@@ -28,7 +28,7 @@ import { TypedFlowEdge } from '../../../components/Flow/TypedFlowEdge';
 import {
   FlowCardOcclusionDefs,
   FlowCardOcclusionProvider,
-} from '../../../components/Flow/FlowCardOcclusion';
+} from '../../../components/Flow/FlowCardOcclusionProvider';
 import { createTypedConnectionLine } from '../../../components/Flow/TypedConnectionLine';
 
 const FLOW_EDGE_TYPES: EdgeTypes = { typed: TypedFlowEdge };

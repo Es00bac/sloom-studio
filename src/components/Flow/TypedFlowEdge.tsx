@@ -8,7 +8,7 @@ import {
   getFlowEdgePresentation,
   readFlowEdgeContract,
 } from './flowEdgePresentation';
-import { useFlowCardOcclusionEnabled } from './FlowCardOcclusion';
+import { useFlowCardOcclusionEnabled } from './FlowCardOcclusionProvider';
 import {
   FLOW_CARD_CORNER_RADIUS,
   FLOW_CARD_OCCLUDER_CLIP_ID,

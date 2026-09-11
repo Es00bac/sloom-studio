@@ -125,6 +125,8 @@ jobs:
 
   # ---- Android (Capacitor + Gradle). Debug APK for now; release AAB once a keystore secret exists. ----
   android:
+    # Android is out of scope for the free-software release line for now; manual runs only, never attached to a release.
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:

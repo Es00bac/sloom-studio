@@ -6,7 +6,7 @@ import {
   type FlowEdgeContractData,
 } from './flowEdgePresentation';
 import { TypedFlowEdge } from './TypedFlowEdge';
-import { FlowCardOcclusionProvider } from './FlowCardOcclusion';
+import { FlowCardOcclusionProvider } from './FlowCardOcclusionProvider';
 import { FLOW_CARD_OCCLUDER_CLIP_ID } from './flowCardOcclusion';
 
 const flowStub = vi.hoisted(() => ({
