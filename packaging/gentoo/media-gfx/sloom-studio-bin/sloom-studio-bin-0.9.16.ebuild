@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop xdg
+inherit desktop unpacker xdg
 
 DESCRIPTION="Local-first creative suite: illustration, comic and book layout, video (binary build)"
 HOMEPAGE="https://sloom.studio https://github.com/Es00bac/sloom-studio"
@@ -34,6 +34,8 @@ RDEPEND="
 	x11-libs/pango
 	globalmenu? ( kde-plasma/sloom-globalmenu )
 "
+
+BDEPEND="$(unpacker_src_uri_depends)"
 
 QA_PREBUILT="opt/sloom-studio/*"
 
