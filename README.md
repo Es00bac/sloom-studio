@@ -221,7 +221,7 @@ do not commit the real environment file.
 
 ## Support the project
 
-Sloom Studio is free software written by one person. It is funded by [Hane](https://sloom.studio/hane/),
+Sloom Studio is free software designed and engineered by one person. It is funded by [Hane](https://sloom.studio/hane/),
 our Android painting app (USD 9.99 one-time for Full), and by donations at
 [sloom.studio/donate](https://sloom.studio/donate/). Hane's physical-media brush engine, Tiltmark, is
 proprietary; a paid Tiltmark plugin for Sloom Studio's Image workspace is planned as a separate,
@@ -244,4 +244,3 @@ not do with the names and logos.
 Bundled third-party components and their licences are listed in
 `shared/third-party-components.json` and `shared/third-party-notices/`. The bundled fonts are
 under the SIL Open Font License or equivalent free licences.
-
