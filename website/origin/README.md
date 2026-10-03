@@ -16,7 +16,7 @@ Visit `http://127.0.0.1:18867/origin/`. Fonts, illustrations, photographs and fi
 
 Root owns scoped deployment to `hostinger-vps:/var/www/sloom.studio/html/origin/`. Preserve the Sloom homepage and every other route.
 
-Publish **only** `index.html`, `origin.css`, `origin.js`, `rigs.js`, `rig-configs.json`, `assets/` and `media/`. Do not publish `art-sources/`, source notes or ignored `qa/` browser evidence. Original generated PNGs, prompts and reference hashes belong to the source history, not the runtime bundle.
+Publish **only** `index.html`, `origin.css`, `origin.js`, `infestation.js`, `infestation.css`, `rigs.js`, `rig-configs.json`, `assets/` and `media/`. Do not publish `art-sources/`, source notes or ignored `qa/` browser evidence. Original generated PNGs, prompts and reference hashes belong to the source history, not the runtime bundle.
 
 Directory routing already serves `/origin/`. Root added this scoped nginx rule so both narration tracks are served as `text/vtt`:
 
@@ -31,11 +31,13 @@ The live configuration was validated and reloaded; no nginx source file exists i
 
 ## Artwork and motion
 
-The opening composition uses the illustrated Qompany habitat with articulated Ducké and Vix foreground figures. Matched Qompany/Seedweb habitat paintings form the world and faction chapters. Manufactured cable/plate bitmap art and cyan/violet SVG conduits progressively invade the roster chapter, then recede before the field guide. Strong strokes stay outside reading copy.
+The opening composition uses the illustrated Qompany habitat with articulated Ducké and Vix foreground figures. Matched Qompany/Seedweb habitat paintings form the world and faction chapters.
 
-Every one of the eight crew and five chassis has two views: labeled illustrated cast and actual current-engine canonical full six-site Tideglass photography. Patches's actual photograph holds the dedicated Arc shears **at rest**; the illustrated cast is empty-handed. Rejected development-room renders are removed.
+All eight crew and five chassis appear in normal-scroll editorial folios: illustrated action and actual current-engine canonical full six-site Tideglass photography are visible together. No character selector or view switch is required. Patches's actual photograph holds the dedicated Arc shears **at rest**; illustrated crew are empty-handed. Rejected development-room renders are removed.
 
-`rigs.js` implements real Canvas 2D bone-weighted textured triangle meshes, parented joint chains, two-link ground-contact IK and fixed foot vertices. `rig-configs.json` fits each identity to the artists' normalized landmarks: tails, ears, Axi's six gills, Chime's wings, Scuttle's eight contact legs and other machine appendages. Occluded limbs are not invented. Motion is small and anatomy-specific. A visible pause control and reduced-motion preference freeze the pose; offscreen and hidden pages stop animation; resumed clocks do not jump.
+`rigs.js` draws separate rigid painted atlas pieces on parented Canvas 2D bones. `rig-configs.json` contains authored action tracks with anticipation, actual steps/weight transfer, individual swing/plant phases, wrist/leg IK, gear gestures, machine tool/wing/claw/crusher cycles, return and settle. This replaces the rejected small idle performance. No texture stretches around a folded forearm. The visible Pause/Play control and reduced-motion preference freeze poses; offscreen and hidden pages stop animation, and resumed clocks do not jump. See `RIGGING.md`.
+
+`infestation.js`, `infestation.css` and `assets/seedweb-surface.frag` attach manufactured Seedweb to page surfaces. The real game's material channels shade graphite cable beds, ceramic deposits, brass clamps and amber signals. Growth spreads through the faction chapter and recedes before the guide; protected copy and real photographs remain readable. A Canvas material fallback remains when WebGL is unavailable. This replaces the former decorative cyan SVG screen frame.
 
 Originals, exact prompts, reference/map/build hashes and landmarks are recorded under `art-sources/` and indexed in `asset-provenance.json`. Illustrations are explicitly labeled and never presented as gameplay.
 
@@ -54,6 +56,6 @@ The creator's supplied NS/NS2 history is preserved. The game is independent and 
 
 ## Access and verification
 
-Native roster/tech buttons expose pressed state; roster arrows move selection/focus. Manuals use native details/summary. Without JavaScript, every dossier and both technology paths remain readable, with static hero art. Mobile navigation exposes expanded state and Escape closes it and restores focus. Main/header resize observers keep scroll geometry correct after reflow.
+All 13 cast dossiers, animated illustrations and actual photographs are in document flow. Native technology buttons expose pressed state. Manuals use native details/summary. Without JavaScript, every dossier and both technology paths remain readable, with static illustrated cast and hero art. Mobile navigation exposes expanded state and Escape closes it and restores focus. Main/header resize observers keep scroll geometry correct after reflow.
 
 See `QA-CHECKS.md` for the bounded changed-page verification and actual browser motion evidence. Root owns final live verification and publication.

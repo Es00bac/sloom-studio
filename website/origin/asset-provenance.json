@@ -1,27 +1,203 @@
 {
-  "version": 2,
+  "version": 3,
   "date": "2026-10-03",
-  "note": "Illustrations are explicitly labeled; actual photographs come from the canonical full six-site Tideglass production batch. Rejected development-room character renders and unused old imagery have been removed. All source PNGs/prompts/reference maps are durable source records, excluded from the public runtime bundle.",
+  "note": "All 13 cast illustrations, authored rigid-part actions and canonical six-site Tideglass photographs appear in normal scroll. Source PNGs, exact prompts, reference hashes, measured atlas bounds and final fits are durable source records, excluded from publication. Seedweb materials come directly from the game.",
   "source_records": [
     {
-      "file": "art-sources/in-engine-photos.json",
-      "sha256": "08644abf9ccb511ad69c1e3ce285a929faddf6741464bd9aab63bb77df5cd798"
+      "file": "art-sources/bastion-layered-atlas.json",
+      "sha256": "acd7a90b2004aaf3509f3486f269d31e6a819ae0178d13d32e77f3d86111b4e1"
     },
     {
-      "file": "art-sources/generated-environment-assets.json",
-      "sha256": "06a38368c728d09f8a0391e79da14d3989499f32de510941073f9390b142530f"
+      "file": "art-sources/chassis/bastion-atlas-source-components.json",
+      "sha256": "28298dae0b4462c40967802bb4758284d91c36dc681ff03f35cdeff8e98f7c36"
+    },
+    {
+      "file": "art-sources/chassis/chime-atlas-correction.json",
+      "sha256": "a29cd7cc5d72ef7ad7eb4d7a6d96799e3b5c20abda93782b3dac18cda35a9c55"
+    },
+    {
+      "file": "art-sources/chassis/chime-atlas-source-components.json",
+      "sha256": "bdf959ea2a14a0cf888a62fb55f30621c7da462af187ef63302f7e688137c43e"
+    },
+    {
+      "file": "art-sources/chassis/remaining-atlas-generation-requests.json",
+      "sha256": "8bcc6e0340b628921ec533e92b958b57a7507e82d101626ae226a49ed4f75be0"
+    },
+    {
+      "file": "art-sources/chassis/remaining-atlas-socket-axes.json",
+      "sha256": "2cc6297d839dba7dbba8109e97669a794609bf6d2dbbe3f5451acb84fd32adfb"
+    },
+    {
+      "file": "art-sources/chassis/scuttle-atlas-source-components.json",
+      "sha256": "3a1d4998f2f13934105c106f676d55797d9408cfa813bc9267cbb5d1da0a8402"
+    },
+    {
+      "file": "art-sources/chassis/skip-atlas-source-components.json",
+      "sha256": "2ad3e0b79dfdc14ba8b730ab0461288d82a102298ee301b2b35b382bf60af111"
+    },
+    {
+      "file": "art-sources/chassis/spool-atlas-layout-source.json",
+      "sha256": "001c6e03128a69dc40c8225dd576a3a3a25b488675d35550392f1ca26e699ed5"
+    },
+    {
+      "file": "art-sources/chassis/spool-atlas-measured-bounds.json",
+      "sha256": "077f56ff86a8a6455d5e2017b6d428687afa1e59aba66416cf45b404f89473d5"
+    },
+    {
+      "file": "art-sources/chassis/spool-atlas-source-components.json",
+      "sha256": "4112ee31b26c2583a335ea10b4f7ff6d110ead675cc401fe7c9f9fc1749f3b53"
+    },
+    {
+      "file": "art-sources/chime-layered-atlas.json",
+      "sha256": "2e837e7a7a2df62ab01258c0dbcdc4f685fc8430a8628ec9f8d1ba98c83bd403"
+    },
+    {
+      "file": "art-sources/crew-atlas-measurement-specs-extra.json",
+      "sha256": "5d9e8e5800c86c3aea2230b3030e532f7fa9e9bb530d2fd315d2ce36a093d16d"
+    },
+    {
+      "file": "art-sources/crew-atlas-measurement-specs.json",
+      "sha256": "cf5e95fa6b176067d37665a686025f0ad2bbafef4e684cb9a574267ff28e9b9b"
+    },
+    {
+      "file": "art-sources/crew-axi-atlas-generation.json",
+      "sha256": "7f3b052a965c333660ee6591e4e3b57cbbf8beb9d94a808a829ab57665f8d282"
+    },
+    {
+      "file": "art-sources/crew-axi-fit.json",
+      "sha256": "1667b73afcfe440daa00065b96ac97866482af433912be312b9cfcbc45387211"
+    },
+    {
+      "file": "art-sources/crew-cache-atlas-generation.json",
+      "sha256": "8385cdf512301753d7dea7facda16482c0c0ff0e2f87b701008bc14a1d8ba55f"
+    },
+    {
+      "file": "art-sources/crew-cache-fit.json",
+      "sha256": "033ffee1ff7d2567d16434f447bccad6e462fbc1414c85bfdff54550645ce159"
+    },
+    {
+      "file": "art-sources/crew-cyberpengu-atlas-generation.json",
+      "sha256": "20c7fe5772e3716c27def000c682fa0de5fccbbb92e879316b186d3ea5e1e6f7"
+    },
+    {
+      "file": "art-sources/crew-cyberpengu-fit.json",
+      "sha256": "cf410fa19d5e55f12a56750bc648a06740a6c136d52f5861b6322076ace9cff3"
+    },
+    {
+      "file": "art-sources/crew-ducke-atlas-generation.json",
+      "sha256": "011f9cd253e0080079f950badb075a3795c9c5ddcc03d18c65ec1a2bb17f1a95"
+    },
+    {
+      "file": "art-sources/crew-ducke-fit.json",
+      "sha256": "afc7ae0d98be83c54c435558f02a4232fa8a5ce5e8726909eec5e5972a7215ae"
+    },
+    {
+      "file": "art-sources/crew-hex-atlas-generation.json",
+      "sha256": "982afd98fe1c5e1a16aa86e9f2bd197cd7af49ad5641b414f165c671fb2c9ef2"
+    },
+    {
+      "file": "art-sources/crew-hex-fit.json",
+      "sha256": "dc2530412ab666f89f05cea259eba931bf3d2dd80d2bf70b998882c9eb59c886"
     },
     {
       "file": "art-sources/crew-illustration-generation.json",
       "sha256": "494aba05435f11167bc5bbc41d1d1e6ce7d3f56669135c3e3d6e7e33865aa73c"
     },
     {
+      "file": "art-sources/crew-mochi-atlas-generation.json",
+      "sha256": "d7457685128b2094cb6a54f45521dba4c0ec30b8c8539da400772c50d683a2d3"
+    },
+    {
+      "file": "art-sources/crew-mochi-fit.json",
+      "sha256": "c0fbd9b99b2848a68c7ea5effb665d312629c102cba149a42b024366d03ff756"
+    },
+    {
+      "file": "art-sources/crew-patches-atlas-generation.json",
+      "sha256": "af9bbd2c0e416b67d37dd7c4c08f48fd46679a78c17fbbac0c15c3bbe28b3b66"
+    },
+    {
+      "file": "art-sources/crew-patches-fit.json",
+      "sha256": "a2d866c3e304fdbf123d096270d042da46b6ccfd64e12f0303a1d5d8fa200373"
+    },
+    {
+      "file": "art-sources/crew-vix-atlas-alpha-inspection.json",
+      "sha256": "9fdb6cad5ee0c90d4fc588051f73f6902432900faf005b96019e85f78326c4cb"
+    },
+    {
+      "file": "art-sources/crew-vix-atlas-generation.json",
+      "sha256": "c06c46fc3ea9b78d80e4e134a32c2be1c5b2f3d754c7ea70d59fe6d39af608f3"
+    },
+    {
+      "file": "art-sources/crew-vix-fit.json",
+      "sha256": "f8bd5c7e9f890afe833fbad0bbce0e3e70872f5e285bc16da982b8adec22b66e"
+    },
+    {
+      "file": "art-sources/final-fit-corrections.json",
+      "sha256": "aee16efbd16f48daf602da2e9a9df3cf42c35e0f312b8181070fbaad519b208d"
+    },
+    {
       "file": "art-sources/generated-chassis-assets.json",
       "sha256": "388f141d0fa2c404f3981c040ceb1109f5433c83458642686cf0a9284287c27e"
     },
     {
+      "file": "art-sources/generated-environment-assets.json",
+      "sha256": "06a38368c728d09f8a0391e79da14d3989499f32de510941073f9390b142530f"
+    },
+    {
+      "file": "art-sources/in-engine-photos.json",
+      "sha256": "08644abf9ccb511ad69c1e3ce285a929faddf6741464bd9aab63bb77df5cd798"
+    },
+    {
+      "file": "art-sources/scuttle-layered-atlas.json",
+      "sha256": "6d263c5609ae42d99222b4ace8d5e95294d6e238d989cc01129f32451fbea234"
+    },
+    {
+      "file": "art-sources/seedweb-game/provenance.json",
+      "sha256": "d5ddfda4d437c0a11327c205d68ca7eb3171694c5d2bf59ff3f4a59289f9c10e"
+    },
+    {
+      "file": "art-sources/skip-layered-atlas.json",
+      "sha256": "10af0b6f9e51c69b23f65f9b47677d22bd644df559f130a014f6b97b548f5959"
+    },
+    {
+      "file": "art-sources/spool-layered-atlas.json",
+      "sha256": "907759cc1124d8107bfcd7416df87bce655e7491060eb1bf18518f73f7967f11"
+    },
+    {
+      "file": "assets/illustrated/crew-axi-atlas-parts.json",
+      "sha256": "2bfe925b0cf23223b9e74f9e9741738d3742defb16faec531fd4641fb82ec4c2"
+    },
+    {
+      "file": "assets/illustrated/crew-cache-atlas-parts.json",
+      "sha256": "eeb46402ca43d84ad868db05ecd02a99b9bd8203d7133d26c0900bc62d46f297"
+    },
+    {
+      "file": "assets/illustrated/crew-cyberpengu-atlas-parts.json",
+      "sha256": "7ece6317d150081ab05697a6d808ba414685adaf355f0fbc5d93dd01ecb9d7f3"
+    },
+    {
+      "file": "assets/illustrated/crew-ducke-atlas-parts.json",
+      "sha256": "cc10f90b949481daf84a5bd1bf50ebc47a2f62428e24ce9c3f3a756204668c10"
+    },
+    {
+      "file": "assets/illustrated/crew-hex-atlas-parts.json",
+      "sha256": "b261ce7302243e5b9255817f7fd1e01d804996e15901601746fc05c463e6cc25"
+    },
+    {
+      "file": "assets/illustrated/crew-mochi-atlas-parts.json",
+      "sha256": "9899e2a020d012cd23c50b7302e058ce8b147ffd35b8af0905aec30a48e51d7f"
+    },
+    {
+      "file": "assets/illustrated/crew-patches-atlas-parts.json",
+      "sha256": "9cb974f8dd1a080d7cc3e6bf79c0efe7d26ccce33cbf468fe2a3491a84c275ce"
+    },
+    {
       "file": "assets/illustrated/crew-rig-landmarks.json",
       "sha256": "bdfd2eef7d2fd8a975e6fdcff3be6a25d0e428cd3a6998b59146643d5a5a9bcd"
+    },
+    {
+      "file": "assets/illustrated/crew-vix-atlas-parts.json",
+      "sha256": "f343fab70322b496dc63044a6fc15567af0d3e68418bd1efeede09eddb798a37"
     }
   ],
   "assets": [
@@ -387,6 +563,189 @@
       "bytes": 360594,
       "sha256": "208456dbf50023ce03f10ff51a559d4179b9dff8c80f16cadec542d3fa5a25f6",
       "source_record": "art-sources/generated-environment-assets.json"
+    },
+    {
+      "asset": "assets/illustrated/chassis-bastion-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 353734,
+      "sha256": "2194472df6b43a9f81e1ee3c45db6874b25d86a50dffa7a59377ebd5b4d7e8d9",
+      "source_record": "art-sources/bastion-layered-atlas.json"
+    },
+    {
+      "asset": "assets/illustrated/chassis-chime-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 344384,
+      "sha256": "f8b85086ff7f6588eed2a25910cac20b1717b09b0934bea2bea2784fa0a61c44",
+      "source_record": "art-sources/chime-layered-atlas.json"
+    },
+    {
+      "asset": "assets/illustrated/chassis-scuttle-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        1145,
+        1374
+      ],
+      "bytes": 348366,
+      "sha256": "cfa6bbc8d4db65a1ecef70f22c514cdf2f0b038e3ccd331ed2b489abde5c6741",
+      "source_record": "art-sources/scuttle-layered-atlas.json"
+    },
+    {
+      "asset": "assets/illustrated/chassis-skip-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "bytes": 365210,
+      "sha256": "c341d833cd368d2154a45d3c1b5adada5974e7a94fff8388483e890332e1a0c6",
+      "source_record": "art-sources/skip-layered-atlas.json"
+    },
+    {
+      "asset": "assets/illustrated/chassis-spool-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 399848,
+      "sha256": "ca7a7f0db94be41c78f272c14ea4ded5f755c5c24495c8086e91b942d2b7e9b3",
+      "source_record": "art-sources/spool-layered-atlas.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-axi-rig-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        768,
+        2048
+      ],
+      "bytes": 273792,
+      "sha256": "5c2e6d0255b17d4a15b0a317056697beffe302dc6705d470305e267eff1c751e",
+      "source_record": "assets/illustrated/crew-axi-atlas-parts.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-cache-rig-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        887,
+        1774
+      ],
+      "bytes": 339138,
+      "sha256": "b3ef8c1dcae49e8e3935f494c9d4b99cf908adc3fa1bbb06d43616c50732317b",
+      "source_record": "assets/illustrated/crew-cache-atlas-parts.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-cyberpengu-rig-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        887,
+        1774
+      ],
+      "bytes": 258108,
+      "sha256": "9de76aacdb2694bc3f4d0d6a30960f8f19603b7a560cbb43055ef233bf9efe54",
+      "source_record": "assets/illustrated/crew-cyberpengu-atlas-parts.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-ducke-rig-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        887,
+        1774
+      ],
+      "bytes": 278994,
+      "sha256": "dc427351aaec045802bb592bb8ac8e3ba4a37769851772b1c26e07346a35c2eb",
+      "source_record": "assets/illustrated/crew-ducke-atlas-parts.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-hex-rig-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        887,
+        1774
+      ],
+      "bytes": 291082,
+      "sha256": "7ad99b25be2801006676a151bfe5299b162a332b79c160f147bb447056146f2e",
+      "source_record": "assets/illustrated/crew-hex-atlas-parts.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-mochi-rig-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        887,
+        1774
+      ],
+      "bytes": 299466,
+      "sha256": "b5575000ed6cdab52bc5b3e044325f7297889dae2323a32c1c66eaa5a4f06f3b",
+      "source_record": "assets/illustrated/crew-mochi-atlas-parts.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-patches-rig-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        887,
+        1774
+      ],
+      "bytes": 353200,
+      "sha256": "aecb9843b68cffd69159a6831c1dd78aae2b5c534087956c2982fe8c4802a9f0",
+      "source_record": "assets/illustrated/crew-patches-atlas-parts.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-vix-rig-atlas.webp",
+      "classification": "Generated rigid-part illustrated cast atlas, source alpha preserved; not gameplay footage",
+      "dimensions": [
+        887,
+        1774
+      ],
+      "bytes": 303782,
+      "sha256": "1268cfa7584caa81733df5318476baffa19874b37a1d62a041cdc2b5a9a62693",
+      "source_record": "assets/illustrated/crew-vix-atlas-parts.json"
+    },
+    {
+      "asset": "assets/seedweb-game-channels.webp",
+      "classification": "Opaque lossless material channels derived from exact production game Seedweb textures",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 395432,
+      "sha256": "f40036a2d8280865e3af15e79a16a6a1f6fcf4a5d1e677466014b06f27809f47",
+      "source_record": "art-sources/seedweb-game/provenance.json"
+    },
+    {
+      "asset": "assets/seedweb-game-color.webp",
+      "classification": "Opaque lossless material channels derived from exact production game Seedweb textures",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 377574,
+      "sha256": "1f344f538679a9091bbe6ac8875a1f16d5546506ad53d5f0215f881bf172c3fb",
+      "source_record": "art-sources/seedweb-game/provenance.json"
+    },
+    {
+      "asset": "assets/seedweb-game-relief.webp",
+      "classification": "Opaque lossless material channels derived from exact production game Seedweb textures",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 747178,
+      "sha256": "b9e487922e94ddef9f3655daf4904ff63a2023ff114468f9863436ba256261ed",
+      "source_record": "art-sources/seedweb-game/provenance.json"
+    },
+    {
+      "asset": "assets/seedweb-surface.frag",
+      "classification": "Website fragment shader using actual game Seedweb material channels",
+      "bytes": 2306,
+      "sha256": "3bee2340a84edc9078932c79d31ab285565cb540312621935dcea9d05cec9fac",
+      "source_record": "art-sources/seedweb-game/provenance.json"
     }
   ],
   "animation": {

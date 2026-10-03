@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "character": "hex",
+  "tool": "built-in image_gen",
+  "reference": "art-sources/crew-hex.png",
+  "layoutReference": "art-sources/crew-vix-rig-atlas.png",
+  "prompt": "Use case: identity-preserve.\nAsset type: professional transparent 2D articulated character PARTS ATLAS.\nInput image1 is the exact Hex full-body identity/costume/anatomy reference to edit. Input image2 is the validated Vix atlas as a LAYOUT AND CLEAN PART SEPARATION example only: never transfer fox features or her costume to Hex.\nPreserve Hex's existing adult professional proportions, recognizable face and exact species: adult sleek black-furred cat, lime-green eyes, pink nose and inner ears, black whiskers, navy fitted field suit, warm ceramic chest and shoulder plates, teal straps, marigold hardware and distinctive magenta/pink lining and pouch accents, dark gloves, navy trousers with slim pads, cream/navy field boots, long slender black furry tail curving on image-left. Same softly sculpted premium hand-painted game illustration, lighting, brush detail, surface textures and existing three-quarter view as image1. Separate the supplied character into clean reusable painted rigid pieces; no redesign.\n\nOutput ONE true-alpha portrait atlas with EXACTLY3 equal columns and 6 equal rows (1536x3072, 1:2 aspect). Equal square cells. No drawn grid. Center each isolated piece entirely within its own cell with 10% CLEAR transparent margins on every side, including all fur/ears/toes. Nothing intersects a neighboring cell. One part per occupied cell. No complete character copy, labels, text, numbers, borders, panels, scene, gradient, floor, checkerboard or shadow plate.\n\nExact cell order left-to-right:\nrow0: head (including normal attached ears/crest/headgear except the explicitly separate Mochi ears or Axi gills below), CLEAN SLEEVELESS torso with neck, CLEAN pelvis with belt/hip apparel.\nrow1: anatomical LEFT upper arm / LEFT forearm / LEFT hand.\nrow2: anatomical RIGHT upper arm / RIGHT forearm / RIGHT hand.\nrow3: anatomical LEFT thigh / LEFT shin / LEFT separate boot or foot.\nrow4: anatomical RIGHT thigh / RIGHT shin / RIGHT separate boot or foot.\nrow5 and any additional rows: THREE connected slender BLACK cat tail sections in row5: BASE, MIDDLE, TIP. Keep the long curved black tail, not a fox plume or raccoon rings.\nLeg/feet details: navy trouser thighs/shins with reference pads; separate cream/navy field boots.\nTorso details: complete fitted navy sleeveless field torso and ceramic chest plate; preserve magenta collar lining.\n\nANATOMICAL LEFT is viewer-right in the reference; anatomical RIGHT is viewer-left. Preserve correct asymmetric gear. EACH arm/leg segment is a distinct separate piece, never an entire limb. Upper arm includes shoulder armour and upper sleeve only. Forearm ends at wrist and excludes the hand. Hand is separate with all original visible fingers and glove. Shin ends at ankle and excludes the boot/foot. Boot/foot is separate including toe and heel.\nOrient limb segments neutrally and mostly straight vertically, proximal joint at top and distal at bottom, with rounded solid overlapping painted socket ends. Preserve same three-quarter surfaces as reference; no different camera angles. Hands relaxed. Feet retain exact perspective.\nJoint ends have generous matching painted fur/fabric/skin overlap that can rotate under neighbor parts. The pelvis must have SOLID CAPPED matching-material hip sockets; NO dark hollow cut-open shorts or brown cylindrical holes, and no protruding old thighs baked on. The torso MUST be a clean SLEEVELESS complete body core with restored sides under removed arms. Ceramic shoulder pads and sleeves appear ONLY in separate upper-arm cells, never attached to torso. No baked old arm, hand, leg, tail or gill silhouettes anywhere on torso/pelvis/head. Neck socket is rounded and solid, covered by the torso collar.\nTail sections must have coherent proximal/distal curved axes and generous solid overlapping painted ends to reconnect smoothly, following actual species shape and markings.\nNo weapons, new equipment, environments or additional characters. Maintain exact original identity, costume, anatomy and palette. Output only clean transparent atlas parts.",
+  "generatedSource": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-5479de85-743a-434b-8b9c-b0f25fce98f9.png",
+  "workspacePng": "art-sources/crew-hex-rig-atlas.png",
+  "workspaceWebp": "assets/illustrated/crew-hex-rig-atlas.webp",
+  "notes": [
+    "Anatomical left/right map to existing image-side R/L.",
+    "PNG pixels preserved; WebP format encoding only.",
+    "Final renderer fit and action inspection owned by website."
+  ],
+  "dimensions": [
+    887,
+    1774
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 915970,
+  "cornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "webpBytes": 291082,
+  "alphaPreserved": true,
+  "pngSha256": "7e106217b9365aa80aed2cf5ff3bcdf8242e2b9db1bfaf7e04212d23086c3a6f",
+  "webpSha256": "7ad99b25be2801006676a151bfe5299b162a332b79c160f147bb447056146f2e",
+  "partsManifest": "assets/illustrated/crew-hex-atlas-parts.json",
+  "proportionFitSource": "art-sources/crew-hex-fit.json",
+  "metadataValidation": {
+    "parts": 18,
+    "warnings": [],
+    "status": "initial source metadata checked; final assembled action QA owned by website"
+  }
+}

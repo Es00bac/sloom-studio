@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "character": "axi",
+  "tool": "built-in image_gen",
+  "reference": "art-sources/crew-axi.png",
+  "layoutReference": "art-sources/crew-vix-rig-atlas.png",
+  "prompt": "Use case: identity-preserve.\nAsset type: professional transparent 2D articulated character PARTS ATLAS.\nInput image1 is the exact Axi full-body identity/costume/anatomy reference to edit. Input image2 is the validated Vix atlas as a LAYOUT AND CLEAN PART SEPARATION example only: never transfer fox features or her costume to Axi.\nPreserve Axi's existing adult professional proportions, recognizable face and exact species: adult PINK AXOLOTL, smooth pale-pink skin, large glossy dark eyes with reddish rims, friendly broad mouth, clear rounded bubble visor/helmet with teal/marigold neck ring and breathing hose, warm ceramic chest/shoulder plates, black/navy cropped field harness, teal and pink straps/pouches with marigold fittings, navy shorts, dark gloves, cream/navy boots, broad smooth pink finned tail on image-right, SIX distinct feathery pink external gills (three on each side of head). Same softly sculpted premium hand-painted game illustration, lighting, brush detail, surface textures and existing three-quarter view as image1. Separate the supplied character into clean reusable painted rigid pieces; no redesign.\n\nOutput ONE true-alpha portrait atlas with EXACTLY3 equal columns and 8 equal rows (1536x4096, 3:8 aspect). Equal square cells. No drawn grid. Center each isolated piece entirely within its own cell with 10% CLEAR transparent margins on every side, including all fur/ears/toes. Nothing intersects a neighboring cell. One part per occupied cell. No complete character copy, labels, text, numbers, borders, panels, scene, gradient, floor, checkerboard or shadow plate.\n\nExact cell order left-to-right:\nrow0: head (including normal attached ears/crest/headgear except the explicitly separate Mochi ears or Axi gills below), CLEAN SLEEVELESS torso with neck, CLEAN pelvis with belt/hip apparel.\nrow1: anatomical LEFT upper arm / LEFT forearm / LEFT hand.\nrow2: anatomical RIGHT upper arm / RIGHT forearm / RIGHT hand.\nrow3: anatomical LEFT thigh / LEFT shin / LEFT separate boot or foot.\nrow4: anatomical RIGHT thigh / RIGHT shin / RIGHT separate boot or foot.\nrow5 and any additional rows: THREE connected smooth PINK finned axolotl tail sections row5: BASE, MIDDLE, TIP; preserve membrane ridge and smooth skin, not fur. Add row6 anatomical LEFT (image-right) gill UPPER, MIDDLE, LOWER; row7 anatomical RIGHT (image-left) gill UPPER, MIDDLE, LOWER. Each gill is one separate whole feathery branch with its own root socket. Head cell is full head/visor WITHOUT ANY baked gills; gills are only in their six dedicated cells.\nLeg/feet details: bare smooth pink thighs and pink shins; separate cream/navy boots.\nTorso details: complete cropped field-harness torso with pink abdomen and neck breathing ring/hose behind, under removed arms; no gills attached to torso.\n\nANATOMICAL LEFT is viewer-right in the reference; anatomical RIGHT is viewer-left. Preserve correct asymmetric gear. EACH arm/leg segment is a distinct separate piece, never an entire limb. Upper arm includes shoulder armour and upper sleeve only. Forearm ends at wrist and excludes the hand. Hand is separate with all original visible fingers and glove. Shin ends at ankle and excludes the boot/foot. Boot/foot is separate including toe and heel.\nOrient limb segments neutrally and mostly straight vertically, proximal joint at top and distal at bottom, with rounded solid overlapping painted socket ends. Preserve same three-quarter surfaces as reference; no different camera angles. Hands relaxed. Feet retain exact perspective.\nJoint ends have generous matching painted fur/fabric/skin overlap that can rotate under neighbor parts. The pelvis must have SOLID CAPPED matching-material hip sockets; NO dark hollow cut-open shorts or brown cylindrical holes, and no protruding old thighs baked on. The torso MUST be a clean SLEEVELESS complete body core with restored sides under removed arms. Ceramic shoulder pads and sleeves appear ONLY in separate upper-arm cells, never attached to torso. No baked old arm, hand, leg, tail or gill silhouettes anywhere on torso/pelvis/head. Neck socket is rounded and solid, covered by the torso collar.\nTail sections must have coherent proximal/distal curved axes and generous solid overlapping painted ends to reconnect smoothly, following actual species shape and markings.\nNo weapons, new equipment, environments or additional characters. Maintain exact original identity, costume, anatomy and palette. Output only clean transparent atlas parts.",
+  "generatedSource": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-8f0aac4b-cdcb-4d5f-b62a-ec7929ff5467.png",
+  "workspacePng": "art-sources/crew-axi-rig-atlas.png",
+  "workspaceWebp": "assets/illustrated/crew-axi-rig-atlas.webp",
+  "notes": [
+    "Anatomical left/right map to existing image-side R/L.",
+    "PNG pixels preserved; WebP format encoding only.",
+    "Final renderer fit and action inspection owned by website."
+  ],
+  "dimensions": [
+    768,
+    2048
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "transparentPixels": 893280,
+  "cornerAlpha": [
+    0,
+    0,
+    1,
+    0
+  ],
+  "webpBytes": 273792,
+  "alphaPreserved": true,
+  "pngSha256": "4c9f01265ca7bdfac475770d22f7c2f797e3fa457cdd95831b7645cb90dc692a",
+  "webpSha256": "5c2e6d0255b17d4a15b0a317056697beffe302dc6705d470305e267eff1c751e",
+  "partsManifest": "assets/illustrated/crew-axi-atlas-parts.json",
+  "proportionFitSource": "art-sources/crew-axi-fit.json",
+  "metadataValidation": {
+    "parts": 24,
+    "warnings": [],
+    "status": "initial source metadata checked; final assembled action QA owned by website"
+  }
+}

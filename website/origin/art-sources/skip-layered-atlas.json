@@ -1,0 +1,1094 @@
+{
+  "schema_version": 1,
+  "character": "skip",
+  "image": "assets/illustrated/chassis-skip-atlas.webp",
+  "source": "art-sources/chassis/chassis-skip-atlas-generated.png",
+  "width": 1122,
+  "height": 1402,
+  "bytes": 365210,
+  "sha256": "c341d833cd368d2154a45d3c1b5adada5974e7a94fff8388483e890332e1a0c6",
+  "source_sha256": "818027ef3b2796ade567ad2ab0abd0428e34d84b59ac8a65138d305c69f64db2",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "layers": [
+    {
+      "id": "chassis",
+      "bone": "chassis",
+      "kind": "core",
+      "rect": [
+        25,
+        6,
+        282,
+        338
+      ],
+      "pivot": [
+        0.46099290780141844,
+        0.8905325443786982
+      ],
+      "anchorEnd": [
+        0.46099290780141844,
+        0.4911242603550296
+      ],
+      "end": [
+        0.46099290780141844,
+        0.4911242603550296
+      ],
+      "bindPivot": [
+        0.538633,
+        0.475645
+      ],
+      "bindEnd": [
+        0.547871,
+        0.332031
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.42,
+        0.43
+      ],
+      "order": 40,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 0,
+      "sourceSocketPixels": [
+        155,
+        307
+      ],
+      "sourceAxisEndPixels": [
+        155,
+        172
+      ],
+      "solidAlphaBounds": [
+        29,
+        10,
+        303,
+        340
+      ],
+      "socketPaddingPixels": 4,
+      "note": "Continuous bare body; no baked mobile appendages. Fixed body-owned dorsal cables retained."
+    },
+    {
+      "id": "scythe_image_left_upper",
+      "bone": "scythe_image_left_upper",
+      "kind": "rigid_link",
+      "rect": [
+        340,
+        59,
+        259,
+        256
+      ],
+      "pivot": [
+        0.722007722007722,
+        0.4609375
+      ],
+      "anchorEnd": [
+        0.10424710424710425,
+        0.88671875
+      ],
+      "end": [
+        0.10424710424710425,
+        0.88671875
+      ],
+      "bindPivot": [
+        0.377383,
+        0.247207
+      ],
+      "bindEnd": [
+        0.257285,
+        0.437852
+      ],
+      "bindAngle": -0.4106100170591396,
+      "size": [
+        0.30143500119607547,
+        0.2979434760856962
+      ],
+      "order": 50,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 1,
+      "sourceSocketPixels": [
+        527,
+        177
+      ],
+      "sourceAxisEndPixels": [
+        367,
+        286
+      ],
+      "solidAlphaBounds": [
+        344,
+        63,
+        595,
+        311
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "scythe_image_left_lower",
+      "bone": "scythe_image_left_lower",
+      "kind": "rigid_link",
+      "rect": [
+        624,
+        46,
+        213,
+        255
+      ],
+      "pivot": [
+        0.863849765258216,
+        0.08235294117647059
+      ],
+      "anchorEnd": [
+        0.10328638497652583,
+        0.8470588235294118
+      ],
+      "end": [
+        0.10328638497652583,
+        0.8470588235294118
+      ],
+      "bindPivot": [
+        0.257285,
+        0.437852
+      ],
+      "bindEnd": [
+        0.159863,
+        0.55543
+      ],
+      "bindAngle": -0.0013005909421055506,
+      "size": [
+        0.12829284313702133,
+        0.15359002347389877
+      ],
+      "order": 51,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 2,
+      "sourceSocketPixels": [
+        808,
+        67
+      ],
+      "sourceAxisEndPixels": [
+        646,
+        262
+      ],
+      "solidAlphaBounds": [
+        628,
+        50,
+        833,
+        297
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "scythe_image_left_tip",
+      "bone": "scythe_image_left_tip",
+      "kind": "rigid_link",
+      "rect": [
+        898,
+        9,
+        198,
+        343
+      ],
+      "pivot": [
+        0.8737373737373737,
+        0.08746355685131195
+      ],
+      "anchorEnd": [
+        0.03535353535353535,
+        0.9766763848396501
+      ],
+      "end": [
+        0.03535353535353535,
+        0.9766763848396501
+      ],
+      "bindPivot": [
+        0.159863,
+        0.55543
+      ],
+      "bindEnd": [
+        0.089316,
+        0.76623
+      ],
+      "bindAngle": -0.17548044746128189,
+      "size": [
+        0.12675019678727636,
+        0.21957231059614038
+      ],
+      "order": 52,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 3,
+      "sourceSocketPixels": [
+        1071,
+        39
+      ],
+      "sourceAxisEndPixels": [
+        905,
+        344
+      ],
+      "solidAlphaBounds": [
+        902,
+        13,
+        1092,
+        348
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "scythe_image_right_upper",
+      "bone": "scythe_image_right_upper",
+      "kind": "rigid_link",
+      "rect": [
+        24,
+        341,
+        257,
+        258
+      ],
+      "pivot": [
+        0.8482490272373541,
+        0.5193798449612403
+      ],
+      "anchorEnd": [
+        0.12062256809338522,
+        0.8875968992248062
+      ],
+      "end": [
+        0.12062256809338522,
+        0.8875968992248062
+      ],
+      "bindPivot": [
+        0.693164,
+        0.291719
+      ],
+      "bindEnd": [
+        0.781348,
+        0.503359
+      ],
+      "bindAngle": -1.495546020270593,
+      "size": [
+        0.2809291097310975,
+        0.28202221910748315
+      ],
+      "order": 60,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 4,
+      "sourceSocketPixels": [
+        242,
+        475
+      ],
+      "sourceAxisEndPixels": [
+        55,
+        570
+      ],
+      "solidAlphaBounds": [
+        28,
+        345,
+        277,
+        595
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "scythe_image_right_lower",
+      "bone": "scythe_image_right_lower",
+      "kind": "rigid_link",
+      "rect": [
+        367,
+        345,
+        216,
+        266
+      ],
+      "pivot": [
+        0.1388888888888889,
+        0.13909774436090225
+      ],
+      "anchorEnd": [
+        0.8564814814814815,
+        0.8909774436090225
+      ],
+      "end": [
+        0.8564814814814815,
+        0.8909774436090225
+      ],
+      "bindPivot": [
+        0.781348,
+        0.503359
+      ],
+      "bindEnd": [
+        0.856934,
+        0.637734
+      ],
+      "bindAngle": 0.1469202546994387,
+      "size": [
+        0.13161109090223955,
+        0.16207662120368388
+      ],
+      "order": 61,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 5,
+      "sourceSocketPixels": [
+        397,
+        382
+      ],
+      "sourceAxisEndPixels": [
+        552,
+        582
+      ],
+      "solidAlphaBounds": [
+        371,
+        349,
+        579,
+        607
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "scythe_image_right_tip",
+      "bone": "scythe_image_right_tip",
+      "kind": "rigid_link",
+      "rect": [
+        658,
+        332,
+        154,
+        287
+      ],
+      "pivot": [
+        0.8181818181818182,
+        0.06968641114982578
+      ],
+      "anchorEnd": [
+        0.045454545454545456,
+        0.9686411149825784
+      ],
+      "end": [
+        0.045454545454545456,
+        0.9686411149825784
+      ],
+      "bindPivot": [
+        0.856934,
+        0.637734
+      ],
+      "bindEnd": [
+        0.858613,
+        0.834258
+      ],
+      "bindAngle": -0.4407052324589358,
+      "size": [
+        0.1065241649232197,
+        0.19852230735690943
+      ],
+      "order": 62,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 6,
+      "sourceSocketPixels": [
+        784,
+        352
+      ],
+      "sourceAxisEndPixels": [
+        665,
+        610
+      ],
+      "solidAlphaBounds": [
+        662,
+        336,
+        808,
+        615
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "claw_image_left_upper",
+      "bone": "claw_image_left_upper",
+      "kind": "rigid_link",
+      "rect": [
+        908,
+        350,
+        159,
+        242
+      ],
+      "pivot": [
+        0.8427672955974843,
+        0.18181818181818182
+      ],
+      "anchorEnd": [
+        0.2893081761006289,
+        0.859504132231405
+      ],
+      "end": [
+        0.2893081761006289,
+        0.859504132231405
+      ],
+      "bindPivot": [
+        0.456328,
+        0.434492
+      ],
+      "bindEnd": [
+        0.401738,
+        0.50168
+      ],
+      "bindAngle": 0.18982854770215152,
+      "size": [
+        0.07395602961483547,
+        0.11256200733830303
+      ],
+      "order": 80,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 7,
+      "sourceSocketPixels": [
+        1042,
+        394
+      ],
+      "sourceAxisEndPixels": [
+        954,
+        558
+      ],
+      "solidAlphaBounds": [
+        912,
+        354,
+        1063,
+        588
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "claw_image_left_lower",
+      "bone": "claw_image_left_lower",
+      "kind": "claw_forearm",
+      "rect": [
+        71,
+        634,
+        169,
+        203
+      ],
+      "pivot": [
+        0.8284023668639053,
+        0.20689655172413793
+      ],
+      "anchorEnd": [
+        0.17751479289940827,
+        0.8719211822660099
+      ],
+      "end": [
+        0.17751479289940827,
+        0.8719211822660099
+      ],
+      "bindPivot": [
+        0.401738,
+        0.50168
+      ],
+      "bindEnd": [
+        0.36325673999999997,
+        0.5586713799999999
+      ],
+      "bindAngle": -0.08981406159599903,
+      "size": [
+        0.0667364206978369,
+        0.08016268285006445
+      ],
+      "order": 81,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 8,
+      "sourceSocketPixels": [
+        211,
+        676
+      ],
+      "sourceAxisEndPixels": [
+        101,
+        811
+      ],
+      "solidAlphaBounds": [
+        75,
+        638,
+        236,
+        833
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "claw_image_left_lower_claw_tip",
+      "bone": "claw_image_left_lower",
+      "kind": "claw_tip",
+      "rect": [
+        356,
+        648,
+        149,
+        189
+      ],
+      "pivot": [
+        0.8053691275167785,
+        0.14285714285714285
+      ],
+      "anchorEnd": [
+        0.40268456375838924,
+        0.9417989417989417
+      ],
+      "end": [
+        0.40268456375838924,
+        0.9417989417989417
+      ],
+      "bindPivot": [
+        0.36325673999999997,
+        0.5586713799999999
+      ],
+      "bindEnd": [
+        0.335391,
+        0.599941
+      ],
+      "bindAngle": 0.21567458323116928,
+      "size": [
+        0.04566400374968987,
+        0.05792279670262675
+      ],
+      "order": 82,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 9,
+      "sourceSocketPixels": [
+        476,
+        675
+      ],
+      "sourceAxisEndPixels": [
+        416,
+        826
+      ],
+      "solidAlphaBounds": [
+        360,
+        652,
+        501,
+        833
+      ],
+      "socketPaddingPixels": 4,
+      "note": "Separate inner claw tool shares lower-arm transform; initial wrist bind interpolated along lower bone for calibration."
+    },
+    {
+      "id": "claw_image_right_upper",
+      "bone": "claw_image_right_upper",
+      "kind": "rigid_link",
+      "rect": [
+        650,
+        634,
+        145,
+        211
+      ],
+      "pivot": [
+        0.15172413793103448,
+        0.22748815165876776
+      ],
+      "anchorEnd": [
+        0.7310344827586207,
+        0.8625592417061612
+      ],
+      "end": [
+        0.7310344827586207,
+        0.8625592417061612
+      ],
+      "bindPivot": [
+        0.617578,
+        0.44373
+      ],
+      "bindEnd": [
+        0.670488,
+        0.536113
+      ],
+      "bindAngle": 0.039817358469723896,
+      "size": [
+        0.0976083697256826,
+        0.14203700698013122
+      ],
+      "order": 90,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 10,
+      "sourceSocketPixels": [
+        672,
+        682
+      ],
+      "sourceAxisEndPixels": [
+        756,
+        816
+      ],
+      "solidAlphaBounds": [
+        654,
+        638,
+        791,
+        841
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "claw_image_right_lower",
+      "bone": "claw_image_right_lower",
+      "kind": "claw_forearm",
+      "rect": [
+        920,
+        630,
+        140,
+        214
+      ],
+      "pivot": [
+        0.7714285714285715,
+        0.1822429906542056
+      ],
+      "anchorEnd": [
+        0.2,
+        0.8551401869158879
+      ],
+      "end": [
+        0.2,
+        0.8551401869158879
+      ],
+      "bindPivot": [
+        0.670488,
+        0.536113
+      ],
+      "bindEnd": [
+        0.6246999,
+        0.5906695399999999
+      ],
+      "bindAngle": 0.19113781770318905,
+      "size": [
+        0.060532150470442816,
+        0.09252771571910545
+      ],
+      "order": 91,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 11,
+      "sourceSocketPixels": [
+        1028,
+        669
+      ],
+      "sourceAxisEndPixels": [
+        948,
+        813
+      ],
+      "solidAlphaBounds": [
+        924,
+        634,
+        1056,
+        840
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "claw_image_right_lower_claw_tip",
+      "bone": "claw_image_right_lower",
+      "kind": "claw_tip",
+      "rect": [
+        70,
+        899,
+        150,
+        187
+      ],
+      "pivot": [
+        0.8133333333333334,
+        0.1443850267379679
+      ],
+      "anchorEnd": [
+        0.4533333333333333,
+        0.93048128342246
+      ],
+      "end": [
+        0.4533333333333333,
+        0.93048128342246
+      ],
+      "bindPivot": [
+        0.6246999,
+        0.5906695399999999
+      ],
+      "bindEnd": [
+        0.591543,
+        0.630176
+      ],
+      "bindAngle": 0.3461920077801073,
+      "size": [
+        0.04940137426441166,
+        0.061587046582966536
+      ],
+      "order": 92,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 12,
+      "sourceSocketPixels": [
+        192,
+        926
+      ],
+      "sourceAxisEndPixels": [
+        138,
+        1073
+      ],
+      "solidAlphaBounds": [
+        74,
+        903,
+        216,
+        1082
+      ],
+      "socketPaddingPixels": 4,
+      "note": "Separate inner claw tool shares lower-arm transform; initial wrist bind interpolated along lower bone for calibration."
+    },
+    {
+      "id": "image_left_upper",
+      "bone": "image_left_upper",
+      "kind": "rigid_link",
+      "rect": [
+        334,
+        842,
+        184,
+        243
+      ],
+      "pivot": [
+        0.842391304347826,
+        0.14814814814814814
+      ],
+      "anchorEnd": [
+        0.17391304347826086,
+        0.8765432098765432
+      ],
+      "end": [
+        0.17391304347826086,
+        0.8765432098765432
+      ],
+      "bindPivot": [
+        0.44541,
+        0.50084
+      ],
+      "bindEnd": [
+        0.426094,
+        0.681406
+      ],
+      "bindAngle": -0.5007357695488801,
+      "size": [
+        0.15502237267733593,
+        0.20473063348148168
+      ],
+      "order": 20,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 13,
+      "sourceSocketPixels": [
+        489,
+        878
+      ],
+      "sourceAxisEndPixels": [
+        366,
+        1055
+      ],
+      "solidAlphaBounds": [
+        338,
+        846,
+        514,
+        1081
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_lower",
+      "bone": "image_left_lower",
+      "kind": "rigid_link",
+      "rect": [
+        627,
+        867,
+        155,
+        231
+      ],
+      "pivot": [
+        0.4645161290322581,
+        0.18614718614718614
+      ],
+      "anchorEnd": [
+        0.17419354838709677,
+        0.8917748917748918
+      ],
+      "end": [
+        0.17419354838709677,
+        0.8917748917748918
+      ],
+      "bindPivot": [
+        0.426094,
+        0.681406
+      ],
+      "bindEnd": [
+        0.333711,
+        0.87025
+      ],
+      "bindAngle": 0.1856084691041735,
+      "size": [
+        0.19270325068046165,
+        0.287190005852817
+      ],
+      "order": 21,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 14,
+      "sourceSocketPixels": [
+        699,
+        910
+      ],
+      "sourceAxisEndPixels": [
+        654,
+        1073
+      ],
+      "solidAlphaBounds": [
+        631,
+        871,
+        778,
+        1094
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_lower_foot",
+      "bone": "image_left_lower",
+      "kind": "foot",
+      "rect": [
+        883,
+        911,
+        200,
+        183
+      ],
+      "pivot": [
+        0.045,
+        0.9726775956284153
+      ],
+      "anchorEnd": [
+        0.835,
+        0.09289617486338798
+      ],
+      "end": [
+        0.835,
+        0.09289617486338798
+      ],
+      "bindPivot": [
+        0.333711,
+        0.87625
+      ],
+      "bindEnd": [
+        0.333711,
+        0.87025
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.14,
+        0.1
+      ],
+      "order": 22,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 15,
+      "sourceSocketPixels": [
+        892,
+        1089
+      ],
+      "sourceAxisEndPixels": [
+        1050,
+        928
+      ],
+      "solidAlphaBounds": [
+        887,
+        915,
+        1079,
+        1090
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_left",
+      "note": "Actual solid-alpha sole/tip anchor pinned to foot target; preserve separate foot surface and never bind it at midstrut."
+    },
+    {
+      "id": "image_right_upper",
+      "bone": "image_right_upper",
+      "kind": "rigid_link",
+      "rect": [
+        86,
+        1092,
+        179,
+        235
+      ],
+      "pivot": [
+        0.16759776536312848,
+        0.15319148936170213
+      ],
+      "anchorEnd": [
+        0.8435754189944135,
+        0.8382978723404255
+      ],
+      "end": [
+        0.8435754189944135,
+        0.8382978723404255
+      ],
+      "bindPivot": [
+        0.598262,
+        0.518477
+      ],
+      "bindEnd": [
+        0.678887,
+        0.688125
+      ],
+      "bindAngle": 0.20084288231034741,
+      "size": [
+        0.16694090952609836,
+        0.21916823317672132
+      ],
+      "order": 25,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 16,
+      "sourceSocketPixels": [
+        116,
+        1128
+      ],
+      "sourceAxisEndPixels": [
+        237,
+        1289
+      ],
+      "solidAlphaBounds": [
+        90,
+        1096,
+        261,
+        1323
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_lower",
+      "bone": "image_right_lower",
+      "kind": "rigid_link",
+      "rect": [
+        372,
+        1100,
+        154,
+        251
+      ],
+      "pivot": [
+        0.487012987012987,
+        0.1752988047808765
+      ],
+      "anchorEnd": [
+        0.8246753246753247,
+        0.896414342629482
+      ],
+      "end": [
+        0.8246753246753247,
+        0.896414342629482
+      ],
+      "bindPivot": [
+        0.678887,
+        0.688125
+      ],
+      "bindEnd": [
+        0.790586,
+        0.895445
+      ],
+      "bindAngle": -0.21442651883162545,
+      "size": [
+        0.19257673328852723,
+        0.3138750652949372
+      ],
+      "order": 26,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 17,
+      "sourceSocketPixels": [
+        447,
+        1144
+      ],
+      "sourceAxisEndPixels": [
+        499,
+        1325
+      ],
+      "solidAlphaBounds": [
+        376,
+        1104,
+        522,
+        1347
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_lower_foot",
+      "bone": "image_right_lower",
+      "kind": "foot",
+      "rect": [
+        626,
+        1139,
+        208,
+        231
+      ],
+      "pivot": [
+        0.9519230769230769,
+        0.9783549783549783
+      ],
+      "anchorEnd": [
+        0.25961538461538464,
+        0.09523809523809523
+      ],
+      "end": [
+        0.25961538461538464,
+        0.09523809523809523
+      ],
+      "bindPivot": [
+        0.790586,
+        0.901445
+      ],
+      "bindEnd": [
+        0.790586,
+        0.895445
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.14,
+        0.1
+      ],
+      "order": 27,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 18,
+      "sourceSocketPixels": [
+        824,
+        1365
+      ],
+      "sourceAxisEndPixels": [
+        680,
+        1161
+      ],
+      "solidAlphaBounds": [
+        630,
+        1143,
+        830,
+        1366
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_right",
+      "note": "Actual solid-alpha sole/tip anchor pinned to foot target; preserve separate foot surface and never bind it at midstrut."
+    }
+  ],
+  "components": {
+    "expected": 19,
+    "measured": 19,
+    "nominal_grid": [
+      4,
+      5
+    ],
+    "rect_policy": "Measured actual isolated component bboxes plus4px soft-edge padding. Original generated atlas retained; no repack or repaint."
+  },
+  "socket_notes": "Socket centers are initial manual measurements as normalized fractions of each actual solid component bbox. Pixel anchors are computed from these and retained in final maps; website calibration owns final binds. Grounded sole/tarsus tips are measured from the component alpha at its lowest solid tip, never from midstrut.",
+  "render_alignment": "Rigid socket axis aligns via local pivot/end to bindPivot/bindEnd using uniform scale+rotation. Core alignAxis=false. Grounded feet use separate contact matrix and solid sole pivot; Chime tips follow their lower bone with no contact. Website worker calibrates final bind sizes/actions.",
+  "tool": "built-in image_gen",
+  "generation_count": 1,
+  "prompt": "Use case: stylized-concept, production rigid 2D skeletal game-animation sprite atlas.\nImage1 is the CURRENT APPROVED illustrated character: preserve its exact industrial design, anatomy, panel identities, colors, softly sculpted hand-painted lighting and THREE-QUARTER camera. Image2 is actual production in-engine anatomy reference only; ignore all background machines/architecture and printed markings. Do NOT create a different species or kit.\nCreate ONE component atlas, NOT a pose sheet, NOT complete character repeats, and NOT an exploded character placed together. Each instructed cell contains ONE isolated rigid piece ONLY. All components use matching source camera/foreshortening, light direction, cream ceramic paint wear, marigold fittings, dark ink-navy steel, graphite cables and source optical colors. No organic flesh, vines, fur, magic, alien membranes or unrelated franchise imagery.\nMake honest ROUND OVERLAPPING metal sockets at proximal and distal link ends; extend fully painted hidden surfaces behind hinges so rotation never reveals holes. The core must be a CONTINUOUS fully painted bare underlying body with complete hidden armor/cable surfaces and covered attachment sockets, NO baked silhouette/stump of any separately listed appendage. Moving appendage hoses belong to their moving link and terminate at its socket. Body-owned dorsal cables can stay with core as specified.\nAll isolated parts must be fully framed, with comfortable transparent gutters and no component overlapping another. Preserve neutral bind-direction from source if possible; isolated component scale can vary by cell and renderer will map it back to original bind size.\nTRUE TRANSPARENT ALPHA everywhere outside parts: NO backdrop, black rectangle, ground, shadow, cell borders, grid lines, captions, letters, labels, arrows, numbers, emblems, logos or decals. The names below are instructions ONLY and must NEVER appear in pixels.\n\nCHARACTER IDENTITY: Skip is the exact lean tall biped in Image1: hunched hard alloy torso with worn cream and amber angular panels, round cool-violet forward inspection optic with smaller amber sensors below, paired arched graphite dorsal cables and twin vertical exhaust posts. Exactly TWO walking legs and FOUR arms: two huge outer segmented scythe arms ending in long tapered dark metal blades, plus two smaller lower inner claw arms ending in angular paired metal talons. Keep the original long dangerous blade silhouettes and lean proportions. The continuous core MUST exclude all four arms and both legs, expose two outer shoulder and two inner claw-arm sockets plus two hip sockets, and retain its actual body-owned dorsal cables/optics. No biological alien or fleshy blades.\n\nAtlas layout: EXACTLY 4 COLUMNS \u00d7 5 ROWS, 19 isolated pieces and 1 explicitly empty transparent cells. Regular aligned equal cells, preferably high-resolution with crisp alpha edges. Every piece inside its own cell with generous gutter; no object crossing any cell. Portrait atlas, aspect ratio 4:5, one sheet only.\nEXACT ROW-MAJOR CONTENTS:\n\nROW 1, left to right:\n1. Fully painted continuous UNDERLYING CHASSIS CORE ONLY. Keep body-owned optics, exact torso armor, rear equipment and dorsal cables. No arm, walking leg, foot, pincer, wing or jaw silhouettes/stumps baked on the body. Fill all hidden body surfaces and expose round limb attachment sockets.\n2. image left SCYTHE ARM UPPER shoulder-to-elbow dark/amber/cream machinery, round overlapped sockets, no forearm or long blade.\n3. image left SCYTHE ARM LOWER elbow-to-wrist armored dark alloy machinery, round covered end sockets, no upper arm or long blade.\n4. image left long tapered DARK SCYTHE BLADE TOOL only, source segmented/angular metal blade with wrist attachment hub. Preserve its long threatening machine-tool outline, no forearm.\n\nROW 2, left to right:\n1. image right SCYTHE ARM UPPER shoulder-to-elbow dark/amber/cream machinery, round overlapped sockets, no forearm or long blade.\n2. image right SCYTHE ARM LOWER elbow-to-wrist armored dark alloy machinery, round covered end sockets, no upper arm or long blade.\n3. image right long tapered DARK SCYTHE BLADE TOOL only, source segmented/angular metal blade with wrist attachment hub. Preserve its long threatening machine-tool outline, no forearm.\n4. image left SMALL INNER CLAW ARM UPPER shoulder-to-elbow cream/amber link, much smaller than the outer scythe arm, with covered sockets.\n\nROW 3, left to right:\n1. image left SMALL INNER CLAW ARM LOWER elbow-to-wrist dark/amber link, no talons. Keep visible covered wrist socket to overlap separate claw tool.\n2. image left SMALL INNER CLAW END TOOL only: source short paired angular mechanical talons and wrist attachment collar, no upper or lower arm.\n3. image right SMALL INNER CLAW ARM UPPER shoulder-to-elbow cream/amber link, much smaller than the outer scythe arm, with covered sockets.\n4. image right SMALL INNER CLAW ARM LOWER elbow-to-wrist dark/amber link, no talons. Keep visible covered wrist socket to overlap separate claw tool.\n\nROW 4, left to right:\n1. image right SMALL INNER CLAW END TOOL only: source short paired angular mechanical talons and wrist attachment collar, no upper or lower arm.\n2. image left walking/tucked leg UPPER hip-to-knee rigid link, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n3. image left leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n4. image left separate FOOT/TARSUS only, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n\nROW 5, left to right:\n1. image right walking/tucked leg UPPER hip-to-knee rigid link, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n2. image right leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n3. image right separate FOOT/TARSUS only, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n4. COMPLETELY EMPTY TRANSPARENT CELL. No object or symbol.\n\nFinal mandatory check: 19 isolated components, one per occupied cell, no hidden additional complete character, NO limbs baked onto core, no foot baked onto lower link, compatible source perspective and source colors, covered round hinge sockets, genuine transparent alpha gutters, no writing.",
+  "reference_illustration": "art-sources/chassis/chassis-skip-generated.png",
+  "reference_illustration_sha256": "86b92823a7a2b071162d22d3d2d20cd48f7329442dc10aec8e7a1e6c3e951ef6",
+  "production_reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00011.jpg",
+  "production_reference_sha256": "ee0c92b278ef9df811027142a12d8c317c0ca19b3ccaef5009b65c4ebaa8488b",
+  "export": {
+    "format": "WebP RGBA",
+    "quality": 91,
+    "method": 6,
+    "resampling": "none",
+    "art_processing": "Generated atlas preserved at original pixel dimensions; crop rects are metadata only, no repainting/repacking."
+  }
+}

@@ -1,0 +1,1462 @@
+{
+  "schema_version": 1,
+  "character": "chime",
+  "image": "assets/illustrated/chassis-chime-atlas.webp",
+  "source": "art-sources/chassis/chassis-chime-atlas-generated.png",
+  "width": 1254,
+  "height": 1254,
+  "bytes": 344384,
+  "sha256": "f8b85086ff7f6588eed2a25910cac20b1717b09b0934bea2bea2784fa0a61c44",
+  "source_sha256": "eec57678a57f9dd84950f8613c1501da87deb3b176fd08cad857aea5602dac61",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "layers": [
+    {
+      "id": "chassis",
+      "bone": "chassis",
+      "kind": "core",
+      "rect": [
+        24,
+        0,
+        228,
+        340
+      ],
+      "pivot": [
+        0.5175438596491229,
+        0.7441176470588236
+      ],
+      "anchorEnd": [
+        0.5307017543859649,
+        0.3735294117647059
+      ],
+      "end": [
+        0.5307017543859649,
+        0.3735294117647059
+      ],
+      "bindPivot": [
+        0.484883,
+        0.590703
+      ],
+      "bindEnd": [
+        0.506719,
+        0.44541
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.3,
+        0.43
+      ],
+      "order": 40,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 0,
+      "sourceSocketPixels": [
+        142,
+        253
+      ],
+      "sourceAxisEndPixels": [
+        145,
+        127
+      ],
+      "solidAlphaBounds": [
+        28,
+        4,
+        248,
+        336
+      ],
+      "socketPaddingPixels": 4,
+      "note": "Continuous bare body; no baked mobile appendages. Fixed body-owned dorsal cables retained."
+    },
+    {
+      "id": "wing_image_left_spar",
+      "bone": "wing_image_left_spar",
+      "kind": "rigid_link",
+      "rect": [
+        291,
+        35,
+        216,
+        285
+      ],
+      "pivot": [
+        0.125,
+        0.3719298245614035
+      ],
+      "anchorEnd": [
+        0.8657407407407407,
+        0.6070175438596491
+      ],
+      "end": [
+        0.8657407407407407,
+        0.6070175438596491
+      ],
+      "bindPivot": [
+        0.442891,
+        0.490762
+      ],
+      "bindEnd": [
+        0.378223,
+        0.374023
+      ],
+      "bindAngle": -2.4732348867062752,
+      "size": [
+        0.16618091854622485,
+        0.2192664897484911
+      ],
+      "order": 12,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 1,
+      "sourceSocketPixels": [
+        318,
+        141
+      ],
+      "sourceAxisEndPixels": [
+        478,
+        208
+      ],
+      "solidAlphaBounds": [
+        295,
+        39,
+        503,
+        316
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "wing_image_left_vane",
+      "bone": "wing_image_left_vane",
+      "kind": "rigid_link",
+      "rect": [
+        496,
+        21,
+        249,
+        300
+      ],
+      "pivot": [
+        0.6546184738955824,
+        0.7333333333333333
+      ],
+      "anchorEnd": [
+        0.040160642570281124,
+        0.03666666666666667
+      ],
+      "end": [
+        0.040160642570281124,
+        0.03666666666666667
+      ],
+      "bindPivot": [
+        0.378223,
+        0.374023
+      ],
+      "bindEnd": [
+        0.165742,
+        0.101914
+      ],
+      "bindAngle": -0.031046637456085602,
+      "size": [
+        0.3318891564514106,
+        0.3998664535559164
+      ],
+      "order": 13,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 2,
+      "sourceSocketPixels": [
+        659,
+        241
+      ],
+      "sourceAxisEndPixels": [
+        506,
+        32
+      ],
+      "solidAlphaBounds": [
+        500,
+        25,
+        741,
+        317
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "wing_image_left_lower_vane",
+      "bone": "wing_image_left_lower_vane",
+      "kind": "rigid_link",
+      "rect": [
+        755,
+        99,
+        263,
+        219
+      ],
+      "pivot": [
+        0.11026615969581749,
+        0.1415525114155251
+      ],
+      "anchorEnd": [
+        0.8288973384030418,
+        0.9634703196347032
+      ],
+      "end": [
+        0.8288973384030418,
+        0.9634703196347032
+      ],
+      "bindPivot": [
+        0.378223,
+        0.374023
+      ],
+      "bindEnd": [
+        0.147266,
+        0.55543
+      ],
+      "bindAngle": 1.7147692046921867,
+      "size": [
+        0.2959333260860774,
+        0.24642356810969945
+      ],
+      "order": 14,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 3,
+      "sourceSocketPixels": [
+        784,
+        130
+      ],
+      "sourceAxisEndPixels": [
+        973,
+        310
+      ],
+      "solidAlphaBounds": [
+        759,
+        103,
+        1014,
+        314
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "wing_image_right_spar",
+      "bone": "wing_image_right_spar",
+      "kind": "rigid_link",
+      "rect": [
+        1023,
+        44,
+        185,
+        279
+      ],
+      "pivot": [
+        0.15675675675675677,
+        0.6451612903225806
+      ],
+      "anchorEnd": [
+        0.8324324324324325,
+        0.34408602150537637
+      ],
+      "end": [
+        0.8324324324324325,
+        0.34408602150537637
+      ],
+      "bindPivot": [
+        0.615059,
+        0.495801
+      ],
+      "bindEnd": [
+        0.656211,
+        0.39082
+      ],
+      "bindAngle": -0.6055241983578398,
+      "size": [
+        0.13851290218008835,
+        0.2088924308553765
+      ],
+      "order": 16,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 4,
+      "sourceSocketPixels": [
+        1052,
+        224
+      ],
+      "sourceAxisEndPixels": [
+        1177,
+        140
+      ],
+      "solidAlphaBounds": [
+        1027,
+        48,
+        1204,
+        319
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "wing_image_right_vane",
+      "bone": "wing_image_right_vane",
+      "kind": "rigid_link",
+      "rect": [
+        13,
+        347,
+        246,
+        243
+      ],
+      "pivot": [
+        0.4715447154471545,
+        0.7407407407407407
+      ],
+      "anchorEnd": [
+        0.9634146341463414,
+        0.03292181069958848
+      ],
+      "end": [
+        0.9634146341463414,
+        0.03292181069958848
+      ],
+      "bindPivot": [
+        0.656211,
+        0.39082
+      ],
+      "bindEnd": [
+        0.818301,
+        0.167422
+      ],
+      "bindAngle": 0.01461578881630976,
+      "size": [
+        0.32286517144735,
+        0.3189277913077482
+      ],
+      "order": 17,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 5,
+      "sourceSocketPixels": [
+        129,
+        527
+      ],
+      "sourceAxisEndPixels": [
+        250,
+        355
+      ],
+      "solidAlphaBounds": [
+        17,
+        351,
+        255,
+        586
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "wing_image_right_lower_vane",
+      "bone": "wing_image_right_lower_vane",
+      "kind": "rigid_link",
+      "rect": [
+        264,
+        382,
+        263,
+        212
+      ],
+      "pivot": [
+        0.09125475285171103,
+        0.16037735849056603
+      ],
+      "anchorEnd": [
+        0.9049429657794676,
+        0.9339622641509434
+      ],
+      "end": [
+        0.9049429657794676,
+        0.9339622641509434
+      ],
+      "bindPivot": [
+        0.656211,
+        0.39082
+      ],
+      "bindEnd": [
+        0.885488,
+        0.657051
+      ],
+      "bindAngle": 0.20595187510218127,
+      "size": [
+        0.3427303092127109,
+        0.2762692986809685
+      ],
+      "order": 18,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 6,
+      "sourceSocketPixels": [
+        288,
+        416
+      ],
+      "sourceAxisEndPixels": [
+        502,
+        580
+      ],
+      "solidAlphaBounds": [
+        268,
+        386,
+        523,
+        590
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_outer_upper",
+      "bone": "image_left_outer_upper",
+      "kind": "rigid_link",
+      "rect": [
+        575,
+        334,
+        148,
+        177
+      ],
+      "pivot": [
+        0.19594594594594594,
+        0.192090395480226
+      ],
+      "anchorEnd": [
+        0.8040540540540541,
+        0.807909604519774
+      ],
+      "end": [
+        0.8040540540540541,
+        0.807909604519774
+      ],
+      "bindPivot": [
+        0.410137,
+        0.592383
+      ],
+      "bindEnd": [
+        0.330352,
+        0.718359
+      ],
+      "bindAngle": 1.2547798484256683,
+      "size": [
+        0.15612682220629745,
+        0.18671924007104493
+      ],
+      "order": 0,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 7,
+      "sourceSocketPixels": [
+        604,
+        368
+      ],
+      "sourceAxisEndPixels": [
+        694,
+        477
+      ],
+      "solidAlphaBounds": [
+        579,
+        338,
+        719,
+        507
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_left_outer_lower",
+      "bone": "image_left_outer_lower",
+      "kind": "rigid_link",
+      "rect": [
+        842,
+        340,
+        129,
+        242
+      ],
+      "pivot": [
+        0.20930232558139536,
+        0.12396694214876033
+      ],
+      "anchorEnd": [
+        0.7829457364341085,
+        0.8760330578512396
+      ],
+      "end": [
+        0.7829457364341085,
+        0.8760330578512396
+      ],
+      "bindPivot": [
+        0.330352,
+        0.718359
+      ],
+      "bindEnd": [
+        0.373184,
+        0.838457
+      ],
+      "bindAngle": 0.043597655844194394,
+      "size": [
+        0.08372035948268843,
+        0.1570567984093845
+      ],
+      "order": 1,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 8,
+      "sourceSocketPixels": [
+        869,
+        370
+      ],
+      "sourceAxisEndPixels": [
+        943,
+        552
+      ],
+      "solidAlphaBounds": [
+        846,
+        344,
+        967,
+        578
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_left_outer_lower_foot",
+      "bone": "image_left_outer_lower",
+      "kind": "foot",
+      "rect": [
+        1077,
+        389,
+        117,
+        178
+      ],
+      "pivot": [
+        0.9145299145299145,
+        0.9719101123595506
+      ],
+      "anchorEnd": [
+        0.2222222222222222,
+        0.16292134831460675
+      ],
+      "end": [
+        0.2222222222222222,
+        0.16292134831460675
+      ],
+      "bindPivot": [
+        0.373184,
+        0.838457
+      ],
+      "bindEnd": [
+        0.373184,
+        0.798457
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.048,
+        0.075
+      ],
+      "order": 2,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 9,
+      "sourceSocketPixels": [
+        1184,
+        562
+      ],
+      "sourceAxisEndPixels": [
+        1103,
+        418
+      ],
+      "solidAlphaBounds": [
+        1081,
+        393,
+        1190,
+        563
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Tucked airborne tarsus tip follows lower bone; no planted ground contact."
+    },
+    {
+      "id": "image_left_middle_upper",
+      "bone": "image_left_middle_upper",
+      "kind": "rigid_link",
+      "rect": [
+        82,
+        590,
+        140,
+        169
+      ],
+      "pivot": [
+        0.2,
+        0.1952662721893491
+      ],
+      "anchorEnd": [
+        0.8,
+        0.8047337278106509
+      ],
+      "end": [
+        0.8,
+        0.8047337278106509
+      ],
+      "bindPivot": [
+        0.428613,
+        0.60918
+      ],
+      "bindEnd": [
+        0.410137,
+        0.760352
+      ],
+      "bindAngle": 0.8057566278913008,
+      "size": [
+        0.16042135799015542,
+        0.19365149643097332
+      ],
+      "order": 3,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 10,
+      "sourceSocketPixels": [
+        110,
+        623
+      ],
+      "sourceAxisEndPixels": [
+        194,
+        726
+      ],
+      "solidAlphaBounds": [
+        86,
+        594,
+        218,
+        755
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_left_middle_lower",
+      "bone": "image_left_middle_lower",
+      "kind": "rigid_link",
+      "rect": [
+        342,
+        601,
+        129,
+        238
+      ],
+      "pivot": [
+        0.20930232558139536,
+        0.12184873949579832
+      ],
+      "anchorEnd": [
+        0.7829457364341085,
+        0.8781512605042017
+      ],
+      "end": [
+        0.7829457364341085,
+        0.8781512605042017
+      ],
+      "bindPivot": [
+        0.410137,
+        0.760352
+      ],
+      "bindEnd": [
+        0.452969,
+        0.868691
+      ],
+      "bindAngle": 0.01355532447493224,
+      "size": [
+        0.07721973167440815,
+        0.14246741192642745
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 11,
+      "sourceSocketPixels": [
+        369,
+        630
+      ],
+      "sourceAxisEndPixels": [
+        443,
+        810
+      ],
+      "solidAlphaBounds": [
+        346,
+        605,
+        467,
+        835
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_left_middle_lower_foot",
+      "bone": "image_left_middle_lower",
+      "kind": "foot",
+      "rect": [
+        585,
+        648,
+        119,
+        178
+      ],
+      "pivot": [
+        0.907563025210084,
+        0.9719101123595506
+      ],
+      "anchorEnd": [
+        0.2184873949579832,
+        0.16853932584269662
+      ],
+      "end": [
+        0.2184873949579832,
+        0.16853932584269662
+      ],
+      "bindPivot": [
+        0.452969,
+        0.868691
+      ],
+      "bindEnd": [
+        0.452969,
+        0.828691
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.048,
+        0.075
+      ],
+      "order": 5,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 12,
+      "sourceSocketPixels": [
+        693,
+        821
+      ],
+      "sourceAxisEndPixels": [
+        611,
+        678
+      ],
+      "solidAlphaBounds": [
+        589,
+        652,
+        700,
+        822
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Tucked airborne tarsus tip follows lower bone; no planted ground contact."
+    },
+    {
+      "id": "image_left_inner_upper",
+      "bone": "image_left_inner_upper",
+      "kind": "rigid_link",
+      "rect": [
+        829,
+        591,
+        140,
+        172
+      ],
+      "pivot": [
+        0.2,
+        0.19767441860465115
+      ],
+      "anchorEnd": [
+        0.8,
+        0.8023255813953488
+      ],
+      "end": [
+        0.8,
+        0.8023255813953488
+      ],
+      "bindPivot": [
+        0.471445,
+        0.636895
+      ],
+      "bindEnd": [
+        0.468086,
+        0.729277
+      ],
+      "bindAngle": 0.7157576919504977,
+      "size": [
+        0.0968089937802565,
+        0.11893676378717227
+      ],
+      "order": 6,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 13,
+      "sourceSocketPixels": [
+        857,
+        625
+      ],
+      "sourceAxisEndPixels": [
+        941,
+        729
+      ],
+      "solidAlphaBounds": [
+        833,
+        595,
+        965,
+        759
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_left_inner_lower",
+      "bone": "image_left_inner_lower",
+      "kind": "rigid_link",
+      "rect": [
+        1088,
+        598,
+        134,
+        234
+      ],
+      "pivot": [
+        0.208955223880597,
+        0.12393162393162394
+      ],
+      "anchorEnd": [
+        0.7835820895522388,
+        0.8760683760683761
+      ],
+      "end": [
+        0.7835820895522388,
+        0.8760683760683761
+      ],
+      "bindPivot": [
+        0.468086,
+        0.729277
+      ],
+      "bindEnd": [
+        0.503359,
+        0.842656
+      ],
+      "bindAngle": 0.11079514809411939,
+      "size": [
+        0.0828239758156403,
+        0.14463291299149125
+      ],
+      "order": 7,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 14,
+      "sourceSocketPixels": [
+        1116,
+        627
+      ],
+      "sourceAxisEndPixels": [
+        1193,
+        803
+      ],
+      "solidAlphaBounds": [
+        1092,
+        602,
+        1218,
+        828
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_left_inner_lower_foot",
+      "bone": "image_left_inner_lower",
+      "kind": "foot",
+      "rect": [
+        84,
+        883,
+        121,
+        177
+      ],
+      "pivot": [
+        0.8016528925619835,
+        0.9717514124293786
+      ],
+      "anchorEnd": [
+        0.2231404958677686,
+        0.1638418079096045
+      ],
+      "end": [
+        0.2231404958677686,
+        0.1638418079096045
+      ],
+      "bindPivot": [
+        0.503359,
+        0.842656
+      ],
+      "bindEnd": [
+        0.503359,
+        0.8026559999999999
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.048,
+        0.075
+      ],
+      "order": 8,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 15,
+      "sourceSocketPixels": [
+        181,
+        1055
+      ],
+      "sourceAxisEndPixels": [
+        111,
+        912
+      ],
+      "solidAlphaBounds": [
+        88,
+        887,
+        201,
+        1056
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Tucked airborne tarsus tip follows lower bone; no planted ground contact."
+    },
+    {
+      "id": "image_right_inner_upper",
+      "bone": "image_right_inner_upper",
+      "kind": "rigid_link",
+      "rect": [
+        330,
+        827,
+        140,
+        169
+      ],
+      "pivot": [
+        0.2,
+        0.1952662721893491
+      ],
+      "anchorEnd": [
+        0.8,
+        0.8047337278106509
+      ],
+      "end": [
+        0.8,
+        0.8047337278106509
+      ],
+      "bindPivot": [
+        0.559629,
+        0.626816
+      ],
+      "bindEnd": [
+        0.529395,
+        0.723398
+      ],
+      "bindAngle": 0.9875178442724907,
+      "size": [
+        0.10660249353539952,
+        0.12868443862487514
+      ],
+      "order": 9,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 16,
+      "sourceSocketPixels": [
+        358,
+        860
+      ],
+      "sourceAxisEndPixels": [
+        442,
+        963
+      ],
+      "solidAlphaBounds": [
+        334,
+        831,
+        466,
+        992
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_right_inner_lower",
+      "bone": "image_right_inner_lower",
+      "kind": "rigid_link",
+      "rect": [
+        586,
+        832,
+        143,
+        224
+      ],
+      "pivot": [
+        0.2097902097902098,
+        0.125
+      ],
+      "anchorEnd": [
+        0.7832167832167832,
+        0.875
+      ],
+      "end": [
+        0.7832167832167832,
+        0.875
+      ],
+      "bindPivot": [
+        0.529395,
+        0.723398
+      ],
+      "bindEnd": [
+        0.522676,
+        0.794785
+      ],
+      "bindAngle": 0.5479228394624232,
+      "size": [
+        0.054847796121427206,
+        0.08591542888950834
+      ],
+      "order": 10,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 17,
+      "sourceSocketPixels": [
+        616,
+        860
+      ],
+      "sourceAxisEndPixels": [
+        698,
+        1028
+      ],
+      "solidAlphaBounds": [
+        590,
+        836,
+        725,
+        1052
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_right_inner_lower_foot",
+      "bone": "image_right_inner_lower",
+      "kind": "foot",
+      "rect": [
+        840,
+        883,
+        121,
+        176
+      ],
+      "pivot": [
+        0.9090909090909091,
+        0.9715909090909091
+      ],
+      "anchorEnd": [
+        0.2231404958677686,
+        0.16477272727272727
+      ],
+      "end": [
+        0.2231404958677686,
+        0.16477272727272727
+      ],
+      "bindPivot": [
+        0.522676,
+        0.794785
+      ],
+      "bindEnd": [
+        0.522676,
+        0.7547849999999999
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.048,
+        0.075
+      ],
+      "order": 11,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 18,
+      "sourceSocketPixels": [
+        950,
+        1054
+      ],
+      "sourceAxisEndPixels": [
+        867,
+        912
+      ],
+      "solidAlphaBounds": [
+        844,
+        887,
+        957,
+        1055
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Tucked airborne tarsus tip follows lower bone; no planted ground contact."
+    },
+    {
+      "id": "image_right_middle_upper",
+      "bone": "image_right_middle_upper",
+      "kind": "rigid_link",
+      "rect": [
+        1086,
+        824,
+        140,
+        171
+      ],
+      "pivot": [
+        0.2,
+        0.19298245614035087
+      ],
+      "anchorEnd": [
+        0.8,
+        0.8070175438596491
+      ],
+      "end": [
+        0.8,
+        0.8070175438596491
+      ],
+      "bindPivot": [
+        0.621777,
+        0.60498
+      ],
+      "bindEnd": [
+        0.641934,
+        0.703242
+      ],
+      "bindAngle": 0.4724125528146279,
+      "size": [
+        0.1044366759706804,
+        0.12756193993561676
+      ],
+      "order": 12,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 19,
+      "sourceSocketPixels": [
+        1114,
+        857
+      ],
+      "sourceAxisEndPixels": [
+        1198,
+        962
+      ],
+      "solidAlphaBounds": [
+        1090,
+        828,
+        1222,
+        991
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_right_middle_lower",
+      "bone": "image_right_middle_lower",
+      "kind": "rigid_link",
+      "rect": [
+        88,
+        1051,
+        136,
+        198
+      ],
+      "pivot": [
+        0.20588235294117646,
+        0.12626262626262627
+      ],
+      "anchorEnd": [
+        0.7794117647058824,
+        0.8737373737373737
+      ],
+      "end": [
+        0.7794117647058824,
+        0.8737373737373737
+      ],
+      "bindPivot": [
+        0.641934,
+        0.703242
+      ],
+      "bindEnd": [
+        0.611699,
+        0.895566
+      ],
+      "bindAngle": 0.6409671481859198,
+      "size": [
+        0.15826610467956229,
+        0.2304168288717157
+      ],
+      "order": 13,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 20,
+      "sourceSocketPixels": [
+        116,
+        1076
+      ],
+      "sourceAxisEndPixels": [
+        194,
+        1224
+      ],
+      "solidAlphaBounds": [
+        92,
+        1055,
+        220,
+        1245
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_right_middle_lower_foot",
+      "bone": "image_right_middle_lower",
+      "kind": "foot",
+      "rect": [
+        344,
+        1089,
+        112,
+        158
+      ],
+      "pivot": [
+        0.9107142857142857,
+        0.9683544303797469
+      ],
+      "anchorEnd": [
+        0.22321428571428573,
+        0.17088607594936708
+      ],
+      "end": [
+        0.22321428571428573,
+        0.17088607594936708
+      ],
+      "bindPivot": [
+        0.611699,
+        0.895566
+      ],
+      "bindEnd": [
+        0.611699,
+        0.8555659999999999
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.048,
+        0.075
+      ],
+      "order": 14,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 21,
+      "sourceSocketPixels": [
+        446,
+        1242
+      ],
+      "sourceAxisEndPixels": [
+        369,
+        1116
+      ],
+      "solidAlphaBounds": [
+        348,
+        1093,
+        452,
+        1243
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Tucked airborne tarsus tip follows lower bone; no planted ground contact."
+    },
+    {
+      "id": "image_right_outer_upper",
+      "bone": "image_right_outer_upper",
+      "kind": "rigid_link",
+      "rect": [
+        582,
+        1040,
+        144,
+        173
+      ],
+      "pivot": [
+        0.19444444444444445,
+        0.19653179190751446
+      ],
+      "anchorEnd": [
+        0.8055555555555556,
+        0.8034682080924855
+      ],
+      "end": [
+        0.8055555555555556,
+        0.8034682080924855
+      ],
+      "bindPivot": [
+        0.641094,
+        0.60918
+      ],
+      "bindEnd": [
+        0.704922,
+        0.722559
+      ],
+      "bindAngle": 0.18480212007921926,
+      "size": [
+        0.13675876051863126,
+        0.16430045534530005
+      ],
+      "order": 15,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 22,
+      "sourceSocketPixels": [
+        610,
+        1074
+      ],
+      "sourceAxisEndPixels": [
+        698,
+        1179
+      ],
+      "solidAlphaBounds": [
+        586,
+        1044,
+        722,
+        1209
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_right_outer_lower",
+      "bone": "image_right_outer_lower",
+      "kind": "rigid_link",
+      "rect": [
+        847,
+        1052,
+        127,
+        198
+      ],
+      "pivot": [
+        0.2125984251968504,
+        0.12626262626262627
+      ],
+      "anchorEnd": [
+        0.7795275590551181,
+        0.8737373737373737
+      ],
+      "end": [
+        0.7795275590551181,
+        0.8737373737373737
+      ],
+      "bindPivot": [
+        0.704922,
+        0.722559
+      ],
+      "bindEnd": [
+        0.720879,
+        0.812422
+      ],
+      "bindAngle": 0.27703997349526355,
+      "size": [
+        0.07042670182660016,
+        0.10979910993438449
+      ],
+      "order": 16,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 23,
+      "sourceSocketPixels": [
+        874,
+        1077
+      ],
+      "sourceAxisEndPixels": [
+        946,
+        1225
+      ],
+      "solidAlphaBounds": [
+        851,
+        1056,
+        970,
+        1246
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Airborne articulated leg; no planted contact."
+    },
+    {
+      "id": "image_right_outer_lower_foot",
+      "bone": "image_right_outer_lower",
+      "kind": "foot",
+      "rect": [
+        1088,
+        1087,
+        108,
+        159
+      ],
+      "pivot": [
+        0.9074074074074074,
+        0.9685534591194969
+      ],
+      "anchorEnd": [
+        0.2222222222222222,
+        0.16981132075471697
+      ],
+      "end": [
+        0.2222222222222222,
+        0.16981132075471697
+      ],
+      "bindPivot": [
+        0.720879,
+        0.812422
+      ],
+      "bindEnd": [
+        0.720879,
+        0.7724219999999999
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.048,
+        0.075
+      ],
+      "order": 17,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 24,
+      "sourceSocketPixels": [
+        1186,
+        1241
+      ],
+      "sourceAxisEndPixels": [
+        1112,
+        1114
+      ],
+      "solidAlphaBounds": [
+        1092,
+        1091,
+        1192,
+        1242
+      ],
+      "socketPaddingPixels": 4,
+      "hovering": true,
+      "note": "Tucked airborne tarsus tip follows lower bone; no planted ground contact."
+    }
+  ],
+  "components": {
+    "expected": 25,
+    "measured": 25,
+    "nominal_grid": [
+      5,
+      5
+    ],
+    "rect_policy": "Measured actual isolated component bboxes plus4px soft-edge padding. Original generated atlas retained; no repack or repaint."
+  },
+  "socket_notes": "Socket centers are initial manual measurements as normalized fractions of each actual solid component bbox. Pixel anchors are computed from these and retained in final maps; website calibration owns final binds. Grounded sole/tarsus tips are measured from the component alpha at its lowest solid tip, never from midstrut.",
+  "render_alignment": "Rigid socket axis aligns via local pivot/end to bindPivot/bindEnd using uniform scale+rotation. Core alignAxis=false. Grounded feet use separate contact matrix and solid sole pivot; Chime tips follow their lower bone with no contact. Website worker calibrates final bind sizes/actions.",
+  "tool": "built-in image_gen",
+  "generation_count": 2,
+  "prompt": "Use case: stylized-concept, production rigid 2D skeletal game-animation sprite atlas.\nImage1 is the CURRENT APPROVED illustrated character: preserve its exact industrial design, anatomy, panel identities, colors, softly sculpted hand-painted lighting and THREE-QUARTER camera. Image2 is actual production in-engine anatomy reference only; ignore all background machines/architecture and printed markings. Do NOT create a different species or kit.\nCreate ONE component atlas, NOT a pose sheet, NOT complete character repeats, and NOT an exploded character placed together. Each instructed cell contains ONE isolated rigid piece ONLY. All components use matching source camera/foreshortening, light direction, cream ceramic paint wear, marigold fittings, dark ink-navy steel, graphite cables and source optical colors. No organic flesh, vines, fur, magic, alien membranes or unrelated franchise imagery.\nMake honest ROUND OVERLAPPING metal sockets at proximal and distal link ends; extend fully painted hidden surfaces behind hinges so rotation never reveals holes. The core must be a CONTINUOUS fully painted bare underlying body with complete hidden armor/cable surfaces and covered attachment sockets, NO baked silhouette/stump of any separately listed appendage. Moving appendage hoses belong to their moving link and terminate at its socket. Body-owned dorsal cables can stay with core as specified.\nAll isolated parts must be fully framed, with comfortable transparent gutters and no component overlapping another. Preserve neutral bind-direction from source if possible; isolated component scale can vary by cell and renderer will map it back to original bind size.\nTRUE TRANSPARENT ALPHA everywhere outside parts: NO backdrop, black rectangle, ground, shadow, cell borders, grid lines, captions, letters, labels, arrows, numbers, emblems, logos or decals. The names below are instructions ONLY and must NEVER appear in pixels.\n\nCHARACTER IDENTITY: Chime is the exact flying industrial drone in Image1: compact forward cream armored core, central cyan/violet optical lens with four small satellites, dark manufactured chassis and exactly TWO layered articulated wing assemblies. Each wing has upper/lower hard cream ceramic vanes, dark mechanical spar and marigold hinge fittings; preserve every original vane silhouette. NO biological membranes or feathers. Six thin articulated legs are tucked under the flying body. The bare core MUST have NO wing/leg silhouette baked into it; keep small body-owned dorsal cables and the vertical body antenna. Wing root connects to body, upper/lower vanes attach to the spar at visible mechanical hinges.\n\nAtlas layout: EXACTLY 5 COLUMNS \u00d7 5 ROWS, 25 isolated pieces and 0 explicitly empty transparent cells. Regular aligned equal cells, preferably high-resolution with crisp alpha edges. Every piece inside its own cell with generous gutter; no object crossing any cell. Square atlas, aspect ratio 5:5, one sheet only.\nEXACT ROW-MAJOR CONTENTS:\n\nROW 1, left to right:\n1. Fully painted continuous UNDERLYING CHASSIS CORE ONLY. Keep body-owned optics, exact torso armor, rear equipment and dorsal cables. No arm, walking leg, foot, pincer, wing or jaw silhouettes/stumps baked on the body. Fill all hidden body surfaces and expose round limb attachment sockets.\n2. Image-left WING ROOT/SPAR ONLY: the original dark alloy/marigold articulated central support linkage from body hinge to vane attachment. Round overlapping hinge hubs. NO upper or lower cream vane sheet.\n3. Image-left UPPER WING VANE ONLY: source long swept pointed layered cream ceramic upper panel and its edge metal frame, complete round spar attachment hinge, no body, other vane or central root spar.\n4. Image-left LOWER WING VANE ONLY: source wide swept cream lower panel with thin bent edge/strut and matching covered hinge; preserve its actual angular manufactured vane outline.\n5. Image-right WING ROOT/SPAR ONLY, original dark/marigold articulated central linkage and covered hub, no upper/lower cream sheet.\n\nROW 2, left to right:\n1. Image-right UPPER WING VANE ONLY, original long pointed cream hard ceramic sheet and edge frame, with round spar attachment hinge.\n2. Image-right LOWER WING VANE ONLY, original broad cream hard vane panel and thin bent edge/strut with covered attachment hinge.\n3. image left outer walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n4. image left outer leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n5. image left outer separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n\nROW 3, left to right:\n1. image left middle walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n2. image left middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n3. image left middle separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n4. image left inner walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n5. image left inner leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n\nROW 4, left to right:\n1. image left inner separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n2. image right inner walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n3. image right inner leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n4. image right inner separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n5. image right middle walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n\nROW 5, left to right:\n1. image right middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n2. image right middle separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n3. image right outer walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n4. image right outer leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n5. image right outer separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n\nFinal mandatory check: 25 isolated components, one per occupied cell, no hidden additional complete character, NO limbs baked onto core, no foot baked onto lower link, compatible source perspective and source colors, covered round hinge sockets, genuine transparent alpha gutters, no writing.",
+  "reference_illustration": "art-sources/chassis/chassis-chime-generated.png",
+  "reference_illustration_sha256": "dcb2aac6b40e1e60d807d9f17550c2cea33654e03d44773762eb71460e33fdfb",
+  "production_reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00010.jpg",
+  "production_reference_sha256": "244f0e0640e5c1ee65678c19f0b190313dc3db36cfd2979a1941c0c49a6c4fb1",
+  "necessary_separation_correction": {
+    "tool": "built-in image_gen",
+    "source_cache_path": "/home/cabewse/.codex/generated_images/01a102d5-a13a-7843-bb23-8fea74c2b8e4/exec-2e8fa332-c43e-4719-a4f6-54bbccb59347.png",
+    "first_candidate_source": "art-sources/chassis/chassis-chime-atlas-first-candidate.png",
+    "prompt": "Use case: stylized-concept, precise atlas repair for rigid 2D skeletal animation.\nImage1 is the generated Chime 5\u00d75 transparent component atlas. Image2 is its exact approved full character. Keep the ENTIRE atlas's original core, all six wing pieces, the lower links, feet, colors, camera, material detail, proportions, transparent alpha and grid layout unchanged.\nChange ONLY these SIX upper tucked-leg pieces in their existing cells: row2/column3 (cell8), row3/column1 (cell11), row3/column4 (cell14), row4/column2 (cell17), row4/column5 (cell20), row5/column3 (cell23). Their current forms incorrectly include a lower strut and pointed toe. Replace each of these six upper-leg sprites with ONLY ONE clean short hip-to-knee dark alloy mechanical link, its source small marigold collar accents, and TWO ROUND OVERLAPPING COVERED SOCKETS, one at EACH end. The upper link must stop at the round knee socket; NO bend continuing into a lower leg, NO lower strut or amber lower-leg armor, NO pointed toe/foot on the upper part, no complete leg. They are six short rigid upper mechanical bone links, not full limbs. Preserve their perspective and source manufacturing detail.\nAll other 19 component cells must remain intact. In particular do not alter the proper independent lower-leg pieces in row2/column4,row3/column2,row3/column5,row4/column3,row5/column1,row5/column4, or the independent pointed foot/tarsus pieces in row2/column5,row3/column3,row4/column1,row4/column4,row5/column2,row5/column5. Exactly25 separate components, one per occupied cell, 5columns\u00d75rows regular grid, true transparent gutters, no writing/labels/grid marks/backdrop or shadows. This is entirely a manufactured industrial drone, no biological material.",
+    "reason": "Six supposed upper leg links contained lower-strut/toe silhouettes. One targeted anatomy/separation correction replaced only those six links with hip-to-knee rigid links and covered round sockets.",
+    "generation_count": 2
+  },
+  "export": {
+    "format": "WebP RGBA",
+    "quality": 91,
+    "method": 6,
+    "resampling": "none",
+    "art_processing": "Generated atlas preserved at original pixel dimensions; crop rects are metadata only, no repainting/repacking."
+  }
+}

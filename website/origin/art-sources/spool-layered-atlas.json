@@ -1,0 +1,1042 @@
+{
+  "schema_version": 1,
+  "character": "spool",
+  "image": "assets/illustrated/chassis-spool-atlas.webp",
+  "width": 1254,
+  "height": 1254,
+  "source": "art-sources/chassis/chassis-spool-atlas-generated.png",
+  "sha256": "ca7a7f0db94be41c78f272c14ea4ded5f755c5c24495c8086e91b942d2b7e9b3",
+  "source_sha256": "1d5a733f36e64048092bafd5aad3ecdade46c65ee976d60f0812dad3239d1d12",
+  "bytes": 399848,
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "layers": [
+    {
+      "id": "chassis",
+      "bone": "chassis",
+      "rect": [
+        37,
+        4,
+        238,
+        249
+      ],
+      "pivot": [
+        0.5126050420168067,
+        0.6666666666666666
+      ],
+      "bindPivot": [
+        0.541992,
+        0.533594
+      ],
+      "size": [
+        0.46,
+        0.5
+      ],
+      "order": 30,
+      "sourceCell": 0,
+      "anchorEnd": [
+        0.46638655462184875,
+        0.3253012048192771
+      ],
+      "bindEnd": [
+        0.558789,
+        0.361426
+      ],
+      "bindAngle": 0,
+      "solidAlphaBounds": [
+        41,
+        8,
+        271,
+        249
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "tool_image_left_upper",
+      "bone": "tool_image_left_upper",
+      "rect": [
+        294,
+        12,
+        226,
+        237
+      ],
+      "pivot": [
+        0.6106194690265486,
+        0.8143459915611815
+      ],
+      "bindPivot": [
+        0.543672,
+        0.355547
+      ],
+      "size": [
+        0.34834580762840717,
+        0.3653006920704978
+      ],
+      "order": 60,
+      "sourceCell": 1,
+      "anchorEnd": [
+        0.8716814159292036,
+        0.20675105485232068
+      ],
+      "bindEnd": [
+        0.363105,
+        0.197656
+      ],
+      "bindAngle": -1.2411555652363606,
+      "solidAlphaBounds": [
+        298,
+        16,
+        516,
+        245
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "tool_image_left_lower",
+      "bone": "tool_image_left_lower",
+      "rect": [
+        531,
+        22,
+        198,
+        216
+      ],
+      "pivot": [
+        0.8333333333333334,
+        0.19907407407407407
+      ],
+      "bindPivot": [
+        0.363105,
+        0.197656
+      ],
+      "size": [
+        0.35147333859839297,
+        0.3834254602891559
+      ],
+      "order": 61,
+      "sourceCell": 2,
+      "anchorEnd": [
+        0.2676767676767677,
+        0.8611111111111112
+      ],
+      "bindEnd": [
+        0.148945,
+        0.438691
+      ],
+      "bindAngle": 0.062002824901497,
+      "solidAlphaBounds": [
+        535,
+        26,
+        725,
+        234
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "tool_image_left_tip",
+      "bone": "tool_image_left_tip",
+      "rect": [
+        782,
+        55,
+        176,
+        182
+      ],
+      "pivot": [
+        0.7727272727272727,
+        0.18681318681318682
+      ],
+      "bindPivot": [
+        0.148945,
+        0.438691
+      ],
+      "size": [
+        0.11930504961850646,
+        0.12337226721913737
+      ],
+      "order": 62,
+      "sourceCell": 3,
+      "anchorEnd": [
+        0.056818181818181816,
+        0.9395604395604396
+      ],
+      "bindEnd": [
+        0.101074,
+        0.55543
+      ],
+      "bindAngle": -0.3544414615349105,
+      "solidAlphaBounds": [
+        786,
+        59,
+        954,
+        233
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "tool_image_right_upper",
+      "bone": "tool_image_right_upper",
+      "rect": [
+        1020,
+        12,
+        217,
+        238
+      ],
+      "pivot": [
+        0.8525345622119815,
+        0.8487394957983193
+      ],
+      "bindPivot": [
+        0.628496,
+        0.332871
+      ],
+      "size": [
+        0.18245046517598457,
+        0.20010696180591855
+      ],
+      "order": 63,
+      "sourceCell": 4,
+      "anchorEnd": [
+        0.12903225806451613,
+        0.17647058823529413
+      ],
+      "bindEnd": [
+        0.730117,
+        0.174141
+      ],
+      "bindAngle": 1.345398964293481,
+      "solidAlphaBounds": [
+        1024,
+        16,
+        1233,
+        246
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "tool_image_right_lower",
+      "bone": "tool_image_right_lower",
+      "rect": [
+        30,
+        258,
+        213,
+        221
+      ],
+      "pivot": [
+        0.13145539906103287,
+        0.15384615384615385
+      ],
+      "bindPivot": [
+        0.730117,
+        0.174141
+      ],
+      "size": [
+        0.16088354646868505,
+        0.16692612098394083
+      ],
+      "order": 64,
+      "sourceCell": 5,
+      "anchorEnd": [
+        0.7699530516431925,
+        0.8642533936651584
+      ],
+      "bindEnd": [
+        0.836777,
+        0.289199
+      ],
+      "bindAngle": -0.033691161806549075,
+      "solidAlphaBounds": [
+        34,
+        262,
+        239,
+        475
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "tool_image_right_tip",
+      "bone": "tool_image_right_tip",
+      "rect": [
+        328,
+        289,
+        138,
+        188
+      ],
+      "pivot": [
+        0.36231884057971014,
+        0.1702127659574468
+      ],
+      "bindPivot": [
+        0.836777,
+        0.289199
+      ],
+      "size": [
+        0.12097614116224034,
+        0.16480807636595063
+      ],
+      "order": 65,
+      "sourceCell": 6,
+      "anchorEnd": [
+        0.9347826086956522,
+        0.9574468085106383
+      ],
+      "bindEnd": [
+        0.890527,
+        0.426094
+      ],
+      "bindAngle": 0.11616533159900344,
+      "solidAlphaBounds": [
+        332,
+        293,
+        462,
+        473
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_front_upper",
+      "bone": "image_left_front_upper",
+      "rect": [
+        533,
+        262,
+        192,
+        229
+      ],
+      "pivot": [
+        0.6666666666666666,
+        0.24017467248908297
+      ],
+      "bindPivot": [
+        0.395859,
+        0.646133
+      ],
+      "size": [
+        0.18166007560209524,
+        0.21666748600458235
+      ],
+      "order": 40,
+      "sourceCell": 7,
+      "anchorEnd": [
+        0.234375,
+        0.8951965065502183
+      ],
+      "bindEnd": [
+        0.244688,
+        0.587344
+      ],
+      "bindAngle": -4.846894884769598,
+      "solidAlphaBounds": [
+        537,
+        266,
+        721,
+        487
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_front_lower",
+      "bone": "image_left_front_lower",
+      "rect": [
+        803,
+        262,
+        167,
+        232
+      ],
+      "pivot": [
+        0.19760479041916168,
+        0.1810344827586207
+      ],
+      "bindPivot": [
+        0.244688,
+        0.587344
+      ],
+      "size": [
+        0.20201385457372634,
+        0.28064200156350005
+      ],
+      "order": 41,
+      "sourceCell": 8,
+      "anchorEnd": [
+        0.7964071856287425,
+        0.853448275862069
+      ],
+      "bindEnd": [
+        0.184219,
+        0.803184
+      ],
+      "bindAngle": 0.8431943736777272,
+      "solidAlphaBounds": [
+        807,
+        266,
+        966,
+        490
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_front_lower_foot",
+      "bone": "image_left_front_lower",
+      "rect": [
+        1032,
+        330,
+        205,
+        146
+      ],
+      "pivot": [
+        0.551219512195122,
+        0.8835616438356164
+      ],
+      "bindPivot": [
+        0.184219,
+        0.803184
+      ],
+      "size": [
+        0.14,
+        0.085
+      ],
+      "order": 42,
+      "sourceCell": 9,
+      "anchorEnd": [
+        0.4585365853658537,
+        0.1643835616438356
+      ],
+      "bindEnd": [
+        0.184219,
+        0.797184
+      ],
+      "bindAngle": 0,
+      "solidAlphaBounds": [
+        1036,
+        334,
+        1233,
+        472
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_left_front",
+      "note": "Source pivot is ground contact at sole, not ankle. Pin this to posed foot target, preserving natural broad foot width; artwork overlaps lower strut above contact plane."
+    },
+    {
+      "id": "image_left_middle_upper",
+      "bone": "image_left_middle_upper",
+      "rect": [
+        44,
+        520,
+        168,
+        198
+      ],
+      "pivot": [
+        0.6964285714285714,
+        0.24242424242424243
+      ],
+      "bindPivot": [
+        0.466406,
+        0.642773
+      ],
+      "size": [
+        0.11971726146382122,
+        0.141095343868075
+      ],
+      "order": 10,
+      "sourceCell": 10,
+      "anchorEnd": [
+        0.31547619047619047,
+        0.8838383838383839
+      ],
+      "bindEnd": [
+        0.366465,
+        0.625977
+      ],
+      "bindAngle": -5.012678008973076,
+      "solidAlphaBounds": [
+        48,
+        524,
+        208,
+        714
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_middle_lower",
+      "bone": "image_left_middle_lower",
+      "rect": [
+        313,
+        497,
+        157,
+        245
+      ],
+      "pivot": [
+        0.17834394904458598,
+        0.2163265306122449
+      ],
+      "bindPivot": [
+        0.366465,
+        0.625977
+      ],
+      "size": [
+        0.10552105217636144,
+        0.16466661008413092
+      ],
+      "order": 11,
+      "sourceCell": 11,
+      "anchorEnd": [
+        0.7707006369426752,
+        0.8530612244897959
+      ],
+      "bindEnd": [
+        0.300117,
+        0.728438
+      ],
+      "bindAngle": 1.1122333516292147,
+      "solidAlphaBounds": [
+        317,
+        501,
+        466,
+        738
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_middle_lower_foot",
+      "bone": "image_left_middle_lower",
+      "rect": [
+        541,
+        594,
+        175,
+        121
+      ],
+      "pivot": [
+        0.5657142857142857,
+        0.8677685950413223
+      ],
+      "bindPivot": [
+        0.300117,
+        0.728438
+      ],
+      "size": [
+        0.095,
+        0.065
+      ],
+      "order": 12,
+      "sourceCell": 12,
+      "anchorEnd": [
+        0.5028571428571429,
+        0.18181818181818182
+      ],
+      "bindEnd": [
+        0.300117,
+        0.722438
+      ],
+      "bindAngle": 0,
+      "solidAlphaBounds": [
+        545,
+        598,
+        712,
+        711
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_left_middle",
+      "note": "Source pivot is ground contact at sole, not ankle. Pin this to posed foot target, preserving natural broad foot width; artwork overlaps lower strut above contact plane."
+    },
+    {
+      "id": "image_right_front_upper",
+      "bone": "image_right_front_upper",
+      "rect": [
+        789,
+        502,
+        188,
+        234
+      ],
+      "pivot": [
+        0.28191489361702127,
+        0.20512820512820512
+      ],
+      "bindPivot": [
+        0.517637,
+        0.656211
+      ],
+      "size": [
+        0.12028732661244235,
+        0.1497193320601676
+      ],
+      "order": 50,
+      "sourceCell": 13,
+      "anchorEnd": [
+        0.7606382978723404,
+        0.8717948717948718
+      ],
+      "bindEnd": [
+        0.597422,
+        0.739355
+      ],
+      "bindAngle": -0.24150641931225603,
+      "solidAlphaBounds": [
+        793,
+        506,
+        973,
+        732
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_front_lower",
+      "bone": "image_right_front_lower",
+      "rect": [
+        1081,
+        505,
+        158,
+        236
+      ],
+      "pivot": [
+        0.20253164556962025,
+        0.1906779661016949
+      ],
+      "bindPivot": [
+        0.597422,
+        0.739355
+      ],
+      "size": [
+        0.10982956357736563,
+        0.16404922154593854
+      ],
+      "order": 51,
+      "sourceCell": 14,
+      "anchorEnd": [
+        0.7848101265822784,
+        0.8601694915254238
+      ],
+      "bindEnd": [
+        0.65957,
+        0.850215
+      ],
+      "bindAngle": 0.0163428780388728,
+      "solidAlphaBounds": [
+        1085,
+        509,
+        1235,
+        737
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_front_lower_foot",
+      "bone": "image_right_front_lower",
+      "rect": [
+        40,
+        834,
+        191,
+        128
+      ],
+      "pivot": [
+        0.5235602094240838,
+        0.890625
+      ],
+      "bindPivot": [
+        0.65957,
+        0.850215
+      ],
+      "size": [
+        0.155,
+        0.085
+      ],
+      "order": 52,
+      "sourceCell": 15,
+      "anchorEnd": [
+        0.4607329842931937,
+        0.140625
+      ],
+      "bindEnd": [
+        0.65957,
+        0.844215
+      ],
+      "bindAngle": 0,
+      "solidAlphaBounds": [
+        44,
+        838,
+        227,
+        958
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_right_front",
+      "note": "Source pivot is ground contact at sole, not ankle. Pin this to posed foot target, preserving natural broad foot width; artwork overlaps lower strut above contact plane."
+    },
+    {
+      "id": "image_right_middle_upper",
+      "bone": "image_right_middle_upper",
+      "rect": [
+        283,
+        748,
+        175,
+        220
+      ],
+      "pivot": [
+        0.68,
+        0.2409090909090909
+      ],
+      "bindPivot": [
+        0.684766,
+        0.625977
+      ],
+      "size": [
+        0.09993482961408019,
+        0.12563235722912938
+      ],
+      "order": 20,
+      "sourceCell": 16,
+      "anchorEnd": [
+        0.24571428571428572,
+        0.8909090909090909
+      ],
+      "bindEnd": [
+        0.756152,
+        0.684766
+      ],
+      "bindAngle": -1.3703718863368157,
+      "solidAlphaBounds": [
+        287,
+        752,
+        454,
+        964
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_middle_lower",
+      "bone": "image_right_middle_lower",
+      "rect": [
+        569,
+        755,
+        152,
+        215
+      ],
+      "pivot": [
+        0.19078947368421054,
+        0.20465116279069767
+      ],
+      "bindPivot": [
+        0.756152,
+        0.684766
+      ],
+      "size": [
+        0.11796993650004388,
+        0.1668653707072989
+      ],
+      "order": 21,
+      "sourceCell": 17,
+      "anchorEnd": [
+        0.7697368421052632,
+        0.8372093023255814
+      ],
+      "bindEnd": [
+        0.800664,
+        0.802344
+      ],
+      "bindAngle": 0.21240428258436872,
+      "solidAlphaBounds": [
+        573,
+        759,
+        717,
+        966
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_middle_lower_foot",
+      "bone": "image_right_middle_lower",
+      "rect": [
+        793,
+        832,
+        174,
+        132
+      ],
+      "pivot": [
+        0.5229885057471264,
+        0.8787878787878788
+      ],
+      "bindPivot": [
+        0.800664,
+        0.802344
+      ],
+      "size": [
+        0.13,
+        0.078
+      ],
+      "order": 22,
+      "sourceCell": 18,
+      "anchorEnd": [
+        0.47126436781609193,
+        0.1590909090909091
+      ],
+      "bindEnd": [
+        0.800664,
+        0.7963439999999999
+      ],
+      "bindAngle": 0,
+      "solidAlphaBounds": [
+        797,
+        836,
+        963,
+        960
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_right_middle",
+      "note": "Source pivot is ground contact at sole, not ankle. Pin this to posed foot target, preserving natural broad foot width; artwork overlaps lower strut above contact plane."
+    },
+    {
+      "id": "image_right_rear_upper",
+      "bone": "image_right_rear_upper",
+      "rect": [
+        1052,
+        763,
+        166,
+        185
+      ],
+      "pivot": [
+        0.30120481927710846,
+        0.21081081081081082
+      ],
+      "bindPivot": [
+        0.704922,
+        0.547031
+      ],
+      "size": [
+        0.1195185679847848,
+        0.13319840407942884
+      ],
+      "order": 4,
+      "sourceCell": 19,
+      "anchorEnd": [
+        0.8132530120481928,
+        0.8702702702702703
+      ],
+      "bindEnd": [
+        0.805703,
+        0.583145
+      ],
+      "bindAngle": -0.6181877586010286,
+      "solidAlphaBounds": [
+        1056,
+        767,
+        1214,
+        944
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_rear_lower",
+      "bone": "image_right_rear_lower",
+      "rect": [
+        62,
+        994,
+        165,
+        240
+      ],
+      "pivot": [
+        0.19393939393939394,
+        0.175
+      ],
+      "bindPivot": [
+        0.805703,
+        0.583145
+      ],
+      "size": [
+        0.12640147686145944,
+        0.18385669361666826
+      ],
+      "order": 5,
+      "sourceCell": 20,
+      "anchorEnd": [
+        0.8,
+        0.8708333333333333
+      ],
+      "bindEnd": [
+        0.87373,
+        0.71584
+      ],
+      "bindAngle": 0.06581670373663773,
+      "solidAlphaBounds": [
+        66,
+        998,
+        223,
+        1230
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_rear_lower_foot",
+      "bone": "image_right_rear_lower",
+      "rect": [
+        306,
+        1090,
+        165,
+        121
+      ],
+      "pivot": [
+        0.503030303030303,
+        0.8925619834710744
+      ],
+      "bindPivot": [
+        0.87373,
+        0.71584
+      ],
+      "size": [
+        0.095,
+        0.07
+      ],
+      "order": 6,
+      "sourceCell": 21,
+      "anchorEnd": [
+        0.49696969696969695,
+        0.1652892561983471
+      ],
+      "bindEnd": [
+        0.87373,
+        0.70984
+      ],
+      "bindAngle": 0,
+      "solidAlphaBounds": [
+        310,
+        1094,
+        467,
+        1207
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_right_rear",
+      "note": "Source pivot is ground contact at sole, not ankle. Pin this to posed foot target, preserving natural broad foot width; artwork overlaps lower strut above contact plane."
+    },
+    {
+      "id": "image_left_rear_upper",
+      "bone": "chassis",
+      "rect": [
+        554,
+        991,
+        160,
+        203
+      ],
+      "pivot": [
+        0.2375,
+        0.24630541871921183
+      ],
+      "bindPivot": [
+        0.5,
+        0.626
+      ],
+      "size": [
+        0.13154041524932764,
+        0.16689190184758443
+      ],
+      "order": 0,
+      "sourceCell": 22,
+      "anchorEnd": [
+        0.64375,
+        0.9064039408866995
+      ],
+      "bindEnd": [
+        0.404,
+        0.55
+      ],
+      "bindAngle": -3.591113860037807,
+      "solidAlphaBounds": [
+        558,
+        995,
+        710,
+        1190
+      ],
+      "socketPaddingPixels": 4,
+      "occluded": true,
+      "note": "Layer behind continuous core; follows chassis only; no invented ground contact."
+    },
+    {
+      "id": "image_left_rear_lower",
+      "bone": "chassis",
+      "rect": [
+        803,
+        999,
+        170,
+        224
+      ],
+      "pivot": [
+        0.18235294117647058,
+        0.20089285714285715
+      ],
+      "bindPivot": [
+        0.404,
+        0.55
+      ],
+      "size": [
+        0.13742458095631804,
+        0.1810770949071485
+      ],
+      "order": 1,
+      "sourceCell": 23,
+      "anchorEnd": [
+        0.8058823529411765,
+        0.84375
+      ],
+      "bindEnd": [
+        0.377,
+        0.692
+      ],
+      "bindAngle": 0.8224506824971085,
+      "solidAlphaBounds": [
+        807,
+        1003,
+        969,
+        1219
+      ],
+      "socketPaddingPixels": 4,
+      "occluded": true,
+      "note": "Layer behind continuous core; follows chassis only; no invented ground contact."
+    },
+    {
+      "id": "image_left_rear_foot",
+      "bone": "chassis",
+      "rect": [
+        1055,
+        1095,
+        162,
+        118
+      ],
+      "pivot": [
+        0.47530864197530864,
+        0.2033898305084746
+      ],
+      "bindPivot": [
+        0.377,
+        0.692
+      ],
+      "size": [
+        0.095,
+        0.063
+      ],
+      "order": 2,
+      "sourceCell": 24,
+      "anchorEnd": [
+        0.5185185185185185,
+        0.8559322033898306
+      ],
+      "bindEnd": [
+        0.558789,
+        0.361426
+      ],
+      "bindAngle": 0,
+      "solidAlphaBounds": [
+        1059,
+        1099,
+        1213,
+        1209
+      ],
+      "socketPaddingPixels": 4,
+      "occluded": true,
+      "note": "Layer behind continuous core; follows chassis only; no invented ground contact."
+    }
+  ],
+  "source_notes": "Initial socket/ankle centers measured visually in the original generated1254 square atlas, in pixel coordinates. Endpoint orientation notes support rigid two-point alignment to current bind bones. Website worker performs final calibration against reconstructed action. No generated component pixels repainted.",
+  "bounds_policy": "Arbitrary actual source component rectangles; original image retained. 25 substantial separate alpha components verified. Nominal equal cells are metadata only because generated gutters vary slightly.",
+  "occluded_policy": "Far image-left rear pieces are source anatomy for layering behind chassis, attached to chassis transform; no new independent grounded contact.",
+  "prompt": "Use case: stylized-concept, production 2D skeletal game-animation sprite atlas.\nCreate ONE square transparent 5-by-5 equal-cell atlas containing exactly 25 separate rigid pieces of the Spool repair chassis.\nImage 1 is the CURRENT APPROVED painted Spool illustration. It is the exact character design, manufacturing details, colors, lighting, camera, ceramic wear, canisters, graphite hoses and tools to preserve. Image 2 is the original in-engine production model for anatomy only; ignore its surroundings/other machines and all printed markings.\nThis is NOT a character pose sheet, NOT an exploded figure placed together, NOT a page of complete robots. Each of the 25 equal square cells contains ONE isolated component cutout only. There are no drawn cell borders, labels, text, arrows, captions, logos, backgrounds or cast shadows. Every unused pixel is true transparent alpha. Each isolated part sits comfortably INSIDE its own cell with at least 8 percent completely transparent gutter on all four sides; never touch or cross a cell boundary. Maintain a mathematically regular 5 columns by 5 rows grid, all cells exactly equal and aligned. Request high-resolution square 2560 by 2560 output if available, with crisp detailed alpha contours.\nSTYLE: preserve Image 1's premium softly sculpted hand-painted mechanical game art exactly: scuffed warm cream ceramic hard armor, marigold amber equipment, dark ink navy steel joints, oxidized teal hints, black graphite cables, cyan inspection lenses, controlled painterly wear, gentle upper-left warm light and restrained rim light. Match the same three-quarter camera and component foreshortening in every piece. No organic flesh, aliens, magical effects or biological material.\n\nANIMATION REQUIREMENT: build round overlapping steel joint sockets at both ends of upper and lower articulated links, extending the hidden surface behind the sockets so rotation never exposes holes. There must be real clean component separation. The CORE is the fully painted continuous UNDERLYING body with complete hidden body surfaces and circular hip/shoulder attachment sockets. It has NO baked silhouette of any walking leg, feet, tool-arm segment or nozzle. Remove those appendages entirely from the core; do not leave phantom arms/legs or floating fragments behind. Keep its exact armored camera core, round cyan main optic with smaller optics, rear tall service canisters, central top sensor assembly, amber side boxes and internal cables that belong to the body. Arm-crossing hoses move with the corresponding upper-arm part and terminate neatly at its joint, NOT as static limb silhouettes on the body.\n\nANATOMY: Spool has SIX industrial walking legs (three per picture side, with far image-left rear leg originally hidden), and TWO utility arms (one per picture side). Walking legs are three parts each: an upper hip-to-knee link with curved cream ceramic armor and circular knee socket, a lower knee-to-ankle dark mechanical strut with cream/amber armor, and a broad squat separate metal contact foot. A tool arm is three parts: upper shoulder-to-elbow linkage with its attached graphite hose, lower elbow-to-wrist linkage with cream/amber panels and socket, and a distinct slim cyan-lit repair nozzle/injector end tool. Preserve the true differences between the two original tools; these are utility devices, not guns or claws.\nRetain the current bind-orientation of each piece from Image 1; do not rotate them all into an identical upright catalog pose. Image-left tool upper extends diagonally up-left from shoulder, lower diagonally down-left, nozzle points down-left. Image-right tool upper extends up-right, lower down-right, nozzle down-right. Image-left walking upper links extend outward-left from hip, then lower links generally downward-left to broad feet. Image-right walking upper links extend outward-right from hip, then lower links generally downward-right. Feet keep the same foreshortened 3/4 contact shape as the source. Hidden far left-rear pieces should be matching smaller foreshortened mechanical versions, not a new species. Parts can be scaled independently to fit cells; the animator will map each back to its original size.\n\nEXACT ROW-MAJOR CELL CONTENTS (these names are instructions only and MUST NOT appear visually):\nROW 1, left to right:\n1. Complete underlying chassis CORE only, with body-owned canisters and body-owned sensor/cables, NO limbs/tools/feet.\n2. Image-left tool arm UPPER shoulder-to-elbow linkage, diagonally up-left, with its moving graphite hose and round covered sockets.\n3. Image-left tool arm LOWER elbow-to-wrist linkage, diagonally down-left, isolated round end sockets.\n4. Image-left END TOOL only, slim repair/injector nozzle with cyan inset, pointed diagonally down-left.\n5. Image-right tool arm UPPER shoulder-to-elbow linkage, diagonally up-right, with moving hose and covered sockets.\nROW 2:\n6. Image-right tool arm LOWER elbow-to-wrist linkage, diagonally down-right, isolated sockets.\n7. Image-right END TOOL only, the original slim cyan-lit injector/repair nozzle, pointed down-right.\n8. Image-left FRONT leg UPPER hip-to-knee piece, closest left-front ceramic armor and circular knee.\n9. Image-left FRONT leg LOWER knee-to-ankle dark/amber/cream strut, WITHOUT foot.\n10. Image-left FRONT FOOT only, broad squat contact foot, WITHOUT lower leg.\nROW 3:\n11. Image-left MIDDLE leg UPPER hip-to-knee piece, its original smaller foreshortened ceramic link.\n12. Image-left MIDDLE leg LOWER knee-to-ankle piece, WITHOUT foot.\n13. Image-left MIDDLE FOOT only, broad compact contact foot, WITHOUT lower leg.\n14. Image-right FRONT leg UPPER hip-to-knee piece, closest large ceramic armor and round knee.\n15. Image-right FRONT leg LOWER knee-to-ankle piece, WITHOUT foot.\nROW 4:\n16. Image-right FRONT FOOT only, broad squat nearest contact foot, WITHOUT lower leg.\n17. Image-right MIDDLE leg UPPER hip-to-knee piece, matching right middle ceramic linkage.\n18. Image-right MIDDLE leg LOWER knee-to-ankle piece, WITHOUT foot.\n19. Image-right MIDDLE FOOT only, broad compact matching contact foot, WITHOUT lower leg.\n20. Image-right REAR leg UPPER hip-to-knee piece, smaller far-right ceramic linkage.\nROW 5:\n21. Image-right REAR leg LOWER knee-to-ankle piece, WITHOUT foot.\n22. Image-right REAR FOOT only, smaller foreshortened matching contact foot, WITHOUT lower leg.\n23. Far image-left REAR leg UPPER hip-to-knee piece, matching source industrial design, to be layered behind body.\n24. Far image-left REAR leg LOWER knee-to-ankle piece, WITHOUT foot, to be layered behind body.\n25. Far image-left REAR FOOT only, matching compact mechanical foot, to be layered behind body.\n\nFinal check: exactly 25 isolated component cutouts, one per equal cell, regular 5\u00d75 grid, true transparent alpha gutters, one continuous naked core and separated rigid hinged limbs. No complete walking robot anywhere; no whole leg in any component cell; no foot baked into a lower link; no limbs baked onto core; no writing.",
+  "references": [
+    "art-sources/chassis/chassis-spool-generated.png",
+    "QindaOriginSpecies/validation/website-character-photos/raw/photo-00009.jpg"
+  ],
+  "render_alignment": "For rigid links, bindAngle rotates measured source socket axis to current bind axis before animated bone transform. Feet use source sole pivot pinned to contact foot (rather than ankle), with no bindAngle; do not let foot sprite rotate or drift with lower strut. Body and far rear occluded pieces use chassis. Sizes/binds are initial fits for website calibration."
+}

@@ -1,0 +1,384 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: stylized-concept, production 2D skeletal game-animation sprite atlas.\nCreate ONE square transparent 5-by-5 equal-cell atlas containing exactly 25 separate rigid pieces of the Spool repair chassis.\nImage 1 is the CURRENT APPROVED painted Spool illustration. It is the exact character design, manufacturing details, colors, lighting, camera, ceramic wear, canisters, graphite hoses and tools to preserve. Image 2 is the original in-engine production model for anatomy only; ignore its surroundings/other machines and all printed markings.\nThis is NOT a character pose sheet, NOT an exploded figure placed together, NOT a page of complete robots. Each of the 25 equal square cells contains ONE isolated component cutout only. There are no drawn cell borders, labels, text, arrows, captions, logos, backgrounds or cast shadows. Every unused pixel is true transparent alpha. Each isolated part sits comfortably INSIDE its own cell with at least 8 percent completely transparent gutter on all four sides; never touch or cross a cell boundary. Maintain a mathematically regular 5 columns by 5 rows grid, all cells exactly equal and aligned. Request high-resolution square 2560 by 2560 output if available, with crisp detailed alpha contours.\nSTYLE: preserve Image 1's premium softly sculpted hand-painted mechanical game art exactly: scuffed warm cream ceramic hard armor, marigold amber equipment, dark ink navy steel joints, oxidized teal hints, black graphite cables, cyan inspection lenses, controlled painterly wear, gentle upper-left warm light and restrained rim light. Match the same three-quarter camera and component foreshortening in every piece. No organic flesh, aliens, magical effects or biological material.\n\nANIMATION REQUIREMENT: build round overlapping steel joint sockets at both ends of upper and lower articulated links, extending the hidden surface behind the sockets so rotation never exposes holes. There must be real clean component separation. The CORE is the fully painted continuous UNDERLYING body with complete hidden body surfaces and circular hip/shoulder attachment sockets. It has NO baked silhouette of any walking leg, feet, tool-arm segment or nozzle. Remove those appendages entirely from the core; do not leave phantom arms/legs or floating fragments behind. Keep its exact armored camera core, round cyan main optic with smaller optics, rear tall service canisters, central top sensor assembly, amber side boxes and internal cables that belong to the body. Arm-crossing hoses move with the corresponding upper-arm part and terminate neatly at its joint, NOT as static limb silhouettes on the body.\n\nANATOMY: Spool has SIX industrial walking legs (three per picture side, with far image-left rear leg originally hidden), and TWO utility arms (one per picture side). Walking legs are three parts each: an upper hip-to-knee link with curved cream ceramic armor and circular knee socket, a lower knee-to-ankle dark mechanical strut with cream/amber armor, and a broad squat separate metal contact foot. A tool arm is three parts: upper shoulder-to-elbow linkage with its attached graphite hose, lower elbow-to-wrist linkage with cream/amber panels and socket, and a distinct slim cyan-lit repair nozzle/injector end tool. Preserve the true differences between the two original tools; these are utility devices, not guns or claws.\nRetain the current bind-orientation of each piece from Image 1; do not rotate them all into an identical upright catalog pose. Image-left tool upper extends diagonally up-left from shoulder, lower diagonally down-left, nozzle points down-left. Image-right tool upper extends up-right, lower down-right, nozzle down-right. Image-left walking upper links extend outward-left from hip, then lower links generally downward-left to broad feet. Image-right walking upper links extend outward-right from hip, then lower links generally downward-right. Feet keep the same foreshortened 3/4 contact shape as the source. Hidden far left-rear pieces should be matching smaller foreshortened mechanical versions, not a new species. Parts can be scaled independently to fit cells; the animator will map each back to its original size.\n\nEXACT ROW-MAJOR CELL CONTENTS (these names are instructions only and MUST NOT appear visually):\nROW 1, left to right:\n1. Complete underlying chassis CORE only, with body-owned canisters and body-owned sensor/cables, NO limbs/tools/feet.\n2. Image-left tool arm UPPER shoulder-to-elbow linkage, diagonally up-left, with its moving graphite hose and round covered sockets.\n3. Image-left tool arm LOWER elbow-to-wrist linkage, diagonally down-left, isolated round end sockets.\n4. Image-left END TOOL only, slim repair/injector nozzle with cyan inset, pointed diagonally down-left.\n5. Image-right tool arm UPPER shoulder-to-elbow linkage, diagonally up-right, with moving hose and covered sockets.\nROW 2:\n6. Image-right tool arm LOWER elbow-to-wrist linkage, diagonally down-right, isolated sockets.\n7. Image-right END TOOL only, the original slim cyan-lit injector/repair nozzle, pointed down-right.\n8. Image-left FRONT leg UPPER hip-to-knee piece, closest left-front ceramic armor and circular knee.\n9. Image-left FRONT leg LOWER knee-to-ankle dark/amber/cream strut, WITHOUT foot.\n10. Image-left FRONT FOOT only, broad squat contact foot, WITHOUT lower leg.\nROW 3:\n11. Image-left MIDDLE leg UPPER hip-to-knee piece, its original smaller foreshortened ceramic link.\n12. Image-left MIDDLE leg LOWER knee-to-ankle piece, WITHOUT foot.\n13. Image-left MIDDLE FOOT only, broad compact contact foot, WITHOUT lower leg.\n14. Image-right FRONT leg UPPER hip-to-knee piece, closest large ceramic armor and round knee.\n15. Image-right FRONT leg LOWER knee-to-ankle piece, WITHOUT foot.\nROW 4:\n16. Image-right FRONT FOOT only, broad squat nearest contact foot, WITHOUT lower leg.\n17. Image-right MIDDLE leg UPPER hip-to-knee piece, matching right middle ceramic linkage.\n18. Image-right MIDDLE leg LOWER knee-to-ankle piece, WITHOUT foot.\n19. Image-right MIDDLE FOOT only, broad compact matching contact foot, WITHOUT lower leg.\n20. Image-right REAR leg UPPER hip-to-knee piece, smaller far-right ceramic linkage.\nROW 5:\n21. Image-right REAR leg LOWER knee-to-ankle piece, WITHOUT foot.\n22. Image-right REAR FOOT only, smaller foreshortened matching contact foot, WITHOUT lower leg.\n23. Far image-left REAR leg UPPER hip-to-knee piece, matching source industrial design, to be layered behind body.\n24. Far image-left REAR leg LOWER knee-to-ankle piece, WITHOUT foot, to be layered behind body.\n25. Far image-left REAR FOOT only, matching compact mechanical foot, to be layered behind body.\n\nFinal check: exactly 25 isolated component cutouts, one per equal cell, regular 5×5 grid, true transparent alpha gutters, one continuous naked core and separated rigid hinged limbs. No complete walking robot anywhere; no whole leg in any component cell; no foot baked into a lower link; no limbs baked onto core; no writing.",
+  "references": [
+    "art-sources/chassis/chassis-spool-generated.png",
+    "QindaOriginSpecies/validation/website-character-photos/raw/photo-00009.jpg"
+  ],
+  "source": "art-sources/chassis/chassis-spool-atlas-generated.png",
+  "image": "assets/illustrated/chassis-spool-atlas.webp",
+  "grid": [
+    5,
+    5
+  ],
+  "pieces": [
+    {
+      "bone": "chassis",
+      "kind": "core",
+      "pivotPx": [
+        159,
+        170
+      ],
+      "endPx": [
+        148,
+        85
+      ],
+      "order": 30,
+      "size": [
+        0.46,
+        0.5
+      ]
+    },
+    {
+      "bone": "tool_image_left_upper",
+      "pivotPx": [
+        432,
+        205
+      ],
+      "endPx": [
+        491,
+        61
+      ],
+      "order": 60
+    },
+    {
+      "bone": "tool_image_left_lower",
+      "pivotPx": [
+        696,
+        65
+      ],
+      "endPx": [
+        584,
+        208
+      ],
+      "order": 61
+    },
+    {
+      "bone": "tool_image_left_tip",
+      "pivotPx": [
+        918,
+        89
+      ],
+      "endPx": [
+        792,
+        226
+      ],
+      "order": 62
+    },
+    {
+      "bone": "tool_image_right_upper",
+      "pivotPx": [
+        1205,
+        214
+      ],
+      "endPx": [
+        1048,
+        54
+      ],
+      "order": 63
+    },
+    {
+      "bone": "tool_image_right_lower",
+      "pivotPx": [
+        58,
+        292
+      ],
+      "endPx": [
+        194,
+        449
+      ],
+      "order": 64
+    },
+    {
+      "bone": "tool_image_right_tip",
+      "pivotPx": [
+        378,
+        321
+      ],
+      "endPx": [
+        457,
+        469
+      ],
+      "order": 65
+    },
+    {
+      "bone": "image_left_front_upper",
+      "pivotPx": [
+        661,
+        317
+      ],
+      "endPx": [
+        578,
+        467
+      ],
+      "order": 40
+    },
+    {
+      "bone": "image_left_front_lower",
+      "pivotPx": [
+        836,
+        304
+      ],
+      "endPx": [
+        936,
+        460
+      ],
+      "order": 41
+    },
+    {
+      "bone": "image_left_front_lower",
+      "kind": "foot",
+      "contact": "image_left_front",
+      "pivotPx": [
+        1126,
+        354
+      ],
+      "endPx": [
+        1145,
+        459
+      ],
+      "order": 42,
+      "size": [
+        0.14,
+        0.085
+      ]
+    },
+    {
+      "bone": "image_left_middle_upper",
+      "pivotPx": [
+        161,
+        568
+      ],
+      "endPx": [
+        97,
+        695
+      ],
+      "order": 10
+    },
+    {
+      "bone": "image_left_middle_lower",
+      "pivotPx": [
+        341,
+        550
+      ],
+      "endPx": [
+        434,
+        706
+      ],
+      "order": 11
+    },
+    {
+      "bone": "image_left_middle_lower",
+      "kind": "foot",
+      "contact": "image_left_middle",
+      "pivotPx": [
+        629,
+        616
+      ],
+      "endPx": [
+        640,
+        699
+      ],
+      "order": 12,
+      "size": [
+        0.095,
+        0.065
+      ]
+    },
+    {
+      "bone": "image_right_front_upper",
+      "pivotPx": [
+        842,
+        550
+      ],
+      "endPx": [
+        932,
+        706
+      ],
+      "order": 50
+    },
+    {
+      "bone": "image_right_front_lower",
+      "pivotPx": [
+        1113,
+        550
+      ],
+      "endPx": [
+        1205,
+        708
+      ],
+      "order": 51
+    },
+    {
+      "bone": "image_right_front_lower",
+      "kind": "foot",
+      "contact": "image_right_front",
+      "pivotPx": [
+        128,
+        852
+      ],
+      "endPx": [
+        140,
+        948
+      ],
+      "order": 52,
+      "size": [
+        0.155,
+        0.085
+      ]
+    },
+    {
+      "bone": "image_right_middle_upper",
+      "pivotPx": [
+        402,
+        801
+      ],
+      "endPx": [
+        326,
+        944
+      ],
+      "order": 20
+    },
+    {
+      "bone": "image_right_middle_lower",
+      "pivotPx": [
+        598,
+        799
+      ],
+      "endPx": [
+        686,
+        935
+      ],
+      "order": 21
+    },
+    {
+      "bone": "image_right_middle_lower",
+      "kind": "foot",
+      "contact": "image_right_middle",
+      "pivotPx": [
+        875,
+        853
+      ],
+      "endPx": [
+        884,
+        948
+      ],
+      "order": 22,
+      "size": [
+        0.13,
+        0.078
+      ]
+    },
+    {
+      "bone": "image_right_rear_upper",
+      "pivotPx": [
+        1102,
+        802
+      ],
+      "endPx": [
+        1187,
+        924
+      ],
+      "order": 4
+    },
+    {
+      "bone": "image_right_rear_lower",
+      "pivotPx": [
+        94,
+        1036
+      ],
+      "endPx": [
+        194,
+        1203
+      ],
+      "order": 5
+    },
+    {
+      "bone": "image_right_rear_lower",
+      "kind": "foot",
+      "contact": "image_right_rear",
+      "pivotPx": [
+        388,
+        1110
+      ],
+      "endPx": [
+        389,
+        1198
+      ],
+      "order": 6,
+      "size": [
+        0.095,
+        0.07
+      ]
+    },
+    {
+      "bone": "chassis",
+      "kind": "occluded_upper",
+      "anatomy": "image_left_rear_upper",
+      "pivotPx": [
+        592,
+        1041
+      ],
+      "endPx": [
+        657,
+        1175
+      ],
+      "order": 0,
+      "bindPivot": [
+        0.5,
+        0.626
+      ],
+      "bindEnd": [
+        0.404,
+        0.55
+      ]
+    },
+    {
+      "bone": "chassis",
+      "kind": "occluded_lower",
+      "anatomy": "image_left_rear_lower",
+      "pivotPx": [
+        834,
+        1044
+      ],
+      "endPx": [
+        940,
+        1188
+      ],
+      "order": 1,
+      "bindPivot": [
+        0.404,
+        0.55
+      ],
+      "bindEnd": [
+        0.377,
+        0.692
+      ]
+    },
+    {
+      "bone": "chassis",
+      "kind": "occluded_foot",
+      "anatomy": "image_left_rear_foot",
+      "pivotPx": [
+        1132,
+        1119
+      ],
+      "endPx": [
+        1139,
+        1196
+      ],
+      "order": 2,
+      "bindPivot": [
+        0.377,
+        0.692
+      ],
+      "size": [
+        0.095,
+        0.063
+      ]
+    }
+  ],
+  "pivot_notes": "Initial socket/ankle centers measured visually in the original generated1254 square atlas, in pixel coordinates. Endpoint orientation notes support rigid two-point alignment to current bind bones. Website worker performs final calibration against reconstructed action. No generated component pixels repainted.",
+  "bounds_policy": "Arbitrary actual source component rectangles; original image retained. 25 substantial separate alpha components verified. Nominal equal cells are metadata only because generated gutters vary slightly.",
+  "occluded_policy": "Far image-left rear pieces are source anatomy for layering behind chassis, attached to chassis transform; no new independent grounded contact."
+}

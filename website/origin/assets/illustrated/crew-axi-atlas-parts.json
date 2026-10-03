@@ -1,0 +1,1536 @@
+{
+  "schemaVersion": 1,
+  "character": "axi",
+  "image": "assets/illustrated/crew-axi-rig-atlas.webp",
+  "sourcePng": "art-sources/crew-axi-rig-atlas.png",
+  "dimensions": [
+    768,
+    2048
+  ],
+  "layout": {
+    "columns": 3,
+    "rows": 8
+  },
+  "coordinateSpace": {
+    "rect": "Atlas pixels [x,y,width,height]",
+    "pivot": "Normalized within source rect",
+    "bindPivot": "Normalized original1024x1536 reference",
+    "sideConvention": "Anatomical left maps existing image-side R, right maps L"
+  },
+  "method": "Actual visually selected part rects; measured alpha bounds and socket cross-section centers. Tail/ear/gill axes individually visually estimated.",
+  "notes": [
+    "Head retains clear helmet/neck-ring but excludes all six gill silhouettes; gills are separate branches at their original head anchor.",
+    "Smooth finned tail uses exact curved proximal/distal source axes; preserve membrane silhouette and do not substitute furry-tail geometry.",
+    "PNG dark/rose RGB under alpha is not a baked background; true alpha verified and preserved.",
+    "Boot/foot proximal pivot is the upper ankle/cuff; separate contact transform follows ground pose.",
+    "Forearm bindEnd is actual wrist, shin bindEnd actual ankle, not hand/foot helper end.",
+    "Head/torso/pelvis use original proportion overrides and never fit to short helper bone vectors."
+  ],
+  "layers": [
+    {
+      "part": "head",
+      "row": 0,
+      "column": 0,
+      "bone": "head",
+      "rect": [
+        17,
+        25,
+        247,
+        263
+      ],
+      "pivot": [
+        0.496987,
+        0.920152
+      ],
+      "end": [
+        0.494729,
+        0.448669
+      ],
+      "bindPivot": [
+        0.448,
+        0.325
+      ],
+      "size": [
+        0.36,
+        0.252
+      ],
+      "order": 5,
+      "alignAxis": false,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        247,
+        263
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        5,
+        6,
+        247,
+        256
+      ],
+      "alphaBoundsAtlasPixels": [
+        17,
+        25,
+        264,
+        288
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          139.76,
+          267.0
+        ],
+        [
+          139.2,
+          143.0
+        ]
+      ],
+      "bindEnd": [
+        0.444,
+        0.205
+      ]
+    },
+    {
+      "part": "torso",
+      "row": 0,
+      "column": 1,
+      "bone": "spine",
+      "rect": [
+        296,
+        13,
+        190,
+        266
+      ],
+      "pivot": [
+        0.427256,
+        0.969925
+      ],
+      "end": [
+        0.520559,
+        0.131579
+      ],
+      "bindPivot": [
+        0.463,
+        0.546
+      ],
+      "size": [
+        0.34,
+        0.235
+      ],
+      "order": 2,
+      "alignAxis": false,
+      "alphaBoundsLocalPixels": [
+        0,
+        1,
+        190,
+        261
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        6,
+        4,
+        187,
+        258
+      ],
+      "alphaBoundsAtlasPixels": [
+        296,
+        14,
+        486,
+        274
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          377.18,
+          271.0
+        ],
+        [
+          394.91,
+          48.0
+        ]
+      ],
+      "bindEnd": [
+        0.448,
+        0.325
+      ]
+    },
+    {
+      "part": "pelvis",
+      "row": 0,
+      "column": 2,
+      "bone": "pelvis",
+      "rect": [
+        506,
+        69,
+        248,
+        203
+      ],
+      "pivot": [
+        0.511666,
+        0.300493
+      ],
+      "end": [
+        0.497395,
+        0.79803
+      ],
+      "bindPivot": [
+        0.463,
+        0.518
+      ],
+      "size": [
+        0.39,
+        0.16
+      ],
+      "order": 3,
+      "alignAxis": false,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        246,
+        195
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        0,
+        6,
+        243,
+        189
+      ],
+      "alphaBoundsAtlasPixels": [
+        506,
+        69,
+        752,
+        264
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          632.89,
+          130.0
+        ],
+        [
+          629.35,
+          231.0
+        ]
+      ]
+    },
+    {
+      "part": "left-upper-arm",
+      "row": 1,
+      "column": 0,
+      "bone": "upper-arm-R",
+      "rect": [
+        71,
+        298,
+        143,
+        223
+      ],
+      "pivot": [
+        0.430469,
+        0.161435
+      ],
+      "end": [
+        0.695682,
+        0.869955
+      ],
+      "bindPivot": [
+        0.597,
+        0.383
+      ],
+      "size": [
+        0.16,
+        0.17
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        143,
+        223
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        1,
+        1,
+        140,
+        219
+      ],
+      "alphaBoundsAtlasPixels": [
+        71,
+        298,
+        214,
+        521
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          132.56,
+          334.0
+        ],
+        [
+          170.48,
+          492.0
+        ]
+      ],
+      "bindEnd": [
+        0.676,
+        0.499
+      ],
+      "fitToBone": true
+    },
+    {
+      "part": "left-forearm",
+      "row": 1,
+      "column": 1,
+      "bone": "forearm-R",
+      "rect": [
+        333,
+        294,
+        111,
+        226
+      ],
+      "pivot": [
+        0.408576,
+        0.119469
+      ],
+      "end": [
+        0.568953,
+        0.858407
+      ],
+      "bindPivot": [
+        0.676,
+        0.499
+      ],
+      "size": [
+        0.11,
+        0.16
+      ],
+      "order": 6,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        1,
+        0,
+        111,
+        224
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        4,
+        3,
+        106,
+        221
+      ],
+      "alphaBoundsAtlasPixels": [
+        334,
+        294,
+        444,
+        518
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          378.35,
+          321.0
+        ],
+        [
+          396.15,
+          488.0
+        ]
+      ],
+      "bindEnd": [
+        0.679,
+        0.54
+      ],
+      "fitToBone": true
+    },
+    {
+      "part": "left-hand",
+      "row": 1,
+      "column": 2,
+      "bone": "forearm-R",
+      "rect": [
+        548,
+        325,
+        154,
+        201
+      ],
+      "pivot": [
+        0.625721,
+        0.189055
+      ],
+      "end": [
+        0.530269,
+        0.781095
+      ],
+      "bindPivot": [
+        0.679,
+        0.54
+      ],
+      "size": [
+        0.1,
+        0.11
+      ],
+      "order": 7,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        150,
+        201
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        5,
+        5,
+        143,
+        196
+      ],
+      "alphaBoundsAtlasPixels": [
+        548,
+        325,
+        698,
+        526
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          644.36,
+          363.0
+        ],
+        [
+          629.66,
+          482.0
+        ]
+      ],
+      "bindEnd": [
+        0.681,
+        0.607
+      ],
+      "fitToBone": true
+    },
+    {
+      "part": "right-upper-arm",
+      "row": 2,
+      "column": 0,
+      "bone": "upper-arm-L",
+      "rect": [
+        34,
+        532,
+        174,
+        236
+      ],
+      "pivot": [
+        0.64943,
+        0.161017
+      ],
+      "end": [
+        0.387697,
+        0.868644
+      ],
+      "bindPivot": [
+        0.303,
+        0.394
+      ],
+      "size": [
+        0.16,
+        0.17
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        3,
+        0,
+        174,
+        236
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        27,
+        2,
+        174,
+        235
+      ],
+      "alphaBoundsAtlasPixels": [
+        37,
+        532,
+        208,
+        768
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          147.0,
+          570.0
+        ],
+        [
+          101.46,
+          737.0
+        ]
+      ],
+      "bindEnd": [
+        0.226,
+        0.492
+      ],
+      "fitToBone": true
+    },
+    {
+      "part": "right-forearm",
+      "row": 2,
+      "column": 1,
+      "bone": "forearm-L",
+      "rect": [
+        327,
+        534,
+        114,
+        227
+      ],
+      "pivot": [
+        0.544788,
+        0.118943
+      ],
+      "end": [
+        0.395863,
+        0.859031
+      ],
+      "bindPivot": [
+        0.226,
+        0.492
+      ],
+      "size": [
+        0.11,
+        0.16
+      ],
+      "order": 6,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        108,
+        227
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        4,
+        2,
+        105,
+        225
+      ],
+      "alphaBoundsAtlasPixels": [
+        327,
+        534,
+        435,
+        761
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          389.11,
+          561.0
+        ],
+        [
+          372.13,
+          729.0
+        ]
+      ],
+      "bindEnd": [
+        0.186,
+        0.54
+      ],
+      "fitToBone": true
+    },
+    {
+      "part": "right-hand",
+      "row": 2,
+      "column": 2,
+      "bone": "forearm-L",
+      "rect": [
+        564,
+        568,
+        147,
+        200
+      ],
+      "pivot": [
+        0.361454,
+        0.19
+      ],
+      "end": [
+        0.417472,
+        0.78
+      ],
+      "bindPivot": [
+        0.186,
+        0.54
+      ],
+      "size": [
+        0.1,
+        0.11
+      ],
+      "order": 7,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        147,
+        200
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        5,
+        3,
+        146,
+        200
+      ],
+      "alphaBoundsAtlasPixels": [
+        564,
+        568,
+        711,
+        768
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          617.13,
+          606.0
+        ],
+        [
+          625.37,
+          724.0
+        ]
+      ],
+      "bindEnd": [
+        0.152,
+        0.596
+      ],
+      "fitToBone": true
+    },
+    {
+      "part": "left-thigh",
+      "row": 3,
+      "column": 0,
+      "bone": "thigh-R",
+      "rect": [
+        53,
+        780,
+        158,
+        236
+      ],
+      "pivot": [
+        0.47772,
+        0.131356
+      ],
+      "end": [
+        0.637694,
+        0.881356
+      ],
+      "bindPivot": [
+        0.55,
+        0.622
+      ],
+      "size": [
+        0.18,
+        0.19
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        158,
+        236
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        8,
+        1,
+        158,
+        234
+      ],
+      "alphaBoundsAtlasPixels": [
+        53,
+        780,
+        211,
+        1016
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          128.48,
+          811.0
+        ],
+        [
+          153.76,
+          988.0
+        ]
+      ],
+      "bindEnd": [
+        0.592,
+        0.732
+      ],
+      "fitToBone": true
+    },
+    {
+      "part": "left-shin",
+      "row": 3,
+      "column": 1,
+      "bone": "shin-R",
+      "rect": [
+        328,
+        782,
+        124,
+        233
+      ],
+      "pivot": [
+        0.450512,
+        0.128755
+      ],
+      "end": [
+        0.469123,
+        0.879828
+      ],
+      "bindPivot": [
+        0.592,
+        0.732
+      ],
+      "size": [
+        0.13,
+        0.18
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        122,
+        233
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        6,
+        0,
+        118,
+        229
+      ],
+      "alphaBoundsAtlasPixels": [
+        328,
+        782,
+        450,
+        1015
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          383.86,
+          812.0
+        ],
+        [
+          386.17,
+          987.0
+        ]
+      ],
+      "bindEnd": [
+        0.665,
+        0.865
+      ],
+      "fitToBone": true
+    },
+    {
+      "part": "left-boot",
+      "row": 3,
+      "column": 2,
+      "bone": "shin-R",
+      "rect": [
+        526,
+        798,
+        211,
+        220
+      ],
+      "pivot": [
+        0.644721,
+        0.2
+      ],
+      "end": [
+        0.361703,
+        0.890909
+      ],
+      "bindPivot": [
+        0.665,
+        0.865
+      ],
+      "size": [
+        0.2,
+        0.115
+      ],
+      "order": 5,
+      "alignAxis": false,
+      "alphaBoundsLocalPixels": [
+        0,
+        1,
+        210,
+        220
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        8,
+        4,
+        200,
+        213
+      ],
+      "alphaBoundsAtlasPixels": [
+        526,
+        799,
+        736,
+        1018
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          662.04,
+          842.0
+        ],
+        [
+          602.32,
+          994.0
+        ]
+      ],
+      "bindEnd": [
+        0.667,
+        0.926
+      ],
+      "contact": "foot-R"
+    },
+    {
+      "part": "right-thigh",
+      "row": 4,
+      "column": 0,
+      "bone": "thigh-L",
+      "rect": [
+        54,
+        1031,
+        161,
+        236
+      ],
+      "pivot": [
+        0.50136,
+        0.131356
+      ],
+      "end": [
+        0.346809,
+        0.881356
+      ],
+      "bindPivot": [
+        0.356,
+        0.612
+      ],
+      "size": [
+        0.18,
+        0.19
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        154,
+        236
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        1,
+        0,
+        151,
+        231
+      ],
+      "alphaBoundsAtlasPixels": [
+        54,
+        1031,
+        208,
+        1267
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          134.72,
+          1062.0
+        ],
+        [
+          109.84,
+          1239.0
+        ]
+      ],
+      "bindEnd": [
+        0.356,
+        0.738
+      ],
+      "fitToBone": true
+    },
+    {
+      "part": "right-shin",
+      "row": 4,
+      "column": 1,
+      "bone": "shin-L",
+      "rect": [
+        319,
+        1032,
+        125,
+        233
+      ],
+      "pivot": [
+        0.489313,
+        0.128755
+      ],
+      "end": [
+        0.420072,
+        0.879828
+      ],
+      "bindPivot": [
+        0.356,
+        0.738
+      ],
+      "size": [
+        0.13,
+        0.18
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        125,
+        233
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        0,
+        0,
+        109,
+        232
+      ],
+      "alphaBoundsAtlasPixels": [
+        319,
+        1032,
+        444,
+        1265
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          380.16,
+          1062.0
+        ],
+        [
+          371.51,
+          1237.0
+        ]
+      ],
+      "bindEnd": [
+        0.313,
+        0.843
+      ],
+      "fitToBone": true
+    },
+    {
+      "part": "right-boot",
+      "row": 4,
+      "column": 2,
+      "bone": "shin-L",
+      "rect": [
+        520,
+        1051,
+        212,
+        206
+      ],
+      "pivot": [
+        0.669865,
+        0.199029
+      ],
+      "end": [
+        0.370877,
+        0.88835
+      ],
+      "bindPivot": [
+        0.313,
+        0.843
+      ],
+      "size": [
+        0.2,
+        0.115
+      ],
+      "order": 5,
+      "alignAxis": false,
+      "alphaBoundsLocalPixels": [
+        1,
+        0,
+        210,
+        200
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        8,
+        0,
+        204,
+        198
+      ],
+      "alphaBoundsAtlasPixels": [
+        521,
+        1051,
+        730,
+        1251
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          662.01,
+          1092.0
+        ],
+        [
+          598.63,
+          1234.0
+        ]
+      ],
+      "bindEnd": [
+        0.306,
+        0.894
+      ],
+      "contact": "foot-L"
+    },
+    {
+      "part": "tail-base",
+      "row": 5,
+      "column": 0,
+      "bone": "tail-root",
+      "rect": [
+        17,
+        1273,
+        238,
+        238
+      ],
+      "pivot": [
+        0.16,
+        0.37
+      ],
+      "end": [
+        0.92,
+        0.82
+      ],
+      "bindPivot": [
+        0.625,
+        0.671
+      ],
+      "size": [
+        0.23,
+        0.2
+      ],
+      "order": 0,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        238,
+        233
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        0,
+        8,
+        235,
+        229
+      ],
+      "alphaBoundsAtlasPixels": [
+        17,
+        1273,
+        255,
+        1506
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          55.08,
+          1361.06
+        ],
+        [
+          235.96,
+          1468.16
+        ]
+      ],
+      "bindEnd": [
+        0.7085,
+        0.7050000000000001
+      ],
+      "fitUniform": true
+    },
+    {
+      "part": "tail-middle",
+      "row": 5,
+      "column": 1,
+      "bone": "tail-middle",
+      "rect": [
+        272,
+        1278,
+        233,
+        231
+      ],
+      "pivot": [
+        0.21,
+        0.33
+      ],
+      "end": [
+        0.94,
+        0.77
+      ],
+      "bindPivot": [
+        0.7085,
+        0.7050000000000001
+      ],
+      "size": [
+        0.23,
+        0.2
+      ],
+      "order": 0,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        233,
+        231
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        4,
+        8,
+        225,
+        219
+      ],
+      "alphaBoundsAtlasPixels": [
+        272,
+        1278,
+        505,
+        1509
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          320.93,
+          1354.23
+        ],
+        [
+          491.02,
+          1455.87
+        ]
+      ],
+      "bindEnd": [
+        0.792,
+        0.739
+      ],
+      "fitUniform": true
+    },
+    {
+      "part": "tail-tip",
+      "row": 5,
+      "column": 2,
+      "bone": "tail-tip",
+      "rect": [
+        522,
+        1260,
+        234,
+        250
+      ],
+      "pivot": [
+        0.12,
+        0.76
+      ],
+      "end": [
+        0.91,
+        0.1
+      ],
+      "bindPivot": [
+        0.792,
+        0.739
+      ],
+      "size": [
+        0.23,
+        0.2
+      ],
+      "order": 0,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        4,
+        234,
+        250
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        2,
+        6,
+        231,
+        247
+      ],
+      "alphaBoundsAtlasPixels": [
+        522,
+        1264,
+        756,
+        1510
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          550.08,
+          1450.0
+        ],
+        [
+          734.94,
+          1285.0
+        ]
+      ],
+      "bindEnd": [
+        0.968,
+        0.531
+      ],
+      "fitUniform": true
+    },
+    {
+      "part": "left-gill-upper",
+      "row": 6,
+      "column": 0,
+      "bone": "gill-R-1",
+      "rect": [
+        23,
+        1524,
+        207,
+        203
+      ],
+      "pivot": [
+        0.14,
+        0.85
+      ],
+      "end": [
+        0.83,
+        0.1
+      ],
+      "bindPivot": [
+        0.612,
+        0.149
+      ],
+      "size": [
+        0.16,
+        0.13
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        207,
+        202
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        1,
+        0,
+        192,
+        193
+      ],
+      "alphaBoundsAtlasPixels": [
+        23,
+        1524,
+        230,
+        1726
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          51.98,
+          1696.55
+        ],
+        [
+          194.81,
+          1544.3
+        ]
+      ],
+      "bindEnd": [
+        0.695,
+        0.054
+      ],
+      "fitUniform": true
+    },
+    {
+      "part": "left-gill-middle",
+      "row": 6,
+      "column": 1,
+      "bone": "gill-R-2",
+      "rect": [
+        264,
+        1537,
+        221,
+        192
+      ],
+      "pivot": [
+        0.13,
+        0.83
+      ],
+      "end": [
+        0.9,
+        0.14
+      ],
+      "bindPivot": [
+        0.632,
+        0.214
+      ],
+      "size": [
+        0.16,
+        0.13
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        4,
+        0,
+        220,
+        192
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        7,
+        0,
+        214,
+        180
+      ],
+      "alphaBoundsAtlasPixels": [
+        268,
+        1537,
+        484,
+        1729
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          292.73,
+          1696.36
+        ],
+        [
+          462.9,
+          1563.88
+        ]
+      ],
+      "bindEnd": [
+        0.815,
+        0.158
+      ],
+      "fitUniform": true
+    },
+    {
+      "part": "left-gill-lower",
+      "row": 6,
+      "column": 2,
+      "bone": "gill-R-3",
+      "rect": [
+        512,
+        1565,
+        234,
+        168
+      ],
+      "pivot": [
+        0.12,
+        0.81
+      ],
+      "end": [
+        0.91,
+        0.14
+      ],
+      "bindPivot": [
+        0.622,
+        0.258
+      ],
+      "size": [
+        0.16,
+        0.13
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        1,
+        0,
+        232,
+        168
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        5,
+        1,
+        227,
+        162
+      ],
+      "alphaBoundsAtlasPixels": [
+        513,
+        1565,
+        744,
+        1733
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          540.08,
+          1701.08
+        ],
+        [
+          724.94,
+          1588.52
+        ]
+      ],
+      "bindEnd": [
+        0.754,
+        0.266
+      ],
+      "fitUniform": true
+    },
+    {
+      "part": "right-gill-upper",
+      "row": 7,
+      "column": 0,
+      "bone": "gill-L-1",
+      "rect": [
+        24,
+        1745,
+        230,
+        218
+      ],
+      "pivot": [
+        0.9,
+        0.86
+      ],
+      "end": [
+        0.13,
+        0.1
+      ],
+      "bindPivot": [
+        0.339,
+        0.137
+      ],
+      "size": [
+        0.16,
+        0.13
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        5,
+        0,
+        230,
+        218
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        15,
+        9,
+        227,
+        210
+      ],
+      "alphaBoundsAtlasPixels": [
+        29,
+        1745,
+        254,
+        1963
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          231.0,
+          1932.48
+        ],
+        [
+          53.9,
+          1766.8
+        ]
+      ],
+      "bindEnd": [
+        0.275,
+        0.083
+      ],
+      "fitUniform": true
+    },
+    {
+      "part": "right-gill-middle",
+      "row": 7,
+      "column": 1,
+      "bone": "gill-L-2",
+      "rect": [
+        278,
+        1756,
+        228,
+        210
+      ],
+      "pivot": [
+        0.88,
+        0.84
+      ],
+      "end": [
+        0.13,
+        0.12
+      ],
+      "bindPivot": [
+        0.304,
+        0.202
+      ],
+      "size": [
+        0.16,
+        0.13
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        3,
+        0,
+        228,
+        206
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        14,
+        3,
+        225,
+        194
+      ],
+      "alphaBoundsAtlasPixels": [
+        281,
+        1756,
+        506,
+        1962
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          478.64,
+          1932.4
+        ],
+        [
+          307.64,
+          1781.2
+        ]
+      ],
+      "bindEnd": [
+        0.188,
+        0.182
+      ],
+      "fitUniform": true
+    },
+    {
+      "part": "right-gill-lower",
+      "row": 7,
+      "column": 2,
+      "bone": "gill-L-3",
+      "rect": [
+        512,
+        1784,
+        236,
+        184
+      ],
+      "pivot": [
+        0.91,
+        0.83
+      ],
+      "end": [
+        0.12,
+        0.12
+      ],
+      "bindPivot": [
+        0.314,
+        0.249
+      ],
+      "size": [
+        0.16,
+        0.13
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "alphaBoundsLocalPixels": [
+        0,
+        0,
+        236,
+        176
+      ],
+      "alphaBoundsVisibleLocalPixels": [
+        29,
+        0,
+        233,
+        172
+      ],
+      "alphaBoundsAtlasPixels": [
+        512,
+        1784,
+        748,
+        1960
+      ],
+      "socketAxisAtlasPixels": [
+        [
+          726.76,
+          1936.72
+        ],
+        [
+          540.32,
+          1806.08
+        ]
+      ],
+      "bindEnd": [
+        0.213,
+        0.266
+      ],
+      "fitUniform": true
+    }
+  ]
+}

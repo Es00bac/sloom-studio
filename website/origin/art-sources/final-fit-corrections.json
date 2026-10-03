@@ -1,0 +1,14 @@
+{
+  "coordinateSpace": "normalized in original1024x1536 crew bind reference",
+  "corrections": {
+    "headGroupVerticalOffset": {
+      "ducke": 0.01,
+      "cache": 0.012,
+      "mochi": 0.01,
+      "hex": 0.018,
+      "patches": 0.02
+    }
+  },
+  "reason": "Close visible head/collar socket gaps in actual assembled bind and action sheets. Head-group descendants and their layer anchors move together; face proportions and source pixels are preserved. Vix was already fitted and unchanged.",
+  "runtimeFit": "rig-configs.json"
+}

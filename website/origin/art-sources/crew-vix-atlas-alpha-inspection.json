@@ -1,0 +1,419 @@
+{
+  "png": "/home/cabewse/work_space/sloom-studio-gpl/website/origin/art-sources/crew-vix-rig-atlas.png",
+  "webp": "/home/cabewse/work_space/sloom-studio-gpl/website/origin/assets/illustrated/crew-vix-rig-atlas.webp",
+  "size": [
+    887,
+    1774
+  ],
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 909427,
+  "cornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "webpBytes": 303782,
+  "alphaPreserved": true,
+  "bounds": [
+    {
+      "row": 0,
+      "column": 0,
+      "cellRect": [
+        0,
+        0,
+        296,
+        296
+      ],
+      "alphaBoundsInCell": [
+        35,
+        15,
+        296,
+        296
+      ],
+      "absoluteBounds": [
+        35,
+        15,
+        296,
+        296
+      ]
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "cellRect": [
+        296,
+        0,
+        591,
+        296
+      ],
+      "alphaBoundsInCell": [
+        71,
+        22,
+        267,
+        296
+      ],
+      "absoluteBounds": [
+        367,
+        22,
+        563,
+        296
+      ]
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "cellRect": [
+        591,
+        0,
+        887,
+        296
+      ],
+      "alphaBoundsInCell": [
+        19,
+        58,
+        269,
+        270
+      ],
+      "absoluteBounds": [
+        610,
+        58,
+        860,
+        270
+      ]
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "cellRect": [
+        0,
+        296,
+        296,
+        591
+      ],
+      "alphaBoundsInCell": [
+        97,
+        0,
+        223,
+        281
+      ],
+      "absoluteBounds": [
+        97,
+        296,
+        223,
+        577
+      ]
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "cellRect": [
+        296,
+        296,
+        591,
+        591
+      ],
+      "alphaBoundsInCell": [
+        108,
+        0,
+        246,
+        282
+      ],
+      "absoluteBounds": [
+        404,
+        296,
+        542,
+        578
+      ]
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "cellRect": [
+        591,
+        296,
+        887,
+        591
+      ],
+      "alphaBoundsInCell": [
+        88,
+        34,
+        203,
+        291
+      ],
+      "absoluteBounds": [
+        679,
+        330,
+        794,
+        587
+      ]
+    },
+    {
+      "row": 2,
+      "column": 0,
+      "cellRect": [
+        0,
+        591,
+        296,
+        887
+      ],
+      "alphaBoundsInCell": [
+        90,
+        5,
+        221,
+        296
+      ],
+      "absoluteBounds": [
+        90,
+        596,
+        221,
+        887
+      ]
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "cellRect": [
+        296,
+        591,
+        591,
+        887
+      ],
+      "alphaBoundsInCell": [
+        99,
+        7,
+        205,
+        280
+      ],
+      "absoluteBounds": [
+        395,
+        598,
+        501,
+        871
+      ]
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "cellRect": [
+        591,
+        591,
+        887,
+        887
+      ],
+      "alphaBoundsInCell": [
+        74,
+        23,
+        197,
+        279
+      ],
+      "absoluteBounds": [
+        665,
+        614,
+        788,
+        870
+      ]
+    },
+    {
+      "row": 3,
+      "column": 0,
+      "cellRect": [
+        0,
+        887,
+        296,
+        1183
+      ],
+      "alphaBoundsInCell": [
+        72,
+        0,
+        252,
+        296
+      ],
+      "absoluteBounds": [
+        72,
+        887,
+        252,
+        1183
+      ]
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "cellRect": [
+        296,
+        887,
+        591,
+        1183
+      ],
+      "alphaBoundsInCell": [
+        86,
+        1,
+        219,
+        296
+      ],
+      "absoluteBounds": [
+        382,
+        888,
+        515,
+        1183
+      ]
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "cellRect": [
+        591,
+        887,
+        887,
+        1183
+      ],
+      "alphaBoundsInCell": [
+        65,
+        10,
+        254,
+        274
+      ],
+      "absoluteBounds": [
+        656,
+        897,
+        845,
+        1161
+      ]
+    },
+    {
+      "row": 4,
+      "column": 0,
+      "cellRect": [
+        0,
+        1183,
+        296,
+        1478
+      ],
+      "alphaBoundsInCell": [
+        64,
+        0,
+        257,
+        295
+      ],
+      "absoluteBounds": [
+        64,
+        1183,
+        257,
+        1478
+      ]
+    },
+    {
+      "row": 4,
+      "column": 1,
+      "cellRect": [
+        296,
+        1183,
+        591,
+        1478
+      ],
+      "alphaBoundsInCell": [
+        59,
+        0,
+        223,
+        295
+      ],
+      "absoluteBounds": [
+        355,
+        1183,
+        519,
+        1478
+      ]
+    },
+    {
+      "row": 4,
+      "column": 2,
+      "cellRect": [
+        591,
+        1183,
+        887,
+        1478
+      ],
+      "alphaBoundsInCell": [
+        23,
+        9,
+        214,
+        295
+      ],
+      "absoluteBounds": [
+        614,
+        1192,
+        805,
+        1478
+      ]
+    },
+    {
+      "row": 5,
+      "column": 0,
+      "cellRect": [
+        0,
+        1478,
+        296,
+        1774
+      ],
+      "alphaBoundsInCell": [
+        31,
+        0,
+        290,
+        257
+      ],
+      "absoluteBounds": [
+        31,
+        1478,
+        290,
+        1735
+      ]
+    },
+    {
+      "row": 5,
+      "column": 1,
+      "cellRect": [
+        296,
+        1478,
+        591,
+        1774
+      ],
+      "alphaBoundsInCell": [
+        23,
+        0,
+        287,
+        257
+      ],
+      "absoluteBounds": [
+        319,
+        1478,
+        583,
+        1735
+      ]
+    },
+    {
+      "row": 5,
+      "column": 2,
+      "cellRect": [
+        591,
+        1478,
+        887,
+        1774
+      ],
+      "alphaBoundsInCell": [
+        10,
+        0,
+        270,
+        279
+      ],
+      "absoluteBounds": [
+        601,
+        1478,
+        861,
+        1757
+      ]
+    }
+  ]
+}

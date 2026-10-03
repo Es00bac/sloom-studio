@@ -1,0 +1,1544 @@
+{
+  "schema_version": 1,
+  "character": "scuttle",
+  "image": "assets/illustrated/chassis-scuttle-atlas.webp",
+  "source": "art-sources/chassis/chassis-scuttle-atlas-generated.png",
+  "width": 1145,
+  "height": 1374,
+  "bytes": 348366,
+  "sha256": "cfa6bbc8d4db65a1ecef70f22c514cdf2f0b038e3ccd331ed2b489abde5c6741",
+  "source_sha256": "ae7387d48ab9a069591a074766592e3374edac1ba01d8b1ad52ecd01388c280b",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "layers": [
+    {
+      "id": "chassis",
+      "bone": "chassis",
+      "kind": "core",
+      "rect": [
+        33,
+        11,
+        273,
+        237
+      ],
+      "pivot": [
+        0.5494505494505495,
+        0.6835443037974683
+      ],
+      "anchorEnd": [
+        0.5677655677655677,
+        0.35443037974683544
+      ],
+      "end": [
+        0.5677655677655677,
+        0.35443037974683544
+      ],
+      "bindPivot": [
+        0.516797,
+        0.5
+      ],
+      "bindEnd": [
+        0.558789,
+        0.34043
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.4,
+        0.38
+      ],
+      "order": 40,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 0,
+      "sourceSocketPixels": [
+        183,
+        173
+      ],
+      "sourceAxisEndPixels": [
+        188,
+        95
+      ],
+      "solidAlphaBounds": [
+        37,
+        15,
+        302,
+        244
+      ],
+      "socketPaddingPixels": 4,
+      "note": "Continuous bare body; no baked mobile appendages. Fixed body-owned dorsal cables retained."
+    },
+    {
+      "id": "pincer_image_left",
+      "bone": "pincer_image_left",
+      "kind": "rigid_link",
+      "rect": [
+        349,
+        83,
+        141,
+        161
+      ],
+      "pivot": [
+        0.1702127659574468,
+        0.19875776397515527
+      ],
+      "anchorEnd": [
+        0.8226950354609929,
+        0.937888198757764
+      ],
+      "end": [
+        0.8226950354609929,
+        0.937888198757764
+      ],
+      "bindPivot": [
+        0.452969,
+        0.588184
+      ],
+      "bindEnd": [
+        0.452969,
+        0.730957
+      ],
+      "bindAngle": 0.6581277252159117,
+      "size": [
+        0.13383536999419404,
+        0.15281911041890242
+      ],
+      "order": 100,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 1,
+      "sourceSocketPixels": [
+        373,
+        115
+      ],
+      "sourceAxisEndPixels": [
+        465,
+        234
+      ],
+      "solidAlphaBounds": [
+        353,
+        87,
+        486,
+        240
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "pincer_image_right",
+      "bone": "pincer_image_right",
+      "kind": "rigid_link",
+      "rect": [
+        542,
+        82,
+        138,
+        162
+      ],
+      "pivot": [
+        0.8043478260869565,
+        0.18518518518518517
+      ],
+      "anchorEnd": [
+        0.11594202898550725,
+        0.9382716049382716
+      ],
+      "end": [
+        0.11594202898550725,
+        0.9382716049382716
+      ],
+      "bindPivot": [
+        0.528555,
+        0.584824
+      ],
+      "bindEnd": [
+        0.505039,
+        0.739355
+      ],
+      "bindAngle": -0.5105924284545869,
+      "size": [
+        0.13950355877261375,
+        0.16376504725480745
+      ],
+      "order": 101,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 2,
+      "sourceSocketPixels": [
+        653,
+        112
+      ],
+      "sourceAxisEndPixels": [
+        558,
+        234
+      ],
+      "solidAlphaBounds": [
+        546,
+        86,
+        676,
+        240
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_rear_upper",
+      "bone": "image_left_rear_upper",
+      "kind": "rigid_link",
+      "rect": [
+        730,
+        48,
+        171,
+        194
+      ],
+      "pivot": [
+        0.8245614035087719,
+        0.23195876288659795
+      ],
+      "anchorEnd": [
+        0.16374269005847952,
+        0.8350515463917526
+      ],
+      "end": [
+        0.16374269005847952,
+        0.8350515463917526
+      ],
+      "bindPivot": [
+        0.407617,
+        0.474805
+      ],
+      "bindEnd": [
+        0.240488,
+        0.441211
+      ],
+      "bindAngle": -5.282034519982329,
+      "size": [
+        0.1792133413454201,
+        0.2033180597719971
+      ],
+      "order": 8,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 3,
+      "sourceSocketPixels": [
+        871,
+        93
+      ],
+      "sourceAxisEndPixels": [
+        758,
+        210
+      ],
+      "solidAlphaBounds": [
+        734,
+        52,
+        897,
+        238
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_rear_lower",
+      "bone": "image_left_rear_lower",
+      "kind": "rigid_link",
+      "rect": [
+        994,
+        36,
+        108,
+        203
+      ],
+      "pivot": [
+        0.25925925925925924,
+        0.1330049261083744
+      ],
+      "anchorEnd": [
+        0.7037037037037037,
+        0.8472906403940886
+      ],
+      "end": [
+        0.7037037037037037,
+        0.8472906403940886
+      ],
+      "bindPivot": [
+        0.240488,
+        0.441211
+      ],
+      "bindEnd": [
+        0.113672,
+        0.6098979999999999
+      ],
+      "bindAngle": 0.9643213448347441,
+      "size": [
+        0.14922414803926215,
+        0.28048613011083534
+      ],
+      "order": 9,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 4,
+      "sourceSocketPixels": [
+        1022,
+        63
+      ],
+      "sourceAxisEndPixels": [
+        1070,
+        208
+      ],
+      "solidAlphaBounds": [
+        998,
+        40,
+        1098,
+        235
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_rear_lower_foot",
+      "bone": "image_left_rear_lower",
+      "kind": "foot",
+      "rect": [
+        68,
+        280,
+        107,
+        172
+      ],
+      "pivot": [
+        0.07476635514018691,
+        0.9709302325581395
+      ],
+      "anchorEnd": [
+        0.794392523364486,
+        0.2441860465116279
+      ],
+      "end": [
+        0.794392523364486,
+        0.2441860465116279
+      ],
+      "bindPivot": [
+        0.113672,
+        0.615898
+      ],
+      "bindEnd": [
+        0.113672,
+        0.6098979999999999
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.07,
+        0.14
+      ],
+      "order": 10,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 5,
+      "sourceSocketPixels": [
+        76,
+        447
+      ],
+      "sourceAxisEndPixels": [
+        153,
+        322
+      ],
+      "solidAlphaBounds": [
+        72,
+        284,
+        171,
+        448
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_left_rear",
+      "note": "Actual solid-alpha sole/tip anchor pinned to foot target; preserve separate foot surface and never bind it at midstrut."
+    },
+    {
+      "id": "image_left_middle_upper",
+      "bone": "image_left_middle_upper",
+      "kind": "rigid_link",
+      "rect": [
+        262,
+        270,
+        164,
+        185
+      ],
+      "pivot": [
+        0.823170731707317,
+        0.23243243243243245
+      ],
+      "anchorEnd": [
+        0.16463414634146342,
+        0.8324324324324325
+      ],
+      "end": [
+        0.16463414634146342,
+        0.8324324324324325
+      ],
+      "bindPivot": [
+        0.39082,
+        0.516797
+      ],
+      "bindEnd": [
+        0.269883,
+        0.515957
+      ],
+      "bindAngle": -5.477143716951952,
+      "size": [
+        0.12806889239289096,
+        0.14446795788222455
+      ],
+      "order": 20,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 6,
+      "sourceSocketPixels": [
+        397,
+        313
+      ],
+      "sourceAxisEndPixels": [
+        289,
+        424
+      ],
+      "solidAlphaBounds": [
+        266,
+        274,
+        422,
+        451
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_middle_lower",
+      "bone": "image_left_middle_lower",
+      "kind": "rigid_link",
+      "rect": [
+        527,
+        271,
+        102,
+        183
+      ],
+      "pivot": [
+        0.2647058823529412,
+        0.1366120218579235
+      ],
+      "anchorEnd": [
+        0.7058823529411765,
+        0.8469945355191257
+      ],
+      "end": [
+        0.7058823529411765,
+        0.8469945355191257
+      ],
+      "bindPivot": [
+        0.269883,
+        0.515957
+      ],
+      "bindEnd": [
+        0.158184,
+        0.735035
+      ],
+      "bindAngle": 0.804748365209254,
+      "size": [
+        0.1823302835650919,
+        0.32712197933737075
+      ],
+      "order": 21,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 7,
+      "sourceSocketPixels": [
+        554,
+        296
+      ],
+      "sourceAxisEndPixels": [
+        599,
+        426
+      ],
+      "solidAlphaBounds": [
+        531,
+        275,
+        625,
+        450
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_middle_lower_foot",
+      "bone": "image_left_middle_lower",
+      "kind": "foot",
+      "rect": [
+        746,
+        282,
+        95,
+        174
+      ],
+      "pivot": [
+        0.08421052631578947,
+        0.9712643678160919
+      ],
+      "anchorEnd": [
+        0.7894736842105263,
+        0.2413793103448276
+      ],
+      "end": [
+        0.7894736842105263,
+        0.2413793103448276
+      ],
+      "bindPivot": [
+        0.158184,
+        0.741035
+      ],
+      "bindEnd": [
+        0.158184,
+        0.735035
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.07,
+        0.14
+      ],
+      "order": 22,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 8,
+      "sourceSocketPixels": [
+        754,
+        451
+      ],
+      "sourceAxisEndPixels": [
+        821,
+        324
+      ],
+      "solidAlphaBounds": [
+        750,
+        286,
+        837,
+        452
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_left_middle",
+      "note": "Actual solid-alpha sole/tip anchor pinned to foot target; preserve separate foot surface and never bind it at midstrut."
+    },
+    {
+      "id": "image_left_front_upper",
+      "bone": "image_left_front_upper",
+      "kind": "rigid_link",
+      "rect": [
+        935,
+        271,
+        163,
+        160
+      ],
+      "pivot": [
+        0.8220858895705522,
+        0.23125
+      ],
+      "anchorEnd": [
+        0.1656441717791411,
+        0.83125
+      ],
+      "end": [
+        0.1656441717791411,
+        0.83125
+      ],
+      "bindPivot": [
+        0.420215,
+        0.575586
+      ],
+      "bindEnd": [
+        0.356387,
+        0.591543
+      ],
+      "bindAngle": 0.48628525065870365,
+      "size": [
+        0.0746011642599925,
+        0.07322813669692516
+      ],
+      "order": 50,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 9,
+      "sourceSocketPixels": [
+        1069,
+        308
+      ],
+      "sourceAxisEndPixels": [
+        962,
+        404
+      ],
+      "solidAlphaBounds": [
+        939,
+        275,
+        1094,
+        427
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_front_lower",
+      "bone": "image_left_front_lower",
+      "kind": "rigid_link",
+      "rect": [
+        62,
+        473,
+        108,
+        194
+      ],
+      "pivot": [
+        0.25925925925925924,
+        0.13402061855670103
+      ],
+      "anchorEnd": [
+        0.7037037037037037,
+        0.845360824742268
+      ],
+      "end": [
+        0.7037037037037037,
+        0.845360824742268
+      ],
+      "bindPivot": [
+        0.356387,
+        0.591543
+      ],
+      "bindEnd": [
+        0.263164,
+        0.825738
+      ],
+      "bindAngle": 0.71356724369502,
+      "size": [
+        0.18632079692410897,
+        0.3346873574377513
+      ],
+      "order": 51,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 10,
+      "sourceSocketPixels": [
+        90,
+        499
+      ],
+      "sourceAxisEndPixels": [
+        138,
+        637
+      ],
+      "solidAlphaBounds": [
+        66,
+        477,
+        166,
+        663
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_front_lower_foot",
+      "bone": "image_left_front_lower",
+      "kind": "foot",
+      "rect": [
+        277,
+        488,
+        101,
+        179
+      ],
+      "pivot": [
+        0.07920792079207921,
+        0.9720670391061452
+      ],
+      "anchorEnd": [
+        0.7920792079207921,
+        0.24022346368715083
+      ],
+      "end": [
+        0.7920792079207921,
+        0.24022346368715083
+      ],
+      "bindPivot": [
+        0.263164,
+        0.831738
+      ],
+      "bindEnd": [
+        0.263164,
+        0.825738
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.07,
+        0.14
+      ],
+      "order": 52,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 11,
+      "sourceSocketPixels": [
+        285,
+        662
+      ],
+      "sourceAxisEndPixels": [
+        357,
+        531
+      ],
+      "solidAlphaBounds": [
+        281,
+        492,
+        374,
+        663
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_left_front",
+      "note": "Actual solid-alpha sole/tip anchor pinned to foot target; preserve separate foot surface and never bind it at midstrut."
+    },
+    {
+      "id": "image_left_inner_rear_upper",
+      "bone": "image_left_inner_rear_upper",
+      "kind": "rigid_link",
+      "rect": [
+        489,
+        472,
+        166,
+        164
+      ],
+      "pivot": [
+        0.8253012048192772,
+        0.23170731707317074
+      ],
+      "anchorEnd": [
+        0.1686746987951807,
+        0.8353658536585366
+      ],
+      "end": [
+        0.1686746987951807,
+        0.8353658536585366
+      ],
+      "bindPivot": [
+        0.427773,
+        0.592383
+      ],
+      "bindEnd": [
+        0.388301,
+        0.627656
+      ],
+      "bindAngle": 0.008078751940836959,
+      "size": [
+        0.05967738559994449,
+        0.058958380954162025
+      ],
+      "order": 3,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 12,
+      "sourceSocketPixels": [
+        626,
+        510
+      ],
+      "sourceAxisEndPixels": [
+        517,
+        609
+      ],
+      "solidAlphaBounds": [
+        493,
+        476,
+        651,
+        632
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_inner_rear_lower",
+      "bone": "image_left_inner_rear_lower",
+      "kind": "rigid_link",
+      "rect": [
+        743,
+        469,
+        110,
+        190
+      ],
+      "pivot": [
+        0.2545454545454545,
+        0.1368421052631579
+      ],
+      "anchorEnd": [
+        0.7,
+        0.8473684210526315
+      ],
+      "end": [
+        0.7,
+        0.8473684210526315
+      ],
+      "bindPivot": [
+        0.388301,
+        0.627656
+      ],
+      "bindEnd": [
+        0.367305,
+        0.672047
+      ],
+      "bindAngle": 0.7899740117842731,
+      "size": [
+        0.037611371226011193,
+        0.06496509575401933
+      ],
+      "order": 4,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 13,
+      "sourceSocketPixels": [
+        771,
+        495
+      ],
+      "sourceAxisEndPixels": [
+        820,
+        630
+      ],
+      "solidAlphaBounds": [
+        747,
+        473,
+        849,
+        655
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_left_inner_rear_lower_foot",
+      "bone": "image_left_inner_rear_lower",
+      "kind": "foot",
+      "rect": [
+        974,
+        474,
+        105,
+        193
+      ],
+      "pivot": [
+        0.08571428571428572,
+        0.9740932642487047
+      ],
+      "anchorEnd": [
+        0.8,
+        0.24352331606217617
+      ],
+      "end": [
+        0.8,
+        0.24352331606217617
+      ],
+      "bindPivot": [
+        0.367305,
+        0.678047
+      ],
+      "bindEnd": [
+        0.367305,
+        0.672047
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.042,
+        0.08
+      ],
+      "order": 5,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 14,
+      "sourceSocketPixels": [
+        983,
+        662
+      ],
+      "sourceAxisEndPixels": [
+        1058,
+        521
+      ],
+      "solidAlphaBounds": [
+        978,
+        478,
+        1075,
+        663
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_left_inner_rear",
+      "note": "Actual solid-alpha sole/tip anchor pinned to foot target; preserve separate foot surface and never bind it at midstrut."
+    },
+    {
+      "id": "image_right_rear_upper",
+      "bone": "image_right_rear_upper",
+      "kind": "rigid_link",
+      "rect": [
+        32,
+        685,
+        184,
+        172
+      ],
+      "pivot": [
+        0.8260869565217391,
+        0.23255813953488372
+      ],
+      "anchorEnd": [
+        0.16304347826086957,
+        0.8313953488372093
+      ],
+      "end": [
+        0.16304347826086957,
+        0.8313953488372093
+      ],
+      "bindPivot": [
+        0.709961,
+        0.453809
+      ],
+      "bindEnd": [
+        0.793945,
+        0.449609
+      ],
+      "bindAngle": -2.490406966038425,
+      "size": [
+        0.09690502600688909,
+        0.0905851330064398
+      ],
+      "order": 12,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 15,
+      "sourceSocketPixels": [
+        184,
+        725
+      ],
+      "sourceAxisEndPixels": [
+        62,
+        828
+      ],
+      "solidAlphaBounds": [
+        36,
+        689,
+        212,
+        853
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_rear_lower",
+      "bone": "image_right_rear_lower",
+      "kind": "rigid_link",
+      "rect": [
+        301,
+        678,
+        108,
+        190
+      ],
+      "pivot": [
+        0.25925925925925924,
+        0.1368421052631579
+      ],
+      "anchorEnd": [
+        0.7037037037037037,
+        0.8473684210526315
+      ],
+      "end": [
+        0.7037037037037037,
+        0.8473684210526315
+      ],
+      "bindPivot": [
+        0.793945,
+        0.449609
+      ],
+      "bindEnd": [
+        0.893047,
+        0.618297
+      ],
+      "bindAngle": -0.18955243312214098,
+      "size": [
+        0.14747144661755346,
+        0.2594405079382885
+      ],
+      "order": 13,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 16,
+      "sourceSocketPixels": [
+        329,
+        704
+      ],
+      "sourceAxisEndPixels": [
+        377,
+        839
+      ],
+      "solidAlphaBounds": [
+        305,
+        682,
+        405,
+        864
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_rear_lower_foot",
+      "bone": "image_right_rear_lower",
+      "kind": "foot",
+      "rect": [
+        508,
+        683,
+        101,
+        191
+      ],
+      "pivot": [
+        0.0891089108910891,
+        0.9738219895287958
+      ],
+      "anchorEnd": [
+        0.7920792079207921,
+        0.24083769633507854
+      ],
+      "end": [
+        0.7920792079207921,
+        0.24083769633507854
+      ],
+      "bindPivot": [
+        0.893047,
+        0.624297
+      ],
+      "bindEnd": [
+        0.893047,
+        0.618297
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.07,
+        0.14
+      ],
+      "order": 14,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 17,
+      "sourceSocketPixels": [
+        517,
+        869
+      ],
+      "sourceAxisEndPixels": [
+        588,
+        729
+      ],
+      "solidAlphaBounds": [
+        512,
+        687,
+        605,
+        870
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_right_rear",
+      "note": "Actual solid-alpha sole/tip anchor pinned to foot target; preserve separate foot surface and never bind it at midstrut."
+    },
+    {
+      "id": "image_right_middle_upper",
+      "bone": "image_right_middle_upper",
+      "kind": "rigid_link",
+      "rect": [
+        719,
+        676,
+        162,
+        191
+      ],
+      "pivot": [
+        0.8209876543209876,
+        0.23036649214659685
+      ],
+      "anchorEnd": [
+        0.16666666666666666,
+        0.837696335078534
+      ],
+      "end": [
+        0.16666666666666666,
+        0.837696335078534
+      ],
+      "bindPivot": [
+        0.652852,
+        0.527715
+      ],
+      "bindEnd": [
+        0.743555,
+        0.510918
+      ],
+      "bindAngle": -2.4942922708566515,
+      "size": [
+        0.09510001112805215,
+        0.11212408719418494
+      ],
+      "order": 25,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 18,
+      "sourceSocketPixels": [
+        852,
+        720
+      ],
+      "sourceAxisEndPixels": [
+        746,
+        836
+      ],
+      "solidAlphaBounds": [
+        723,
+        680,
+        877,
+        863
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_middle_lower",
+      "bone": "image_right_middle_lower",
+      "kind": "rigid_link",
+      "rect": [
+        986,
+        678,
+        113,
+        190
+      ],
+      "pivot": [
+        0.25663716814159293,
+        0.1368421052631579
+      ],
+      "anchorEnd": [
+        0.7079646017699115,
+        0.8473684210526315
+      ],
+      "end": [
+        0.7079646017699115,
+        0.8473684210526315
+      ],
+      "bindPivot": [
+        0.743555,
+        0.510918
+      ],
+      "bindEnd": [
+        0.87541,
+        0.728316
+      ],
+      "bindAngle": -0.1839919224946216,
+      "size": [
+        0.19909108817428436,
+        0.3347549270187082
+      ],
+      "order": 26,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 19,
+      "sourceSocketPixels": [
+        1015,
+        704
+      ],
+      "sourceAxisEndPixels": [
+        1066,
+        839
+      ],
+      "solidAlphaBounds": [
+        990,
+        682,
+        1095,
+        864
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_middle_lower_foot",
+      "bone": "image_right_middle_lower",
+      "kind": "foot",
+      "rect": [
+        70,
+        904,
+        113,
+        191
+      ],
+      "pivot": [
+        0.07079646017699115,
+        0.9738219895287958
+      ],
+      "anchorEnd": [
+        0.7964601769911505,
+        0.24083769633507854
+      ],
+      "end": [
+        0.7964601769911505,
+        0.24083769633507854
+      ],
+      "bindPivot": [
+        0.87541,
+        0.734316
+      ],
+      "bindEnd": [
+        0.87541,
+        0.728316
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.07,
+        0.14
+      ],
+      "order": 27,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 20,
+      "sourceSocketPixels": [
+        78,
+        1090
+      ],
+      "sourceAxisEndPixels": [
+        160,
+        950
+      ],
+      "solidAlphaBounds": [
+        74,
+        908,
+        179,
+        1091
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_right_middle",
+      "note": "Actual solid-alpha sole/tip anchor pinned to foot target; preserve separate foot surface and never bind it at midstrut."
+    },
+    {
+      "id": "image_right_front_upper",
+      "bone": "image_right_front_upper",
+      "kind": "rigid_link",
+      "rect": [
+        260,
+        881,
+        181,
+        168
+      ],
+      "pivot": [
+        0.8232044198895028,
+        0.23214285714285715
+      ],
+      "anchorEnd": [
+        0.16574585635359115,
+        0.8333333333333334
+      ],
+      "end": [
+        0.16574585635359115,
+        0.8333333333333334
+      ],
+      "bindPivot": [
+        0.622617,
+        0.594902
+      ],
+      "bindEnd": [
+        0.628496,
+        0.60498
+      ],
+      "bindAngle": -1.3951212928531203,
+      "size": [
+        0.013529974992116238,
+        0.012558208832461481
+      ],
+      "order": 60,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 21,
+      "sourceSocketPixels": [
+        409,
+        920
+      ],
+      "sourceAxisEndPixels": [
+        290,
+        1021
+      ],
+      "solidAlphaBounds": [
+        264,
+        885,
+        437,
+        1045
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_front_lower",
+      "bone": "image_right_front_lower",
+      "kind": "rigid_link",
+      "rect": [
+        513,
+        887,
+        113,
+        194
+      ],
+      "pivot": [
+        0.25663716814159293,
+        0.13402061855670103
+      ],
+      "anchorEnd": [
+        0.7079646017699115,
+        0.845360824742268
+      ],
+      "end": [
+        0.7079646017699115,
+        0.845360824742268
+      ],
+      "bindPivot": [
+        0.628496,
+        0.60498
+      ],
+      "bindEnd": [
+        0.756992,
+        0.829098
+      ],
+      "bindAngle": -0.1665890382374382,
+      "size": [
+        0.19842348576029006,
+        0.34065624988934756
+      ],
+      "order": 61,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 22,
+      "sourceSocketPixels": [
+        542,
+        913
+      ],
+      "sourceAxisEndPixels": [
+        593,
+        1051
+      ],
+      "solidAlphaBounds": [
+        517,
+        891,
+        622,
+        1077
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_front_lower_foot",
+      "bone": "image_right_front_lower",
+      "kind": "foot",
+      "rect": [
+        742,
+        907,
+        106,
+        182
+      ],
+      "pivot": [
+        0.08490566037735849,
+        0.9725274725274725
+      ],
+      "anchorEnd": [
+        0.7924528301886793,
+        0.24175824175824176
+      ],
+      "end": [
+        0.7924528301886793,
+        0.24175824175824176
+      ],
+      "bindPivot": [
+        0.756992,
+        0.835098
+      ],
+      "bindEnd": [
+        0.756992,
+        0.829098
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.07,
+        0.14
+      ],
+      "order": 62,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 23,
+      "sourceSocketPixels": [
+        751,
+        1084
+      ],
+      "sourceAxisEndPixels": [
+        826,
+        951
+      ],
+      "solidAlphaBounds": [
+        746,
+        911,
+        844,
+        1085
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_right_front",
+      "note": "Actual solid-alpha sole/tip anchor pinned to foot target; preserve separate foot surface and never bind it at midstrut."
+    },
+    {
+      "id": "image_right_inner_rear_upper",
+      "bone": "image_right_inner_rear_upper",
+      "kind": "rigid_link",
+      "rect": [
+        938,
+        882,
+        170,
+        175
+      ],
+      "pivot": [
+        0.8235294117647058,
+        0.2342857142857143
+      ],
+      "anchorEnd": [
+        0.16470588235294117,
+        0.8342857142857143
+      ],
+      "end": [
+        0.16470588235294117,
+        0.8342857142857143
+      ],
+      "bindPivot": [
+        0.602461,
+        0.589863
+      ],
+      "bindEnd": [
+        0.637734,
+        0.625977
+      ],
+      "bindAngle": -1.59126289774242,
+      "size": [
+        0.05590010352211665,
+        0.057544224213943604
+      ],
+      "order": 5,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 24,
+      "sourceSocketPixels": [
+        1078,
+        923
+      ],
+      "sourceAxisEndPixels": [
+        966,
+        1028
+      ],
+      "solidAlphaBounds": [
+        942,
+        886,
+        1104,
+        1053
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_inner_rear_lower",
+      "bone": "image_right_inner_rear_lower",
+      "kind": "rigid_link",
+      "rect": [
+        62,
+        1108,
+        123,
+        216
+      ],
+      "pivot": [
+        0.2601626016260163,
+        0.13425925925925927
+      ],
+      "anchorEnd": [
+        0.7073170731707317,
+        0.8472222222222222
+      ],
+      "end": [
+        0.7073170731707317,
+        0.8472222222222222
+      ],
+      "bindPivot": [
+        0.637734,
+        0.625977
+      ],
+      "bindEnd": [
+        0.638574,
+        0.677086
+      ],
+      "bindAngle": 0.3265899585892085,
+      "size": [
+        0.03844787326504191,
+        0.06751821646543946
+      ],
+      "order": 6,
+      "alignAxis": true,
+      "fitUniform": true,
+      "sourceCell": 25,
+      "sourceSocketPixels": [
+        94,
+        1137
+      ],
+      "sourceAxisEndPixels": [
+        149,
+        1291
+      ],
+      "solidAlphaBounds": [
+        66,
+        1112,
+        181,
+        1320
+      ],
+      "socketPaddingPixels": 4
+    },
+    {
+      "id": "image_right_inner_rear_lower_foot",
+      "bone": "image_right_inner_rear_lower",
+      "kind": "foot",
+      "rect": [
+        284,
+        1114,
+        107,
+        211
+      ],
+      "pivot": [
+        0.07476635514018691,
+        0.976303317535545
+      ],
+      "anchorEnd": [
+        0.794392523364486,
+        0.24170616113744076
+      ],
+      "end": [
+        0.794392523364486,
+        0.24170616113744076
+      ],
+      "bindPivot": [
+        0.638574,
+        0.683086
+      ],
+      "bindEnd": [
+        0.638574,
+        0.677086
+      ],
+      "bindAngle": 0,
+      "size": [
+        0.042,
+        0.08
+      ],
+      "order": 7,
+      "alignAxis": false,
+      "fitUniform": false,
+      "sourceCell": 26,
+      "sourceSocketPixels": [
+        292,
+        1320
+      ],
+      "sourceAxisEndPixels": [
+        369,
+        1165
+      ],
+      "solidAlphaBounds": [
+        288,
+        1118,
+        387,
+        1321
+      ],
+      "socketPaddingPixels": 4,
+      "contact": "image_right_inner_rear",
+      "note": "Actual solid-alpha sole/tip anchor pinned to foot target; preserve separate foot surface and never bind it at midstrut."
+    }
+  ],
+  "components": {
+    "expected": 27,
+    "measured": 27,
+    "nominal_grid": [
+      5,
+      6
+    ],
+    "rect_policy": "Measured actual isolated component bboxes plus4px soft-edge padding. Original generated atlas retained; no repack or repaint."
+  },
+  "socket_notes": "Socket centers are initial manual measurements as normalized fractions of each actual solid component bbox. Pixel anchors are computed from these and retained in final maps; website calibration owns final binds. Grounded sole/tarsus tips are measured from the component alpha at its lowest solid tip, never from midstrut.",
+  "render_alignment": "Rigid socket axis aligns via local pivot/end to bindPivot/bindEnd using uniform scale+rotation. Core alignAxis=false. Grounded feet use separate contact matrix and solid sole pivot; Chime tips follow their lower bone with no contact. Website worker calibrates final bind sizes/actions.",
+  "tool": "built-in image_gen",
+  "generation_count": 1,
+  "prompt": "Use case: stylized-concept, production rigid 2D skeletal game-animation sprite atlas.\nImage1 is the CURRENT APPROVED illustrated character: preserve its exact industrial design, anatomy, panel identities, colors, softly sculpted hand-painted lighting and THREE-QUARTER camera. Image2 is actual production in-engine anatomy reference only; ignore all background machines/architecture and printed markings. Do NOT create a different species or kit.\nCreate ONE component atlas, NOT a pose sheet, NOT complete character repeats, and NOT an exploded character placed together. Each instructed cell contains ONE isolated rigid piece ONLY. All components use matching source camera/foreshortening, light direction, cream ceramic paint wear, marigold fittings, dark ink-navy steel, graphite cables and source optical colors. No organic flesh, vines, fur, magic, alien membranes or unrelated franchise imagery.\nMake honest ROUND OVERLAPPING metal sockets at proximal and distal link ends; extend fully painted hidden surfaces behind hinges so rotation never reveals holes. The core must be a CONTINUOUS fully painted bare underlying body with complete hidden armor/cable surfaces and covered attachment sockets, NO baked silhouette/stump of any separately listed appendage. Moving appendage hoses belong to their moving link and terminate at its socket. Body-owned dorsal cables can stay with core as specified.\nAll isolated parts must be fully framed, with comfortable transparent gutters and no component overlapping another. Preserve neutral bind-direction from source if possible; isolated component scale can vary by cell and renderer will map it back to original bind size.\nTRUE TRANSPARENT ALPHA everywhere outside parts: NO backdrop, black rectangle, ground, shadow, cell borders, grid lines, captions, letters, labels, arrows, numbers, emblems, logos or decals. The names below are instructions ONLY and must NEVER appear in pixels.\n\nCHARACTER IDENTITY: Scuttle is the exact low compact EIGHT-legged industrial crawler in Image1: rounded worn cream armored low body, huge central AMBER inspection lens with four smaller amber satellite optics, marigold rear equipment blocks and looping graphite dorsal cables. Exactly four walking legs on each picture side and two smaller central front pincers. Keep its original short broad proportions and amber lenses. Its dorsal cable arches stay on the core as body detail. Core MUST exclude both pincers and all eight legs. Do not turn it into a tall biped, replace it with a new spider species, or count its two pincers as legs.\n\nAtlas layout: EXACTLY 5 COLUMNS \u00d7 6 ROWS, 27 isolated pieces and 3 explicitly empty transparent cells. Regular aligned equal cells, preferably high-resolution with crisp alpha edges. Every piece inside its own cell with generous gutter; no object crossing any cell. Portrait atlas, aspect ratio 5:6, one sheet only.\nEXACT ROW-MAJOR CONTENTS:\n\nROW 1, left to right:\n1. Fully painted continuous UNDERLYING CHASSIS CORE ONLY. Keep body-owned optics, exact torso armor, rear equipment and dorsal cables. No arm, walking leg, foot, pincer, wing or jaw silhouettes/stumps baked on the body. Fill all hidden body surfaces and expose round limb attachment sockets.\n2. Image-left front PINCER only: the source small cream armored manufactured bite-clamp with dark prongs, complete from covered round body hinge to its pointed gripping end, no body or walking leg.\n3. Image-right front PINCER only, matching source mirrored manufactured bite-clamp, covered round body hinge to gripping prongs, no body or walking leg.\n4. image left rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n5. image left rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n\nROW 2, left to right:\n1. image left rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n2. image left middle walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n3. image left middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n4. image left middle separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n5. image left front walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n\nROW 3, left to right:\n1. image left front leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n2. image left front separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n3. image left inner rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n4. image left inner rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n5. image left inner rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n\nROW 4, left to right:\n1. image right rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n2. image right rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n3. image right rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n4. image right middle walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n5. image right middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n\nROW 5, left to right:\n1. image right middle separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n2. image right front walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n3. image right front leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n4. image right front separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n5. image right inner rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n\nROW 6, left to right:\n1. image right inner rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n2. image right inner rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n3. COMPLETELY EMPTY TRANSPARENT CELL. No object or symbol.\n4. COMPLETELY EMPTY TRANSPARENT CELL. No object or symbol.\n5. COMPLETELY EMPTY TRANSPARENT CELL. No object or symbol.\n\nFinal mandatory check: 27 isolated components, one per occupied cell, no hidden additional complete character, NO limbs baked onto core, no foot baked onto lower link, compatible source perspective and source colors, covered round hinge sockets, genuine transparent alpha gutters, no writing.",
+  "reference_illustration": "art-sources/chassis/chassis-scuttle-generated.png",
+  "reference_illustration_sha256": "427811d09eeac93ef90c51e19f61836cc7903d069dcb570637c45bea22df7101",
+  "production_reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00008.jpg",
+  "production_reference_sha256": "957ffd9e948f0a833a016b32f8477c827997fdb067e128f1968d9b012f8ab9e1",
+  "export": {
+    "format": "WebP RGBA",
+    "quality": 91,
+    "method": 6,
+    "resampling": "none",
+    "art_processing": "Generated atlas preserved at original pixel dimensions; crop rects are metadata only, no repainting/repacking."
+  }
+}

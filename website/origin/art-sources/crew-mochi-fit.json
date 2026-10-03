@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "character": "mochi",
+  "coordinateSpace": "Normalized original1024x1536 reference; pivots local to atlas source rect.",
+  "nonSegmentParts": [
+    "head",
+    "torso",
+    "pelvis"
+  ],
+  "layers": {
+    "head": {
+      "size": [
+        0.315,
+        0.175
+      ],
+      "pivot": [
+        0.467592,
+        0.928889
+      ],
+      "bindPivot": [
+        0.488,
+        0.361
+      ],
+      "alignAxis": false,
+      "order": 5
+    },
+    "torso": {
+      "size": [
+        0.35,
+        0.27
+      ],
+      "pivot": [
+        0.505524,
+        0.969388
+      ],
+      "bindPivot": [
+        0.513,
+        0.609
+      ],
+      "alignAxis": false,
+      "order": 2
+    },
+    "pelvis": {
+      "size": [
+        0.4,
+        0.155
+      ],
+      "pivot": [
+        0.496592,
+        0.370079
+      ],
+      "bindPivot": [
+        0.513,
+        0.581
+      ],
+      "alignAxis": false,
+      "order": 3
+    },
+    "left-boot": {
+      "size": [
+        0.2,
+        0.095
+      ],
+      "pivot": [
+        0.599221,
+        0.19917
+      ],
+      "bindPivot": [
+        0.649,
+        0.9
+      ],
+      "alignAxis": false,
+      "order": 5,
+      "contact": "foot-R"
+    },
+    "right-boot": {
+      "size": [
+        0.2,
+        0.095
+      ],
+      "pivot": [
+        0.372869,
+        0.200803
+      ],
+      "bindPivot": [
+        0.339,
+        0.883
+      ],
+      "alignAxis": false,
+      "order": 5,
+      "contact": "foot-L"
+    },
+    "tail-tuft": {
+      "size": [
+        0.1,
+        0.055
+      ],
+      "pivot": [
+        0.5,
+        0.18
+      ],
+      "bindPivot": [
+        0.513,
+        0.634
+      ],
+      "alignAxis": false,
+      "order": 0
+    }
+  },
+  "notes": [
+    "Reference-proportion fit overrides. Retain fixed body/head sizes rather than scaling to helper bone length.",
+    "Initial bind fit; website owns reconstructed action and silhouette inspection."
+  ]
+}

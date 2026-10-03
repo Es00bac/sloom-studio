@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "character": "vix",
+  "tool": "built-in image_gen",
+  "editTarget": "art-sources/crew-vix.png",
+  "initial": {
+    "prompt": "Use case: identity-preserve.\nAsset type: a production transparent 2D character rig PARTS ATLAS for animation. This is an edit of the supplied Vix illustration, not a character redesign.\nInput image 1 is the exact identity, costume, palette, lighting, material and three-quarter-view reference. Preserve her adult professional orange fox identity, cream muzzle/chest, green-teal eyes, recognizable face and large cream-lined ears; cropped navy and teal jacket, warm ceramic shoulder armour, marigold fasteners, navy shorts and utility belt, teal knee armour, cream/navy field boots, dark gloves, and orange bushy tail with cream-white tip. Keep the premium softly sculpted hand-painted game illustration style and existing proportions.\n\nOutput ONE portrait atlas, 1536 x 3072 pixels (exact 1:2 aspect), with EXACTLY THREE equal columns and SIX equal rows: 18 equal square cells, 512 x 512 pixels each. Do not draw grid lines. Real transparent alpha background in every empty region, with clear generous gutters between cells. One isolated part centered entirely within each cell, at least 36 pixels of transparent margin on every side. No part touches another part or cell edge. Never include a complete character figure. No labels, letters, numbers, panels, borders, background gradients, environment, floor or shadow plate.\n\nEXACT cells, read left-to-right then top-to-bottom:\nROW 0: head including BOTH ears and cheek fur; complete torso including neck/collar, jacket, exposed cream belly and all chest details; pelvis including complete belt, pouches and shorts.\nROW 1: her ANATOMICAL LEFT upper arm including its ceramic shoulder pad and teal/navy sleeve; her anatomical LEFT forearm including orange fur and dark protective bracer/wrist device; her anatomical LEFT gloved hand including all visible fingers.\nROW 2: her ANATOMICAL RIGHT upper arm including its ceramic shoulder pad and teal/navy sleeve; her anatomical RIGHT forearm including orange fur and dark protective bracer; her anatomical RIGHT gloved hand including all visible fingers.\nROW 3: her ANATOMICAL LEFT thigh, orange fur; her anatomical LEFT shin including its teal knee armour and orange lower-leg fur; her anatomical LEFT complete field boot.\nROW 4: her ANATOMICAL RIGHT thigh, orange fur and its reference utility holster/strap; her anatomical RIGHT shin including its teal knee armour and orange lower-leg fur; her anatomical RIGHT complete field boot.\nROW 5: orange tail BASE section with rounded root; orange bushy tail MIDDLE section; cream-white-ended tail TIP section.\n\nLeft and right are the CHARACTER'S OWN left and right: her anatomical left is viewer-right in the supplied front-three-quarter reference; her anatomical right is viewer-left. Preserve asymmetrical holster and costume placement correctly.\n\nEach arm/leg segment is one distinct separate piece, not a whole limb. Orient each limb piece neutrally, mostly straight vertically with its proximal joint at the top and distal joint at the bottom, preserving the SAME visible three-quarter surfaces as the reference. Hands are relaxed, facing the same way as the reference. Boots retain their reference toe perspective. All pieces share consistent lighting, brush detail and matching anatomy at joins. Use rounded generously overlapping textured sockets at shoulder, elbow, wrist, hip, knee and ankle. Extend matching fur/fabric beneath adjacent pieces so rotation can overlap without holes or flat amputated edges. Each tail section has a compatible gentle curve and matching overlapping fur ends that can reconnect into her original image-left bushy tail.\n\nCRITICAL: The torso has NO arms, hands or shoulder-pad limb remnants baked onto it. It is a complete clean torso behind the removed arms. The pelvis has NO thigh, shin, foot or tail silhouettes baked onto it. It is complete behind removed legs and tail, with rounded hip attachment overlap. The head has both ears attached, and a rounded hidden neck overlap for rigging. These are clean reusable solid textured parts for a professional articulated renderer, not an exploded full-body pose or an anatomy diagram. No extra objects or weapons. Preserve identity and costume exactly; change only separation and arrangement into this specified 18-part atlas.",
+    "generatedSource": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-96cab9e2-7d7d-453d-a88b-84e2c6ca884d.png"
+  },
+  "selected": {
+    "prompt": "Use case: precise-object-edit.\nEdit target image1 is the Vix 18-part rig atlas. Image2 is the original full-body Vix identity reference only.\nCorrect the atlas for real articulated animation. Keep its exact 3-column by 6-row layout, all 18 existing part identities, beautiful softly sculpted painted fur/ceramic/fabric detail, orange/cream fox face, adult proportions, navy/teal/marigold costume, left/right handedness and three-quarter perspective.\n\nCRITICAL correction to TOP ROW MIDDLE cell: remove BOTH ceramic shoulder pads and BOTH navy/teal upper arm sleeves completely from the torso piece. The torso must be a SLEEVELESS clean jacket-and-body core with neck, collar, chest, abdomen and rounded side surfaces. There are NO arm segments or shoulder-pad bulges attached to it. Reconstruct the hidden sides of the original torso as clean navy jacket edges with complete cream/orange belly beneath. Shoulder pads/sleeves belong ONLY to the separate upper-arm cells in rows1/2.\nTOP ROW RIGHT pelvis piece: keep complete belt/pouches/navy shorts plus small rounded hip sockets inside shorts leg openings, not protruding furry upper-thigh silhouettes. Existing separate thighs attach over these sockets.\n\nSpacing correction: center each of the existing 18 parts fully within its own equal square cell with at least 8% completely transparent margin on EVERY side. Slightly reduce all pieces consistently as needed to create clean clear gutters at ALL cell boundaries. Nothing touches a neighboring cell. Top torso neck must not touch the upper canvas edge. Head neck must not touch the upper-arm below it. Every row must have a clear horizontal band of true transparent alpha between it and the next row. No grid lines.\n\nCanvas exact portrait1:2, ideally1024x2048 or1536x3072. Exactly3equalcolumns,6equalrows.\nKeep identical order:\nrow0 head with both ears / sleeveless torso with neck / pelvis.\nrow1 anatomical LEFT upper arm / LEFT forearm / LEFT hand.\nrow2 anatomical RIGHT upper arm / RIGHT forearm / RIGHT hand.\nrow3 anatomical LEFT thigh / LEFT shin+knee armour / LEFT boot.\nrow4 anatomical RIGHT thigh with utility holster / RIGHT shin+knee armour / RIGHT boot.\nrow5 orange tail base / orange tail middle / white-ended tail tip.\nAnatomical LEFT corresponds to viewer-right on original character, anatomical RIGHT to viewer-left.\n\nPreserve independent neutral vertical limbs and rounded textured overlapping joint ends so rotations fit together. Preserve all remaining head/arm/hand/leg/boot/tail artwork and detail. No redesign, weapons, complete body copy, text, labels, backgrounds, gradients, borders, floor, cast shadow plate or checkerboard. Truly transparent alpha everywhere around and between the 18 parts. Output only the corrected production atlas.",
+    "generatedSource": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-b74a7179-a398-4671-998e-18807557d18d.png",
+    "workspacePng": "art-sources/crew-vix-rig-atlas.png",
+    "workspaceWebp": "assets/illustrated/crew-vix-rig-atlas.webp",
+    "dimensions": [
+      887,
+      1774
+    ],
+    "pngSha256": "1e7b2e509805b8c078c04bddd6a624541409f4ad23582a5aeb841e7acddc1667",
+    "webpSha256": "1268cfa7584caa81733df5318476baffa19874b37a1d62a041cdc2b5a9a62693",
+    "alphaInspection": "art-sources/crew-vix-atlas-alpha-inspection.json",
+    "partsManifest": "assets/illustrated/crew-vix-atlas-parts.json",
+    "validationStatus": "true alpha confirmed; final rigid reconstruction and meaningful action inspection pending"
+  },
+  "atlasIntent": {
+    "columns": 3,
+    "rows": 6,
+    "parts": [
+      "head",
+      "torso",
+      "pelvis",
+      "left-upper-arm",
+      "left-forearm",
+      "left-hand",
+      "right-upper-arm",
+      "right-forearm",
+      "right-hand",
+      "left-thigh",
+      "left-shin",
+      "left-boot",
+      "right-thigh",
+      "right-shin",
+      "right-boot",
+      "tail-base",
+      "tail-middle",
+      "tail-tip"
+    ]
+  },
+  "sideConvention": "Atlas left/right are anatomical; existing rig L/R are image-side. anatomical left maps R, right maps L.",
+  "notes": [
+    "Generated part boundaries and local pivots require fitting to actual alpha, not merely equal cell borders.",
+    "No pixel editing; copied selected PNG and encoded RGBA WebP."
+  ]
+}

@@ -1,0 +1,854 @@
+{
+  "mochi": {
+    "rows": 6,
+    "rects": [
+      [
+        14,
+        32,
+        297,
+        225
+      ],
+      [
+        330,
+        22,
+        237,
+        294
+      ],
+      [
+        597,
+        41,
+        283,
+        254
+      ],
+      [
+        70,
+        319,
+        170,
+        249
+      ],
+      [
+        379,
+        322,
+        139,
+        251
+      ],
+      [
+        656,
+        353,
+        157,
+        233
+      ],
+      [
+        78,
+        578,
+        174,
+        274
+      ],
+      [
+        394,
+        582,
+        136,
+        274
+      ],
+      [
+        657,
+        616,
+        162,
+        223
+      ],
+      [
+        66,
+        859,
+        201,
+        279
+      ],
+      [
+        375,
+        862,
+        143,
+        267
+      ],
+      [
+        622,
+        888,
+        236,
+        241
+      ],
+      [
+        57,
+        1139,
+        199,
+        279
+      ],
+      [
+        379,
+        1140,
+        135,
+        267
+      ],
+      [
+        632,
+        1160,
+        227,
+        249
+      ],
+      [
+        86,
+        1510,
+        160,
+        153
+      ],
+      [
+        353,
+        1406,
+        197,
+        350
+      ],
+      [
+        612,
+        1410,
+        229,
+        346
+      ]
+    ],
+    "wrist": {
+      "L": [
+        0.244,
+        0.594
+      ],
+      "R": [
+        0.753,
+        0.596
+      ]
+    },
+    "head": [
+      0.315,
+      0.175
+    ],
+    "torso": [
+      0.35,
+      0.27
+    ],
+    "torsoPivot": 0.97,
+    "pelvis": [
+      0.4,
+      0.155
+    ],
+    "pelvisPivot": 0.37,
+    "boot": [
+      0.2,
+      0.095
+    ],
+    "headPivot": 0.93,
+    "headX": 0.55,
+    "tailMode": "short",
+    "extraParts": [
+      "right-ear",
+      "left-ear"
+    ],
+    "extraBoneSides": {
+      "right-ear": "L",
+      "left-ear": "R"
+    },
+    "extraAxes": {
+      "right-ear": [
+        [
+          0.76,
+          0.94
+        ],
+        [
+          0.15,
+          0.1
+        ]
+      ],
+      "left-ear": [
+        [
+          0.2,
+          0.94
+        ],
+        [
+          0.82,
+          0.08
+        ]
+      ]
+    },
+    "notes": [
+      "Actual generated ear cells are row5col1 anatomicalRIGHT (no tech insert), row5col2 anatomicalLEFT (teal tech insert). This corrects the tool's swapped ear placement to preserve reference identity.",
+      "Head rect excludes duplicated navy collar below fur; torso owns collar.",
+      "Short lower pants sockets overlap proximal cargo thighs; render thighs in front of lower rim and preserve belt."
+    ]
+  },
+  "hex": {
+    "rows": 6,
+    "rects": [
+      [
+        0,
+        9,
+        310,
+        303
+      ],
+      [
+        355,
+        2,
+        216,
+        320
+      ],
+      [
+        592,
+        31,
+        281,
+        281
+      ],
+      [
+        81,
+        321,
+        162,
+        267
+      ],
+      [
+        389,
+        318,
+        145,
+        272
+      ],
+      [
+        684,
+        337,
+        130,
+        255
+      ],
+      [
+        80,
+        595,
+        162,
+        264
+      ],
+      [
+        385,
+        594,
+        151,
+        273
+      ],
+      [
+        661,
+        605,
+        160,
+        259
+      ],
+      [
+        51,
+        862,
+        185,
+        287
+      ],
+      [
+        386,
+        865,
+        132,
+        281
+      ],
+      [
+        625,
+        872,
+        211,
+        278
+      ],
+      [
+        66,
+        1148,
+        204,
+        300
+      ],
+      [
+        384,
+        1147,
+        143,
+        296
+      ],
+      [
+        640,
+        1142,
+        213,
+        310
+      ],
+      [
+        22,
+        1449,
+        282,
+        307
+      ],
+      [
+        307,
+        1445,
+        319,
+        304
+      ],
+      [
+        645,
+        1460,
+        219,
+        284
+      ]
+    ],
+    "wrist": {
+      "L": [
+        0.31,
+        0.508
+      ],
+      "R": [
+        0.795,
+        0.515
+      ]
+    },
+    "head": [
+      0.4,
+      0.242
+    ],
+    "torso": [
+      0.36,
+      0.29
+    ],
+    "torsoPivot": 0.94,
+    "pelvis": [
+      0.37,
+      0.155
+    ],
+    "pelvisPivot": 0.32,
+    "boot": [
+      0.21,
+      0.115
+    ],
+    "headPivot": 0.94,
+    "headX": 0.51,
+    "tailMode": "long",
+    "tailAxes": [
+      [
+        [
+          0.86,
+          0.1
+        ],
+        [
+          0.16,
+          0.9
+        ]
+      ],
+      [
+        [
+          0.16,
+          0.14
+        ],
+        [
+          0.87,
+          0.8
+        ]
+      ],
+      [
+        [
+          0.18,
+          0.15
+        ],
+        [
+          0.47,
+          0.9
+        ]
+      ]
+    ],
+    "notes": [
+      "Retain narrow black curved tail with solid joined ends; do not inflate to Vix's fox plume.",
+      "Magenta gear remains part of supplied source; renderer owns final depth and seam fit."
+    ]
+  },
+  "patches": {
+    "rows": 6,
+    "rects": [
+      [
+        0,
+        41,
+        314,
+        254
+      ],
+      [
+        337,
+        25,
+        218,
+        263
+      ],
+      [
+        592,
+        56,
+        282,
+        263
+      ],
+      [
+        81,
+        302,
+        214,
+        264
+      ],
+      [
+        373,
+        295,
+        159,
+        271
+      ],
+      [
+        645,
+        330,
+        164,
+        228
+      ],
+      [
+        57,
+        566,
+        222,
+        273
+      ],
+      [
+        375,
+        567,
+        158,
+        271
+      ],
+      [
+        657,
+        599,
+        159,
+        237
+      ],
+      [
+        60,
+        839,
+        214,
+        290
+      ],
+      [
+        377,
+        844,
+        158,
+        282
+      ],
+      [
+        603,
+        850,
+        240,
+        275
+      ],
+      [
+        55,
+        1134,
+        223,
+        302
+      ],
+      [
+        379,
+        1139,
+        151,
+        287
+      ],
+      [
+        638,
+        1160,
+        229,
+        278
+      ],
+      [
+        27,
+        1434,
+        286,
+        301
+      ],
+      [
+        316,
+        1434,
+        291,
+        293
+      ],
+      [
+        611,
+        1441,
+        264,
+        286
+      ]
+    ],
+    "wrist": {
+      "L": [
+        0.148,
+        0.496
+      ],
+      "R": [
+        0.828,
+        0.499
+      ]
+    },
+    "head": [
+      0.46,
+      0.215
+    ],
+    "torso": [
+      0.46,
+      0.315
+    ],
+    "torsoPivot": 0.98,
+    "pelvis": [
+      0.5,
+      0.18
+    ],
+    "pelvisPivot": 0.42,
+    "boot": [
+      0.215,
+      0.11
+    ],
+    "headPivot": 0.97,
+    "headX": 0.5,
+    "tailMode": "long",
+    "tailAxes": [
+      [
+        [
+          0.18,
+          0.14
+        ],
+        [
+          0.85,
+          0.88
+        ]
+      ],
+      [
+        [
+          0.137,
+          0.126
+        ],
+        [
+          0.88,
+          0.88
+        ]
+      ],
+      [
+        [
+          0.14,
+          0.17
+        ],
+        [
+          0.86,
+          0.87
+        ]
+      ]
+    ],
+    "notes": [
+      "Patches is a red panda; preserve rounded ears, cream mask/whiskers, stocky build and rust/brown banded tail.",
+      "No held tool or weapon generated; engineering gear stays in belt/holster."
+    ]
+  },
+  "axi": {
+    "rows": 8,
+    "rects": [
+      [
+        17,
+        25,
+        247,
+        263
+      ],
+      [
+        296,
+        13,
+        190,
+        266
+      ],
+      [
+        506,
+        69,
+        248,
+        203
+      ],
+      [
+        71,
+        298,
+        143,
+        223
+      ],
+      [
+        333,
+        294,
+        111,
+        226
+      ],
+      [
+        548,
+        325,
+        154,
+        201
+      ],
+      [
+        34,
+        532,
+        174,
+        236
+      ],
+      [
+        327,
+        534,
+        114,
+        227
+      ],
+      [
+        564,
+        568,
+        147,
+        200
+      ],
+      [
+        53,
+        780,
+        158,
+        236
+      ],
+      [
+        328,
+        782,
+        124,
+        233
+      ],
+      [
+        526,
+        798,
+        211,
+        220
+      ],
+      [
+        54,
+        1031,
+        161,
+        236
+      ],
+      [
+        319,
+        1032,
+        125,
+        233
+      ],
+      [
+        520,
+        1051,
+        212,
+        206
+      ],
+      [
+        17,
+        1273,
+        238,
+        238
+      ],
+      [
+        272,
+        1278,
+        233,
+        231
+      ],
+      [
+        522,
+        1260,
+        234,
+        250
+      ],
+      [
+        23,
+        1524,
+        207,
+        203
+      ],
+      [
+        264,
+        1537,
+        221,
+        192
+      ],
+      [
+        512,
+        1565,
+        234,
+        168
+      ],
+      [
+        24,
+        1745,
+        230,
+        218
+      ],
+      [
+        278,
+        1756,
+        228,
+        210
+      ],
+      [
+        512,
+        1784,
+        236,
+        184
+      ]
+    ],
+    "wrist": {
+      "L": [
+        0.186,
+        0.54
+      ],
+      "R": [
+        0.679,
+        0.54
+      ]
+    },
+    "head": [
+      0.36,
+      0.252
+    ],
+    "torso": [
+      0.34,
+      0.235
+    ],
+    "torsoPivot": 0.97,
+    "pelvis": [
+      0.39,
+      0.16
+    ],
+    "pelvisPivot": 0.3,
+    "boot": [
+      0.2,
+      0.115
+    ],
+    "headPivot": 0.92,
+    "headX": 0.46,
+    "tailMode": "long",
+    "tailAxes": [
+      [
+        [
+          0.16,
+          0.37
+        ],
+        [
+          0.92,
+          0.82
+        ]
+      ],
+      [
+        [
+          0.21,
+          0.33
+        ],
+        [
+          0.94,
+          0.77
+        ]
+      ],
+      [
+        [
+          0.12,
+          0.76
+        ],
+        [
+          0.91,
+          0.1
+        ]
+      ]
+    ],
+    "extraParts": [
+      "left-gill-upper",
+      "left-gill-middle",
+      "left-gill-lower",
+      "right-gill-upper",
+      "right-gill-middle",
+      "right-gill-lower"
+    ],
+    "extraBoneSides": {
+      "left-gill-upper": [
+        "R",
+        1
+      ],
+      "left-gill-middle": [
+        "R",
+        2
+      ],
+      "left-gill-lower": [
+        "R",
+        3
+      ],
+      "right-gill-upper": [
+        "L",
+        1
+      ],
+      "right-gill-middle": [
+        "L",
+        2
+      ],
+      "right-gill-lower": [
+        "L",
+        3
+      ]
+    },
+    "extraAxes": {
+      "left-gill-upper": [
+        [
+          0.14,
+          0.85
+        ],
+        [
+          0.83,
+          0.1
+        ]
+      ],
+      "left-gill-middle": [
+        [
+          0.13,
+          0.83
+        ],
+        [
+          0.9,
+          0.14
+        ]
+      ],
+      "left-gill-lower": [
+        [
+          0.12,
+          0.81
+        ],
+        [
+          0.91,
+          0.14
+        ]
+      ],
+      "right-gill-upper": [
+        [
+          0.9,
+          0.86
+        ],
+        [
+          0.13,
+          0.1
+        ]
+      ],
+      "right-gill-middle": [
+        [
+          0.88,
+          0.84
+        ],
+        [
+          0.13,
+          0.12
+        ]
+      ],
+      "right-gill-lower": [
+        [
+          0.91,
+          0.83
+        ],
+        [
+          0.12,
+          0.12
+        ]
+      ]
+    },
+    "notes": [
+      "Head retains clear helmet/neck-ring but excludes all six gill silhouettes; gills are separate branches at their original head anchor.",
+      "Smooth finned tail uses exact curved proximal/distal source axes; preserve membrane silhouette and do not substitute furry-tail geometry.",
+      "PNG dark/rose RGB under alpha is not a baked background; true alpha verified and preserved."
+    ]
+  }
+}

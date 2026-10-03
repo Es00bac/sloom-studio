@@ -1,0 +1,49 @@
+{
+  "type": "Exact current game surface maps, unmodified",
+  "sourceRepository": "QindaOriginSpecies",
+  "sourceRevision": "279590a",
+  "gameShader": "shaders/infestation.glsl",
+  "materialChannels": {
+    "albedo": "RGB material, A signal veins",
+    "normalRough": "RG tangent normal, B height, A roughness"
+  },
+  "references": [
+    "src/seedweb_view.cpp",
+    "src/seedweb.cpp:493",
+    "validation/branded-trailers/stills/seedweb-anchor.png"
+  ],
+  "files": [
+    {
+      "source": "art-sources/seedweb-game/seedweb-infest-albedo.png",
+      "sha256": "aa9d2f63238976cc695bb95ccff12ea326956fd961b861086ad5511799cf7f36"
+    },
+    {
+      "source": "art-sources/seedweb-game/seedweb-infest-normal-rough.png",
+      "sha256": "08deeeb3880c234d7ee36b3f902186d0f63564326f1f8983075e3872dddb200f"
+    }
+  ],
+  "runtimeChannelDecode": {
+    "reason": "Game RGBA alpha stores material data; split losslessly so browser transparency decoding cannot discard RGB at A=0.",
+    "files": [
+      {
+        "path": "assets/seedweb-game-color.webp",
+        "sha256": "1f344f538679a9091bbe6ac8875a1f16d5546506ad53d5f0215f881bf172c3fb"
+      },
+      {
+        "path": "assets/seedweb-game-relief.webp",
+        "sha256": "b9e487922e94ddef9f3655daf4904ff63a2023ff114468f9863436ba256261ed"
+      },
+      {
+        "path": "assets/seedweb-game-channels.webp",
+        "sha256": "f40036a2d8280865e3af15e79a16a6a1f6fcf4a5d1e677466014b06f27809f47"
+      }
+    ],
+    "channelMap": "color RGB, relief RGB; channels R=emission G=roughness B=height"
+  },
+  "renderer": {
+    "surface": "height-aware growth field and decoded normal/roughness lighting",
+    "hardware": "routed multi-strand jackets, tangent-aligned brass clamps, outbound amber packets",
+    "fallback": "Canvas 2D real game material with decoded normal lighting and cached height-aware coverage",
+    "protection": "DOM-measured copy/photo masks; rigs above growth; reduced motion and visibility pause"
+  }
+}

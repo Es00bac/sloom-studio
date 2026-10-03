@@ -1,7 +1,7 @@
 "use strict";
-// Canvas 2D linear blend skinning. Bind-image vertices carry joint weights;
-// each triangle samples the original texture through its deformed affine map.
-// Ground contacts use a two-link inverse-kinematic chain, not a moving PNG.
+// Authored Canvas 2D action rigs: rigid painted atlas parts on parented bones,
+// wrist targets and individual swing/plant contacts with two-link IK.
+// A weighted textured mesh remains available for configurations without parts.
 (()=>{
 const I=()=>[1,0,0,1,0,0];
 const multiply=(a,b)=>[a[0]*b[0]+a[2]*b[1],a[1]*b[0]+a[3]*b[1],a[0]*b[2]+a[2]*b[3],a[1]*b[2]+a[3]*b[3],a[0]*b[4]+a[2]*b[5]+a[4],a[1]*b[4]+a[3]*b[5]+a[5]];
@@ -10,14 +10,23 @@ const rotation=(p,a)=>{const c=Math.cos(a),s=Math.sin(a);return[c,s,-s,c,p[0]-c*
 const distance=(a,b)=>Math.hypot(a[0]-b[0],a[1]-b[1]);
 const rigidMap=(a,b,c,d)=>{const angle=Math.atan2(d[1]-c[1],d[0]-c[0])-Math.atan2(b[1]-a[1],b[0]-a[0]);const cosine=Math.cos(angle),sine=Math.sin(angle);return[cosine,sine,-sine,cosine,c[0]-cosine*a[0]+sine*a[1],c[1]-sine*a[0]-cosine*a[1]];};
 function segmentDistance(p,a,b){const dx=b[0]-a[0],dy=b[1]-a[1],n=dx*dx+dy*dy;const t=n?Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/n)):0;return Math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dy);}
-function solveLeg(hip,knee,foot,posedHip){
-  const l1=distance(hip,knee),l2=distance(knee,foot),length=distance(posedHip,foot);
+function solveLeg(hip,knee,foot,posedHip,posedFoot=foot){
+  const l1=distance(hip,knee),l2=distance(knee,foot),length=distance(posedHip,posedFoot);
   const reach=Math.max(.001,Math.min(l1+l2-.001,length));
-  const direction=Math.atan2(foot[1]-posedHip[1],foot[0]-posedHip[0]);
+  const direction=Math.atan2(posedFoot[1]-posedHip[1],posedFoot[0]-posedHip[0]);
   const cos=Math.max(-1,Math.min(1,(l1*l1+reach*reach-l2*l2)/(2*l1*reach)));
   const side=((foot[0]-hip[0])*(knee[1]-hip[1])-(foot[1]-hip[1])*(knee[0]-hip[0]))>=0?1:-1;
   const angle=direction+side*Math.acos(cos),posedKnee=[posedHip[0]+Math.cos(angle)*l1,posedHip[1]+Math.sin(angle)*l1];
-  return {upper:rigidMap(hip,knee,posedHip,posedKnee),lower:rigidMap(knee,foot,posedKnee,foot),knee:posedKnee,foot};
+  return {upper:rigidMap(hip,knee,posedHip,posedKnee),lower:rigidMap(knee,foot,posedKnee,posedFoot),knee:posedKnee,foot:posedFoot};
+}
+function sampleTrack(frames,time){
+  if(!frames?.length)return[];
+  if(time<=frames[0][0])return frames[0].slice(1);
+  for(let index=1;index<frames.length;index++)if(time<=frames[index][0]){
+    const from=frames[index-1],to=frames[index],u=(time-from[0])/(to[0]-from[0]),ease=u*u*(3-2*u);
+    return from.slice(1).map((value,column)=>value+((to[column+1]??value)-value)*ease);
+  }
+  return frames.at(-1).slice(1);
 }
 function affine(source,destination){
   const [p0,p1,p2]=source,[q0,q1,q2]=destination;
@@ -28,9 +37,10 @@ function affine(source,destination){
 }
 class OriginPortraitRig{
  constructor(canvas,config){
-  this.canvas=canvas;this.context=canvas.getContext("2d");this.config=config;this.paused=false;this.active=false;this.inView=false;this.documentVisible=true;this.frameId=null;this.lastFrame=0;this.clock=0;this.epoch=performance.now();this.loaded=false;
+  this.canvas=canvas;this.context=canvas.getContext("2d");this.config=config;this.paused=false;this.active=false;this.inView=false;this.documentVisible=!document.hidden;this.frameId=null;this.lastFrame=0;this.clock=0;this.epoch=performance.now();this.loaded=false;
   this.ready=new Promise((resolve,reject)=>{
-   const texture=new Image();texture.onload=()=>{this.texture=texture;this.buildMesh();this.loaded=true;canvas.dataset.boneCount=this.bones.length;canvas.dataset.triangleCount=this.triangles.length;this.resize();this.draw(0);this.manage();resolve(this);};texture.onerror=()=>reject(Error(`Missing illustrated rig texture: ${config.image}`));texture.src=config.image;
+   const finish=()=>{this.buildMesh();this.loaded=true;canvas.dataset.boneCount=this.bones.length;canvas.dataset.triangleCount=this.triangles.length;this.resize();this.draw(0);this.manage();resolve(this);};
+   const texture=new Image();texture.onload=()=>{this.texture=texture;if(config.parts?.image){const atlas=new Image();atlas.onload=()=>{this.atlas=atlas;finish();};atlas.onerror=()=>reject(Error(`Missing articulated atlas: ${config.parts.image}`));atlas.src=config.parts.image;}else finish();};texture.onerror=()=>reject(Error(`Missing illustrated rig texture: ${config.image}`));texture.src=config.image;
   });
   if("IntersectionObserver" in window)this.visibilityObserver=new IntersectionObserver(entries=>{this.inView=entries[0].isIntersecting;this.manage();},{rootMargin:"80px",threshold:0});
   if(this.visibilityObserver)this.visibilityObserver.observe(canvas);else this.inView=true;
@@ -42,14 +52,15 @@ class OriginPortraitRig{
   this.boneIndex=Object.fromEntries(this.bones.map((bone,index)=>[bone.name,index]));
   this.legs=(this.config.contacts||[]).map(leg=>({...leg,hip:point(leg.hip),knee:point(leg.knee),foot:point(leg.foot),ankle:point(leg.ankle||leg.foot)}));
   this.columns=18;this.rows=26;this.vertices=[];this.triangles=[];
+  if(this.atlas)return;
   for(let row=0;row<=this.rows;row++)for(let column=0;column<=this.columns;column++){
    const p=[w*column/this.columns,h*row/this.rows];
    let influences=this.bones.map((bone,index)=>({bone:index,value:Math.exp(-Math.pow(segmentDistance(p,bone.pivot,bone.end)/bone.radius,2)*3)})).sort((a,b)=>b.value-a.value).slice(0,3);
    const contact=this.legs.find(leg=>distance(p,leg.foot)<Math.min(w,h)*.045);
    if(contact)influences=[{bone:this.boneIndex[contact.lower],value:1}];
    const sum=influences.reduce((total,item)=>total+item.value,0)||1;
-   const pinned=this.legs.some(leg=>p[1]>=leg.ankle[1]-h*.01&&Math.abs(p[0]-leg.foot[0])<w*(leg.pinWidth||.08));
-   this.vertices.push({bind:p,pinned,weights:influences.map(item=>({bone:item.bone,weight:item.value/sum}))});
+   const contactIndex=this.legs.map((leg,index)=>({leg,index})).filter(({leg})=>p[1]>=leg.ankle[1]-h*.01&&Math.abs(p[0]-leg.foot[0])<w*(leg.pinWidth||.08)).sort((a,b)=>distance(p,a.leg.foot)-distance(p,b.leg.foot))[0]?.index;
+   this.vertices.push({bind:p,pinned:contactIndex!==undefined,contactIndex,weights:influences.map(item=>({bone:item.bone,weight:item.value/sum}))});
   }
   const mask=document.createElement("canvas");mask.width=this.columns*4;mask.height=this.rows*4;const maskContext=mask.getContext("2d",{willReadFrequently:true});maskContext.drawImage(this.texture,0,0,mask.width,mask.height);const pixels=maskContext.getImageData(0,0,mask.width,mask.height).data;
   for(let row=0;row<this.rows;row++)for(let col=0;col<this.columns;col++){
@@ -59,17 +70,34 @@ class OriginPortraitRig{
  }
  pose(time){
   const phase=time*2*Math.PI/this.config.cycle,w=this.imageWidth,h=this.imageHeight;
-  const rootBone=this.bones[0],rootMatrix=rotation(rootBone.pivot,Math.sin(phase)*this.config.bodyAngle);
-  rootMatrix[4]+=Math.sin(phase)*this.config.shift[0]*w;rootMatrix[5]+=(1+Math.sin(phase))*.5*this.config.shift[1]*h;
+  const clip=this.config.action,clipTime=clip?time%clip.duration:time,authored=sampleTrack(clip?.root,clipTime);
+  const rootBone=this.bones[0],rootMatrix=rotation(rootBone.pivot,Math.sin(phase)*this.config.bodyAngle+(authored[2]||0));
+  rootMatrix[4]+=(Math.sin(phase)*this.config.shift[0]+(authored[0]||0))*w;rootMatrix[5]+=((1+Math.sin(phase))*.5*this.config.shift[1]+(authored[1]||0))*h;
   const matrices=[];
   this.bones.forEach((bone,index)=>{
    if(index===0){matrices.push(rootMatrix);return;}
    const parent=matrices[this.boneIndex[bone.parent]]||rootMatrix;
-   const angle=Math.sin(phase*(bone.frequency||1)+(bone.phase||0))*bone.amplitude;
+   const angle=Math.sin(phase*(bone.frequency||1)+(bone.phase||0))*bone.amplitude+(sampleTrack(clip?.joints?.[bone.name],clipTime)[0]||0);
    matrices.push(multiply(parent,rotation(bone.pivot,angle)));
   });
-  this.legs.forEach(leg=>{const hip=transform(matrices[this.boneIndex[leg.parent]]||rootMatrix,leg.hip),solved=solveLeg(leg.hip,leg.knee,leg.foot,hip);matrices[this.boneIndex[leg.upper]]=solved.upper;matrices[this.boneIndex[leg.lower]]=solved.lower;});
-  return {matrices,vertices:this.vertices.map(vertex=>vertex.pinned?vertex.bind:vertex.weights.reduce((position,influence)=>{const p=transform(matrices[influence.bone],vertex.bind);position[0]+=p[0]*influence.weight;position[1]+=p[1]*influence.weight;return position;},[0,0]))};
+  for(const side of ["L","R"]){
+   const hand=sampleTrack(clip?.hands?.[side],clipTime),upper=this.bones[this.boneIndex["upper-arm-"+side]],lower=this.bones[this.boneIndex["forearm-"+side]];
+   if(!hand.length||!upper||!lower)continue;
+   const parent=matrices[this.boneIndex[upper.parent]],shoulder=transform(parent,upper.pivot),target=transform(parent,[hand[0]*w,hand[1]*h]);
+   const solved=solveLeg(upper.pivot,lower.pivot,lower.end,shoulder,target);
+   matrices[this.boneIndex[upper.name]]=solved.upper;matrices[this.boneIndex[lower.name]]=solved.lower;
+  }
+  this.bones.forEach((bone,index)=>{if(bone.name.startsWith("hand-")){const parent=matrices[this.boneIndex[bone.parent]],angle=sampleTrack(clip?.joints?.[bone.name],clipTime)[0]||0;matrices[index]=multiply(parent,rotation(bone.pivot,angle));}});
+  const contacts=[],footMatrices=[];
+  this.legs.forEach(leg=>{
+   const step=sampleTrack(clip?.feet?.[leg.name],clipTime),foot=[leg.foot[0]+(step[0]||0)*w,leg.foot[1]+(step[1]||0)*h];
+   const footMatrix=rotation(leg.foot,step[2]||0);footMatrix[4]+=foot[0]-leg.foot[0];footMatrix[5]+=foot[1]-leg.foot[1];footMatrices.push(footMatrix);
+   const endpoint=this.atlas?leg.ankle:leg.foot,targetEndpoint=this.atlas?transform(footMatrix,leg.ankle):foot;
+   const hip=transform(matrices[this.boneIndex[leg.parent]]||rootMatrix,leg.hip),solved=solveLeg(leg.hip,leg.knee,endpoint,hip,targetEndpoint);
+   matrices[this.boneIndex[leg.upper]]=solved.upper;matrices[this.boneIndex[leg.lower]]=solved.lower;
+   contacts.push({name:leg.name,foot,planted:Math.abs(step[1]||0)<.001});
+  });
+  return {matrices,footMatrices,contacts,clipTime,vertices:this.vertices.map(vertex=>vertex.pinned?transform(footMatrices[vertex.contactIndex],vertex.bind):vertex.weights.reduce((position,influence)=>{const p=transform(matrices[influence.bone],vertex.bind);position[0]+=p[0]*influence.weight;position[1]+=p[1]*influence.weight;return position;},[0,0]))};
  }
  resize(){
   if(!this.loaded)return;const rect=this.canvas.getBoundingClientRect(),ratio=Math.min(devicePixelRatio||1,1.5);this.pixelRatio=ratio;
@@ -77,8 +105,28 @@ class OriginPortraitRig{
  }
  draw(time){
   if(!this.loaded||this.canvas.width<2)return;this.clock=time;
-  const context=this.context,width=this.canvas.width,height=this.canvas.height,fit=Math.min(width/this.imageWidth,height/this.imageHeight)*.94,ox=(width-this.imageWidth*fit)*.5,oy=height-this.imageHeight*fit;
+  const context=this.context,width=this.canvas.width,height=this.canvas.height,fit=Math.min(width/this.imageWidth,height/this.imageHeight)*(this.config.action?.fit||.94),ox=(width-this.imageWidth*fit)*.5,oy=height-this.imageHeight*fit;
   const posed=this.pose(time);context.setTransform(1,0,0,1,0,0);context.clearRect(0,0,width,height);context.imageSmoothingEnabled=true;context.imageSmoothingQuality="high";
+  if(this.atlas&&this.config.parts?.layers){
+   for(const layer of [...this.config.parts.layers].sort((a,b)=>(a.order||0)-(b.order||0))){
+    const matrix=layer.contact?posed.footMatrices[this.legs.findIndex(leg=>leg.name===layer.contact)]:posed.matrices[this.boneIndex[layer.bone]];
+    if(!matrix)continue;
+    const [sx,sy,sw,sh]=layer.rect,[localX,localY]=layer.pivot||[.5,.5],size=layer.size;let[targetW,targetH]=[size[0]*this.imageWidth,size[1]*this.imageHeight];
+    const bind=layer.bindPivot||this.config.bones[this.boneIndex[layer.bone]]?.pivot||this.config.contacts.find(leg=>leg.name===layer.contact)?.foot;
+    const bone=this.bones[this.boneIndex[layer.bone]],bindEnd=layer.bindEnd?[layer.bindEnd[0]*this.imageWidth,layer.bindEnd[1]*this.imageHeight]:bone?.end;
+    let aligned=matrix;
+    if(layer.end&&bindEnd&&!layer.contact&&layer.alignAxis!==false){
+     const deltaX=layer.end[0]-localX,deltaY=layer.end[1]-localY,bindPoint=[bind[0]*this.imageWidth,bind[1]*this.imageHeight],length=distance(bindPoint,bindEnd);
+     if(layer.fitUniform){const scale=length/Math.hypot(deltaX*targetW,deltaY*targetH);targetW*=scale;targetH*=scale;}
+     else if(layer.fitToBone&&Math.abs(deltaY)>.05)targetH=Math.sqrt(Math.max(1,length*length-Math.pow(deltaX*targetW,2)))/Math.abs(deltaY);
+     const angle=Math.atan2(bindEnd[1]-bindPoint[1],bindEnd[0]-bindPoint[0])-Math.atan2(deltaY*targetH,deltaX*targetW);
+     aligned=multiply(matrix,rotation(bindPoint,angle));
+    }
+    const targetX=bind[0]*this.imageWidth-localX*targetW,targetY=bind[1]*this.imageHeight-localY*targetH;
+    context.save();context.setTransform(aligned[0]*fit,aligned[1]*fit,aligned[2]*fit,aligned[3]*fit,aligned[4]*fit+ox,aligned[5]*fit+oy);context.drawImage(this.atlas,sx,sy,sw,sh,targetX,targetY,targetW,targetH);context.restore();
+   }
+   return;
+  }
   const deformed=posed.vertices.map(p=>[p[0]*fit+ox,p[1]*fit+oy]);
   for(const indices of this.triangles){
    const source=indices.map(index=>this.vertices[index].bind),dest=indices.map(index=>deformed[index]),matrix=affine(source,dest);
@@ -101,7 +149,7 @@ class OriginPortraitRig{
  setDocumentVisible(visible){this.documentVisible=visible;this.manage();}
  // A deterministic clock supports one compact motion study without engine captures.
  renderAt(seconds){this.draw(seconds);}
- debugSummary(){return {bones:this.bones.map(b=>b.name),vertices:this.vertices.length,pinnedVertices:this.vertices.filter(v=>v.pinned).length,triangles:this.triangles.length,pinnedContacts:this.legs.map(leg=>({name:leg.name,foot:leg.foot})),texture:[this.imageWidth,this.imageHeight]};}
+ debugSummary(){return {bones:this.bones.map(b=>b.name),rigidParts:this.config.parts?.layers?.length||0,action:this.config.action?.name||null,duration:this.config.action?.duration||null,vertices:this.vertices.length,pinnedVertices:this.vertices.filter(v=>v.pinned).length,triangles:this.triangles.length,pinnedContacts:this.legs.map(leg=>({name:leg.name,foot:leg.foot})),texture:[this.imageWidth,this.imageHeight]};}
 }
 window.OriginPortraitRig=OriginPortraitRig;
 })();

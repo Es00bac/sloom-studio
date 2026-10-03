@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "character": "cache",
+  "tool": "built-in image_gen",
+  "reference": "art-sources/crew-cache.png",
+  "layoutReference": "art-sources/crew-vix-rig-atlas.png",
+  "prompt": "Use case: identity-preserve.\nAsset type: professional transparent 2D articulated character PARTS ATLAS.\nInput image1 is the exact Cache full-body identity/costume/anatomy reference to edit. Input image2 is the validated Vix atlas as a LAYOUT AND CLEAN PART SEPARATION example only: never transfer fox features or her costume to Cache.\nPreserve Cache's existing adult professional proportions, recognizable face and exact species: adult warm grey-brown raccoon, black eye mask, cream muzzle/eyebrows/ear trim, brown eyes, dark nose, whiskers, headset, navy utility suit, warm ceramic chest and shoulder armour, teal straps, marigold buckles, brown leather engineer's tool apron with familiar red/yellow-handled tools in pockets, dark gloves, cream/navy field boots, thick dark-and-cream ringed furry tail. Same softly sculpted premium hand-painted game illustration, lighting, brush detail, surface textures and existing three-quarter view as image1. Separate the supplied character into clean reusable painted rigid pieces; no redesign.\n\nOutput ONE true-alpha portrait atlas with EXACTLY3 equal columns and 6 equal rows (1536x3072, 1:2 aspect). Equal square cells. No drawn grid. Center each isolated piece entirely within its own cell with 10% CLEAR transparent margins on every side, including all fur/ears/toes. Nothing intersects a neighboring cell. One part per occupied cell. No complete character copy, labels, text, numbers, borders, panels, scene, gradient, floor, checkerboard or shadow plate.\n\nExact cell order left-to-right:\nrow0: head (including normal attached ears/crest/headgear except the explicitly separate Mochi ears or Axi gills below), CLEAN SLEEVELESS torso with neck, CLEAN pelvis with belt/hip apparel.\nrow1: anatomical LEFT upper arm / LEFT forearm / LEFT hand.\nrow2: anatomical RIGHT upper arm / RIGHT forearm / RIGHT hand.\nrow3: anatomical LEFT thigh / LEFT shin / LEFT separate boot or foot.\nrow4: anatomical RIGHT thigh / RIGHT shin / RIGHT separate boot or foot.\nrow5 and any additional rows: THREE connected thick raccoon tail sections in row5: BASE, MIDDLE, TIP, retaining dark/cream rings.\nLeg/feet details: navy trouser thighs/shins with reference knee gear; separate cream/navy field boots.\nTorso details: complete ceramic chest plate/navy sleeveless torso under removed arms; brown engineer's apron and all tool pockets belong to the separate pelvis, with no old thigh or tail silhouettes.\n\nANATOMICAL LEFT is viewer-right in the reference; anatomical RIGHT is viewer-left. Preserve correct asymmetric gear. EACH arm/leg segment is a distinct separate piece, never an entire limb. Upper arm includes shoulder armour and upper sleeve only. Forearm ends at wrist and excludes the hand. Hand is separate with all original visible fingers and glove. Shin ends at ankle and excludes the boot/foot. Boot/foot is separate including toe and heel.\nOrient limb segments neutrally and mostly straight vertically, proximal joint at top and distal at bottom, with rounded solid overlapping painted socket ends. Preserve same three-quarter surfaces as reference; no different camera angles. Hands relaxed. Feet retain exact perspective.\nJoint ends have generous matching painted fur/fabric/skin overlap that can rotate under neighbor parts. The pelvis must have SOLID CAPPED matching-material hip sockets; NO dark hollow cut-open shorts or brown cylindrical holes, and no protruding old thighs baked on. The torso MUST be a clean SLEEVELESS complete body core with restored sides under removed arms. Ceramic shoulder pads and sleeves appear ONLY in separate upper-arm cells, never attached to torso. No baked old arm, hand, leg, tail or gill silhouettes anywhere on torso/pelvis/head. Neck socket is rounded and solid, covered by the torso collar.\nTail sections must have coherent proximal/distal curved axes and generous solid overlapping painted ends to reconnect smoothly, following actual species shape and markings.\nNo weapons, new equipment, environments or additional characters. Maintain exact original identity, costume, anatomy and palette. Output only clean transparent atlas parts.",
+  "generatedSource": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-8b2c2f34-8970-4943-98d6-caa6c7dfd9a8.png",
+  "workspacePng": "art-sources/crew-cache-rig-atlas.png",
+  "workspaceWebp": "assets/illustrated/crew-cache-rig-atlas.webp",
+  "notes": [
+    "Anatomical left/right map to existing image-side R/L.",
+    "PNG pixels preserved; WebP format encoding only.",
+    "Final renderer fit and action inspection owned by website."
+  ],
+  "dimensions": [
+    887,
+    1774
+  ],
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 869692,
+  "cornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "webpBytes": 339138,
+  "alphaPreserved": true,
+  "pngSha256": "3c8e4537e68bf61753785bf9ca456c7fcefbc0a583fb152be6f2322f69658cb8",
+  "webpSha256": "b3ef8c1dcae49e8e3935f494c9d4b99cf908adc3fa1bbb06d43616c50732317b",
+  "partsManifest": "assets/illustrated/crew-cache-atlas-parts.json",
+  "proportionFitSource": "art-sources/crew-cache-fit.json",
+  "metadataValidation": {
+    "parts": 18,
+    "warnings": [],
+    "status": "initial source metadata checked; final assembled action QA owned by website"
+  }
+}

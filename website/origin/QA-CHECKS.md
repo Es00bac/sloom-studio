@@ -1,36 +1,38 @@
 # Website verification — 2026-10-03
 
-## Cinematic redesign checks
+## Final cast presentation
 
-The existing Portage Firefox/QindaFox engine rendered the actual redesigned page in isolated temporary headless profiles. Finite checks were injected by a local QA server; production source contains no test UI.
+The existing Portage Firefox/QindaFox engine rendered the changed page in isolated temporary headless profiles. A finite local QA server injected checks; production source contains no test UI.
 
-Passed in the final changed-page cases (`hive-illustrated-final.json`, `mobile-crew-final.json`, `desktop-text200.json` and reduced-motion `mobile-final.json`):
+- `folio-desktop.json` and `folio-mobile.json` pass: all eight crew and five chassis dossiers are visible in normal document flow, all 13 actual Tideglass photographs are present, and neither the 1440 px desktop nor 390 px mobile layout has horizontal overflow. Character selectors and view switches were removed. Illustrations and actual photography appear together.
+- `all-cast-actions.json` passes: all 13 production atlas rigs load, with 15 instances including the two hero figures. The native global Pause button freezes their clocks and stops RAF. Every production figure uses rigid articulated parts; the unused mesh work is skipped.
+- Source guards retain reduced-motion, offscreen and document-visibility suspension. Earlier native reduced-motion and resume-clock checks passed before the atlas replacement. The final pause check exercises the current runtime; it is not a new claim of a complete keyboard or accessibility audit.
+- All 17 structure entries, both complete technology paths, controls, world/history and the two corrected full films remain present. The actual photographs use the canonical full six-site Tideglass capture record in `art-sources/in-engine-photos.json`.
 
-- All 13 illustrated textures and 15 production rig instances load; every identity has 11–20 fitted bones, a weighted triangulated texture mesh and species-specific chains.
-- Ground vertices remain fixed at the sampled joint pose; other vertex displacement varies across the figure. This is articulated deformation, not whole-image translation.
-- Visible pause freezes the clock; resume continues without a hidden-time jump. Hidden documents and offscreen hero stop RAF. Reduced motion freezes all rigs and uses a static infestation treatment.
-- Every roster selector shows exactly one requested dossier. Arrow keys move selection/focus. Both technology paths switch correctly. Mobile Escape closes the menu and restores focus.
-- Infestation starts clean, grows through the roster, peaks at Seedweb and recedes before the guide. Main reflow updates scroll geometry, including doubled text.
-- Illustrated mode replaces the actual photograph; the engine-photo reveal animation no longer masks the mesh. Strong left conduit strokes remain in the outer 28 px, clear of Scuttle's title and roles.
-- All 13 fresh canonical Tideglass photographs, 17 structure entries and two unchanged full films remain present.
-- No horizontal overflow at 1440 px desktop or 390 px mobile, including desktop text enlarged to twice every computed size. The title reflows at enlarged text.
+The final folio screenshots are `qa/folio-desktop.png` and `qa/folio-mobile.png`, with their finite reports. They cover the normal-scroll layout before the final collar adjustments and material refinement. Root separately reviewed the composed desktop/mobile hero and the final readable Seedweb surfaces.
 
-Visual inspection covered the composed illustrated desktop/phone hero, full-body phone Vix, illustrated Seedweb/Scuttle presentation and enlarged-text layout. Root approved the new desktop/mobile hero. The pronunciation footer was moved into the clear left region after that review.
+## Authored action evidence
 
-Evidence is in ignored `website/origin/qa/` in the Qinda feature worktree, mirrored from `/tmp/origin-redesign-qa/`: `desktop-final.png`, `mobile-final.png`, `hive-illustrated-final.png`, `mobile-crew-final.png`, `desktop-text200.png` and their finite JSON reports. Section screenshots translate the existing main into the screenshot CLI viewport origin; this only affects the temporary response.
+`qa/all-cast-actions.mp4` is the accepted, silent 1440×960 browser action study: eight crew in its first 12 seconds, then all five machines. Native Firefox `canvas.captureStream` and `MediaRecorder` recorded the **production rigid-part renderer** at a deterministic clock. The 24-second recording rendered 481 poses in software headless Firefox. This is an illustration study, not gameplay footage or a hardware performance benchmark. The H264 faststart derivative is 24.042 seconds, 24 fps; its native VP8 source remains in ignored QA storage.
 
-## Actual motion evidence
+The cast has authored anticipation, travel, gesture or tool action, release, return and settle. Crew make foot placements and individual strap, headset, wrist, gauntlet or glove gestures. Empty-handed crew do not mime firing or welding. Scuttle advances on eight legs and probes with its pincers; Spool crawls and reaches/retracts its tools; Chime unfolds, climbs and banks; Skip stalks and cycles its scythes; Bastion advances and works its crusher.
 
-`qa/rig-motion-preview.mp4` is one compact silent 1280×720, eight-second browser motion study. Native Firefox `canvas.captureStream` and `MediaRecorder` recorded the **production** Vix and Spool textured bone-mesh renderer at a deterministic joint clock, generated matched habitat art, invasion fringe and the page's actual SVG conduit geometry as it spreads and recedes. It is not an engine capture or a claim of gameplay. The browser-produced VP8 source is retained as `rig-motion-preview.webm`; MP4 is a standard H264 faststart derivative for playback.
+`all-cast-actions-motion.json` records each action and its 14–27 rigid parts. Grounded rigs have explicit swing/plant contact tracks and two-link leg IK; crew gestures use wrist IK and separate gloves. Chime has no fictitious planted contacts. Sampled bind, lifted-foot, peak gesture/tool and recovery poses were inspected for shoulder/collar overlap, thigh sockets, tail seams, rigid forearms and connected machine links. Five final head-group offsets close visible collar gaps without changing source pixels. Root reviewed temporal samples of the actual clip and accepted the revision for publication.
 
-`rig-motion-report.json` records 513 vertices per mesh, Vix's 15 bones/two fixed contacts and Spool's 17 bones/five visible fixed contacts. The record rendered 170 poses across eight seconds in the isolated headless browser with other screenshot profiles active. Production animation caps at 24 fps and only visible active figures run. Static sampled frames were inspected for mesh seams, unwanted armour stretching and contact drift; root receives the playable clip for actual motion review.
+`qa/root-all-cast-motion-review.png` is a temporal contact sheet derived from that recording, not another render. The one final playable gallery artifact is `validation/website-redesign/illustrated-cast-actions.mp4` in the private Qinda game validation lane. Raw frames are excluded from the gallery. The former small idle study is superseded and is not evidence that the requested action animation was complete.
+
+## Seedweb surface verification
+
+Root's final infestation checks cover the exact game albedo/normal material channels, the document-attached network, protected copy/photo masks and clean → growth/amber signal → retreat. Its 10-second controlled material study recorded 224 rendered frames in the software fallback, with 175 nodes, 160 branches and 47 protected regions. The gallery artifact is `validation/website-redesign/seedweb-page-growth.mp4`, with `seedweb-motion-junctions.json`.
+
+Root reviewed sparse wall/floor deposits and readable foreground characters in `/tmp/origin-infest-qa/seedweb-floor-readable.png`; the 390×844 mobile check has no horizontal overflow. JavaScript syntax passes, and the fragment shader validates offline. Headless Firefox did not provide a runtime GPU context, so actual runtime WebGL compilation is **not** claimed: the Canvas material fallback was exercised. This is a controlled website material study, not a page-scrolling or engine capture.
 
 ## Retained film verification
 
 Both corrected MP4s retain the producer hashes. Earlier actual Firefox checks loaded metadata, advanced muted playback and decoded corrected welder footage at A08 43.00 s, D06 147.00 s and D07 148.38 s using native video and `requestVideoFrameCallback`. Saved browser pixels show the forked Arc tool and attached glow; no media errors occurred. Both 1920×1080 H264/AAC films have 4,548 frames, 189.504 seconds and faststart. Narration tracks parsed 19/20 cues within the films. These unchanged movies were not re-encoded for the redesign.
 
-`media-manifest.json` and retained `qa/media-final.json` record those checks. Root's live nginx rule now serves both tracks as `text/vtt`. Final live route/asset/range verification belongs to root after scoped deployment.
+`media-manifest.json` and retained `qa/media-final.json` record those checks. Root's live nginx rule serves both tracks as `text/vtt`. Final live route, asset and range verification belongs to root after scoped deployment.
 
 ## Practical limits
 
-Checks activate native controls and dispatch finite keyboard events; they are not a claim of a manual trusted Tab/Enter walkthrough. Enlarged text directly doubles computed sizes, not native browser zoom. The earlier JavaScript-disabled source/layout check remains applicable to the retained semantic fallback: all dossiers and both trees remain accessible, selector controls are hidden and the hero has static illustration fallbacks. No engine build, test or capture was run by this website lane during the redesign. All new production photographs and canonical map hashes were supplied and reviewed by root.
+Finite checks activate native controls and dispatch events; they are not a manual trusted Tab/Enter walkthrough. The earlier enlarged-text check directly doubled computed sizes, not native browser zoom, and predates the folio replacement. Semantic HTML retains every dossier and both technology paths without JavaScript, with static illustrated fallbacks. No engine build, test or capture was run by this website lane during the redesign. Root supplied and reviewed all new production photography and canonical-map hashes.

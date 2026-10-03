@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "character": "vix",
+  "coordinateSpace": "Normalized in existing 1024x1536 original bind image; pivots normalized within source part rect.",
+  "nonSegmentParts": [
+    "head",
+    "torso",
+    "pelvis"
+  ],
+  "layers": {
+    "head": {
+      "size": [
+        0.315,
+        0.212
+      ],
+      "pivot": [
+        0.52,
+        0.95
+      ],
+      "bindPivot": [
+        0.59,
+        0.223
+      ],
+      "alignAxis": false,
+      "order": 5
+    },
+    "torso": {
+      "size": [
+        0.32,
+        0.275
+      ],
+      "pivot": [
+        0.5,
+        0.94
+      ],
+      "bindPivot": [
+        0.594,
+        0.47
+      ],
+      "alignAxis": false,
+      "order": 2
+    },
+    "pelvis": {
+      "size": [
+        0.34,
+        0.14
+      ],
+      "pivot": [
+        0.51,
+        0.44
+      ],
+      "bindPivot": [
+        0.594,
+        0.442
+      ],
+      "alignAxis": false,
+      "order": 3
+    },
+    "left-boot": {
+      "size": [
+        0.17,
+        0.15
+      ],
+      "pivot": [
+        0.42,
+        0.23
+      ],
+      "bindPivot": [
+        0.735,
+        0.85
+      ],
+      "alignAxis": false,
+      "contact": "foot-R",
+      "order": 5
+    },
+    "right-boot": {
+      "size": [
+        0.17,
+        0.15
+      ],
+      "pivot": [
+        0.6,
+        0.23
+      ],
+      "bindPivot": [
+        0.382,
+        0.84
+      ],
+      "alignAxis": false,
+      "contact": "foot-L",
+      "order": 5
+    }
+  },
+  "notes": [
+    "Use fixed fitted proportions for head/torso/pelvis, not automatic scaling to the short helper bone vector; their helper ends do not encode full painted-piece length.",
+    "Head target rect is x~436..759, y~33..359. Its neck socket overlaps the upper torso at y~343.",
+    "Torso target width~328px reaches both painted upper-arm shoulder sockets; keep upper-arm pads in front of vest.",
+    "Pelvis belt anchor is above the root helper pivot. This puts the shorts lower edge around y800, overlapping the existing hip sockets y782..802.",
+    "Boot pivot should be near upper ankle/cuff, not mid-shoe. The old .47 pivot placed the join too low. Proposed .23 pivot keeps top~1235 and sole~1467 on the image-left boot.",
+    "These are initial visual fit overrides; renderer must inspect reconstructed bind/peak-action poses before expanding."
+  ]
+}

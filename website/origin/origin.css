@@ -48,3 +48,40 @@ html:not(.enhanced) .dossier-toolbar{display:none}
 
 /* Keep the pronunciation note in the clear left footer beside the scene link. */
 @media(min-width:901px){.hero-bottom>p{margin-left:20px;margin-right:auto}}
+
+/* Paired personnel folios: every illustration, action and real photograph is visible. */
+.dossier-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#ffffff21;border-block:1px solid #ffffff21}
+.dossier-panel{min-height:720px;display:block;isolation:isolate;background:#182923;scroll-margin-top:calc(var(--header-height) + 20px)}
+.dossier-panel:nth-child(4n+2),.dossier-panel:nth-child(4n+3){background:#162426}
+.hive-dossier .dossier-panel{background:#171e1b}
+.dossier-panel:after{display:none}
+.dossier-panel .illustration-stage{position:absolute;inset:0 auto 0 0;width:45%;height:100%;aspect-ratio:auto;overflow:hidden;z-index:0}
+.dossier-panel .illustration-stage:after{display:none}
+.dossier-panel .illustration-stage .illustrated-surface{opacity:.36;background-position:35% center}
+.dossier-panel .illustration-stage .rig-canvas{inset:0 0 42px;width:100%;height:calc(100% - 42px)}
+.dossier-panel .illustration-stage .illustration-fallback{object-fit:contain;object-position:center bottom;aspect-ratio:auto;position:absolute;inset:0 0 42px;height:calc(100% - 42px);width:100%;opacity:1}
+.dossier[data-portrait-view=illustrated] .dossier-panel:has(.rig-canvas.is-ready) .illustration-fallback{opacity:0}
+.dossier-panel .illustration-stage figcaption{position:absolute;bottom:20px;left:20px;right:20px;max-width:none;text-align:left;font-size:8px;color:#a9b5a5;z-index:1;letter-spacing:.035em}
+.dossier-copy{margin:0 0 0 45%;padding:35px 28px 28px;width:55%;max-width:none;position:relative;z-index:9;background:linear-gradient(90deg,#131c17ed,#131c17c9)}
+.dossier-copy h4{font-size:clamp(34px,3.6vw,55px);margin-bottom:15px;letter-spacing:-.06em}
+.dossier-copy>.eyebrow{font-size:9px;letter-spacing:.1em;line-height:1.7;margin-bottom:16px}
+.character-line{font-size:19px;line-height:1.4;margin-bottom:24px}
+.dossier-copy dl{max-width:none}
+.dossier-copy dl>div{margin-top:14px;padding-top:11px}
+.dossier-copy dt{font-size:10px;line-height:1.5}
+.dossier-copy dd{font-size:12px;line-height:1.75}
+.dossier-panel .actual-scene{position:relative;inset:auto;margin:25px 0 0;width:100%;height:auto;aspect-ratio:auto;z-index:auto;overflow:visible}
+.dossier-panel .actual-scene:after{display:none}
+.dossier-panel .actual-scene img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;opacity:1!important}
+.dossier-panel .actual-scene figcaption{position:static;max-width:none;text-align:left;margin-top:9px;font-size:8px;line-height:1.7;color:#b9c3b0;letter-spacing:.03em}
+.dossier-toolbar{gap:24px;align-items:baseline}
+.dossier-toolbar>p:last-child{font-size:9px;color:#91a28d;letter-spacing:.01em;text-transform:none}
+.hive-dossier .dossier-panel:last-child{grid-column:1/-1;min-height:610px}
+.hive-dossier .dossier-panel:last-child .illustration-stage{width:56%}
+.hive-dossier .dossier-panel:last-child .dossier-copy{margin-left:56%;width:44%;max-width:620px}
+.hive-dossier .dossier-panel:last-child .actual-scene{max-width:400px}
+.motion-toggle{position:fixed;right:22px;bottom:20px;z-index:65;background:#101a16ed;box-shadow:0 4px 24px #0005;border-color:#d4d7bb50;backdrop-filter:blur(12px)}
+.dossier-panel .illustration-stage figcaption{background:#101b15e8;padding:6px 8px;width:max-content;max-width:calc(100% - 40px);font-size:9px;line-height:1.6;color:#c5cbb8}
+@media(max-width:1150px){.dossier-panel{min-height:690px}.dossier-copy{padding:28px 22px 24px}.dossier-copy h4{font-size:38px}.dossier-copy>.eyebrow{font-size:8px}.dossier-copy dd{font-size:11px}.character-line{font-size:17px}.dossier-panel .actual-scene figcaption{font-size:7px}}
+@media(max-width:900px){.dossier-panels{grid-template-columns:1fr}.dossier-panel{min-height:660px}.dossier-panel .illustration-stage{width:45%}.dossier-copy{width:55%;margin-left:45%;padding:35px 35px 28px}.dossier-copy h4{font-size:50px}.dossier-copy dd{font-size:13px}.character-line{font-size:21px}.dossier-panel .actual-scene{max-width:360px}.hive-dossier .dossier-panel:last-child{grid-column:auto;min-height:660px}.hive-dossier .dossier-panel:last-child .illustration-stage{width:45%}.hive-dossier .dossier-panel:last-child .dossier-copy{width:55%;margin-left:45%;max-width:none}.motion-toggle{right:16px;bottom:16px}}
+@media(max-width:600px){.dossier-panel{min-height:0;display:block}.dossier-panel .illustration-stage,.hive-dossier .dossier-panel:last-child .illustration-stage{position:relative;inset:auto;width:100%;height:400px;aspect-ratio:auto;background:#173028}.dossier-panel .illustration-stage .rig-canvas{inset:0 18% 30px;width:64%;height:calc(100% - 30px)}.dossier-panel .illustration-stage .illustration-fallback{inset:0 18% 30px;width:64%;height:calc(100% - 30px)}.dossier-panel .illustration-stage figcaption{bottom:15px;left:20px;font-size:7px}.dossier-copy,.hive-dossier .dossier-panel:last-child .dossier-copy{margin:0;width:100%;max-width:none;padding:24px 24px 32px;background:#121b16}.dossier-copy h4{font-size:55px}.dossier-copy>.eyebrow{font-size:9px}.dossier-copy dd{font-size:13px}.dossier-copy .actual-scene{max-width:none;margin-top:22px}.dossier-panel .actual-scene figcaption{font-size:8px}.dossier-toolbar{padding:17px 24px;display:block}.dossier-toolbar>p:last-child{margin-top:8px}.hive-dossier .dossier-panel:last-child{min-height:0}.motion-toggle{font-size:10px;right:12px;bottom:12px;padding:10px 12px}}

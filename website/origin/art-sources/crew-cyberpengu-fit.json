@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "character": "cyberpengu",
+  "coordinateSpace": "Normalized original1024x1536 reference; pivots local to atlas source rect.",
+  "nonSegmentParts": [
+    "head",
+    "torso",
+    "pelvis"
+  ],
+  "layers": {
+    "head": {
+      "size": [
+        0.47,
+        0.29
+      ],
+      "pivot": [
+        0.426175,
+        0.951724
+      ],
+      "bindPivot": [
+        0.514,
+        0.318
+      ],
+      "alignAxis": false,
+      "order": 5
+    },
+    "torso": {
+      "size": [
+        0.47,
+        0.33
+      ],
+      "pivot": [
+        0.453726,
+        0.996429
+      ],
+      "bindPivot": [
+        0.522,
+        0.621
+      ],
+      "alignAxis": false,
+      "order": 2
+    },
+    "pelvis": {
+      "size": [
+        0.5,
+        0.18
+      ],
+      "pivot": [
+        0.490934,
+        0.399209
+      ],
+      "bindPivot": [
+        0.522,
+        0.593
+      ],
+      "alignAxis": false,
+      "order": 3
+    },
+    "left-boot": {
+      "size": [
+        0.205,
+        0.11
+      ],
+      "pivot": [
+        0.55987,
+        0.199288
+      ],
+      "bindPivot": [
+        0.714,
+        0.891
+      ],
+      "alignAxis": false,
+      "order": 5,
+      "contact": "foot-R"
+    },
+    "right-boot": {
+      "size": [
+        0.205,
+        0.11
+      ],
+      "pivot": [
+        0.463315,
+        0.199275
+      ],
+      "bindPivot": [
+        0.303,
+        0.853
+      ],
+      "alignAxis": false,
+      "order": 5,
+      "contact": "foot-L"
+    },
+    "tail-tuft": {
+      "size": [
+        0.1,
+        0.055
+      ],
+      "pivot": [
+        0.5,
+        0.18
+      ],
+      "bindPivot": [
+        0.522,
+        0.646
+      ],
+      "alignAxis": false,
+      "order": 0
+    }
+  },
+  "notes": [
+    "Reference-proportion fit overrides. Retain fixed body/head sizes rather than scaling to helper bone length.",
+    "Initial bind fit; website owns reconstructed action and silhouette inspection."
+  ]
+}

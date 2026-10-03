@@ -1,0 +1,450 @@
+[
+  {
+    "id": "scuttle",
+    "columns": 5,
+    "rows": 6,
+    "count": 27,
+    "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00008.jpg",
+    "identity": "Scuttle is the exact low compact EIGHT-legged industrial crawler in Image1: rounded worn cream armored low body, huge central AMBER inspection lens with four smaller amber satellite optics, marigold rear equipment blocks and looping graphite dorsal cables. Exactly four walking legs on each picture side and two smaller central front pincers. Keep its original short broad proportions and amber lenses. Its dorsal cable arches stay on the core as body detail. Core MUST exclude both pincers and all eight legs. Do not turn it into a tall biped, replace it with a new spider species, or count its two pincers as legs.",
+    "parts": [
+      {
+        "bone": "chassis",
+        "kind": "core",
+        "role": "Fully painted continuous UNDERLYING CHASSIS CORE ONLY. Keep body-owned optics, exact torso armor, rear equipment and dorsal cables. No arm, walking leg, foot, pincer, wing or jaw silhouettes/stumps baked on the body. Fill all hidden body surfaces and expose round limb attachment sockets."
+      },
+      {
+        "bone": "pincer_image_left",
+        "role": "Image-left front PINCER only: the source small cream armored manufactured bite-clamp with dark prongs, complete from covered round body hinge to its pointed gripping end, no body or walking leg."
+      },
+      {
+        "bone": "pincer_image_right",
+        "role": "Image-right front PINCER only, matching source mirrored manufactured bite-clamp, covered round body hinge to gripping prongs, no body or walking leg."
+      },
+      {
+        "bone": "image_left_rear_upper",
+        "role": "image left rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_left_rear_lower",
+        "role": "image left rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_left_rear_lower",
+        "contact": "image_left_rear",
+        "kind": "foot",
+        "role": "image left rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      },
+      {
+        "bone": "image_left_middle_upper",
+        "role": "image left middle walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_left_middle_lower",
+        "role": "image left middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_left_middle_lower",
+        "contact": "image_left_middle",
+        "kind": "foot",
+        "role": "image left middle separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      },
+      {
+        "bone": "image_left_front_upper",
+        "role": "image left front walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_left_front_lower",
+        "role": "image left front leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_left_front_lower",
+        "contact": "image_left_front",
+        "kind": "foot",
+        "role": "image left front separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      },
+      {
+        "bone": "image_left_inner_rear_upper",
+        "role": "image left inner rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_left_inner_rear_lower",
+        "role": "image left inner rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_left_inner_rear_lower",
+        "contact": "image_left_inner_rear",
+        "kind": "foot",
+        "role": "image left inner rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      },
+      {
+        "bone": "image_right_rear_upper",
+        "role": "image right rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_right_rear_lower",
+        "role": "image right rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_right_rear_lower",
+        "contact": "image_right_rear",
+        "kind": "foot",
+        "role": "image right rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      },
+      {
+        "bone": "image_right_middle_upper",
+        "role": "image right middle walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_right_middle_lower",
+        "role": "image right middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_right_middle_lower",
+        "contact": "image_right_middle",
+        "kind": "foot",
+        "role": "image right middle separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      },
+      {
+        "bone": "image_right_front_upper",
+        "role": "image right front walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_right_front_lower",
+        "role": "image right front leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_right_front_lower",
+        "contact": "image_right_front",
+        "kind": "foot",
+        "role": "image right front separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      },
+      {
+        "bone": "image_right_inner_rear_upper",
+        "role": "image right inner rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_right_inner_rear_lower",
+        "role": "image right inner rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_right_inner_rear_lower",
+        "contact": "image_right_inner_rear",
+        "kind": "foot",
+        "role": "image right inner rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      }
+    ],
+    "prompt": "Use case: stylized-concept, production rigid 2D skeletal game-animation sprite atlas.\nImage1 is the CURRENT APPROVED illustrated character: preserve its exact industrial design, anatomy, panel identities, colors, softly sculpted hand-painted lighting and THREE-QUARTER camera. Image2 is actual production in-engine anatomy reference only; ignore all background machines/architecture and printed markings. Do NOT create a different species or kit.\nCreate ONE component atlas, NOT a pose sheet, NOT complete character repeats, and NOT an exploded character placed together. Each instructed cell contains ONE isolated rigid piece ONLY. All components use matching source camera/foreshortening, light direction, cream ceramic paint wear, marigold fittings, dark ink-navy steel, graphite cables and source optical colors. No organic flesh, vines, fur, magic, alien membranes or unrelated franchise imagery.\nMake honest ROUND OVERLAPPING metal sockets at proximal and distal link ends; extend fully painted hidden surfaces behind hinges so rotation never reveals holes. The core must be a CONTINUOUS fully painted bare underlying body with complete hidden armor/cable surfaces and covered attachment sockets, NO baked silhouette/stump of any separately listed appendage. Moving appendage hoses belong to their moving link and terminate at its socket. Body-owned dorsal cables can stay with core as specified.\nAll isolated parts must be fully framed, with comfortable transparent gutters and no component overlapping another. Preserve neutral bind-direction from source if possible; isolated component scale can vary by cell and renderer will map it back to original bind size.\nTRUE TRANSPARENT ALPHA everywhere outside parts: NO backdrop, black rectangle, ground, shadow, cell borders, grid lines, captions, letters, labels, arrows, numbers, emblems, logos or decals. The names below are instructions ONLY and must NEVER appear in pixels.\n\nCHARACTER IDENTITY: Scuttle is the exact low compact EIGHT-legged industrial crawler in Image1: rounded worn cream armored low body, huge central AMBER inspection lens with four smaller amber satellite optics, marigold rear equipment blocks and looping graphite dorsal cables. Exactly four walking legs on each picture side and two smaller central front pincers. Keep its original short broad proportions and amber lenses. Its dorsal cable arches stay on the core as body detail. Core MUST exclude both pincers and all eight legs. Do not turn it into a tall biped, replace it with a new spider species, or count its two pincers as legs.\n\nAtlas layout: EXACTLY 5 COLUMNS × 6 ROWS, 27 isolated pieces and 3 explicitly empty transparent cells. Regular aligned equal cells, preferably high-resolution with crisp alpha edges. Every piece inside its own cell with generous gutter; no object crossing any cell. Portrait atlas, aspect ratio 5:6, one sheet only.\nEXACT ROW-MAJOR CONTENTS:\n\nROW 1, left to right:\n1. Fully painted continuous UNDERLYING CHASSIS CORE ONLY. Keep body-owned optics, exact torso armor, rear equipment and dorsal cables. No arm, walking leg, foot, pincer, wing or jaw silhouettes/stumps baked on the body. Fill all hidden body surfaces and expose round limb attachment sockets.\n2. Image-left front PINCER only: the source small cream armored manufactured bite-clamp with dark prongs, complete from covered round body hinge to its pointed gripping end, no body or walking leg.\n3. Image-right front PINCER only, matching source mirrored manufactured bite-clamp, covered round body hinge to gripping prongs, no body or walking leg.\n4. image left rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n5. image left rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n\nROW 2, left to right:\n1. image left rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n2. image left middle walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n3. image left middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n4. image left middle separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n5. image left front walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n\nROW 3, left to right:\n1. image left front leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n2. image left front separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n3. image left inner rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n4. image left inner rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n5. image left inner rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n\nROW 4, left to right:\n1. image right rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n2. image right rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n3. image right rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n4. image right middle walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n5. image right middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n\nROW 5, left to right:\n1. image right middle separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n2. image right front walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n3. image right front leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n4. image right front separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n5. image right inner rear walking/tucked leg UPPER hip-to-knee rigid link, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n\nROW 6, left to right:\n1. image right inner rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n2. image right inner rear separate FOOT/TARSUS only, source curved scuffed cream upper armor and dark/amber alloy linkages; foot is a narrow dark pointed mechanical support spike, NEVER a broad humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n3. COMPLETELY EMPTY TRANSPARENT CELL. No object or symbol.\n4. COMPLETELY EMPTY TRANSPARENT CELL. No object or symbol.\n5. COMPLETELY EMPTY TRANSPARENT CELL. No object or symbol.\n\nFinal mandatory check: 27 isolated components, one per occupied cell, no hidden additional complete character, NO limbs baked onto core, no foot baked onto lower link, compatible source perspective and source colors, covered round hinge sockets, genuine transparent alpha gutters, no writing.",
+    "generated_cache_path": "/home/cabewse/.codex/generated_images/01a102d5-a13a-7843-bb23-8fea74c2b8e4/exec-05109586-8e6c-4086-9959-3162dd76d7f4.png"
+  },
+  {
+    "id": "chime",
+    "columns": 5,
+    "rows": 5,
+    "count": 25,
+    "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00010.jpg",
+    "identity": "Chime is the exact flying industrial drone in Image1: compact forward cream armored core, central cyan/violet optical lens with four small satellites, dark manufactured chassis and exactly TWO layered articulated wing assemblies. Each wing has upper/lower hard cream ceramic vanes, dark mechanical spar and marigold hinge fittings; preserve every original vane silhouette. NO biological membranes or feathers. Six thin articulated legs are tucked under the flying body. The bare core MUST have NO wing/leg silhouette baked into it; keep small body-owned dorsal cables and the vertical body antenna. Wing root connects to body, upper/lower vanes attach to the spar at visible mechanical hinges.",
+    "parts": [
+      {
+        "bone": "chassis",
+        "kind": "core",
+        "role": "Fully painted continuous UNDERLYING CHASSIS CORE ONLY. Keep body-owned optics, exact torso armor, rear equipment and dorsal cables. No arm, walking leg, foot, pincer, wing or jaw silhouettes/stumps baked on the body. Fill all hidden body surfaces and expose round limb attachment sockets."
+      },
+      {
+        "bone": "wing_image_left_spar",
+        "role": "Image-left WING ROOT/SPAR ONLY: the original dark alloy/marigold articulated central support linkage from body hinge to vane attachment. Round overlapping hinge hubs. NO upper or lower cream vane sheet."
+      },
+      {
+        "bone": "wing_image_left_vane",
+        "role": "Image-left UPPER WING VANE ONLY: source long swept pointed layered cream ceramic upper panel and its edge metal frame, complete round spar attachment hinge, no body, other vane or central root spar."
+      },
+      {
+        "bone": "wing_image_left_lower_vane",
+        "role": "Image-left LOWER WING VANE ONLY: source wide swept cream lower panel with thin bent edge/strut and matching covered hinge; preserve its actual angular manufactured vane outline."
+      },
+      {
+        "bone": "wing_image_right_spar",
+        "role": "Image-right WING ROOT/SPAR ONLY, original dark/marigold articulated central linkage and covered hub, no upper/lower cream sheet."
+      },
+      {
+        "bone": "wing_image_right_vane",
+        "role": "Image-right UPPER WING VANE ONLY, original long pointed cream hard ceramic sheet and edge frame, with round spar attachment hinge."
+      },
+      {
+        "bone": "wing_image_right_lower_vane",
+        "role": "Image-right LOWER WING VANE ONLY, original broad cream hard vane panel and thin bent edge/strut with covered attachment hinge."
+      },
+      {
+        "bone": "image_left_outer_upper",
+        "role": "image left outer walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_left_outer_lower",
+        "role": "image left outer leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_left_outer_lower",
+        "kind": "foot",
+        "role": "image left outer separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.",
+        "hovering": true
+      },
+      {
+        "bone": "image_left_middle_upper",
+        "role": "image left middle walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_left_middle_lower",
+        "role": "image left middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_left_middle_lower",
+        "kind": "foot",
+        "role": "image left middle separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.",
+        "hovering": true
+      },
+      {
+        "bone": "image_left_inner_upper",
+        "role": "image left inner walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_left_inner_lower",
+        "role": "image left inner leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_left_inner_lower",
+        "kind": "foot",
+        "role": "image left inner separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.",
+        "hovering": true
+      },
+      {
+        "bone": "image_right_inner_upper",
+        "role": "image right inner walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_right_inner_lower",
+        "role": "image right inner leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_right_inner_lower",
+        "kind": "foot",
+        "role": "image right inner separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.",
+        "hovering": true
+      },
+      {
+        "bone": "image_right_middle_upper",
+        "role": "image right middle walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_right_middle_lower",
+        "role": "image right middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_right_middle_lower",
+        "kind": "foot",
+        "role": "image right middle separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.",
+        "hovering": true
+      },
+      {
+        "bone": "image_right_outer_upper",
+        "role": "image right outer walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_right_outer_lower",
+        "role": "image right outer leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.",
+        "hovering": true
+      },
+      {
+        "bone": "image_right_outer_lower",
+        "kind": "foot",
+        "role": "image right outer separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.",
+        "hovering": true
+      }
+    ],
+    "prompt": "Use case: stylized-concept, production rigid 2D skeletal game-animation sprite atlas.\nImage1 is the CURRENT APPROVED illustrated character: preserve its exact industrial design, anatomy, panel identities, colors, softly sculpted hand-painted lighting and THREE-QUARTER camera. Image2 is actual production in-engine anatomy reference only; ignore all background machines/architecture and printed markings. Do NOT create a different species or kit.\nCreate ONE component atlas, NOT a pose sheet, NOT complete character repeats, and NOT an exploded character placed together. Each instructed cell contains ONE isolated rigid piece ONLY. All components use matching source camera/foreshortening, light direction, cream ceramic paint wear, marigold fittings, dark ink-navy steel, graphite cables and source optical colors. No organic flesh, vines, fur, magic, alien membranes or unrelated franchise imagery.\nMake honest ROUND OVERLAPPING metal sockets at proximal and distal link ends; extend fully painted hidden surfaces behind hinges so rotation never reveals holes. The core must be a CONTINUOUS fully painted bare underlying body with complete hidden armor/cable surfaces and covered attachment sockets, NO baked silhouette/stump of any separately listed appendage. Moving appendage hoses belong to their moving link and terminate at its socket. Body-owned dorsal cables can stay with core as specified.\nAll isolated parts must be fully framed, with comfortable transparent gutters and no component overlapping another. Preserve neutral bind-direction from source if possible; isolated component scale can vary by cell and renderer will map it back to original bind size.\nTRUE TRANSPARENT ALPHA everywhere outside parts: NO backdrop, black rectangle, ground, shadow, cell borders, grid lines, captions, letters, labels, arrows, numbers, emblems, logos or decals. The names below are instructions ONLY and must NEVER appear in pixels.\n\nCHARACTER IDENTITY: Chime is the exact flying industrial drone in Image1: compact forward cream armored core, central cyan/violet optical lens with four small satellites, dark manufactured chassis and exactly TWO layered articulated wing assemblies. Each wing has upper/lower hard cream ceramic vanes, dark mechanical spar and marigold hinge fittings; preserve every original vane silhouette. NO biological membranes or feathers. Six thin articulated legs are tucked under the flying body. The bare core MUST have NO wing/leg silhouette baked into it; keep small body-owned dorsal cables and the vertical body antenna. Wing root connects to body, upper/lower vanes attach to the spar at visible mechanical hinges.\n\nAtlas layout: EXACTLY 5 COLUMNS × 5 ROWS, 25 isolated pieces and 0 explicitly empty transparent cells. Regular aligned equal cells, preferably high-resolution with crisp alpha edges. Every piece inside its own cell with generous gutter; no object crossing any cell. Square atlas, aspect ratio 5:5, one sheet only.\nEXACT ROW-MAJOR CONTENTS:\n\nROW 1, left to right:\n1. Fully painted continuous UNDERLYING CHASSIS CORE ONLY. Keep body-owned optics, exact torso armor, rear equipment and dorsal cables. No arm, walking leg, foot, pincer, wing or jaw silhouettes/stumps baked on the body. Fill all hidden body surfaces and expose round limb attachment sockets.\n2. Image-left WING ROOT/SPAR ONLY: the original dark alloy/marigold articulated central support linkage from body hinge to vane attachment. Round overlapping hinge hubs. NO upper or lower cream vane sheet.\n3. Image-left UPPER WING VANE ONLY: source long swept pointed layered cream ceramic upper panel and its edge metal frame, complete round spar attachment hinge, no body, other vane or central root spar.\n4. Image-left LOWER WING VANE ONLY: source wide swept cream lower panel with thin bent edge/strut and matching covered hinge; preserve its actual angular manufactured vane outline.\n5. Image-right WING ROOT/SPAR ONLY, original dark/marigold articulated central linkage and covered hub, no upper/lower cream sheet.\n\nROW 2, left to right:\n1. Image-right UPPER WING VANE ONLY, original long pointed cream hard ceramic sheet and edge frame, with round spar attachment hinge.\n2. Image-right LOWER WING VANE ONLY, original broad cream hard vane panel and thin bent edge/strut with covered attachment hinge.\n3. image left outer walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n4. image left outer leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n5. image left outer separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n\nROW 3, left to right:\n1. image left middle walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n2. image left middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n3. image left middle separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n4. image left inner walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n5. image left inner leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n\nROW 4, left to right:\n1. image left inner separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n2. image right inner walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n3. image right inner leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n4. image right inner separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n5. image right middle walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n\nROW 5, left to right:\n1. image right middle leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n2. image right middle separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n3. image right outer walking/tucked leg UPPER hip-to-knee rigid link, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n4. image right outer leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n5. image right outer separate FOOT/TARSUS only, thin source dark alloy cylinders with small amber armor cuffs; tip is a narrow pointed mechanical tarsus, NOT a large walking platform or boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n\nFinal mandatory check: 25 isolated components, one per occupied cell, no hidden additional complete character, NO limbs baked onto core, no foot baked onto lower link, compatible source perspective and source colors, covered round hinge sockets, genuine transparent alpha gutters, no writing.",
+    "generated_cache_path": "/home/cabewse/.codex/generated_images/01a102d5-a13a-7843-bb23-8fea74c2b8e4/exec-d1fcf940-a17f-4f25-ba5c-abf28bab1aa3.png"
+  },
+  {
+    "id": "skip",
+    "columns": 4,
+    "rows": 5,
+    "count": 19,
+    "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00011.jpg",
+    "identity": "Skip is the exact lean tall biped in Image1: hunched hard alloy torso with worn cream and amber angular panels, round cool-violet forward inspection optic with smaller amber sensors below, paired arched graphite dorsal cables and twin vertical exhaust posts. Exactly TWO walking legs and FOUR arms: two huge outer segmented scythe arms ending in long tapered dark metal blades, plus two smaller lower inner claw arms ending in angular paired metal talons. Keep the original long dangerous blade silhouettes and lean proportions. The continuous core MUST exclude all four arms and both legs, expose two outer shoulder and two inner claw-arm sockets plus two hip sockets, and retain its actual body-owned dorsal cables/optics. No biological alien or fleshy blades.",
+    "parts": [
+      {
+        "bone": "chassis",
+        "kind": "core",
+        "role": "Fully painted continuous UNDERLYING CHASSIS CORE ONLY. Keep body-owned optics, exact torso armor, rear equipment and dorsal cables. No arm, walking leg, foot, pincer, wing or jaw silhouettes/stumps baked on the body. Fill all hidden body surfaces and expose round limb attachment sockets."
+      },
+      {
+        "bone": "scythe_image_left_upper",
+        "role": "image left SCYTHE ARM UPPER shoulder-to-elbow dark/amber/cream machinery, round overlapped sockets, no forearm or long blade."
+      },
+      {
+        "bone": "scythe_image_left_lower",
+        "role": "image left SCYTHE ARM LOWER elbow-to-wrist armored dark alloy machinery, round covered end sockets, no upper arm or long blade."
+      },
+      {
+        "bone": "scythe_image_left_tip",
+        "role": "image left long tapered DARK SCYTHE BLADE TOOL only, source segmented/angular metal blade with wrist attachment hub. Preserve its long threatening machine-tool outline, no forearm."
+      },
+      {
+        "bone": "scythe_image_right_upper",
+        "role": "image right SCYTHE ARM UPPER shoulder-to-elbow dark/amber/cream machinery, round overlapped sockets, no forearm or long blade."
+      },
+      {
+        "bone": "scythe_image_right_lower",
+        "role": "image right SCYTHE ARM LOWER elbow-to-wrist armored dark alloy machinery, round covered end sockets, no upper arm or long blade."
+      },
+      {
+        "bone": "scythe_image_right_tip",
+        "role": "image right long tapered DARK SCYTHE BLADE TOOL only, source segmented/angular metal blade with wrist attachment hub. Preserve its long threatening machine-tool outline, no forearm."
+      },
+      {
+        "bone": "claw_image_left_upper",
+        "role": "image left SMALL INNER CLAW ARM UPPER shoulder-to-elbow cream/amber link, much smaller than the outer scythe arm, with covered sockets."
+      },
+      {
+        "bone": "claw_image_left_lower",
+        "kind": "claw_forearm",
+        "role": "image left SMALL INNER CLAW ARM LOWER elbow-to-wrist dark/amber link, no talons. Keep visible covered wrist socket to overlap separate claw tool."
+      },
+      {
+        "bone": "claw_image_left_lower",
+        "kind": "claw_tip",
+        "role": "image left SMALL INNER CLAW END TOOL only: source short paired angular mechanical talons and wrist attachment collar, no upper or lower arm."
+      },
+      {
+        "bone": "claw_image_right_upper",
+        "role": "image right SMALL INNER CLAW ARM UPPER shoulder-to-elbow cream/amber link, much smaller than the outer scythe arm, with covered sockets."
+      },
+      {
+        "bone": "claw_image_right_lower",
+        "kind": "claw_forearm",
+        "role": "image right SMALL INNER CLAW ARM LOWER elbow-to-wrist dark/amber link, no talons. Keep visible covered wrist socket to overlap separate claw tool."
+      },
+      {
+        "bone": "claw_image_right_lower",
+        "kind": "claw_tip",
+        "role": "image right SMALL INNER CLAW END TOOL only: source short paired angular mechanical talons and wrist attachment collar, no upper or lower arm."
+      },
+      {
+        "bone": "image_left_upper",
+        "role": "image left walking/tucked leg UPPER hip-to-knee rigid link, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_left_lower",
+        "role": "image left leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_left_lower",
+        "contact": "image_left",
+        "kind": "foot",
+        "role": "image left separate FOOT/TARSUS only, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      },
+      {
+        "bone": "image_right_upper",
+        "role": "image right walking/tucked leg UPPER hip-to-knee rigid link, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_right_lower",
+        "role": "image right leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_right_lower",
+        "contact": "image_right",
+        "kind": "foot",
+        "role": "image right separate FOOT/TARSUS only, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      }
+    ],
+    "prompt": "Use case: stylized-concept, production rigid 2D skeletal game-animation sprite atlas.\nImage1 is the CURRENT APPROVED illustrated character: preserve its exact industrial design, anatomy, panel identities, colors, softly sculpted hand-painted lighting and THREE-QUARTER camera. Image2 is actual production in-engine anatomy reference only; ignore all background machines/architecture and printed markings. Do NOT create a different species or kit.\nCreate ONE component atlas, NOT a pose sheet, NOT complete character repeats, and NOT an exploded character placed together. Each instructed cell contains ONE isolated rigid piece ONLY. All components use matching source camera/foreshortening, light direction, cream ceramic paint wear, marigold fittings, dark ink-navy steel, graphite cables and source optical colors. No organic flesh, vines, fur, magic, alien membranes or unrelated franchise imagery.\nMake honest ROUND OVERLAPPING metal sockets at proximal and distal link ends; extend fully painted hidden surfaces behind hinges so rotation never reveals holes. The core must be a CONTINUOUS fully painted bare underlying body with complete hidden armor/cable surfaces and covered attachment sockets, NO baked silhouette/stump of any separately listed appendage. Moving appendage hoses belong to their moving link and terminate at its socket. Body-owned dorsal cables can stay with core as specified.\nAll isolated parts must be fully framed, with comfortable transparent gutters and no component overlapping another. Preserve neutral bind-direction from source if possible; isolated component scale can vary by cell and renderer will map it back to original bind size.\nTRUE TRANSPARENT ALPHA everywhere outside parts: NO backdrop, black rectangle, ground, shadow, cell borders, grid lines, captions, letters, labels, arrows, numbers, emblems, logos or decals. The names below are instructions ONLY and must NEVER appear in pixels.\n\nCHARACTER IDENTITY: Skip is the exact lean tall biped in Image1: hunched hard alloy torso with worn cream and amber angular panels, round cool-violet forward inspection optic with smaller amber sensors below, paired arched graphite dorsal cables and twin vertical exhaust posts. Exactly TWO walking legs and FOUR arms: two huge outer segmented scythe arms ending in long tapered dark metal blades, plus two smaller lower inner claw arms ending in angular paired metal talons. Keep the original long dangerous blade silhouettes and lean proportions. The continuous core MUST exclude all four arms and both legs, expose two outer shoulder and two inner claw-arm sockets plus two hip sockets, and retain its actual body-owned dorsal cables/optics. No biological alien or fleshy blades.\n\nAtlas layout: EXACTLY 4 COLUMNS × 5 ROWS, 19 isolated pieces and 1 explicitly empty transparent cells. Regular aligned equal cells, preferably high-resolution with crisp alpha edges. Every piece inside its own cell with generous gutter; no object crossing any cell. Portrait atlas, aspect ratio 4:5, one sheet only.\nEXACT ROW-MAJOR CONTENTS:\n\nROW 1, left to right:\n1. Fully painted continuous UNDERLYING CHASSIS CORE ONLY. Keep body-owned optics, exact torso armor, rear equipment and dorsal cables. No arm, walking leg, foot, pincer, wing or jaw silhouettes/stumps baked on the body. Fill all hidden body surfaces and expose round limb attachment sockets.\n2. image left SCYTHE ARM UPPER shoulder-to-elbow dark/amber/cream machinery, round overlapped sockets, no forearm or long blade.\n3. image left SCYTHE ARM LOWER elbow-to-wrist armored dark alloy machinery, round covered end sockets, no upper arm or long blade.\n4. image left long tapered DARK SCYTHE BLADE TOOL only, source segmented/angular metal blade with wrist attachment hub. Preserve its long threatening machine-tool outline, no forearm.\n\nROW 2, left to right:\n1. image right SCYTHE ARM UPPER shoulder-to-elbow dark/amber/cream machinery, round overlapped sockets, no forearm or long blade.\n2. image right SCYTHE ARM LOWER elbow-to-wrist armored dark alloy machinery, round covered end sockets, no upper arm or long blade.\n3. image right long tapered DARK SCYTHE BLADE TOOL only, source segmented/angular metal blade with wrist attachment hub. Preserve its long threatening machine-tool outline, no forearm.\n4. image left SMALL INNER CLAW ARM UPPER shoulder-to-elbow cream/amber link, much smaller than the outer scythe arm, with covered sockets.\n\nROW 3, left to right:\n1. image left SMALL INNER CLAW ARM LOWER elbow-to-wrist dark/amber link, no talons. Keep visible covered wrist socket to overlap separate claw tool.\n2. image left SMALL INNER CLAW END TOOL only: source short paired angular mechanical talons and wrist attachment collar, no upper or lower arm.\n3. image right SMALL INNER CLAW ARM UPPER shoulder-to-elbow cream/amber link, much smaller than the outer scythe arm, with covered sockets.\n4. image right SMALL INNER CLAW ARM LOWER elbow-to-wrist dark/amber link, no talons. Keep visible covered wrist socket to overlap separate claw tool.\n\nROW 4, left to right:\n1. image right SMALL INNER CLAW END TOOL only: source short paired angular mechanical talons and wrist attachment collar, no upper or lower arm.\n2. image left walking/tucked leg UPPER hip-to-knee rigid link, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n3. image left leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n4. image left separate FOOT/TARSUS only, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n\nROW 5, left to right:\n1. image right walking/tucked leg UPPER hip-to-knee rigid link, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n2. image right leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n3. image right separate FOOT/TARSUS only, lean source cream armored biped thigh and dark/amber shin; foot is the source angular forked dark metal claw-shaped contact foot, NOT a humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n4. COMPLETELY EMPTY TRANSPARENT CELL. No object or symbol.\n\nFinal mandatory check: 19 isolated components, one per occupied cell, no hidden additional complete character, NO limbs baked onto core, no foot baked onto lower link, compatible source perspective and source colors, covered round hinge sockets, genuine transparent alpha gutters, no writing.",
+    "generated_cache_path": "/home/cabewse/.codex/generated_images/01a102d5-a13a-7843-bb23-8fea74c2b8e4/exec-85572e72-b91a-4920-bc8c-13c2c8ae61ed.png"
+  },
+  {
+    "id": "bastion",
+    "columns": 4,
+    "rows": 4,
+    "count": 14,
+    "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/retry3/raw/photo-00002.jpg",
+    "identity": "Bastion is the exact monumental heavy industrial quadruped in Image1: very broad tall armored core with overlapping worn cream front plates, marigold side equipment and heavy dark finned machinery behind, looping graphite hoses and upright hydraulic cylinders beside its blocky face. Small cyan inspection optics, NO invented large central eye. Exactly FOUR massively built legs with broad dark claw-shaped industrial contact feet. Its gigantic LOWER CRUSHER JAW is one grouped articulated machine assembly: preserve all the original segmented cream/amber armored rectangular crushing fingers/prongs shown in Image1 over a dark mounting frame. The naked underlying core MUST have NO jaw fingers/prongs, leg or foot silhouettes baked on it. Fill the hidden lower front body and show the jaw mounting hinge; retain fixed body-owned face piston columns/hoses but no fake dangling jaw duplicate. Preserve source bulldozer mass, not a smaller spider or a humanoid.",
+    "parts": [
+      {
+        "bone": "chassis",
+        "kind": "core",
+        "role": "Fully painted continuous UNDERLYING CHASSIS CORE ONLY. Keep body-owned optics, exact torso armor, rear equipment and dorsal cables. No arm, walking leg, foot, pincer, wing or jaw silhouettes/stumps baked on the body. Fill all hidden body surfaces and expose round limb attachment sockets."
+      },
+      {
+        "bone": "crusher_jaw",
+        "role": "COMPLETE LOWER CRUSHER JAW ASSEMBLY ONLY: every original segmented plate-covered dark crushing finger/prong grouped on its true mounting frame, broad covered upper attachment hinge, lower clamp/prong ends all fully visible. EXACT source jaw identity. No body, legs or hydraulic body columns baked onto this movable jaw."
+      },
+      {
+        "bone": "image_left_front_upper",
+        "role": "image left front walking/tucked leg UPPER hip-to-knee rigid link, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_left_front_lower",
+        "role": "image left front leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_left_front_lower",
+        "contact": "image_left_front",
+        "kind": "foot",
+        "role": "image left front separate FOOT/TARSUS only, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      },
+      {
+        "bone": "image_right_front_upper",
+        "role": "image right front walking/tucked leg UPPER hip-to-knee rigid link, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_right_front_lower",
+        "role": "image right front leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_right_front_lower",
+        "contact": "image_right_front",
+        "kind": "foot",
+        "role": "image right front separate FOOT/TARSUS only, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      },
+      {
+        "bone": "image_left_rear_upper",
+        "role": "image left rear walking/tucked leg UPPER hip-to-knee rigid link, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_left_rear_lower",
+        "role": "image left rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_left_rear_lower",
+        "contact": "image_left_rear",
+        "kind": "foot",
+        "role": "image left rear separate FOOT/TARSUS only, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      },
+      {
+        "bone": "image_right_rear_upper",
+        "role": "image right rear walking/tucked leg UPPER hip-to-knee rigid link, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot."
+      },
+      {
+        "bone": "image_right_rear_lower",
+        "role": "image right rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot."
+      },
+      {
+        "bone": "image_right_rear_lower",
+        "contact": "image_right_rear",
+        "kind": "foot",
+        "role": "image right rear separate FOOT/TARSUS only, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg."
+      }
+    ],
+    "prompt": "Use case: stylized-concept, production rigid 2D skeletal game-animation sprite atlas.\nImage1 is the CURRENT APPROVED illustrated character: preserve its exact industrial design, anatomy, panel identities, colors, softly sculpted hand-painted lighting and THREE-QUARTER camera. Image2 is actual production in-engine anatomy reference only; ignore all background machines/architecture and printed markings. Do NOT create a different species or kit.\nCreate ONE component atlas, NOT a pose sheet, NOT complete character repeats, and NOT an exploded character placed together. Each instructed cell contains ONE isolated rigid piece ONLY. All components use matching source camera/foreshortening, light direction, cream ceramic paint wear, marigold fittings, dark ink-navy steel, graphite cables and source optical colors. No organic flesh, vines, fur, magic, alien membranes or unrelated franchise imagery.\nMake honest ROUND OVERLAPPING metal sockets at proximal and distal link ends; extend fully painted hidden surfaces behind hinges so rotation never reveals holes. The core must be a CONTINUOUS fully painted bare underlying body with complete hidden armor/cable surfaces and covered attachment sockets, NO baked silhouette/stump of any separately listed appendage. Moving appendage hoses belong to their moving link and terminate at its socket. Body-owned dorsal cables can stay with core as specified.\nAll isolated parts must be fully framed, with comfortable transparent gutters and no component overlapping another. Preserve neutral bind-direction from source if possible; isolated component scale can vary by cell and renderer will map it back to original bind size.\nTRUE TRANSPARENT ALPHA everywhere outside parts: NO backdrop, black rectangle, ground, shadow, cell borders, grid lines, captions, letters, labels, arrows, numbers, emblems, logos or decals. The names below are instructions ONLY and must NEVER appear in pixels.\n\nCHARACTER IDENTITY: Bastion is the exact monumental heavy industrial quadruped in Image1: very broad tall armored core with overlapping worn cream front plates, marigold side equipment and heavy dark finned machinery behind, looping graphite hoses and upright hydraulic cylinders beside its blocky face. Small cyan inspection optics, NO invented large central eye. Exactly FOUR massively built legs with broad dark claw-shaped industrial contact feet. Its gigantic LOWER CRUSHER JAW is one grouped articulated machine assembly: preserve all the original segmented cream/amber armored rectangular crushing fingers/prongs shown in Image1 over a dark mounting frame. The naked underlying core MUST have NO jaw fingers/prongs, leg or foot silhouettes baked on it. Fill the hidden lower front body and show the jaw mounting hinge; retain fixed body-owned face piston columns/hoses but no fake dangling jaw duplicate. Preserve source bulldozer mass, not a smaller spider or a humanoid.\n\nAtlas layout: EXACTLY 4 COLUMNS × 4 ROWS, 14 isolated pieces and 2 explicitly empty transparent cells. Regular aligned equal cells, preferably high-resolution with crisp alpha edges. Every piece inside its own cell with generous gutter; no object crossing any cell. Square atlas, aspect ratio 4:4, one sheet only.\nEXACT ROW-MAJOR CONTENTS:\n\nROW 1, left to right:\n1. Fully painted continuous UNDERLYING CHASSIS CORE ONLY. Keep body-owned optics, exact torso armor, rear equipment and dorsal cables. No arm, walking leg, foot, pincer, wing or jaw silhouettes/stumps baked on the body. Fill all hidden body surfaces and expose round limb attachment sockets.\n2. COMPLETE LOWER CRUSHER JAW ASSEMBLY ONLY: every original segmented plate-covered dark crushing finger/prong grouped on its true mounting frame, broad covered upper attachment hinge, lower clamp/prong ends all fully visible. EXACT source jaw identity. No body, legs or hydraulic body columns baked onto this movable jaw.\n3. image left front walking/tucked leg UPPER hip-to-knee rigid link, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n4. image left front leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n\nROW 2, left to right:\n1. image left front separate FOOT/TARSUS only, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n2. image right front walking/tucked leg UPPER hip-to-knee rigid link, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n3. image right front leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n4. image right front separate FOOT/TARSUS only, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n\nROW 3, left to right:\n1. image left rear walking/tucked leg UPPER hip-to-knee rigid link, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n2. image left rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n3. image left rear separate FOOT/TARSUS only, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n4. image right rear walking/tucked leg UPPER hip-to-knee rigid link, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; covered round mechanical sockets at hip and knee; NO lower link or foot.\n\nROW 4, left to right:\n1. image right rear leg LOWER knee-to-ankle dark alloy/amber strut, with covered round knee and ankle sockets; NO foot.\n2. image right rear separate FOOT/TARSUS only, massive source load-bearing cream armored upper leg, dark hydraulic strut, and broad squat forked dark alloy contact foot; rear legs are same manufacturing family but correctly foreshortened, no humanoid boot; ankle attachment and pointed sole/contact tip visible, NO lower leg.\n3. COMPLETELY EMPTY TRANSPARENT CELL. No object or symbol.\n4. COMPLETELY EMPTY TRANSPARENT CELL. No object or symbol.\n\nFinal mandatory check: 14 isolated components, one per occupied cell, no hidden additional complete character, NO limbs baked onto core, no foot baked onto lower link, compatible source perspective and source colors, covered round hinge sockets, genuine transparent alpha gutters, no writing.",
+    "generated_cache_path": "/home/cabewse/.codex/generated_images/01a102d5-a13a-7843-bb23-8fea74c2b8e4/exec-bee610cc-38cb-49f2-bca9-084800bd4035.png"
+  }
+]

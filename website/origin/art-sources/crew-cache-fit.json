@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "character": "cache",
+  "coordinateSpace": "Normalized original1024x1536 reference; pivots local to atlas source rect.",
+  "nonSegmentParts": [
+    "head",
+    "torso",
+    "pelvis"
+  ],
+  "layers": {
+    "head": {
+      "size": [
+        0.48,
+        0.235
+      ],
+      "pivot": [
+        0.447173,
+        0.96875
+      ],
+      "bindPivot": [
+        0.459,
+        0.273
+      ],
+      "alignAxis": false,
+      "order": 5
+    },
+    "torso": {
+      "size": [
+        0.42,
+        0.28
+      ],
+      "pivot": [
+        0.5,
+        1.2
+      ],
+      "bindPivot": [
+        0.45,
+        0.609
+      ],
+      "alignAxis": false,
+      "order": 2
+    },
+    "pelvis": {
+      "size": [
+        0.47,
+        0.24
+      ],
+      "pivot": [
+        0.480366,
+        0.489051
+      ],
+      "bindPivot": [
+        0.45,
+        0.581
+      ],
+      "alignAxis": false,
+      "order": 3
+    },
+    "left-boot": {
+      "size": [
+        0.205,
+        0.11
+      ],
+      "pivot": [
+        0.523608,
+        0.2
+      ],
+      "bindPivot": [
+        0.613,
+        0.891
+      ],
+      "alignAxis": false,
+      "order": 5,
+      "contact": "foot-R"
+    },
+    "right-boot": {
+      "size": [
+        0.205,
+        0.11
+      ],
+      "pivot": [
+        0.399893,
+        0.198502
+      ],
+      "bindPivot": [
+        0.302,
+        0.852
+      ],
+      "alignAxis": false,
+      "order": 5,
+      "contact": "foot-L"
+    }
+  },
+  "notes": [
+    "Reference-proportion fit overrides. Retain fixed body/head sizes rather than scaling to helper bone length.",
+    "Initial bind fit; website owns reconstructed action and silhouette inspection."
+  ]
+}
