@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-03",
+  "game_source_checkout": "/home/cabewse/work_space/Games/QindaOriginSpecies",
+  "game_source_head": "cdc78777995780fcaedba8874d70b76f7a0b4fb4",
+  "files": [
+    {
+      "file": "docs/DESIGN.md",
+      "sha256": "1858577f2d4a2d11b2b6785e6672d0a8a9e8e33729c3561340f990a8e9b3b198"
+    },
+    {
+      "file": "docs/GAMEPLAY.md",
+      "sha256": "e83acfff963908b4a730d3a2906f342d2d5b624f9e340af6445db0350c8c13fe"
+    },
+    {
+      "file": "docs/ENGINE.md",
+      "sha256": "375b94964350ffeef0447342bcb020b9d9a75904ec3c97e3c8ff10cd47e73be0"
+    },
+    {
+      "file": "docs/STATUS.md",
+      "sha256": "257f5bf8a579b98e59ec40f7fece22b08f4a1a287f2d1c62e46ecb0595609e29"
+    },
+    {
+      "file": "src/simulation.cpp",
+      "sha256": "8bc05c0e9049fe6f62c3cb4a415aa3b7a6dd975d899be66f869b93d8ba6003a9"
+    },
+    {
+      "file": "src/simulation.hpp",
+      "sha256": "dde37ebdb0e0f55168e99c62092d1327b27330696edcf7aac8202a1c4c7e4414"
+    },
+    {
+      "file": "src/economy.cpp",
+      "sha256": "84dcea80eda0b1b3d3cb1705f474cfc93e250b632df5b5b6adab445d03d7568c"
+    },
+    {
+      "file": "src/economy.hpp",
+      "sha256": "eeecaba088b53971e7550912e54f487af3c6d9c7e064d33a939cc8964e9fc643"
+    },
+    {
+      "file": "src/sim_internal.hpp",
+      "sha256": "199043100b76799681e7d9926f4647061fc2c1d07c15be891cf31311c26ca0f0"
+    },
+    {
+      "file": "src/renderer.cpp",
+      "sha256": "c92ebf8de4597c69d85569fd5d9a0331578fcba4b70304a981b347bc68c95d9a"
+    }
+  ],
+  "user_supplied": [
+    "Written title Qind Qompany: Origin of Species; spoken title Kind Company.",
+    "Exact website route https://sloom.studio/origin.",
+    "Creator history: NS1.04 onward, formative NS/NS2 community involvement, custom maps, briefly internal NS2 tester, Caboose-TPF- = team-play first, thousands of UWE forum posts, respect for Unknown Worlds, distinct project with genre influences."
+  ],
+  "latest_runtime_correction": "Root manager verified the Patches torch action in the simulation: hold G to draw the dedicated Arc shears welder; release G to return the selected firearm. E remains use/service/build. G/H commander research is a separate context.",
+  "coverage": {
+    "crew": 8,
+    "cyber_creep_chassis": 5,
+    "crew_buildable_structures": 7,
+    "hive_buildable_structures": 10,
+    "research_tiers_per_faction": 3,
+    "trailers": 2
+  },
+  "status": "In development; no release date, download promise, finished-production claim, or affiliation claimed."
+}

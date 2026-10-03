@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-03",
+  "status": "awaiting_corrected_welding_shots_do_not_publish_earlier_mp4s",
+  "source_host": "qinda",
+  "source_directory": "/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers",
+  "delivery": "Git tracks the subtitle text; large MP4s are separate durable production artifacts. Fill verified final MP4 hashes after corrected films arrive.",
+  "expected_files": [
+    "media/hold-the-light.mp4",
+    "media/send-another.mp4"
+  ],
+  "subtitles": "English narration only; field dialogue omitted.",
+  "spoken_title": "Kind Company",
+  "written_title": "Qind Qompany: Origin of Species"
+}

@@ -1,0 +1,346 @@
+{
+  "version": 1,
+  "date": "2026-10-03",
+  "note": "All scene and model images derive from existing game production assets. Illustrated hero artwork is labeled separately on the page. No active welding screenshot is used. Trailer MP4s are delivered separately; consult media-manifest.json before publication.",
+  "assets": [
+    {
+      "asset": "assets/key-art.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/assets/ui/illustrated/title-painting.png",
+      "source_sha256": "aa3b400d9c1c289c364690efef65374507532ee9b6034e2b11611cbb17d1644b",
+      "classification": "Illustrated game key art",
+      "crop_box": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 377576,
+      "sha256": "ffe9666c2d6c690ea86a8c267d92093a92aac9ac18db1f23db8f0d853687c90b"
+    },
+    {
+      "asset": "assets/tideglass.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/trailer-2/scout/tiles/05-pool-deck-high.png",
+      "source_sha256": "94c7fcd222fbb797f0fc9cbb42d5f7c55ba5f3ca1898766cbca4910e6613fc3e",
+      "classification": "Actual in-engine Tideglass capture; debug header cropped",
+      "crop_box": [
+        0,
+        42,
+        960,
+        540
+      ],
+      "dimensions": [
+        960,
+        498
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 57750,
+      "sha256": "8fcb2ba7d4b45132aa9bd2e854dd33d240c08839e7e752940a8942fd5457730e"
+    },
+    {
+      "asset": "assets/cyberpengu.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/06-cyberpengu-rivet-idle-ready-front-three-quarter.png",
+      "source_sha256": "f740b748a2cb1611fab18bd76b9c83aaa4b0018f21d671a5d0f5a6cb79ab0a2b",
+      "classification": "Actual in-engine crew render, idle-ready weapon pose",
+      "crop_box": [
+        560,
+        260,
+        1280,
+        1000
+      ],
+      "dimensions": [
+        720,
+        740
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 100406,
+      "sha256": "f1efdfeb011f3a226b110b1cace758b3a3f9d5ebce3e64fcc94c14c669a79da6"
+    },
+    {
+      "asset": "assets/ducke.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/12-ducke-ram-idle-ready-front-three-quarter.png",
+      "source_sha256": "1bfb4df8c7a4ed3219c55e68810b69d27ab928c44ac62a99f5c16c6e9969cacc",
+      "classification": "Actual in-engine crew render, idle-ready weapon pose",
+      "crop_box": [
+        560,
+        260,
+        1280,
+        1000
+      ],
+      "dimensions": [
+        720,
+        740
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 102272,
+      "sha256": "66e71b8ff5d4ed1c5266c77baea6a8099b3ee2023d9bd7d8097c23d073b7ddc8"
+    },
+    {
+      "asset": "assets/vix.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/18-vix-purge-idle-ready-front-three-quarter.png",
+      "source_sha256": "6dfc2300bea576c77e03ae5a5bd791ba8aa2e570062448405244b67112786a22",
+      "classification": "Actual in-engine crew render, idle-ready weapon pose",
+      "crop_box": [
+        560,
+        260,
+        1280,
+        1000
+      ],
+      "dimensions": [
+        720,
+        740
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 105336,
+      "sha256": "3696b27bf8cdaa0c3f943628ab56867cc67560ab4a5f83464100c2b8bdb4ede1"
+    },
+    {
+      "asset": "assets/cache.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/24-cache-arc-idle-ready-front-three-quarter.png",
+      "source_sha256": "22cde0c9ae6a3c17dcc9c1bdb228d52396f98392a248572a6abf31866a12a328",
+      "classification": "Actual in-engine crew render, idle-ready weapon pose",
+      "crop_box": [
+        560,
+        260,
+        1280,
+        1000
+      ],
+      "dimensions": [
+        720,
+        740
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 103210,
+      "sha256": "1c9d7f2d77867ff928493449297e5eca89b0d677c9e0f19deb6b966bdc3e6789"
+    },
+    {
+      "asset": "assets/mochi.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/30-mochi-rivet-idle-ready-front-three-quarter.png",
+      "source_sha256": "2a489a9580a1ad56b4b035fd0fb0e85316bc42e3f14b4c15176e9b029cf52981",
+      "classification": "Actual in-engine crew render, idle-ready weapon pose",
+      "crop_box": [
+        560,
+        260,
+        1280,
+        1000
+      ],
+      "dimensions": [
+        720,
+        740
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 101172,
+      "sha256": "3328e30cf4630a361d4287781fca20c697eaff1399bfc41bd124e9e120853c8c"
+    },
+    {
+      "asset": "assets/hex.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/36-hex-ram-idle-ready-front-three-quarter.png",
+      "source_sha256": "902da9b9ce75ecc180225aa87bb0c53866d215eaf4b3efa3278eac48b3a7d3c1",
+      "classification": "Actual in-engine crew render, idle-ready weapon pose",
+      "crop_box": [
+        560,
+        260,
+        1280,
+        1000
+      ],
+      "dimensions": [
+        720,
+        740
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 100578,
+      "sha256": "408000eda6268e2e5b6fe20a18586e326dd60e74fa72dfd10798d7034b18a74d"
+    },
+    {
+      "asset": "assets/patches.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/42-patches-purge-idle-ready-front-three-quarter.png",
+      "source_sha256": "d2aa0fe6685a984ae56beb516a3540f51a225578ae052912f9dc3cdc94bc40e3",
+      "classification": "Actual in-engine crew render, idle-ready weapon pose",
+      "crop_box": [
+        560,
+        260,
+        1280,
+        1000
+      ],
+      "dimensions": [
+        720,
+        740
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 108282,
+      "sha256": "dbf456861c5be32a748f80b73166fedb0ba0316f9373a4fe56b34e65d7502d5f"
+    },
+    {
+      "asset": "assets/axi.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/48-axi-arc-idle-ready-front-three-quarter.png",
+      "source_sha256": "efcec3f5fb6e69d9c7a6ae70e05228c31eabd8baf22e833da240d83c0e76faac",
+      "classification": "Actual in-engine crew render, idle-ready weapon pose",
+      "crop_box": [
+        560,
+        260,
+        1280,
+        1000
+      ],
+      "dimensions": [
+        720,
+        740
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 103500,
+      "sha256": "9e06726fc0ce5bcb0c55cce06ed6cbfc024c1cc212da04424bd4488061133cd0"
+    },
+    {
+      "asset": "assets/scuttle.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/critic-creep-tiles/08-scuttle-creep-spider-idle-three-quarter.png",
+      "source_sha256": "95e2758bb07730e0d40903796e18135b86ec693fd306311323b0ea1714b04134",
+      "classification": "Actual in-engine Cyber Creep machine render with crew scale reference",
+      "crop_box": [
+        690,
+        90,
+        1770,
+        1060
+      ],
+      "dimensions": [
+        1080,
+        970
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 176126,
+      "sha256": "5210980ec04a32483097ec903541f8a660dbbbf3f41fdf4c1d1283c5ce3d11e9"
+    },
+    {
+      "asset": "assets/spool.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/critic-creep-tiles/20-spool-creep-hexapod-idle-three-quarter.png",
+      "source_sha256": "edebc3844df3cab680787faae3ab591dd7d30d8d65325995d07d6813705d5211",
+      "classification": "Actual in-engine Cyber Creep machine render with crew scale reference",
+      "crop_box": [
+        690,
+        90,
+        1770,
+        1060
+      ],
+      "dimensions": [
+        1080,
+        970
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 192202,
+      "sha256": "1582ce2c84423a467b72c93692cdba8d36bd7e6313f48da7acc7be4d1d003354"
+    },
+    {
+      "asset": "assets/chime.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/critic-creep-tiles/14-chime-creep-wasp-idle-three-quarter.png",
+      "source_sha256": "8d1fa9ec2cfeb1ee9db515489c8850ab24b1c0f015471862f420c10f977195e4",
+      "classification": "Actual in-engine Cyber Creep machine render with crew scale reference",
+      "crop_box": [
+        690,
+        90,
+        1770,
+        1060
+      ],
+      "dimensions": [
+        1080,
+        970
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 179420,
+      "sha256": "c9862c9ce118dd863d9e82a2956944ee56d15ba5fb9983156aec08ab8e732c87"
+    },
+    {
+      "asset": "assets/skip.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/critic-creep-tiles/26-skip-creep-fade-idle-three-quarter.png",
+      "source_sha256": "1ecfeb56cfb9c6f07f3e0b13047326879fbbd61a2180d0c4556787aa353b2225",
+      "classification": "Actual in-engine Cyber Creep machine render with crew scale reference",
+      "crop_box": [
+        690,
+        90,
+        1770,
+        1060
+      ],
+      "dimensions": [
+        1080,
+        970
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 192464,
+      "sha256": "0b3645a061eda78af6b275c174a0ef3a4229e2148f47a5d57999b49f71949394"
+    },
+    {
+      "asset": "assets/bastion.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/critic-creep-tiles/32-bastion-creep-quadruped-idle-three-quarter.png",
+      "source_sha256": "41fffa61d63a8aa60faa604224cefc14f3c3ab401fe294a5453772a921bc20ed",
+      "classification": "Actual in-engine Cyber Creep machine render with crew scale reference",
+      "crop_box": [
+        690,
+        90,
+        1770,
+        1060
+      ],
+      "dimensions": [
+        1080,
+        970
+      ],
+      "encoding": "WebP, quality 88",
+      "bytes": 206584,
+      "sha256": "d9d1e1d1c87c1d85ac56ac1dd6543895aa97e46171dd760e34f556018e4ff69a"
+    },
+    {
+      "asset": "assets/hold-the-light.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/stills/world-pool.png",
+      "source_sha256": "aeb50369ab0f71580d6073fd7e0e34e08033d2fac0cf2f80aa3472e4af91e460",
+      "classification": "Actual staged in-engine trailer still; no active welding shown",
+      "crop_box": null,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "encoding": "WebP, resized to 1280x720, quality 90",
+      "bytes": 68994,
+      "sha256": "7b91c65a17eafaa8ca0f4e1a7a2a3c4c913edcc3e98c9276185ec5024b17bf78"
+    },
+    {
+      "asset": "assets/send-another.webp",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/stills/seedweb-pool.png",
+      "source_sha256": "0d3f551fce6b5a4e9ce9b0b14b88b4134183dc694caa4c3b17301eb6babb38ca",
+      "classification": "Actual staged in-engine trailer still; no active welding shown",
+      "crop_box": null,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "encoding": "WebP, resized to 1280x720, quality 90",
+      "bytes": 68674,
+      "sha256": "28e2c94ef5c0e64b6cbd5ba982b2e6869601705530178dd0ed0807ea820aa442"
+    },
+    {
+      "asset": "assets/inter-latin-var.woff2",
+      "source_url": "https://sloom.studio/assets/fonts/inter-latin-var.woff2",
+      "classification": "Existing Sloom website font, copied without alteration",
+      "bytes": 48256,
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+    },
+    {
+      "asset": "assets/space-grotesk-latin-var.woff2",
+      "source_url": "https://sloom.studio/assets/fonts/space-grotesk-latin-var.woff2",
+      "classification": "Existing Sloom website font, copied without alteration",
+      "bytes": 22288,
+      "sha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d"
+    }
+  ]
+}
