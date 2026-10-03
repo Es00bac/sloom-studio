@@ -14,7 +14,7 @@
 - Reduced-motion profiles have no motion-enabled class. The normal-motion profile initializes the enhancements.
 - No horizontal overflow at 1440, 390 or 320 px widths.
 - Text enlarged to twice every computed font size at 1440 and 390 px reflows without horizontal overflow. The hero, fixed header and scene footer were visually inspected and corrected to avoid overlap.
-- Static source keeps all 13 dossiers and both trees accessible when JavaScript is unavailable; selector controls are hidden only in that fallback.
+- The JavaScript-disabled 390 px browser capture was inspected: navigation and introduction remain readable. Static source keeps all 13 dossiers and both trees accessible in this fallback; selector controls are hidden.
 
 ## Visual evidence
 
