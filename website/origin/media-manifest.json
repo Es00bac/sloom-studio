@@ -1,7 +1,7 @@
 {
   "version": 2,
   "date": "2026-10-03",
-  "status": "corrected_media_browser_verified_pending_root_canonical_map_provenance_review",
+  "status": "corrected_media_browser_verified_retained_from_live_initial_site",
   "target": "https://sloom.studio/origin",
   "source_host": "qinda",
   "source_directory": "/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers",
@@ -299,6 +299,6 @@
   "canonical_map": {
     "direction": "The full six-site Tideglass is the canonical map. The old smaller/broken map must never be used for testing, screenshots or play.",
     "publication_owner": "Root manager",
-    "provenance_status": "Root tracing original movie body footage and environment/poster captures before publication. Browser playback and welding visuals are verified; those checks do not prove which map version was used to capture all earlier footage."
+    "provenance_status": "The initial route was published by root. Corrected films remain unchanged for the redesign. New actual roster photographs are separately recorded against canonical full six-site Tideglass in art-sources/in-engine-photos.json; root owns film/map provenance integration."
   }
 }

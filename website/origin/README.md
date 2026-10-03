@@ -1,6 +1,6 @@
 # Qind Qompany: Origin of Species website
 
-Public target: **https://sloom.studio/origin**. This is a self-contained static directory within the existing Sloom website. It uses plain HTML, CSS and JavaScript, with no package manager or build step.
+Public target: **https://sloom.studio/origin**. This is a static directory in the existing Sloom website: plain HTML, CSS and JavaScript, no build step or new dependencies.
 
 ## Preview
 
@@ -10,45 +10,50 @@ From the repository root:
 python3 -m http.server 18867 --bind 127.0.0.1 --directory website
 ```
 
-Visit `http://127.0.0.1:18867/origin/`. Fonts and image paths are relative to this directory, so previews do not require the live site's root assets.
+Visit `http://127.0.0.1:18867/origin/`. Fonts, illustrations, photographs and films use relative local paths.
 
 ## Publication
 
-The existing external hosting is on `hostinger-vps`, with the directory `/var/www/sloom.studio/html/origin/`. No nginx configuration change is required. The manager owns deployment and must copy **only this route**. Preserve `website/index.html`, the rest of the Sloom website and its live files.
+Root owns scoped deployment to `hostinger-vps:/var/www/sloom.studio/html/origin/`. Preserve the Sloom homepage and every other route.
 
-The public bundle comprises `index.html`, `origin.css`, `origin.js`, `assets/` and `media/`. Source notes and ignored `qa/` evidence need not be copied into the public web root.
+Publish **only** `index.html`, `origin.css`, `origin.js`, `rigs.js`, `rig-configs.json`, `assets/` and `media/`. Do not publish `art-sources/`, source notes or ignored `qa/` browser evidence. Original generated PNGs, prompts and reference hashes belong to the source history, not the runtime bundle.
 
-The website's canonical URL is exactly `https://sloom.studio/origin`; existing directory routing may redirect the browser to `/origin/`.
+Directory routing already serves `/origin/`. Root added this scoped nginx rule so both narration tracks are served as `text/vtt`:
 
-## Media delivery
+```nginx
+location ~ ^/origin/media/(hold-the-light|send-another)\.vtt$ {
+    default_type text/vtt;
+    try_files $uri =404;
+}
+```
 
-Both native players use local MP4s and narration-only English subtitle tracks. They do not autoplay or fetch the entire films on page load. The tracks are labeled narration subtitles because field dialogue is not transcribed.
+The live configuration was validated and reloaded; no nginx source file exists in this repository. Preserve that rule during deployment. CSS, JavaScript and rig-config URLs carry a new version query; actual character photos have fresh `scene-` filenames to avoid stale cached renders.
 
-Expected names:
+## Artwork and motion
 
-- `media/hold-the-light.mp4`
-- `media/hold-the-light.vtt`
-- `media/send-another.mp4`
-- `media/send-another.vtt`
+The opening composition uses the illustrated Qompany habitat with articulated Ducké and Vix foreground figures. Matched Qompany/Seedweb habitat paintings form the world and faction chapters. Manufactured cable/plate bitmap art and cyan/violet SVG conduits progressively invade the roster chapter, then recede before the field guide. Strong strokes stay outside reading copy.
 
-MP4s are intentionally ignored by Git. Durable masters and web files belong to the game's Qinda trailer lane, `/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/`. The trailer worker provides their verified production manifest. Record the actual deployed file hashes in `media-manifest.json` after receiving corrected finals.
+Every one of the eight crew and five chassis has two views: labeled illustrated cast and actual current-engine canonical full six-site Tideglass photography. Patches's actual photograph holds the dedicated Arc shears **at rest**; the illustrated cast is empty-handed. Rejected development-room renders are removed.
 
-**Corrected media verified:** both delivered films contain the checked forked Arc shears welder and attached working glow in A08, D06 and D07, captured from revision `af2e55b`. AAC packets are identical to the already verified “Kind Company” narration. Both final MP4 hashes, H264/AAC metadata, faststart and actual Firefox load/play/seek/decode/subtitle checks are recorded in `media-manifest.json`. Site posters show the crew entering the pool room and the Seedweb-covered pool; neither portrays active welding. Patches's roster caption explicitly says “Purge loadout, torch stowed.”
+`rigs.js` implements real Canvas 2D bone-weighted textured triangle meshes, parented joint chains, two-link ground-contact IK and fixed foot vertices. `rig-configs.json` fits each identity to the artists' normalized landmarks: tails, ears, Axi's six gills, Chime's wings, Scuttle's eight contact legs and other machine appendages. Occluded limbs are not invented. Motion is small and anatomy-specific. A visible pause control and reduced-motion preference freeze the pose; offscreen and hidden pages stop animation; resumed clocks do not jump.
 
-**Root publication gate:** the user clarified that the full six-site Tideglass is the corrected canonical map. The smaller/broken map must never be used for tests, screenshots or play. Root is tracing the provenance of earlier movie body footage and environment/poster captures before publishing. The browser and welder checks prove playback and the repaired tool, not the map provenance of every earlier shot. No further engine/map tests or captures are authorized during that audit.
+Originals, exact prompts, reference/map/build hashes and landmarks are recorded under `art-sources/` and indexed in `asset-provenance.json`. Illustrations are explicitly labeled and never presented as gameplay.
 
-## Content and art
+## Films and game content
 
-- The user's written title is **Qind Qompany: Origin of Species**. Spoken narration says **Kind Company**.
-- All eight crew identities, five Cyber Creep chassis, seven crew structures and ten hive structures are documented.
-- Both actual tier paths, costs, timings, base prerequisites, Arms lab research, hive traits and offline behavior are explained.
-- The canonical full six-site Tideglass, its authored command-site names, Seedweb/Custodian history and the supplied creator history are included.
-- The page says **In development** and makes no release-date, download or finished-production promise.
-- Artwork is existing production material: the hero is labeled illustrated key art; world, crew, chassis and trailer images are actual in-engine renders/captures. See `asset-provenance.json` for original Qinda paths, operations and SHA-256 hashes.
-- `content-sources.json` records the authoritative game files and user-supplied account. Latest Patches input correction was verified by the manager against the simulation: **hold G** for the dedicated Arc shears welder; releasing G redraws the selected firearm. E remains use/service/build.
+Both corrected full films remain unchanged from the initial published site:
 
-## Behavior and accessibility
+- `media/hold-the-light.mp4` and `.vtt`
+- `media/send-another.mp4` and `.vtt`
 
-Roster and faction selectors use native buttons with pressed state. Expandable manuals use native details/summary. Without JavaScript all dossiers and both technology paths remain readable. Mobile navigation exposes its expanded state and Escape closes it and focuses its trigger. Focus indicators are visible. Decorative motion respects reduced-motion preference; enlarged text can grow the introduction without colliding with navigation or the scene footer.
+The MP4s are ignored by Git. Durable verified production files belong to the game's Qinda trailer lane, `/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/`; the site worktree also holds the runtime copies. Final hashes, actual Firefox playback/seek/decode checks and 19/20 parsed narration cues are recorded in `media-manifest.json`. Films have correct Arc shears welding footage and verified **Kind Company** narration. Native controls, `playsinline` and `preload=none` are retained. Tracks honestly say narration subtitles because field dialogue is not fully transcribed.
 
-See `QA-CHECKS.md` for the checks and their practical limits. QA scripts, browser profiles and screenshots are separate ignored evidence, not production code.
+The site retains the complete accurate world/history, all eight crew, five chassis, seven crew structures, ten hive structures, both three-tier tech paths with costs/timings/base prerequisites, Arms lab/trait research, offline behavior and field/commander controls. The full six-site Tideglass is canonical. Patches **holds G** to draw the dedicated welder alongside any selected gun kit; releasing G redraws that gun. E remains use/service/build; commander research controls are separate.
+
+The creator's supplied NS/NS2 history is preserved. The game is independent and **In development**, with no release-date, download or finished-production promise. Written title: **Qind Qompany: Origin of Species**; spoken title: **Kind Company**. `content-sources.json` records authoritative sources and the supplied personal account.
+
+## Access and verification
+
+Native roster/tech buttons expose pressed state; roster arrows move selection/focus. Manuals use native details/summary. Without JavaScript, every dossier and both technology paths remain readable, with static hero art. Mobile navigation exposes expanded state and Escape closes it and restores focus. Main/header resize observers keep scroll geometry correct after reflow.
+
+See `QA-CHECKS.md` for the bounded changed-page verification and actual browser motion evidence. Root owns final live verification and publication.

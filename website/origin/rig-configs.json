@@ -1,0 +1,4129 @@
+{
+  "version": 1,
+  "method": "Canvas 2D textured triangulated mesh with 3 joint weights per vertex and two-link IK foot contacts. Normalized bind-image landmarks.",
+  "characters": {
+    "cyberpengu": {
+      "image": "assets/illustrated/crew-cyberpengu.webp",
+      "kind": "crew",
+      "cycle": 5.779999999999999,
+      "bodyAngle": 0.003,
+      "shift": [
+        0.0015,
+        0.0012
+      ],
+      "bones": [
+        {
+          "name": "pelvis",
+          "parent": null,
+          "pivot": [
+            0.522,
+            0.621
+          ],
+          "end": [
+            0.522,
+            0.656
+          ],
+          "radius": 0.18,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "spine",
+          "parent": "pelvis",
+          "pivot": [
+            0.522,
+            0.621
+          ],
+          "end": [
+            0.514,
+            0.318
+          ],
+          "radius": 0.2,
+          "amplitude": 0.006,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "head",
+          "parent": "spine",
+          "pivot": [
+            0.514,
+            0.318
+          ],
+          "end": [
+            0.523,
+            0.212
+          ],
+          "radius": 0.21,
+          "amplitude": 0.018,
+          "phase": -0.8,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-L",
+          "parent": "spine",
+          "pivot": [
+            0.294,
+            0.372
+          ],
+          "end": [
+            0.226,
+            0.488
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-L",
+          "parent": "upper-arm-L",
+          "pivot": [
+            0.226,
+            0.488
+          ],
+          "end": [
+            0.168,
+            0.598
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-L",
+          "parent": "pelvis",
+          "pivot": [
+            0.396,
+            0.67
+          ],
+          "end": [
+            0.332,
+            0.777
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-L",
+          "parent": "thigh-L",
+          "pivot": [
+            0.332,
+            0.777
+          ],
+          "end": [
+            0.292,
+            0.904
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-R",
+          "parent": "spine",
+          "pivot": [
+            0.764,
+            0.393
+          ],
+          "end": [
+            0.819,
+            0.508
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-R",
+          "parent": "upper-arm-R",
+          "pivot": [
+            0.819,
+            0.508
+          ],
+          "end": [
+            0.814,
+            0.618
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-R",
+          "parent": "pelvis",
+          "pivot": [
+            0.661,
+            0.675
+          ],
+          "end": [
+            0.687,
+            0.796
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-R",
+          "parent": "thigh-R",
+          "pivot": [
+            0.687,
+            0.796
+          ],
+          "end": [
+            0.718,
+            0.938
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "tuft",
+          "parent": "head",
+          "pivot": [
+            0.5,
+            0.108
+          ],
+          "end": [
+            0.535,
+            0.062
+          ],
+          "radius": 0.07,
+          "amplitude": 0.025,
+          "phase": 1.2,
+          "frequency": 1
+        }
+      ],
+      "contacts": [
+        {
+          "name": "foot-L",
+          "parent": "pelvis",
+          "upper": "thigh-L",
+          "lower": "shin-L",
+          "hip": [
+            0.396,
+            0.67
+          ],
+          "knee": [
+            0.332,
+            0.777
+          ],
+          "foot": [
+            0.292,
+            0.904
+          ],
+          "ankle": [
+            0.303,
+            0.853
+          ],
+          "pinWidth": 0.16
+        },
+        {
+          "name": "foot-R",
+          "parent": "pelvis",
+          "upper": "thigh-R",
+          "lower": "shin-R",
+          "hip": [
+            0.661,
+            0.675
+          ],
+          "knee": [
+            0.687,
+            0.796
+          ],
+          "foot": [
+            0.718,
+            0.938
+          ],
+          "ankle": [
+            0.714,
+            0.891
+          ],
+          "pinWidth": 0.16
+        }
+      ],
+      "landmarkSource": "assets/illustrated/crew-rig-landmarks.json"
+    },
+    "ducke": {
+      "image": "assets/illustrated/crew-ducke.webp",
+      "kind": "crew",
+      "cycle": 5.3,
+      "bodyAngle": 0.003,
+      "shift": [
+        0.0015,
+        0.0012
+      ],
+      "bones": [
+        {
+          "name": "pelvis",
+          "parent": null,
+          "pivot": [
+            0.522,
+            0.62
+          ],
+          "end": [
+            0.522,
+            0.655
+          ],
+          "radius": 0.18,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "spine",
+          "parent": "pelvis",
+          "pivot": [
+            0.522,
+            0.62
+          ],
+          "end": [
+            0.515,
+            0.281
+          ],
+          "radius": 0.2,
+          "amplitude": 0.006,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "head",
+          "parent": "spine",
+          "pivot": [
+            0.515,
+            0.281
+          ],
+          "end": [
+            0.518,
+            0.189
+          ],
+          "radius": 0.21,
+          "amplitude": 0.018,
+          "phase": -0.8,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-L",
+          "parent": "spine",
+          "pivot": [
+            0.321,
+            0.363
+          ],
+          "end": [
+            0.247,
+            0.507
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-L",
+          "parent": "upper-arm-L",
+          "pivot": [
+            0.247,
+            0.507
+          ],
+          "end": [
+            0.186,
+            0.643
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-L",
+          "parent": "pelvis",
+          "pivot": [
+            0.407,
+            0.671
+          ],
+          "end": [
+            0.378,
+            0.761
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-L",
+          "parent": "thigh-L",
+          "pivot": [
+            0.378,
+            0.761
+          ],
+          "end": [
+            0.29,
+            0.921
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-R",
+          "parent": "spine",
+          "pivot": [
+            0.759,
+            0.363
+          ],
+          "end": [
+            0.802,
+            0.5
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-R",
+          "parent": "upper-arm-R",
+          "pivot": [
+            0.802,
+            0.5
+          ],
+          "end": [
+            0.83,
+            0.642
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-R",
+          "parent": "pelvis",
+          "pivot": [
+            0.626,
+            0.671
+          ],
+          "end": [
+            0.629,
+            0.773
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-R",
+          "parent": "thigh-R",
+          "pivot": [
+            0.629,
+            0.773
+          ],
+          "end": [
+            0.712,
+            0.944
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "tuft",
+          "parent": "head",
+          "pivot": [
+            0.52,
+            0.115
+          ],
+          "end": [
+            0.52,
+            0.027
+          ],
+          "radius": 0.07,
+          "amplitude": 0.025,
+          "phase": 1.2,
+          "frequency": 1
+        }
+      ],
+      "contacts": [
+        {
+          "name": "foot-L",
+          "parent": "pelvis",
+          "upper": "thigh-L",
+          "lower": "shin-L",
+          "hip": [
+            0.407,
+            0.671
+          ],
+          "knee": [
+            0.378,
+            0.761
+          ],
+          "foot": [
+            0.29,
+            0.921
+          ],
+          "ankle": [
+            0.387,
+            0.848
+          ],
+          "pinWidth": 0.16
+        },
+        {
+          "name": "foot-R",
+          "parent": "pelvis",
+          "upper": "thigh-R",
+          "lower": "shin-R",
+          "hip": [
+            0.626,
+            0.671
+          ],
+          "knee": [
+            0.629,
+            0.773
+          ],
+          "foot": [
+            0.712,
+            0.944
+          ],
+          "ankle": [
+            0.647,
+            0.854
+          ],
+          "pinWidth": 0.16
+        }
+      ],
+      "landmarkSource": "assets/illustrated/crew-rig-landmarks.json"
+    },
+    "vix": {
+      "image": "assets/illustrated/crew-vix.webp",
+      "kind": "crew",
+      "cycle": 5.46,
+      "bodyAngle": 0.003,
+      "shift": [
+        0.0015,
+        0.0012
+      ],
+      "bones": [
+        {
+          "name": "pelvis",
+          "parent": null,
+          "pivot": [
+            0.594,
+            0.47
+          ],
+          "end": [
+            0.594,
+            0.505
+          ],
+          "radius": 0.18,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "spine",
+          "parent": "pelvis",
+          "pivot": [
+            0.594,
+            0.47
+          ],
+          "end": [
+            0.59,
+            0.223
+          ],
+          "radius": 0.2,
+          "amplitude": 0.006,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "head",
+          "parent": "spine",
+          "pivot": [
+            0.59,
+            0.223
+          ],
+          "end": [
+            0.586,
+            0.137
+          ],
+          "radius": 0.21,
+          "amplitude": 0.018,
+          "phase": -0.8,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-L",
+          "parent": "spine",
+          "pivot": [
+            0.431,
+            0.266
+          ],
+          "end": [
+            0.38,
+            0.376
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-L",
+          "parent": "upper-arm-L",
+          "pivot": [
+            0.38,
+            0.376
+          ],
+          "end": [
+            0.345,
+            0.536
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-L",
+          "parent": "pelvis",
+          "pivot": [
+            0.466,
+            0.509
+          ],
+          "end": [
+            0.471,
+            0.656
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-L",
+          "parent": "thigh-L",
+          "pivot": [
+            0.471,
+            0.656
+          ],
+          "end": [
+            0.343,
+            0.931
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-R",
+          "parent": "spine",
+          "pivot": [
+            0.727,
+            0.283
+          ],
+          "end": [
+            0.781,
+            0.378
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-R",
+          "parent": "upper-arm-R",
+          "pivot": [
+            0.781,
+            0.378
+          ],
+          "end": [
+            0.85,
+            0.542
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-R",
+          "parent": "pelvis",
+          "pivot": [
+            0.699,
+            0.522
+          ],
+          "end": [
+            0.738,
+            0.68
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-R",
+          "parent": "thigh-R",
+          "pivot": [
+            0.738,
+            0.68
+          ],
+          "end": [
+            0.772,
+            0.922
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "tail-root",
+          "parent": "pelvis",
+          "pivot": [
+            0.458,
+            0.487
+          ],
+          "end": [
+            0.135,
+            0.572
+          ],
+          "radius": 0.14,
+          "amplitude": 0.022,
+          "phase": 1.4,
+          "frequency": 1
+        },
+        {
+          "name": "tail-tip",
+          "parent": "tail-root",
+          "pivot": [
+            0.135,
+            0.572
+          ],
+          "end": [
+            0.279,
+            0.743
+          ],
+          "radius": 0.12,
+          "amplitude": 0.018,
+          "phase": 2.1,
+          "frequency": 1
+        },
+        {
+          "name": "ear-L",
+          "parent": "head",
+          "pivot": [
+            0.491,
+            0.098
+          ],
+          "end": [
+            0.462,
+            0.026
+          ],
+          "radius": 0.085,
+          "amplitude": 0.014,
+          "phase": 1.2,
+          "frequency": 1
+        },
+        {
+          "name": "ear-R",
+          "parent": "head",
+          "pivot": [
+            0.691,
+            0.099
+          ],
+          "end": [
+            0.738,
+            0.056
+          ],
+          "radius": 0.085,
+          "amplitude": 0.014,
+          "phase": 1.6,
+          "frequency": 1
+        }
+      ],
+      "contacts": [
+        {
+          "name": "foot-L",
+          "parent": "pelvis",
+          "upper": "thigh-L",
+          "lower": "shin-L",
+          "hip": [
+            0.466,
+            0.509
+          ],
+          "knee": [
+            0.471,
+            0.656
+          ],
+          "foot": [
+            0.343,
+            0.931
+          ],
+          "ankle": [
+            0.382,
+            0.84
+          ],
+          "pinWidth": 0.16
+        },
+        {
+          "name": "foot-R",
+          "parent": "pelvis",
+          "upper": "thigh-R",
+          "lower": "shin-R",
+          "hip": [
+            0.699,
+            0.522
+          ],
+          "knee": [
+            0.738,
+            0.68
+          ],
+          "foot": [
+            0.772,
+            0.922
+          ],
+          "ankle": [
+            0.735,
+            0.85
+          ],
+          "pinWidth": 0.16
+        }
+      ],
+      "landmarkSource": "assets/illustrated/crew-rig-landmarks.json"
+    },
+    "cache": {
+      "image": "assets/illustrated/crew-cache.webp",
+      "kind": "crew",
+      "cycle": 5.9399999999999995,
+      "bodyAngle": 0.003,
+      "shift": [
+        0.0015,
+        0.0012
+      ],
+      "bones": [
+        {
+          "name": "pelvis",
+          "parent": null,
+          "pivot": [
+            0.45,
+            0.609
+          ],
+          "end": [
+            0.45,
+            0.644
+          ],
+          "radius": 0.18,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "spine",
+          "parent": "pelvis",
+          "pivot": [
+            0.45,
+            0.609
+          ],
+          "end": [
+            0.459,
+            0.273
+          ],
+          "radius": 0.2,
+          "amplitude": 0.006,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "head",
+          "parent": "spine",
+          "pivot": [
+            0.459,
+            0.273
+          ],
+          "end": [
+            0.463,
+            0.171
+          ],
+          "radius": 0.21,
+          "amplitude": 0.018,
+          "phase": -0.8,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-L",
+          "parent": "spine",
+          "pivot": [
+            0.269,
+            0.326
+          ],
+          "end": [
+            0.173,
+            0.48
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-L",
+          "parent": "upper-arm-L",
+          "pivot": [
+            0.173,
+            0.48
+          ],
+          "end": [
+            0.117,
+            0.626
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-L",
+          "parent": "pelvis",
+          "pivot": [
+            0.331,
+            0.673
+          ],
+          "end": [
+            0.306,
+            0.753
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-L",
+          "parent": "thigh-L",
+          "pivot": [
+            0.306,
+            0.753
+          ],
+          "end": [
+            0.269,
+            0.908
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-R",
+          "parent": "spine",
+          "pivot": [
+            0.67,
+            0.352
+          ],
+          "end": [
+            0.703,
+            0.485
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-R",
+          "parent": "upper-arm-R",
+          "pivot": [
+            0.703,
+            0.485
+          ],
+          "end": [
+            0.673,
+            0.633
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-R",
+          "parent": "pelvis",
+          "pivot": [
+            0.58,
+            0.682
+          ],
+          "end": [
+            0.59,
+            0.783
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-R",
+          "parent": "thigh-R",
+          "pivot": [
+            0.59,
+            0.783
+          ],
+          "end": [
+            0.626,
+            0.94
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "tail-root",
+          "parent": "pelvis",
+          "pivot": [
+            0.676,
+            0.602
+          ],
+          "end": [
+            0.82,
+            0.686
+          ],
+          "radius": 0.14,
+          "amplitude": 0.022,
+          "phase": 1.4,
+          "frequency": 1
+        },
+        {
+          "name": "tail-tip",
+          "parent": "tail-root",
+          "pivot": [
+            0.82,
+            0.686
+          ],
+          "end": [
+            0.891,
+            0.772
+          ],
+          "radius": 0.12,
+          "amplitude": 0.018,
+          "phase": 2.1,
+          "frequency": 1
+        },
+        {
+          "name": "ear-L",
+          "parent": "head",
+          "pivot": [
+            0.325,
+            0.118
+          ],
+          "end": [
+            0.274,
+            0.048
+          ],
+          "radius": 0.085,
+          "amplitude": 0.014,
+          "phase": 1.2,
+          "frequency": 1
+        },
+        {
+          "name": "ear-R",
+          "parent": "head",
+          "pivot": [
+            0.61,
+            0.139
+          ],
+          "end": [
+            0.688,
+            0.064
+          ],
+          "radius": 0.085,
+          "amplitude": 0.014,
+          "phase": 1.6,
+          "frequency": 1
+        }
+      ],
+      "contacts": [
+        {
+          "name": "foot-L",
+          "parent": "pelvis",
+          "upper": "thigh-L",
+          "lower": "shin-L",
+          "hip": [
+            0.331,
+            0.673
+          ],
+          "knee": [
+            0.306,
+            0.753
+          ],
+          "foot": [
+            0.269,
+            0.908
+          ],
+          "ankle": [
+            0.302,
+            0.852
+          ],
+          "pinWidth": 0.16
+        },
+        {
+          "name": "foot-R",
+          "parent": "pelvis",
+          "upper": "thigh-R",
+          "lower": "shin-R",
+          "hip": [
+            0.58,
+            0.682
+          ],
+          "knee": [
+            0.59,
+            0.783
+          ],
+          "foot": [
+            0.626,
+            0.94
+          ],
+          "ankle": [
+            0.613,
+            0.891
+          ],
+          "pinWidth": 0.16
+        }
+      ],
+      "landmarkSource": "assets/illustrated/crew-rig-landmarks.json"
+    },
+    "mochi": {
+      "image": "assets/illustrated/crew-mochi.webp",
+      "kind": "crew",
+      "cycle": 5.62,
+      "bodyAngle": 0.003,
+      "shift": [
+        0.0015,
+        0.0012
+      ],
+      "bones": [
+        {
+          "name": "pelvis",
+          "parent": null,
+          "pivot": [
+            0.513,
+            0.609
+          ],
+          "end": [
+            0.513,
+            0.644
+          ],
+          "radius": 0.18,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "spine",
+          "parent": "pelvis",
+          "pivot": [
+            0.513,
+            0.609
+          ],
+          "end": [
+            0.488,
+            0.361
+          ],
+          "radius": 0.2,
+          "amplitude": 0.006,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "head",
+          "parent": "spine",
+          "pivot": [
+            0.488,
+            0.361
+          ],
+          "end": [
+            0.504,
+            0.281
+          ],
+          "radius": 0.21,
+          "amplitude": 0.018,
+          "phase": -0.8,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-L",
+          "parent": "spine",
+          "pivot": [
+            0.356,
+            0.416
+          ],
+          "end": [
+            0.27,
+            0.541
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-L",
+          "parent": "upper-arm-L",
+          "pivot": [
+            0.27,
+            0.541
+          ],
+          "end": [
+            0.232,
+            0.645
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-L",
+          "parent": "pelvis",
+          "pivot": [
+            0.405,
+            0.648
+          ],
+          "end": [
+            0.402,
+            0.788
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-L",
+          "parent": "thigh-L",
+          "pivot": [
+            0.402,
+            0.788
+          ],
+          "end": [
+            0.337,
+            0.93
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-R",
+          "parent": "spine",
+          "pivot": [
+            0.687,
+            0.416
+          ],
+          "end": [
+            0.75,
+            0.533
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-R",
+          "parent": "upper-arm-R",
+          "pivot": [
+            0.75,
+            0.533
+          ],
+          "end": [
+            0.757,
+            0.661
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-R",
+          "parent": "pelvis",
+          "pivot": [
+            0.642,
+            0.648
+          ],
+          "end": [
+            0.651,
+            0.826
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-R",
+          "parent": "thigh-R",
+          "pivot": [
+            0.651,
+            0.826
+          ],
+          "end": [
+            0.665,
+            0.953
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "ear-L",
+          "parent": "head",
+          "pivot": [
+            0.475,
+            0.209
+          ],
+          "end": [
+            0.349,
+            0.047
+          ],
+          "radius": 0.085,
+          "amplitude": 0.014,
+          "phase": 1.2,
+          "frequency": 1
+        },
+        {
+          "name": "ear-R",
+          "parent": "head",
+          "pivot": [
+            0.57,
+            0.212
+          ],
+          "end": [
+            0.722,
+            0.013
+          ],
+          "radius": 0.085,
+          "amplitude": 0.014,
+          "phase": 1.6,
+          "frequency": 1
+        }
+      ],
+      "contacts": [
+        {
+          "name": "foot-L",
+          "parent": "pelvis",
+          "upper": "thigh-L",
+          "lower": "shin-L",
+          "hip": [
+            0.405,
+            0.648
+          ],
+          "knee": [
+            0.402,
+            0.788
+          ],
+          "foot": [
+            0.337,
+            0.93
+          ],
+          "ankle": [
+            0.339,
+            0.883
+          ],
+          "pinWidth": 0.16
+        },
+        {
+          "name": "foot-R",
+          "parent": "pelvis",
+          "upper": "thigh-R",
+          "lower": "shin-R",
+          "hip": [
+            0.642,
+            0.648
+          ],
+          "knee": [
+            0.651,
+            0.826
+          ],
+          "foot": [
+            0.665,
+            0.953
+          ],
+          "ankle": [
+            0.649,
+            0.9
+          ],
+          "pinWidth": 0.16
+        }
+      ],
+      "landmarkSource": "assets/illustrated/crew-rig-landmarks.json"
+    },
+    "hex": {
+      "image": "assets/illustrated/crew-hex.webp",
+      "kind": "crew",
+      "cycle": 6.1,
+      "bodyAngle": 0.003,
+      "shift": [
+        0.0015,
+        0.0012
+      ],
+      "bones": [
+        {
+          "name": "pelvis",
+          "parent": null,
+          "pivot": [
+            0.56,
+            0.51
+          ],
+          "end": [
+            0.56,
+            0.545
+          ],
+          "radius": 0.18,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "spine",
+          "parent": "pelvis",
+          "pivot": [
+            0.56,
+            0.51
+          ],
+          "end": [
+            0.537,
+            0.245
+          ],
+          "radius": 0.2,
+          "amplitude": 0.006,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "head",
+          "parent": "spine",
+          "pivot": [
+            0.537,
+            0.245
+          ],
+          "end": [
+            0.55,
+            0.163
+          ],
+          "radius": 0.21,
+          "amplitude": 0.018,
+          "phase": -0.8,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-L",
+          "parent": "spine",
+          "pivot": [
+            0.369,
+            0.305
+          ],
+          "end": [
+            0.321,
+            0.425
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-L",
+          "parent": "upper-arm-L",
+          "pivot": [
+            0.321,
+            0.425
+          ],
+          "end": [
+            0.303,
+            0.58
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-L",
+          "parent": "pelvis",
+          "pivot": [
+            0.418,
+            0.563
+          ],
+          "end": [
+            0.421,
+            0.716
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-L",
+          "parent": "thigh-L",
+          "pivot": [
+            0.421,
+            0.716
+          ],
+          "end": [
+            0.323,
+            0.939
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-R",
+          "parent": "spine",
+          "pivot": [
+            0.695,
+            0.319
+          ],
+          "end": [
+            0.765,
+            0.449
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-R",
+          "parent": "upper-arm-R",
+          "pivot": [
+            0.765,
+            0.449
+          ],
+          "end": [
+            0.826,
+            0.574
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-R",
+          "parent": "pelvis",
+          "pivot": [
+            0.653,
+            0.575
+          ],
+          "end": [
+            0.685,
+            0.729
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-R",
+          "parent": "thigh-R",
+          "pivot": [
+            0.685,
+            0.729
+          ],
+          "end": [
+            0.787,
+            0.952
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "tail-root",
+          "parent": "pelvis",
+          "pivot": [
+            0.378,
+            0.66
+          ],
+          "end": [
+            0.154,
+            0.716
+          ],
+          "radius": 0.14,
+          "amplitude": 0.022,
+          "phase": 1.4,
+          "frequency": 1
+        },
+        {
+          "name": "tail-tip",
+          "parent": "tail-root",
+          "pivot": [
+            0.154,
+            0.716
+          ],
+          "end": [
+            0.203,
+            0.578
+          ],
+          "radius": 0.12,
+          "amplitude": 0.018,
+          "phase": 2.1,
+          "frequency": 1
+        },
+        {
+          "name": "ear-L",
+          "parent": "head",
+          "pivot": [
+            0.439,
+            0.104
+          ],
+          "end": [
+            0.363,
+            0.048
+          ],
+          "radius": 0.085,
+          "amplitude": 0.014,
+          "phase": 1.2,
+          "frequency": 1
+        },
+        {
+          "name": "ear-R",
+          "parent": "head",
+          "pivot": [
+            0.629,
+            0.095
+          ],
+          "end": [
+            0.639,
+            0.022
+          ],
+          "radius": 0.085,
+          "amplitude": 0.014,
+          "phase": 1.6,
+          "frequency": 1
+        }
+      ],
+      "contacts": [
+        {
+          "name": "foot-L",
+          "parent": "pelvis",
+          "upper": "thigh-L",
+          "lower": "shin-L",
+          "hip": [
+            0.418,
+            0.563
+          ],
+          "knee": [
+            0.421,
+            0.716
+          ],
+          "foot": [
+            0.323,
+            0.939
+          ],
+          "ankle": [
+            0.323,
+            0.862
+          ],
+          "pinWidth": 0.16
+        },
+        {
+          "name": "foot-R",
+          "parent": "pelvis",
+          "upper": "thigh-R",
+          "lower": "shin-R",
+          "hip": [
+            0.653,
+            0.575
+          ],
+          "knee": [
+            0.685,
+            0.729
+          ],
+          "foot": [
+            0.787,
+            0.952
+          ],
+          "ankle": [
+            0.728,
+            0.879
+          ],
+          "pinWidth": 0.16
+        }
+      ],
+      "landmarkSource": "assets/illustrated/crew-rig-landmarks.json"
+    },
+    "patches": {
+      "image": "assets/illustrated/crew-patches.webp",
+      "kind": "crew",
+      "cycle": 6.26,
+      "bodyAngle": 0.003,
+      "shift": [
+        0.0015,
+        0.0012
+      ],
+      "bones": [
+        {
+          "name": "pelvis",
+          "parent": null,
+          "pivot": [
+            0.503,
+            0.563
+          ],
+          "end": [
+            0.503,
+            0.598
+          ],
+          "radius": 0.18,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "spine",
+          "parent": "pelvis",
+          "pivot": [
+            0.503,
+            0.563
+          ],
+          "end": [
+            0.509,
+            0.256
+          ],
+          "radius": 0.2,
+          "amplitude": 0.006,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "head",
+          "parent": "spine",
+          "pivot": [
+            0.509,
+            0.256
+          ],
+          "end": [
+            0.505,
+            0.157
+          ],
+          "radius": 0.21,
+          "amplitude": 0.018,
+          "phase": -0.8,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-L",
+          "parent": "spine",
+          "pivot": [
+            0.279,
+            0.298
+          ],
+          "end": [
+            0.175,
+            0.443
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-L",
+          "parent": "upper-arm-L",
+          "pivot": [
+            0.175,
+            0.443
+          ],
+          "end": [
+            0.149,
+            0.557
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-L",
+          "parent": "pelvis",
+          "pivot": [
+            0.328,
+            0.618
+          ],
+          "end": [
+            0.323,
+            0.745
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-L",
+          "parent": "thigh-L",
+          "pivot": [
+            0.323,
+            0.745
+          ],
+          "end": [
+            0.259,
+            0.902
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-R",
+          "parent": "spine",
+          "pivot": [
+            0.779,
+            0.303
+          ],
+          "end": [
+            0.851,
+            0.434
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-R",
+          "parent": "upper-arm-R",
+          "pivot": [
+            0.851,
+            0.434
+          ],
+          "end": [
+            0.813,
+            0.56
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-R",
+          "parent": "pelvis",
+          "pivot": [
+            0.678,
+            0.626
+          ],
+          "end": [
+            0.678,
+            0.766
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-R",
+          "parent": "thigh-R",
+          "pivot": [
+            0.678,
+            0.766
+          ],
+          "end": [
+            0.701,
+            0.926
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "tail-root",
+          "parent": "pelvis",
+          "pivot": [
+            0.726,
+            0.67
+          ],
+          "end": [
+            0.827,
+            0.721
+          ],
+          "radius": 0.14,
+          "amplitude": 0.022,
+          "phase": 1.4,
+          "frequency": 1
+        },
+        {
+          "name": "tail-tip",
+          "parent": "tail-root",
+          "pivot": [
+            0.827,
+            0.721
+          ],
+          "end": [
+            0.891,
+            0.773
+          ],
+          "radius": 0.12,
+          "amplitude": 0.018,
+          "phase": 2.1,
+          "frequency": 1
+        },
+        {
+          "name": "ear-L",
+          "parent": "head",
+          "pivot": [
+            0.403,
+            0.096
+          ],
+          "end": [
+            0.365,
+            0.073
+          ],
+          "radius": 0.085,
+          "amplitude": 0.014,
+          "phase": 1.2,
+          "frequency": 1
+        },
+        {
+          "name": "ear-R",
+          "parent": "head",
+          "pivot": [
+            0.58,
+            0.082
+          ],
+          "end": [
+            0.656,
+            0.062
+          ],
+          "radius": 0.085,
+          "amplitude": 0.014,
+          "phase": 1.6,
+          "frequency": 1
+        }
+      ],
+      "contacts": [
+        {
+          "name": "foot-L",
+          "parent": "pelvis",
+          "upper": "thigh-L",
+          "lower": "shin-L",
+          "hip": [
+            0.328,
+            0.618
+          ],
+          "knee": [
+            0.323,
+            0.745
+          ],
+          "foot": [
+            0.259,
+            0.902
+          ],
+          "ankle": [
+            0.297,
+            0.848
+          ],
+          "pinWidth": 0.16
+        },
+        {
+          "name": "foot-R",
+          "parent": "pelvis",
+          "upper": "thigh-R",
+          "lower": "shin-R",
+          "hip": [
+            0.678,
+            0.626
+          ],
+          "knee": [
+            0.678,
+            0.766
+          ],
+          "foot": [
+            0.701,
+            0.926
+          ],
+          "ankle": [
+            0.717,
+            0.859
+          ],
+          "pinWidth": 0.16
+        }
+      ],
+      "landmarkSource": "assets/illustrated/crew-rig-landmarks.json"
+    },
+    "axi": {
+      "image": "assets/illustrated/crew-axi.webp",
+      "kind": "crew",
+      "cycle": 6.42,
+      "bodyAngle": 0.003,
+      "shift": [
+        0.0015,
+        0.0012
+      ],
+      "bones": [
+        {
+          "name": "pelvis",
+          "parent": null,
+          "pivot": [
+            0.463,
+            0.546
+          ],
+          "end": [
+            0.463,
+            0.5810000000000001
+          ],
+          "radius": 0.18,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "spine",
+          "parent": "pelvis",
+          "pivot": [
+            0.463,
+            0.546
+          ],
+          "end": [
+            0.448,
+            0.325
+          ],
+          "radius": 0.2,
+          "amplitude": 0.006,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "head",
+          "parent": "spine",
+          "pivot": [
+            0.448,
+            0.325
+          ],
+          "end": [
+            0.444,
+            0.205
+          ],
+          "radius": 0.21,
+          "amplitude": 0.018,
+          "phase": -0.8,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-L",
+          "parent": "spine",
+          "pivot": [
+            0.303,
+            0.394
+          ],
+          "end": [
+            0.226,
+            0.492
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-L",
+          "parent": "upper-arm-L",
+          "pivot": [
+            0.226,
+            0.492
+          ],
+          "end": [
+            0.152,
+            0.596
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-L",
+          "parent": "pelvis",
+          "pivot": [
+            0.356,
+            0.612
+          ],
+          "end": [
+            0.356,
+            0.738
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-L",
+          "parent": "thigh-L",
+          "pivot": [
+            0.356,
+            0.738
+          ],
+          "end": [
+            0.306,
+            0.894
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "upper-arm-R",
+          "parent": "spine",
+          "pivot": [
+            0.597,
+            0.383
+          ],
+          "end": [
+            0.676,
+            0.499
+          ],
+          "radius": 0.13,
+          "amplitude": 0.009,
+          "phase": 0.5,
+          "frequency": 1
+        },
+        {
+          "name": "forearm-R",
+          "parent": "upper-arm-R",
+          "pivot": [
+            0.676,
+            0.499
+          ],
+          "end": [
+            0.681,
+            0.607
+          ],
+          "radius": 0.11,
+          "amplitude": 0.007,
+          "phase": 1.1,
+          "frequency": 1
+        },
+        {
+          "name": "thigh-R",
+          "parent": "pelvis",
+          "pivot": [
+            0.55,
+            0.622
+          ],
+          "end": [
+            0.592,
+            0.732
+          ],
+          "radius": 0.15,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "shin-R",
+          "parent": "thigh-R",
+          "pivot": [
+            0.592,
+            0.732
+          ],
+          "end": [
+            0.667,
+            0.926
+          ],
+          "radius": 0.13,
+          "amplitude": 0,
+          "phase": 0,
+          "frequency": 1
+        },
+        {
+          "name": "tail-root",
+          "parent": "pelvis",
+          "pivot": [
+            0.625,
+            0.671
+          ],
+          "end": [
+            0.792,
+            0.739
+          ],
+          "radius": 0.14,
+          "amplitude": 0.022,
+          "phase": 1.4,
+          "frequency": 1
+        },
+        {
+          "name": "tail-tip",
+          "parent": "tail-root",
+          "pivot": [
+            0.792,
+            0.739
+          ],
+          "end": [
+            0.968,
+            0.531
+          ],
+          "radius": 0.12,
+          "amplitude": 0.018,
+          "phase": 2.1,
+          "frequency": 1
+        },
+        {
+          "name": "gillL1",
+          "parent": "head",
+          "pivot": [
+            0.339,
+            0.137
+          ],
+          "end": [
+            0.275,
+            0.083
+          ],
+          "radius": 0.055,
+          "amplitude": 0.018,
+          "phase": 1.4000000000000001,
+          "frequency": 1
+        },
+        {
+          "name": "gillL2",
+          "parent": "head",
+          "pivot": [
+            0.304,
+            0.202
+          ],
+          "end": [
+            0.188,
+            0.182
+          ],
+          "radius": 0.055,
+          "amplitude": 0.018,
+          "phase": 1.7000000000000002,
+          "frequency": 1
+        },
+        {
+          "name": "gillL3",
+          "parent": "head",
+          "pivot": [
+            0.314,
+            0.249
+          ],
+          "end": [
+            0.213,
+            0.266
+          ],
+          "radius": 0.055,
+          "amplitude": 0.018,
+          "phase": 2.0,
+          "frequency": 1
+        },
+        {
+          "name": "gillR1",
+          "parent": "head",
+          "pivot": [
+            0.612,
+            0.149
+          ],
+          "end": [
+            0.695,
+            0.054
+          ],
+          "radius": 0.055,
+          "amplitude": 0.018,
+          "phase": 1.75,
+          "frequency": 1
+        },
+        {
+          "name": "gillR2",
+          "parent": "head",
+          "pivot": [
+            0.632,
+            0.214
+          ],
+          "end": [
+            0.815,
+            0.158
+          ],
+          "radius": 0.055,
+          "amplitude": 0.018,
+          "phase": 2.0500000000000003,
+          "frequency": 1
+        },
+        {
+          "name": "gillR3",
+          "parent": "head",
+          "pivot": [
+            0.622,
+            0.258
+          ],
+          "end": [
+            0.754,
+            0.266
+          ],
+          "radius": 0.055,
+          "amplitude": 0.018,
+          "phase": 2.35,
+          "frequency": 1
+        }
+      ],
+      "contacts": [
+        {
+          "name": "foot-L",
+          "parent": "pelvis",
+          "upper": "thigh-L",
+          "lower": "shin-L",
+          "hip": [
+            0.356,
+            0.612
+          ],
+          "knee": [
+            0.356,
+            0.738
+          ],
+          "foot": [
+            0.306,
+            0.894
+          ],
+          "ankle": [
+            0.313,
+            0.843
+          ],
+          "pinWidth": 0.16
+        },
+        {
+          "name": "foot-R",
+          "parent": "pelvis",
+          "upper": "thigh-R",
+          "lower": "shin-R",
+          "hip": [
+            0.55,
+            0.622
+          ],
+          "knee": [
+            0.592,
+            0.732
+          ],
+          "foot": [
+            0.667,
+            0.926
+          ],
+          "ankle": [
+            0.665,
+            0.865
+          ],
+          "pinWidth": 0.16
+        }
+      ],
+      "landmarkSource": "assets/illustrated/crew-rig-landmarks.json"
+    },
+    "scuttle": {
+      "image": "assets/illustrated/chassis-scuttle.webp",
+      "cycle": 5.8,
+      "bodyAngle": 0.003,
+      "shift": [
+        0.001,
+        0.002
+      ],
+      "bones": [
+        {
+          "name": "chassis",
+          "parent": null,
+          "pivot": [
+            0.516797,
+            0.5
+          ],
+          "end": [
+            0.558789,
+            0.34043
+          ],
+          "radius": 0.22,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_left_rear_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.407617,
+            0.474805
+          ],
+          "end": [
+            0.240488,
+            0.441211
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_left_rear_lower",
+          "parent": "image_left_rear_upper",
+          "pivot": [
+            0.240488,
+            0.441211
+          ],
+          "end": [
+            0.113672,
+            0.615898
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 0.5
+        },
+        {
+          "name": "image_left_middle_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.39082,
+            0.516797
+          ],
+          "end": [
+            0.269883,
+            0.515957
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_left_middle_lower",
+          "parent": "image_left_middle_upper",
+          "pivot": [
+            0.269883,
+            0.515957
+          ],
+          "end": [
+            0.158184,
+            0.741035
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "image_left_front_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.420215,
+            0.575586
+          ],
+          "end": [
+            0.356387,
+            0.591543
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_left_front_lower",
+          "parent": "image_left_front_upper",
+          "pivot": [
+            0.356387,
+            0.591543
+          ],
+          "end": [
+            0.263164,
+            0.831738
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 0.5
+        },
+        {
+          "name": "image_left_inner_rear_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.427773,
+            0.592383
+          ],
+          "end": [
+            0.388301,
+            0.627656
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_left_inner_rear_lower",
+          "parent": "image_left_inner_rear_upper",
+          "pivot": [
+            0.388301,
+            0.627656
+          ],
+          "end": [
+            0.367305,
+            0.678047
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "image_right_rear_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.709961,
+            0.453809
+          ],
+          "end": [
+            0.793945,
+            0.449609
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_right_rear_lower",
+          "parent": "image_right_rear_upper",
+          "pivot": [
+            0.793945,
+            0.449609
+          ],
+          "end": [
+            0.893047,
+            0.624297
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 0.5
+        },
+        {
+          "name": "image_right_middle_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.652852,
+            0.527715
+          ],
+          "end": [
+            0.743555,
+            0.510918
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_right_middle_lower",
+          "parent": "image_right_middle_upper",
+          "pivot": [
+            0.743555,
+            0.510918
+          ],
+          "end": [
+            0.87541,
+            0.734316
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "image_right_front_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.622617,
+            0.594902
+          ],
+          "end": [
+            0.628496,
+            0.60498
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_right_front_lower",
+          "parent": "image_right_front_upper",
+          "pivot": [
+            0.628496,
+            0.60498
+          ],
+          "end": [
+            0.756992,
+            0.835098
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 0.5
+        },
+        {
+          "name": "image_right_inner_rear_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.602461,
+            0.589863
+          ],
+          "end": [
+            0.637734,
+            0.625977
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_right_inner_rear_lower",
+          "parent": "image_right_inner_rear_upper",
+          "pivot": [
+            0.637734,
+            0.625977
+          ],
+          "end": [
+            0.638574,
+            0.683086
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "pincer_image_left",
+          "parent": "chassis",
+          "pivot": [
+            0.452969,
+            0.588184
+          ],
+          "end": [
+            0.452969,
+            0.730957
+          ],
+          "radius": 0.065,
+          "amplitude": 0.006,
+          "phase": 0
+        },
+        {
+          "name": "pincer_image_right",
+          "parent": "chassis",
+          "pivot": [
+            0.528555,
+            0.584824
+          ],
+          "end": [
+            0.505039,
+            0.739355
+          ],
+          "radius": 0.065,
+          "amplitude": 0.006,
+          "phase": 1.2
+        },
+        {
+          "name": "dorsal_cable",
+          "parent": "chassis",
+          "pivot": [
+            0.529395,
+            0.331191
+          ],
+          "end": [
+            0.305996,
+            0.245527
+          ],
+          "radius": 0.038,
+          "amplitude": 0.003,
+          "phase": 2.4
+        }
+      ],
+      "contacts": [
+        {
+          "name": "image_left_rear",
+          "parent": "chassis",
+          "upper": "image_left_rear_upper",
+          "lower": "image_left_rear_lower",
+          "hip": [
+            0.407617,
+            0.474805
+          ],
+          "knee": [
+            0.240488,
+            0.441211
+          ],
+          "foot": [
+            0.113672,
+            0.615898
+          ],
+          "ankle": [
+            0.113672,
+            0.6098979999999999
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_left_middle",
+          "parent": "chassis",
+          "upper": "image_left_middle_upper",
+          "lower": "image_left_middle_lower",
+          "hip": [
+            0.39082,
+            0.516797
+          ],
+          "knee": [
+            0.269883,
+            0.515957
+          ],
+          "foot": [
+            0.158184,
+            0.741035
+          ],
+          "ankle": [
+            0.158184,
+            0.735035
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_left_front",
+          "parent": "chassis",
+          "upper": "image_left_front_upper",
+          "lower": "image_left_front_lower",
+          "hip": [
+            0.420215,
+            0.575586
+          ],
+          "knee": [
+            0.356387,
+            0.591543
+          ],
+          "foot": [
+            0.263164,
+            0.831738
+          ],
+          "ankle": [
+            0.263164,
+            0.825738
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_left_inner_rear",
+          "parent": "chassis",
+          "upper": "image_left_inner_rear_upper",
+          "lower": "image_left_inner_rear_lower",
+          "hip": [
+            0.427773,
+            0.592383
+          ],
+          "knee": [
+            0.388301,
+            0.627656
+          ],
+          "foot": [
+            0.367305,
+            0.678047
+          ],
+          "partiallyOccluded": true,
+          "ankle": [
+            0.367305,
+            0.672047
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_right_rear",
+          "parent": "chassis",
+          "upper": "image_right_rear_upper",
+          "lower": "image_right_rear_lower",
+          "hip": [
+            0.709961,
+            0.453809
+          ],
+          "knee": [
+            0.793945,
+            0.449609
+          ],
+          "foot": [
+            0.893047,
+            0.624297
+          ],
+          "ankle": [
+            0.893047,
+            0.618297
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_right_middle",
+          "parent": "chassis",
+          "upper": "image_right_middle_upper",
+          "lower": "image_right_middle_lower",
+          "hip": [
+            0.652852,
+            0.527715
+          ],
+          "knee": [
+            0.743555,
+            0.510918
+          ],
+          "foot": [
+            0.87541,
+            0.734316
+          ],
+          "ankle": [
+            0.87541,
+            0.728316
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_right_front",
+          "parent": "chassis",
+          "upper": "image_right_front_upper",
+          "lower": "image_right_front_lower",
+          "hip": [
+            0.622617,
+            0.594902
+          ],
+          "knee": [
+            0.628496,
+            0.60498
+          ],
+          "foot": [
+            0.756992,
+            0.835098
+          ],
+          "ankle": [
+            0.756992,
+            0.829098
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_right_inner_rear",
+          "parent": "chassis",
+          "upper": "image_right_inner_rear_upper",
+          "lower": "image_right_inner_rear_lower",
+          "hip": [
+            0.602461,
+            0.589863
+          ],
+          "knee": [
+            0.637734,
+            0.625977
+          ],
+          "foot": [
+            0.638574,
+            0.683086
+          ],
+          "partiallyOccluded": true,
+          "ankle": [
+            0.638574,
+            0.677086
+          ],
+          "pinWidth": 0.024
+        }
+      ],
+      "kind": "chassis",
+      "landmarkSource": "art-sources/generated-chassis-assets.json",
+      "anatomyNotes": "Four legs on each image side; rear inner leg contact tips are partly occluded. First candidate preserved separately; one pose correction separates eight feet."
+    },
+    "spool": {
+      "image": "assets/illustrated/chassis-spool.webp",
+      "cycle": 5.99,
+      "bodyAngle": 0.003,
+      "shift": [
+        0.001,
+        0.002
+      ],
+      "bones": [
+        {
+          "name": "chassis",
+          "parent": null,
+          "pivot": [
+            0.541992,
+            0.533594
+          ],
+          "end": [
+            0.558789,
+            0.361426
+          ],
+          "radius": 0.22,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_left_front_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.395859,
+            0.646133
+          ],
+          "end": [
+            0.244688,
+            0.587344
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_left_front_lower",
+          "parent": "image_left_front_upper",
+          "pivot": [
+            0.244688,
+            0.587344
+          ],
+          "end": [
+            0.184219,
+            0.803184
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 0.5
+        },
+        {
+          "name": "image_left_middle_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.466406,
+            0.642773
+          ],
+          "end": [
+            0.366465,
+            0.625977
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_left_middle_lower",
+          "parent": "image_left_middle_upper",
+          "pivot": [
+            0.366465,
+            0.625977
+          ],
+          "end": [
+            0.300117,
+            0.728438
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "image_right_front_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.517637,
+            0.656211
+          ],
+          "end": [
+            0.597422,
+            0.739355
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_right_front_lower",
+          "parent": "image_right_front_upper",
+          "pivot": [
+            0.597422,
+            0.739355
+          ],
+          "end": [
+            0.65957,
+            0.850215
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "image_right_middle_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.684766,
+            0.625977
+          ],
+          "end": [
+            0.756152,
+            0.684766
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_right_middle_lower",
+          "parent": "image_right_middle_upper",
+          "pivot": [
+            0.756152,
+            0.684766
+          ],
+          "end": [
+            0.800664,
+            0.802344
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 0.5
+        },
+        {
+          "name": "image_right_rear_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.704922,
+            0.547031
+          ],
+          "end": [
+            0.805703,
+            0.583145
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_right_rear_lower",
+          "parent": "image_right_rear_upper",
+          "pivot": [
+            0.805703,
+            0.583145
+          ],
+          "end": [
+            0.87373,
+            0.71584
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "tool_image_left_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.543672,
+            0.355547
+          ],
+          "end": [
+            0.363105,
+            0.197656
+          ],
+          "radius": 0.062,
+          "amplitude": 0.009,
+          "phase": 0
+        },
+        {
+          "name": "tool_image_left_lower",
+          "parent": "tool_image_left_upper",
+          "pivot": [
+            0.363105,
+            0.197656
+          ],
+          "end": [
+            0.148945,
+            0.438691
+          ],
+          "radius": 0.055,
+          "amplitude": 0.005399999999999999,
+          "phase": 0.5
+        },
+        {
+          "name": "tool_image_left_tip",
+          "parent": "tool_image_left_lower",
+          "pivot": [
+            0.148945,
+            0.438691
+          ],
+          "end": [
+            0.101074,
+            0.55543
+          ],
+          "radius": 0.048,
+          "amplitude": 0.003,
+          "phase": 0
+        },
+        {
+          "name": "tool_image_right_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.628496,
+            0.332871
+          ],
+          "end": [
+            0.730117,
+            0.174141
+          ],
+          "radius": 0.062,
+          "amplitude": 0.009,
+          "phase": 1.5707963267948966
+        },
+        {
+          "name": "tool_image_right_lower",
+          "parent": "tool_image_right_upper",
+          "pivot": [
+            0.730117,
+            0.174141
+          ],
+          "end": [
+            0.836777,
+            0.289199
+          ],
+          "radius": 0.055,
+          "amplitude": 0.005399999999999999,
+          "phase": 2.0707963267948966
+        },
+        {
+          "name": "tool_image_right_tip",
+          "parent": "tool_image_right_lower",
+          "pivot": [
+            0.836777,
+            0.289199
+          ],
+          "end": [
+            0.890527,
+            0.426094
+          ],
+          "radius": 0.048,
+          "amplitude": 0.003,
+          "phase": 1.5707963267948966
+        }
+      ],
+      "contacts": [
+        {
+          "name": "image_left_front",
+          "parent": "chassis",
+          "upper": "image_left_front_upper",
+          "lower": "image_left_front_lower",
+          "hip": [
+            0.395859,
+            0.646133
+          ],
+          "knee": [
+            0.244688,
+            0.587344
+          ],
+          "foot": [
+            0.184219,
+            0.803184
+          ],
+          "ankle": [
+            0.184219,
+            0.797184
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_left_middle",
+          "parent": "chassis",
+          "upper": "image_left_middle_upper",
+          "lower": "image_left_middle_lower",
+          "hip": [
+            0.466406,
+            0.642773
+          ],
+          "knee": [
+            0.366465,
+            0.625977
+          ],
+          "foot": [
+            0.300117,
+            0.728438
+          ],
+          "ankle": [
+            0.300117,
+            0.722438
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_right_front",
+          "parent": "chassis",
+          "upper": "image_right_front_upper",
+          "lower": "image_right_front_lower",
+          "hip": [
+            0.517637,
+            0.656211
+          ],
+          "knee": [
+            0.597422,
+            0.739355
+          ],
+          "foot": [
+            0.65957,
+            0.850215
+          ],
+          "ankle": [
+            0.65957,
+            0.844215
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_right_middle",
+          "parent": "chassis",
+          "upper": "image_right_middle_upper",
+          "lower": "image_right_middle_lower",
+          "hip": [
+            0.684766,
+            0.625977
+          ],
+          "knee": [
+            0.756152,
+            0.684766
+          ],
+          "foot": [
+            0.800664,
+            0.802344
+          ],
+          "ankle": [
+            0.800664,
+            0.7963439999999999
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_right_rear",
+          "parent": "chassis",
+          "upper": "image_right_rear_upper",
+          "lower": "image_right_rear_lower",
+          "hip": [
+            0.704922,
+            0.547031
+          ],
+          "knee": [
+            0.805703,
+            0.583145
+          ],
+          "foot": [
+            0.87373,
+            0.71584
+          ],
+          "ankle": [
+            0.87373,
+            0.70984
+          ],
+          "pinWidth": 0.024
+        }
+      ],
+      "kind": "chassis",
+      "landmarkSource": "art-sources/generated-chassis-assets.json",
+      "anatomyNotes": "Far image-left rear leg/foot is occluded by the armored utility core in this view. Its estimate is metadata only and excluded from independent bones and pinned contacts."
+    },
+    "chime": {
+      "image": "assets/illustrated/chassis-chime.webp",
+      "cycle": 4.9799999999999995,
+      "bodyAngle": 0.005,
+      "shift": [
+        0.002,
+        0.007
+      ],
+      "bones": [
+        {
+          "name": "chassis",
+          "parent": null,
+          "pivot": [
+            0.484883,
+            0.590703
+          ],
+          "end": [
+            0.506719,
+            0.44541
+          ],
+          "radius": 0.22,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_left_outer_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.410137,
+            0.592383
+          ],
+          "end": [
+            0.330352,
+            0.718359
+          ],
+          "radius": 0.053,
+          "amplitude": 0.017,
+          "phase": 0
+        },
+        {
+          "name": "image_left_outer_lower",
+          "parent": "image_left_outer_upper",
+          "pivot": [
+            0.330352,
+            0.718359
+          ],
+          "end": [
+            0.373184,
+            0.838457
+          ],
+          "radius": 0.048,
+          "amplitude": 0.00935,
+          "phase": 0.5
+        },
+        {
+          "name": "image_left_middle_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.428613,
+            0.60918
+          ],
+          "end": [
+            0.410137,
+            0.760352
+          ],
+          "radius": 0.053,
+          "amplitude": 0.017,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_left_middle_lower",
+          "parent": "image_left_middle_upper",
+          "pivot": [
+            0.410137,
+            0.760352
+          ],
+          "end": [
+            0.452969,
+            0.868691
+          ],
+          "radius": 0.048,
+          "amplitude": 0.00935,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "image_left_inner_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.471445,
+            0.636895
+          ],
+          "end": [
+            0.468086,
+            0.729277
+          ],
+          "radius": 0.053,
+          "amplitude": 0.017,
+          "phase": 0
+        },
+        {
+          "name": "image_left_inner_lower",
+          "parent": "image_left_inner_upper",
+          "pivot": [
+            0.468086,
+            0.729277
+          ],
+          "end": [
+            0.503359,
+            0.842656
+          ],
+          "radius": 0.048,
+          "amplitude": 0.00935,
+          "phase": 0.5
+        },
+        {
+          "name": "image_right_inner_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.559629,
+            0.626816
+          ],
+          "end": [
+            0.529395,
+            0.723398
+          ],
+          "radius": 0.053,
+          "amplitude": 0.017,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_right_inner_lower",
+          "parent": "image_right_inner_upper",
+          "pivot": [
+            0.529395,
+            0.723398
+          ],
+          "end": [
+            0.522676,
+            0.794785
+          ],
+          "radius": 0.048,
+          "amplitude": 0.00935,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "image_right_middle_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.621777,
+            0.60498
+          ],
+          "end": [
+            0.641934,
+            0.703242
+          ],
+          "radius": 0.053,
+          "amplitude": 0.017,
+          "phase": 0
+        },
+        {
+          "name": "image_right_middle_lower",
+          "parent": "image_right_middle_upper",
+          "pivot": [
+            0.641934,
+            0.703242
+          ],
+          "end": [
+            0.611699,
+            0.895566
+          ],
+          "radius": 0.048,
+          "amplitude": 0.00935,
+          "phase": 0.5
+        },
+        {
+          "name": "image_right_outer_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.641094,
+            0.60918
+          ],
+          "end": [
+            0.704922,
+            0.722559
+          ],
+          "radius": 0.053,
+          "amplitude": 0.017,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_right_outer_lower",
+          "parent": "image_right_outer_upper",
+          "pivot": [
+            0.704922,
+            0.722559
+          ],
+          "end": [
+            0.720879,
+            0.812422
+          ],
+          "radius": 0.048,
+          "amplitude": 0.00935,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "wing_image_left_spar",
+          "parent": "chassis",
+          "pivot": [
+            0.442891,
+            0.490762
+          ],
+          "end": [
+            0.378223,
+            0.374023
+          ],
+          "radius": 0.105,
+          "amplitude": 0.013,
+          "phase": 0
+        },
+        {
+          "name": "wing_image_left_vane",
+          "parent": "wing_image_left_spar",
+          "pivot": [
+            0.378223,
+            0.374023
+          ],
+          "end": [
+            0.165742,
+            0.101914
+          ],
+          "radius": 0.1,
+          "amplitude": 0.008,
+          "phase": 0.2
+        },
+        {
+          "name": "wing_image_left_lower_vane",
+          "parent": "wing_image_left_spar",
+          "pivot": [
+            0.378223,
+            0.374023
+          ],
+          "end": [
+            0.147266,
+            0.55543
+          ],
+          "radius": 0.092,
+          "amplitude": 0.006,
+          "phase": 0.35
+        },
+        {
+          "name": "wing_image_right_spar",
+          "parent": "chassis",
+          "pivot": [
+            0.615059,
+            0.495801
+          ],
+          "end": [
+            0.656211,
+            0.39082
+          ],
+          "radius": 0.105,
+          "amplitude": 0.013,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "wing_image_right_vane",
+          "parent": "wing_image_right_spar",
+          "pivot": [
+            0.656211,
+            0.39082
+          ],
+          "end": [
+            0.818301,
+            0.167422
+          ],
+          "radius": 0.1,
+          "amplitude": 0.008,
+          "phase": 3.3415926535897933
+        },
+        {
+          "name": "wing_image_right_lower_vane",
+          "parent": "wing_image_right_spar",
+          "pivot": [
+            0.656211,
+            0.39082
+          ],
+          "end": [
+            0.885488,
+            0.657051
+          ],
+          "radius": 0.092,
+          "amplitude": 0.006,
+          "phase": 3.491592653589793
+        }
+      ],
+      "contacts": [],
+      "kind": "chassis",
+      "landmarkSource": "art-sources/generated-chassis-assets.json",
+      "anatomyNotes": "Flying drone: six tucked articulated legs, two layered rigid wing assemblies; no grounded contacts. Root hover and spar hinges provide distinct motion."
+    },
+    "skip": {
+      "image": "assets/illustrated/chassis-skip.webp",
+      "cycle": 6.37,
+      "bodyAngle": 0.003,
+      "shift": [
+        0.001,
+        0.002
+      ],
+      "bones": [
+        {
+          "name": "chassis",
+          "parent": null,
+          "pivot": [
+            0.538633,
+            0.475645
+          ],
+          "end": [
+            0.547871,
+            0.332031
+          ],
+          "radius": 0.22,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_left_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.44541,
+            0.50084
+          ],
+          "end": [
+            0.426094,
+            0.681406
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_left_lower",
+          "parent": "image_left_upper",
+          "pivot": [
+            0.426094,
+            0.681406
+          ],
+          "end": [
+            0.333711,
+            0.87625
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 0.5
+        },
+        {
+          "name": "image_right_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.598262,
+            0.518477
+          ],
+          "end": [
+            0.678887,
+            0.688125
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_right_lower",
+          "parent": "image_right_upper",
+          "pivot": [
+            0.678887,
+            0.688125
+          ],
+          "end": [
+            0.790586,
+            0.901445
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "scythe_image_left_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.377383,
+            0.247207
+          ],
+          "end": [
+            0.257285,
+            0.437852
+          ],
+          "radius": 0.062,
+          "amplitude": 0.007,
+          "phase": 0
+        },
+        {
+          "name": "scythe_image_left_lower",
+          "parent": "scythe_image_left_upper",
+          "pivot": [
+            0.257285,
+            0.437852
+          ],
+          "end": [
+            0.159863,
+            0.55543
+          ],
+          "radius": 0.055,
+          "amplitude": 0.0042,
+          "phase": 0.5
+        },
+        {
+          "name": "scythe_image_left_tip",
+          "parent": "scythe_image_left_lower",
+          "pivot": [
+            0.159863,
+            0.55543
+          ],
+          "end": [
+            0.089316,
+            0.76623
+          ],
+          "radius": 0.048,
+          "amplitude": 0.003,
+          "phase": 0
+        },
+        {
+          "name": "scythe_image_right_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.693164,
+            0.291719
+          ],
+          "end": [
+            0.781348,
+            0.503359
+          ],
+          "radius": 0.062,
+          "amplitude": 0.007,
+          "phase": 1.5707963267948966
+        },
+        {
+          "name": "scythe_image_right_lower",
+          "parent": "scythe_image_right_upper",
+          "pivot": [
+            0.781348,
+            0.503359
+          ],
+          "end": [
+            0.856934,
+            0.637734
+          ],
+          "radius": 0.055,
+          "amplitude": 0.0042,
+          "phase": 2.0707963267948966
+        },
+        {
+          "name": "scythe_image_right_tip",
+          "parent": "scythe_image_right_lower",
+          "pivot": [
+            0.856934,
+            0.637734
+          ],
+          "end": [
+            0.858613,
+            0.834258
+          ],
+          "radius": 0.048,
+          "amplitude": 0.003,
+          "phase": 1.5707963267948966
+        },
+        {
+          "name": "claw_image_left_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.456328,
+            0.434492
+          ],
+          "end": [
+            0.401738,
+            0.50168
+          ],
+          "radius": 0.062,
+          "amplitude": 0.007,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "claw_image_left_lower",
+          "parent": "claw_image_left_upper",
+          "pivot": [
+            0.401738,
+            0.50168
+          ],
+          "end": [
+            0.335391,
+            0.599941
+          ],
+          "radius": 0.055,
+          "amplitude": 0.0042,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "claw_image_right_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.617578,
+            0.44373
+          ],
+          "end": [
+            0.670488,
+            0.536113
+          ],
+          "radius": 0.062,
+          "amplitude": 0.007,
+          "phase": 4.71238898038469
+        },
+        {
+          "name": "claw_image_right_lower",
+          "parent": "claw_image_right_upper",
+          "pivot": [
+            0.670488,
+            0.536113
+          ],
+          "end": [
+            0.591543,
+            0.630176
+          ],
+          "radius": 0.055,
+          "amplitude": 0.0042,
+          "phase": 5.21238898038469
+        },
+        {
+          "name": "dorsal_cable_image_left",
+          "parent": "chassis",
+          "pivot": [
+            0.449609,
+            0.23125
+          ],
+          "end": [
+            0.279121,
+            0.303477
+          ],
+          "radius": 0.038,
+          "amplitude": 0.003,
+          "phase": 0
+        },
+        {
+          "name": "dorsal_cable_image_right",
+          "parent": "chassis",
+          "pivot": [
+            0.594062,
+            0.208574
+          ],
+          "end": [
+            0.805703,
+            0.28584
+          ],
+          "radius": 0.038,
+          "amplitude": 0.003,
+          "phase": 1.2
+        }
+      ],
+      "contacts": [
+        {
+          "name": "image_left",
+          "parent": "chassis",
+          "upper": "image_left_upper",
+          "lower": "image_left_lower",
+          "hip": [
+            0.44541,
+            0.50084
+          ],
+          "knee": [
+            0.426094,
+            0.681406
+          ],
+          "foot": [
+            0.333711,
+            0.87625
+          ],
+          "ankle": [
+            0.333711,
+            0.87025
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_right",
+          "parent": "chassis",
+          "upper": "image_right_upper",
+          "lower": "image_right_lower",
+          "hip": [
+            0.598262,
+            0.518477
+          ],
+          "knee": [
+            0.678887,
+            0.688125
+          ],
+          "foot": [
+            0.790586,
+            0.901445
+          ],
+          "ankle": [
+            0.790586,
+            0.895445
+          ],
+          "pinWidth": 0.024
+        }
+      ],
+      "kind": "chassis",
+      "landmarkSource": "art-sources/generated-chassis-assets.json",
+      "anatomyNotes": "Four arms must remain distinct: two long blade arms and two smaller inner claws. Planted two-link legs support the lean."
+    },
+    "bastion": {
+      "image": "assets/illustrated/chassis-bastion.webp",
+      "cycle": 7.96,
+      "bodyAngle": 0.0015,
+      "shift": [
+        0.0008,
+        0.0012
+      ],
+      "bones": [
+        {
+          "name": "chassis",
+          "parent": null,
+          "pivot": [
+            0.546191,
+            0.520996
+          ],
+          "end": [
+            0.529395,
+            0.257285
+          ],
+          "radius": 0.22,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_left_front_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.259805,
+            0.479844
+          ],
+          "end": [
+            0.160703,
+            0.634375
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_left_front_lower",
+          "parent": "image_left_front_upper",
+          "pivot": [
+            0.160703,
+            0.634375
+          ],
+          "end": [
+            0.148945,
+            0.791426
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 0.5
+        },
+        {
+          "name": "image_right_front_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.66293,
+            0.49832
+          ],
+          "end": [
+            0.728438,
+            0.711641
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_right_front_lower",
+          "parent": "image_right_front_upper",
+          "pivot": [
+            0.728438,
+            0.711641
+          ],
+          "end": [
+            0.772109,
+            0.861133
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "image_left_rear_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.533594,
+            0.60918
+          ],
+          "end": [
+            0.562988,
+            0.667969
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 0
+        },
+        {
+          "name": "image_left_rear_lower",
+          "parent": "image_left_rear_upper",
+          "pivot": [
+            0.562988,
+            0.667969
+          ],
+          "end": [
+            0.576426,
+            0.725918
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 0.5
+        },
+        {
+          "name": "image_right_rear_upper",
+          "parent": "chassis",
+          "pivot": [
+            0.851895,
+            0.527715
+          ],
+          "end": [
+            0.865332,
+            0.641094
+          ],
+          "radius": 0.053,
+          "amplitude": 0,
+          "phase": 3.141592653589793
+        },
+        {
+          "name": "image_right_rear_lower",
+          "parent": "image_right_rear_upper",
+          "pivot": [
+            0.865332,
+            0.641094
+          ],
+          "end": [
+            0.882969,
+            0.746914
+          ],
+          "radius": 0.048,
+          "amplitude": 0,
+          "phase": 3.641592653589793
+        },
+        {
+          "name": "crusher_jaw",
+          "parent": "chassis",
+          "pivot": [
+            0.437012,
+            0.541152
+          ],
+          "end": [
+            0.416016,
+            0.774629
+          ],
+          "radius": 0.065,
+          "amplitude": 0.004,
+          "phase": 0
+        },
+        {
+          "name": "dorsal_cable",
+          "parent": "chassis",
+          "pivot": [
+            0.574746,
+            0.300117
+          ],
+          "end": [
+            0.800664,
+            0.441211
+          ],
+          "radius": 0.038,
+          "amplitude": 0.003,
+          "phase": 1.2
+        }
+      ],
+      "contacts": [
+        {
+          "name": "image_left_front",
+          "parent": "chassis",
+          "upper": "image_left_front_upper",
+          "lower": "image_left_front_lower",
+          "hip": [
+            0.259805,
+            0.479844
+          ],
+          "knee": [
+            0.160703,
+            0.634375
+          ],
+          "foot": [
+            0.148945,
+            0.791426
+          ],
+          "ankle": [
+            0.148945,
+            0.785426
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_right_front",
+          "parent": "chassis",
+          "upper": "image_right_front_upper",
+          "lower": "image_right_front_lower",
+          "hip": [
+            0.66293,
+            0.49832
+          ],
+          "knee": [
+            0.728438,
+            0.711641
+          ],
+          "foot": [
+            0.772109,
+            0.861133
+          ],
+          "ankle": [
+            0.772109,
+            0.855133
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_left_rear",
+          "parent": "chassis",
+          "upper": "image_left_rear_upper",
+          "lower": "image_left_rear_lower",
+          "hip": [
+            0.533594,
+            0.60918
+          ],
+          "knee": [
+            0.562988,
+            0.667969
+          ],
+          "foot": [
+            0.576426,
+            0.725918
+          ],
+          "partiallyOccluded": true,
+          "ankle": [
+            0.576426,
+            0.719918
+          ],
+          "pinWidth": 0.024
+        },
+        {
+          "name": "image_right_rear",
+          "parent": "chassis",
+          "upper": "image_right_rear_upper",
+          "lower": "image_right_rear_lower",
+          "hip": [
+            0.851895,
+            0.527715
+          ],
+          "knee": [
+            0.865332,
+            0.641094
+          ],
+          "foot": [
+            0.882969,
+            0.746914
+          ],
+          "ankle": [
+            0.882969,
+            0.740914
+          ],
+          "pinWidth": 0.024
+        }
+      ],
+      "kind": "chassis",
+      "landmarkSource": "art-sources/generated-chassis-assets.json",
+      "anatomyNotes": "Four heavy legs; far image-left rear limb is partly occluded by the crusher jaw. Keep jaw angle small and planted contacts steady."
+    }
+  }
+}

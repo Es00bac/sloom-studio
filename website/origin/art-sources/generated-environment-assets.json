@@ -1,0 +1,24 @@
+[
+  {
+    "asset": "assets/seedweb-growth-illustrated.webp",
+    "source": "art-sources/seedweb-growth-illustrated.png",
+    "tool": "built-in image_gen",
+    "use": "Scroll-driven mechanical infestation fringe",
+    "prompt": "Transparent wide ornamental invasion fringe for Qind Qompany: Origin of Species. Manufactured Seedweb: braided graphite cables, oxidized teal conduits, interlocking ceramic plates, brass clamps, inspection lenses, segmented robotic struts, cyan/violet circuitry. Cluster at lower edge and sides, empty transparent upper center for live web text. Detailed crafted illustrative material rendering, crisp silhouettes, no characters, flesh, slime, logos, text or background."
+  },
+  {
+    "asset": "assets/qompany-habitat-illustrated.webp",
+    "source": "art-sources/qompany-habitat-illustrated.png",
+    "tool": "built-in image_gen",
+    "use": "Illustrated Qompany chapter backdrop",
+    "prompt": "Wide cinematic illustrated Tideglass Baths civic habitat backdrop for Qind Qompany: Origin of Species. Industrial thermal spa/desalination complex, grand warm cream ceramic pool hall, oxidized teal steel, marigold safety details, brass plumbing/gauges, service galleries, turquoise pools, dark navy machinery, sunlight on water. Premium hand-painted science fiction game art, precise architecture, atmospheric material depth. At far right, a little manufactured Seedweb of graphite cable, cyan/violet circuitry and ceramic machine plates. Quiet left/center for web copy. No characters, logos, text, organic vines, horror slime or real franchise imagery."
+  },
+  {
+    "asset": "assets/seedweb-habitat-illustrated.webp",
+    "source": "art-sources/seedweb-habitat-illustrated.png",
+    "tool": "built-in image_gen",
+    "reference": "art-sources/qompany-habitat-illustrated.png",
+    "use": "Matched illustrated Seedweb chapter backdrop",
+    "prompt": "Produce the Seedweb-infested version of the same Qompany habitat illustration. Preserve major architecture, perspective, camera, pools and premium painted style. Occupied engineered maintenance ecology with graphite braided cable, segmented ceramic machine plates, dark alloy conduits, brass clamps, fabricated inspection lenses, cyan/violet indicators. Dim warm service lighting, cool cyan/violet contrast, dusk through same arches. Quiet lower-left/left-center for web copy, detailed machines at right/edges. No flesh, slime, organic vines, magic, characters, logos or text."
+  }
+]

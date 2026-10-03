@@ -1,0 +1,291 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "date": "2026-10-03",
+  "notes": "Generated illustrative adaptations of the actual canonical production character captures, not literal screenshots. Website Canvas rig provides articulated animation; PNG originals are source-only. No CLI model fallback.",
+  "artworks": [
+    {
+      "id": "ducke",
+      "index": 1,
+      "prompt": "Use case: stylized-concept. Asset type: production transparent full-body illustrated character for articulated 2D website animation, not a screenshot. Image 1 is the actual game character identity/costume reference; preserve the species, fur/skin colors, distinguishing features, adult proportions and manufactured outfit design. Ignore the screenshot environment and remove the firearm. Create premium softly sculpted hand-painted 3D-ish graphic game character art: refined painterly surfaces, warm ceramic armor, deep navy fabric, oxidized teal straps, marigold fittings, delicate edge highlights, warm key light with restrained cool rim light. Keep the real character's personality; adult rescue/reclamation professional, not infant/chibi or generic fantasy hero. One character only, near-front three-quarter pose, upright calm alert stance. For animation readiness, relaxed arms gently separated from torso by 12\u201320 degrees, elbows slightly bent and both hands clearly readable; no hands crossing the chest, no weapon, no overlapping limbs. Feet grounded on the same implied baseline, tail/ears/gills fully visible with clean silhouettes independent enough to rig. Transparent portrait composition 1024 by 1536, centered full body with about 8% margin on every side including highest ear/tuft and toes. Genuine transparent alpha outside the subject: no baked background, floor, rectangle, shadow plate, cast ground shadow, text, captions or watermark. Do not invent costume symbols, unrelated props or a different species. Character: Duck\u00e9, the yellow duck from the screenshot. Retain yellow plumage, the swept spiky feather tuft, orange broad duck bill, black aviator sunglasses and circular radio earcups. Keep his rounded sturdy adult duck build, ceramic shoulder/chest plates and utilitarian dark shorts/pouches. Retain the real orange webbed feet with ankle equipment rather than human shoes. Empty relaxed wing-hands; no shotgun.",
+      "path": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-a0b73be0-32e6-4a7d-87f9-8871b5714d9a.png",
+      "output_hint": "Generated images are saved to /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4 as /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-a0b73be0-32e6-4a7d-87f9-8871b5714d9a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 960142,
+      "alpha_corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "source_png": "art-sources/crew-ducke.png",
+      "website_asset": "assets/illustrated/crew-ducke.webp",
+      "webp_bytes": 174534,
+      "webp_encoding": {
+        "color_quality": 88,
+        "alpha_quality": 100,
+        "encoder": "system cwebp",
+        "alpha_preserved_exactly": true
+      },
+      "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00001.jpg",
+      "source_sha256": "6516fafa3d5495b1523f99c597f71df26368d74c94e626343f2ac421827b23d7",
+      "webp_sha256": "0fc122e6290f42965dbe2aa487ed25163bc9e322d5054ff42ff13079f7f9c09a",
+      "capture_map": "assets/maps/tideglass-baths.json",
+      "pose": "Upright, empty-handed, limbs gently separated for 2D skeletal skinning"
+    },
+    {
+      "id": "vix",
+      "index": 2,
+      "prompt": "Use case: stylized-concept. Asset type: production transparent full-body illustrated character for articulated 2D website animation, not a screenshot. Image 1 is the actual game character identity/costume reference; preserve the species, fur/skin colors, distinguishing features, adult proportions and manufactured outfit design. Ignore the screenshot environment and remove the firearm. Create premium softly sculpted hand-painted 3D-ish graphic game character art: refined painterly surfaces, warm ceramic armor, deep navy fabric, oxidized teal straps, marigold fittings, delicate edge highlights, warm key light with restrained cool rim light. Keep the real character's personality; adult rescue/reclamation professional, not infant/chibi or generic fantasy hero. One character only, near-front three-quarter pose, upright calm alert stance. For animation readiness, relaxed arms gently separated from torso by 12\u201320 degrees, elbows slightly bent and both hands clearly readable; no hands crossing the chest, no weapon, no overlapping limbs. Feet grounded on the same implied baseline, tail/ears/gills fully visible with clean silhouettes independent enough to rig. Transparent portrait composition 1024 by 1536, centered full body with about 8% margin on every side including highest ear/tuft and toes. Genuine transparent alpha outside the subject: no baked background, floor, rectangle, shadow plate, cast ground shadow, text, captions or watermark. Do not invent costume symbols, unrelated props or a different species. Character: Vix, the adult orange fox from the screenshot. Retain orange fur, white cheeks/muzzle/chest, expressive teal-green eyes, dark nose, tall cream-inside pointed ears and long bushy orange tail with its prominent white tip. Keep her actual navy/teal shorts and field kit, ceramic shoulder plates, knee protection and boots. Her confident professional stance must retain the reference's adult feminine build. Tail curves visibly out to one side with a clear gap from legs; no gun.",
+      "path": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-cf288235-a686-4a41-ad99-917f6112fe50.png",
+      "output_hint": "Generated images are saved to /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4 as /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-cf288235-a686-4a41-ad99-917f6112fe50.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 1031993,
+      "alpha_corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "source_png": "art-sources/crew-vix.png",
+      "website_asset": "assets/illustrated/crew-vix.webp",
+      "webp_bytes": 173026,
+      "webp_encoding": {
+        "color_quality": 88,
+        "alpha_quality": 100,
+        "encoder": "system cwebp",
+        "alpha_preserved_exactly": true
+      },
+      "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00002.jpg",
+      "source_sha256": "9e6e270d26c0f5d2028a226a86b07002419cada96d6876a298fb442ed945d1d0",
+      "webp_sha256": "22dcfecb3ea8b57029d382a8cdf69cd2eadc99056fc0ec8a32412865f06fcf4c",
+      "capture_map": "assets/maps/tideglass-baths.json",
+      "pose": "Upright, empty-handed, limbs gently separated for 2D skeletal skinning"
+    },
+    {
+      "id": "mochi",
+      "index": 4,
+      "prompt": "Use case: stylized-concept. Asset type: production transparent full-body illustrated character for articulated 2D website animation, not a screenshot. Image 1 is the actual game character identity/costume reference; preserve the species, fur/skin colors, distinguishing features, adult proportions and manufactured outfit design. Ignore the screenshot environment and remove the firearm. Create premium softly sculpted hand-painted 3D-ish graphic game character art: refined painterly surfaces, warm ceramic armor, deep navy fabric, oxidized teal straps, marigold fittings, delicate edge highlights, warm key light with restrained cool rim light. Keep the real character's personality; adult rescue/reclamation professional, not infant/chibi or generic fantasy hero. One character only, near-front three-quarter pose, upright calm alert stance. For animation readiness, relaxed arms gently separated from torso by 12\u201320 degrees, elbows slightly bent and both hands clearly readable; no hands crossing the chest, no weapon, no overlapping limbs. Feet grounded on the same implied baseline, tail/ears/gills fully visible with clean silhouettes independent enough to rig. Transparent portrait composition 1024 by 1536, centered full body with about 8% margin on every side including highest ear/tuft and toes. Genuine transparent alpha outside the subject: no baked background, floor, rectangle, shadow plate, cast ground shadow, text, captions or watermark. Do not invent costume symbols, unrelated props or a different species. Character: Mochi, the adult white rabbit from the screenshot. Retain white fur, tall asymmetric rabbit ears with pink-purple interiors and the small teal manufactured inset in the ear, round dark expressive eyes, small rabbit muzzle, and her actual padded navy trousers, ceramic plates, field pouches and boots. Keep a capable composed adult professional appearance. The complete long ears fit with margin; gently separated empty hands, no rifle.",
+      "path": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-4fe39d7c-1981-454a-8dbb-145c411fd15d.png",
+      "output_hint": "Generated images are saved to /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4 as /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-4fe39d7c-1981-454a-8dbb-145c411fd15d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 1063878,
+      "alpha_corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "source_png": "art-sources/crew-mochi.png",
+      "website_asset": "assets/illustrated/crew-mochi.webp",
+      "webp_bytes": 179780,
+      "webp_encoding": {
+        "color_quality": 88,
+        "alpha_quality": 100,
+        "encoder": "system cwebp",
+        "alpha_preserved_exactly": true
+      },
+      "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00004.jpg",
+      "source_sha256": "3b2ee9a2a95fdcb3b36f8a2a8ab8c0528839a1d3df542c15d48223132d4c06ee",
+      "webp_sha256": "ea9d96e61177898b30cb27f58cffa7e4af835b4b008bc7688ca272487915b15c",
+      "capture_map": "assets/maps/tideglass-baths.json",
+      "pose": "Upright, empty-handed, limbs gently separated for 2D skeletal skinning"
+    },
+    {
+      "id": "cyberpengu",
+      "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/retry3/raw/photo-00000.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: production transparent full-body illustrated character for articulated 2D website animation, not a screenshot. Image 1 is the actual game character identity/costume reference; preserve the species, fur/skin colors, distinguishing features, adult proportions and manufactured outfit design. Ignore the screenshot environment and remove the firearm. Create premium softly sculpted hand-painted 3D-ish graphic game character art: refined painterly surfaces, warm ceramic armor, deep navy fabric, oxidized teal straps, marigold fittings, delicate edge highlights, warm key light with restrained cool rim light. Keep the real character's personality; adult rescue/reclamation professional, not infant/chibi or generic fantasy hero. One character only, near-front three-quarter pose, upright calm alert stance. For animation readiness, relaxed arms gently separated from torso by 12\u201320 degrees, elbows slightly bent and both hands clearly readable; no hands crossing the chest, no weapon, no overlapping limbs. Feet grounded on the same implied baseline, tail/ears/gills fully visible with clean silhouettes independent enough to rig. Transparent portrait composition 1024 by 1536, centered full body with about 8% margin on every side including highest ear/tuft and toes. Genuine transparent alpha outside the subject: no baked background, floor, rectangle, shadow plate, cast ground shadow, text, captions or watermark. Do not invent costume symbols, unrelated props or a different species.  Image 2 is a style-family reference ONLY: match its premium painted sculptural treatment, material finish and light quality, never copy its duck identity, sunglasses, plumage or specific costume into this character. Character: CyberPengu, the adult black-and-white penguin from image 1. Retain black plumage, white cheek/belly markings, short orange bill, orange neck scarf, distinctive large teal cyber-monocle over one eye with its circular radio headset and antenna, and his compact rounded sturdy penguin body. Keep actual navy uniform, ceramic shoulders/chest, teal gloves/straps, marigold pouches and boots. Empty gently separated flipper-hands, no rifle. Do not give him Duck\u00e9's sunglasses or yellow body.",
+      "path": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-374666af-64f2-4bd9-bc63-0c6667c33f1e.png",
+      "output_hint": "Generated images are saved to /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4 as /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-374666af-64f2-4bd9-bc63-0c6667c33f1e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 849336,
+      "alpha_corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "source_png": "art-sources/crew-cyberpengu.png",
+      "website_asset": "assets/illustrated/crew-cyberpengu.webp",
+      "webp_bytes": 198660,
+      "webp_encoding": {
+        "color_quality": 88,
+        "alpha_quality": 100,
+        "encoder": "system cwebp",
+        "alpha_preserved_exactly": true
+      },
+      "source_sha256": "31669861efa29ea82819cc7777ccc1819cbb14f3f274747d03abe895f74933d3",
+      "webp_sha256": "94cf2267a4cdc3d4e039243988c76c071e0e6ac153087d95de0c2877fc37687a",
+      "capture_map": "assets/maps/tideglass-baths.json",
+      "pose": "Upright, empty-handed, limbs gently separated for 2D skeletal skinning"
+    },
+    {
+      "id": "cache",
+      "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/retry3/raw/photo-00001.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: production transparent full-body illustrated character for articulated 2D website animation, not a screenshot. Image 1 is the actual game character identity/costume reference; preserve the species, fur/skin colors, distinguishing features, adult proportions and manufactured outfit design. Ignore the screenshot environment and remove the firearm. Create premium softly sculpted hand-painted 3D-ish graphic game character art: refined painterly surfaces, warm ceramic armor, deep navy fabric, oxidized teal straps, marigold fittings, delicate edge highlights, warm key light with restrained cool rim light. Keep the real character's personality; adult rescue/reclamation professional, not infant/chibi or generic fantasy hero. One character only, near-front three-quarter pose, upright calm alert stance. For animation readiness, relaxed arms gently separated from torso by 12\u201320 degrees, elbows slightly bent and both hands clearly readable; no hands crossing the chest, no weapon, no overlapping limbs. Feet grounded on the same implied baseline, tail/ears/gills fully visible with clean silhouettes independent enough to rig. Transparent portrait composition 1024 by 1536, centered full body with about 8% margin on every side including highest ear/tuft and toes. Genuine transparent alpha outside the subject: no baked background, floor, rectangle, shadow plate, cast ground shadow, text, captions or watermark. Do not invent costume symbols, unrelated props or a different species.  Image 2 is a style-family reference ONLY: match its premium painted sculptural treatment, material finish and light quality, never copy its duck identity, sunglasses, plumage or specific costume into this character. Character: Cache, the adult raccoon from image 1. Retain brown-gray fur, white-edged black raccoon eye mask, white muzzle and ear rims, black nose, radio headset, round expressive dark eyes and bushy prominently ringed black-and-gray tail. Keep his actual sturdy build, worn brown utility apron loaded with small existing tools/pouches over navy trousers, warm ceramic shoulders/chest, teal sleeves and boots. Tail curls out to one side with a clear gap from legs. Empty relaxed hands; no rifle, no glasses or sunglasses.",
+      "path": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-9589ac13-ded4-46d2-a6b0-28f6594d802c.png",
+      "output_hint": "Generated images are saved to /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4 as /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-9589ac13-ded4-46d2-a6b0-28f6594d802c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 804560,
+      "alpha_corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "source_png": "art-sources/crew-cache.png",
+      "website_asset": "assets/illustrated/crew-cache.webp",
+      "webp_bytes": 267670,
+      "webp_encoding": {
+        "color_quality": 88,
+        "alpha_quality": 100,
+        "encoder": "system cwebp",
+        "alpha_preserved_exactly": true
+      },
+      "source_sha256": "e66f7cc10d79aaf3840a77e99a4d4097ecf49dd578dc4de8520e2f7efe8953d3",
+      "webp_sha256": "f9c140054768428f4e23f0427e3b261d05dc70fdaeb29fc338ebd96483dd9f48",
+      "capture_map": "assets/maps/tideglass-baths.json",
+      "pose": "Upright, empty-handed, limbs gently separated for 2D skeletal skinning"
+    },
+    {
+      "id": "hex",
+      "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00005.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: production transparent full-body illustrated character for articulated 2D website animation, not a screenshot. Image 1 is the actual game character identity/costume reference; preserve the species, fur/skin colors, distinguishing features, adult proportions and manufactured outfit design. Ignore the screenshot environment and remove the firearm. Create premium softly sculpted hand-painted 3D-ish graphic game character art: refined painterly surfaces, warm ceramic armor, deep navy fabric, oxidized teal straps, marigold fittings, delicate edge highlights, warm key light with restrained cool rim light. Keep the real character's personality; adult rescue/reclamation professional, not infant/chibi or generic fantasy hero. One character only, near-front three-quarter pose, upright calm alert stance. For animation readiness, relaxed arms gently separated from torso by 12\u201320 degrees, elbows slightly bent and both hands clearly readable; no hands crossing the chest, no weapon, no overlapping limbs. Feet grounded on the same implied baseline, tail/ears/gills fully visible with clean silhouettes independent enough to rig. Transparent portrait composition 1024 by 1536, centered full body with about 8% margin on every side including highest ear/tuft and toes. Genuine transparent alpha outside the subject: no baked background, floor, rectangle, shadow plate, cast ground shadow, text, captions or watermark. Do not invent costume symbols, unrelated props or a different species.  Image 2 is a style-family reference ONLY: match its premium painted sculptural treatment, material finish and light quality, never copy its duck identity, sunglasses, plumage or specific costume into this character. Character: Hex, the adult black cat from image 1. Retain sleek black fur, green-yellow cat eyes, pink-red nose, large black pointed ears with muted pink interiors and long curved black tail. Keep her actual slim agile adult feminine build, pink/marigold small kit accents, navy/teal uniform, warm ceramic shoulder/chest plates, utilitarian shorts/trousers as pictured, pouches and boots. Tail visible to one side, relaxed empty separated gloved hands, no shotgun. Do not turn her into a gray cat or fox.",
+      "path": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-866e87b9-77a7-44d4-85e3-25ee23ccc72e.png",
+      "output_hint": "Generated images are saved to /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4 as /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-866e87b9-77a7-44d4-85e3-25ee23ccc72e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 996030,
+      "alpha_corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "source_png": "art-sources/crew-hex.png",
+      "website_asset": "assets/illustrated/crew-hex.webp",
+      "webp_bytes": 180572,
+      "webp_encoding": {
+        "color_quality": 88,
+        "alpha_quality": 100,
+        "encoder": "system cwebp",
+        "alpha_preserved_exactly": true
+      },
+      "source_sha256": "35f2f111c1535b28ad45e59097b2f9388595255f7f2d91d8b603f1124352a6c5",
+      "webp_sha256": "e651c6b3b133c5eaf92982fd584fc67b56e4704684e366228e30e4f6b4e5f1c2",
+      "capture_map": "assets/maps/tideglass-baths.json",
+      "pose": "Upright, empty-handed, limbs gently separated for 2D skeletal skinning"
+    },
+    {
+      "id": "patches",
+      "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00006.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: production transparent full-body illustrated character for articulated 2D website animation, not a screenshot. Image 1 is the actual game character identity/costume reference; preserve the species, fur/skin colors, distinguishing features, adult proportions and manufactured outfit design. Ignore the screenshot environment and remove the firearm. Create premium softly sculpted hand-painted 3D-ish graphic game character art: refined painterly surfaces, warm ceramic armor, deep navy fabric, oxidized teal straps, marigold fittings, delicate edge highlights, warm key light with restrained cool rim light. Keep the real character's personality; adult rescue/reclamation professional, not infant/chibi or generic fantasy hero. One character only, near-front three-quarter pose, upright calm alert stance. For animation readiness, relaxed arms gently separated from torso by 12\u201320 degrees, elbows slightly bent and both hands clearly readable; no hands crossing the chest, no weapon, no overlapping limbs. Feet grounded on the same implied baseline, tail/ears/gills fully visible with clean silhouettes independent enough to rig. Transparent portrait composition 1024 by 1536, centered full body with about 8% margin on every side including highest ear/tuft and toes. Genuine transparent alpha outside the subject: no baked background, floor, rectangle, shadow plate, cast ground shadow, text, captions or watermark. Do not invent costume symbols, unrelated props or a different species.  Image 2 is a style-family reference ONLY: match its premium painted sculptural treatment, material finish and light quality, never copy its duck identity, sunglasses, plumage or specific costume into this character. Character: Patches, the adult red panda from image 1. Retain orange-red thick fur, cream muzzle and cheek patches, dark facial eye patches, round cream-edged red-panda ears, black nose and broad stocky strong adult build. Keep his actual heavy warm ceramic chest and shoulder plates, dark navy padded uniform and trousers, oxidized teal straps, marigold fasteners, utility pouches and rugged boots. Show his thick ringed red-panda tail curving visibly outward with a gap from the legs. Both hands empty and clearly separated for rigging; no firearm, no tool in the hands, no welding arc or effects. If any worn tool is visible it must resemble the actual forked Arc shears from the reference, not a gun.",
+      "path": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-490b77b5-cf41-4c57-8db1-865fe1bcc57b.png",
+      "output_hint": "Generated images are saved to /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4 as /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-490b77b5-cf41-4c57-8db1-865fe1bcc57b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 781698,
+      "alpha_corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "source_png": "art-sources/crew-patches.png",
+      "website_asset": "assets/illustrated/crew-patches.webp",
+      "webp_bytes": 230570,
+      "webp_encoding": {
+        "color_quality": 88,
+        "alpha_quality": 100,
+        "encoder": "system cwebp",
+        "alpha_preserved_exactly": true
+      },
+      "source_sha256": "bf663fc172fa413411b1f9138890ba40e45e57e0d361a592340573d0b6caf66a",
+      "webp_sha256": "794fa8ab4f507bf47383f51912b3e2a48b71bc05501cd4421626da2c49e665d3",
+      "capture_map": "assets/maps/tideglass-baths.json",
+      "pose": "Upright, empty-handed, limbs gently separated for 2D skeletal skinning"
+    },
+    {
+      "id": "axi",
+      "reference": "/home/cabewse/work_space/Games/QindaOriginSpecies/validation/website-character-photos/raw/photo-00007.jpg",
+      "prompt": "Use case: stylized-concept. Asset type: production transparent full-body illustrated character for articulated 2D website animation, not a screenshot. Image 1 is the actual game character identity/costume reference; preserve the species, fur/skin colors, distinguishing features, adult proportions and manufactured outfit design. Ignore the screenshot environment and remove the firearm. Create premium softly sculpted hand-painted 3D-ish graphic game character art: refined painterly surfaces, warm ceramic armor, deep navy fabric, oxidized teal straps, marigold fittings, delicate edge highlights, warm key light with restrained cool rim light. Keep the real character's personality; adult rescue/reclamation professional, not infant/chibi or generic fantasy hero. One character only, near-front three-quarter pose, upright calm alert stance. For animation readiness, relaxed arms gently separated from torso by 12\u201320 degrees, elbows slightly bent and both hands clearly readable; no hands crossing the chest, no weapon, no overlapping limbs. Feet grounded on the same implied baseline, tail/ears/gills fully visible with clean silhouettes independent enough to rig. Transparent portrait composition 1024 by 1536, centered full body with about 8% margin on every side including highest ear/tuft and toes. Genuine transparent alpha outside the subject: no baked background, floor, rectangle, shadow plate, cast ground shadow, text, captions or watermark. Do not invent costume symbols, unrelated props or a different species.  Image 2 is a style-family reference ONLY: match its premium painted sculptural treatment, material finish and light quality, never copy its duck identity, sunglasses, plumage or specific costume into this character. Character: Axi, the adult pink axolotl from image 1. Retain pale pink skin, round dark eyes, axolotl mouth, six prominent branching pink external gill fans, clear bubble helmet with teal collar and air hose, and large fin-edged curved pink tail. Keep her actual adult field-professional build and navy/teal shorts and equipment, ceramic shoulder plates, marigold clips, existing pink/teal pouches and boots. Gills and fin tail must be completely visible, cleanly separated from body where possible, and the helmet must remain clear with restrained edge reflections. Empty relaxed gloved hands gently apart from torso, no flame weapon or gun. Do not replace the external gills with hair or mammal ears.",
+      "path": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-05dd06c1-dfe9-4483-ab9c-a82f14a59189.png",
+      "output_hint": "Generated images are saved to /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4 as /home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-05dd06c1-dfe9-4483-ab9c-a82f14a59189.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 887186,
+      "alpha_corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "source_png": "art-sources/crew-axi.png",
+      "website_asset": "assets/illustrated/crew-axi.webp",
+      "webp_bytes": 233850,
+      "webp_encoding": {
+        "color_quality": 88,
+        "alpha_quality": 100,
+        "encoder": "system cwebp",
+        "alpha_preserved_exactly": true
+      },
+      "source_sha256": "3860f0879713fd8d6f1038e9678707f8c49105db0d3d6b0e80fb278a89ccce7e",
+      "webp_sha256": "e32c030923bb65193fc002b80a788b0075f8721b6e0375e559a17cf34dee63f5",
+      "capture_map": "assets/maps/tideglass-baths.json",
+      "pose": "Upright, empty-handed, limbs gently separated for 2D skeletal skinning"
+    }
+  ],
+  "recovery_copy": "qinda:/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/website-illustrated/crew/"
+}

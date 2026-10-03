@@ -1,0 +1,193 @@
+{
+  "map": "assets/maps/tideglass-baths.json",
+  "map_sites": 6,
+  "map_sha256": "c07294151c907fb34d204b4fc17c952c2f1c337973b1113dd9db5cc9674e8c77",
+  "renderer": "OpenGL",
+  "graphics": "ultra",
+  "binary_source_revision": "311be6cf81ad5be14c40d7b6c484a4640fcb213c",
+  "source_checkout_revision": "efc5e4dcb3d15682a85370d7bc6ab5ccc6eabe8b",
+  "photos": [
+    {
+      "identity": "CyberPengu",
+      "model": "cyberpengu",
+      "asset": "assets/characters/scene-cyberpengu.webp",
+      "raw": "validation/website-character-photos/retry3/raw/photo-00000.jpg",
+      "views": "validation/website-character-photos/retry3/combined-views.json",
+      "raw_sha256": "23884c633cf41e180ddca763aef262aa764c53f1480eb30a7490d385d969ce97",
+      "asset_sha256": "30b6bbb4d6a97faf20d832ffa65304ac6f2ef952e9e1efda78e31f816d31bb7b",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Duck\u00e9",
+      "model": "ducke",
+      "asset": "assets/characters/scene-ducke.webp",
+      "raw": "validation/website-character-photos/raw/photo-00001.jpg",
+      "views": "validation/website-character-photos/combined-views.json",
+      "raw_sha256": "1216fe9713c97eae524c6b04cc8420d09dbf6ad27210530523c89b11c2b33620",
+      "asset_sha256": "8dc9704eac6abd1c433d81b213515d70c44ab31930aa52ddcd82ec9f9fba341a",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Vix",
+      "model": "vix",
+      "asset": "assets/characters/scene-vix.webp",
+      "raw": "validation/website-character-photos/raw/photo-00002.jpg",
+      "views": "validation/website-character-photos/combined-views.json",
+      "raw_sha256": "fb44f247b998a039210600ac0ac5e86992221f78e1569237cdab73c3b6f486d8",
+      "asset_sha256": "fb644a92e65a57126c06d5a351ca27422ce0e241b01071e6c32ad4d2e295c6a5",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Cache",
+      "model": "cache",
+      "asset": "assets/characters/scene-cache.webp",
+      "raw": "validation/website-character-photos/retry3/raw/photo-00001.jpg",
+      "views": "validation/website-character-photos/retry3/combined-views.json",
+      "raw_sha256": "62e2a6b3818c2c3ec35005b34654742d4b0b9772319dfa499afb54705c5556a5",
+      "asset_sha256": "cb8fe53c946df3e552b5c01d73f69c1fb7b99d6b1c4eb232156282d7d77c8653",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Mochi",
+      "model": "mochi",
+      "asset": "assets/characters/scene-mochi.webp",
+      "raw": "validation/website-character-photos/raw/photo-00004.jpg",
+      "views": "validation/website-character-photos/combined-views.json",
+      "raw_sha256": "ed50469bcad8c1777674561c5f9d842eb0d55b5aa1bb674a01b7b861c80a6827",
+      "asset_sha256": "44ebe760535e7e99c9cb8be64ba8f4bb0cf4fff53563e8df3f460b493049497c",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Hex",
+      "model": "hex",
+      "asset": "assets/characters/scene-hex.webp",
+      "raw": "validation/website-character-photos/raw/photo-00005.jpg",
+      "views": "validation/website-character-photos/combined-views.json",
+      "raw_sha256": "a71092412ffee8969734e1268bb5a226666d25d52ab961611bf93e955b5ca779",
+      "asset_sha256": "0a10d3b662820d12ce1446577b339e9bff9b6d42becf92c888d1b517fe0fb340",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Patches",
+      "model": "patches",
+      "asset": "assets/characters/scene-patches.webp",
+      "raw": "validation/website-character-photos/raw/photo-00006.jpg",
+      "views": "validation/website-character-photos/combined-views.json",
+      "raw_sha256": "fa5fa59eddb1350483073faaac3ed8acda47b4c21cb498c104b88d29f5289c33",
+      "asset_sha256": "faa2bf406fdb83fe44240ff3330d6890cf87c612c78d74ffcbbec03b9f221411",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Axi",
+      "model": "axi",
+      "asset": "assets/characters/scene-axi.webp",
+      "raw": "validation/website-character-photos/raw/photo-00007.jpg",
+      "views": "validation/website-character-photos/combined-views.json",
+      "raw_sha256": "77f0c0434cf1daf824d3f7bfa66559ea5ffe6054e9a1edf56c4417c2f2750f7a",
+      "asset_sha256": "a7497ae2217f26eecbdb5e7eefe5af16d91000e22936fc96c356d316b2a46d76",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Scuttle",
+      "model": "creep-spider",
+      "asset": "assets/characters/scene-scuttle.webp",
+      "raw": "validation/website-character-photos/raw/photo-00008.jpg",
+      "views": "validation/website-character-photos/combined-views.json",
+      "raw_sha256": "957ffd9e948f0a833a016b32f8477c827997fdb067e128f1968d9b012f8ab9e1",
+      "asset_sha256": "beb82ec08dc744d7ff3a721e9c4a120bba43c2af9dd54d27f84ca2123e88de1d",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Spool",
+      "model": "creep-hexapod",
+      "asset": "assets/characters/scene-spool.webp",
+      "raw": "validation/website-character-photos/raw/photo-00009.jpg",
+      "views": "validation/website-character-photos/combined-views.json",
+      "raw_sha256": "75bb09dbcad2f6d1ee03a0d352df027e244ea6a0133cc0a5c8c00235f0caa8f3",
+      "asset_sha256": "e6c682b6f8810c1becda64742130d1dd694a1e86b7383430d2ae31629c15bcc7",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Chime",
+      "model": "creep-wasp",
+      "asset": "assets/characters/scene-chime.webp",
+      "raw": "validation/website-character-photos/raw/photo-00010.jpg",
+      "views": "validation/website-character-photos/combined-views.json",
+      "raw_sha256": "244f0e0640e5c1ee65678c19f0b190313dc3db36cfd2979a1941c0c49a6c4fb1",
+      "asset_sha256": "08eb56b5befe4c6fccbb549441481ee5e611221c8df5e5adfc56fca6c83bd3ca",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Skip",
+      "model": "creep-fade",
+      "asset": "assets/characters/scene-skip.webp",
+      "raw": "validation/website-character-photos/raw/photo-00011.jpg",
+      "views": "validation/website-character-photos/combined-views.json",
+      "raw_sha256": "ee0c92b278ef9df811027142a12d8c317c0ca19b3ccaef5009b65c4ebaa8488b",
+      "asset_sha256": "63ce93e89d49cde3f1091b76bfa5bc7ac6a29b1ac8d4e5af380310b0e2c1955e",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    },
+    {
+      "identity": "Bastion",
+      "model": "creep-quadruped",
+      "asset": "assets/characters/scene-bastion.webp",
+      "raw": "validation/website-character-photos/retry3/bastion-final/raw/photo-00000.jpg",
+      "views": "validation/website-character-photos/retry3/bastion-final/views.json",
+      "raw_sha256": "d07af821a0b13498ed8407023190ec500fc58d584f1cc1f0b76cb1c031f0f3b0",
+      "asset_sha256": "fd469025dcd33d0a12ea8c7f729485ff0a03ff90a9f05609c1ab14e908dd2da4",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "review": "Actual rendered frame visually inspected; readable silhouette, finished canonical map, no HUD/debug/burned labels."
+    }
+  ]
+}

@@ -1,303 +1,30 @@
 {
-  "version": 1,
+  "version": 2,
   "date": "2026-10-03",
-  "note": "All scene and model images derive from existing game production assets. Illustrated hero artwork is labeled separately on the page. No active welding screenshot is used. Trailer MP4s are delivered separately; consult media-manifest.json before publication.",
+  "note": "Illustrations are explicitly labeled; actual photographs come from the canonical full six-site Tideglass production batch. Rejected development-room character renders and unused old imagery have been removed. All source PNGs/prompts/reference maps are durable source records, excluded from the public runtime bundle.",
+  "source_records": [
+    {
+      "file": "art-sources/in-engine-photos.json",
+      "sha256": "08644abf9ccb511ad69c1e3ce285a929faddf6741464bd9aab63bb77df5cd798"
+    },
+    {
+      "file": "art-sources/generated-environment-assets.json",
+      "sha256": "06a38368c728d09f8a0391e79da14d3989499f32de510941073f9390b142530f"
+    },
+    {
+      "file": "art-sources/crew-illustration-generation.json",
+      "sha256": "494aba05435f11167bc5bbc41d1d1e6ce7d3f56669135c3e3d6e7e33865aa73c"
+    },
+    {
+      "file": "art-sources/generated-chassis-assets.json",
+      "sha256": "388f141d0fa2c404f3981c040ceb1109f5433c83458642686cf0a9284287c27e"
+    },
+    {
+      "file": "assets/illustrated/crew-rig-landmarks.json",
+      "sha256": "bdfd2eef7d2fd8a975e6fdcff3be6a25d0e428cd3a6998b59146643d5a5a9bcd"
+    }
+  ],
   "assets": [
-    {
-      "asset": "assets/key-art.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/assets/ui/illustrated/title-painting.png",
-      "source_sha256": "aa3b400d9c1c289c364690efef65374507532ee9b6034e2b11611cbb17d1644b",
-      "classification": "Illustrated game key art",
-      "crop_box": null,
-      "dimensions": [
-        1672,
-        941
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 377576,
-      "sha256": "ffe9666c2d6c690ea86a8c267d92093a92aac9ac18db1f23db8f0d853687c90b"
-    },
-    {
-      "asset": "assets/tideglass.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/trailer-2/scout/tiles/05-pool-deck-high.png",
-      "source_sha256": "94c7fcd222fbb797f0fc9cbb42d5f7c55ba5f3ca1898766cbca4910e6613fc3e",
-      "classification": "Actual in-engine Tideglass capture; debug header cropped",
-      "crop_box": [
-        0,
-        42,
-        960,
-        540
-      ],
-      "dimensions": [
-        960,
-        498
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 57750,
-      "sha256": "8fcb2ba7d4b45132aa9bd2e854dd33d240c08839e7e752940a8942fd5457730e"
-    },
-    {
-      "asset": "assets/cyberpengu.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/06-cyberpengu-rivet-idle-ready-front-three-quarter.png",
-      "source_sha256": "f740b748a2cb1611fab18bd76b9c83aaa4b0018f21d671a5d0f5a6cb79ab0a2b",
-      "classification": "Actual in-engine crew render, idle-ready weapon pose",
-      "crop_box": [
-        560,
-        260,
-        1280,
-        1000
-      ],
-      "dimensions": [
-        720,
-        740
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 100406,
-      "sha256": "f1efdfeb011f3a226b110b1cace758b3a3f9d5ebce3e64fcc94c14c669a79da6"
-    },
-    {
-      "asset": "assets/ducke.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/12-ducke-ram-idle-ready-front-three-quarter.png",
-      "source_sha256": "1bfb4df8c7a4ed3219c55e68810b69d27ab928c44ac62a99f5c16c6e9969cacc",
-      "classification": "Actual in-engine crew render, idle-ready weapon pose",
-      "crop_box": [
-        560,
-        260,
-        1280,
-        1000
-      ],
-      "dimensions": [
-        720,
-        740
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 102272,
-      "sha256": "66e71b8ff5d4ed1c5266c77baea6a8099b3ee2023d9bd7d8097c23d073b7ddc8"
-    },
-    {
-      "asset": "assets/vix.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/18-vix-purge-idle-ready-front-three-quarter.png",
-      "source_sha256": "6dfc2300bea576c77e03ae5a5bd791ba8aa2e570062448405244b67112786a22",
-      "classification": "Actual in-engine crew render, idle-ready weapon pose",
-      "crop_box": [
-        560,
-        260,
-        1280,
-        1000
-      ],
-      "dimensions": [
-        720,
-        740
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 105336,
-      "sha256": "3696b27bf8cdaa0c3f943628ab56867cc67560ab4a5f83464100c2b8bdb4ede1"
-    },
-    {
-      "asset": "assets/cache.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/24-cache-arc-idle-ready-front-three-quarter.png",
-      "source_sha256": "22cde0c9ae6a3c17dcc9c1bdb228d52396f98392a248572a6abf31866a12a328",
-      "classification": "Actual in-engine crew render, idle-ready weapon pose",
-      "crop_box": [
-        560,
-        260,
-        1280,
-        1000
-      ],
-      "dimensions": [
-        720,
-        740
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 103210,
-      "sha256": "1c9d7f2d77867ff928493449297e5eca89b0d677c9e0f19deb6b966bdc3e6789"
-    },
-    {
-      "asset": "assets/mochi.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/30-mochi-rivet-idle-ready-front-three-quarter.png",
-      "source_sha256": "2a489a9580a1ad56b4b035fd0fb0e85316bc42e3f14b4c15176e9b029cf52981",
-      "classification": "Actual in-engine crew render, idle-ready weapon pose",
-      "crop_box": [
-        560,
-        260,
-        1280,
-        1000
-      ],
-      "dimensions": [
-        720,
-        740
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 101172,
-      "sha256": "3328e30cf4630a361d4287781fca20c697eaff1399bfc41bd124e9e120853c8c"
-    },
-    {
-      "asset": "assets/hex.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/36-hex-ram-idle-ready-front-three-quarter.png",
-      "source_sha256": "902da9b9ce75ecc180225aa87bb0c53866d215eaf4b3efa3278eac48b3a7d3c1",
-      "classification": "Actual in-engine crew render, idle-ready weapon pose",
-      "crop_box": [
-        560,
-        260,
-        1280,
-        1000
-      ],
-      "dimensions": [
-        720,
-        740
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 100578,
-      "sha256": "408000eda6268e2e5b6fe20a18586e326dd60e74fa72dfd10798d7034b18a74d"
-    },
-    {
-      "asset": "assets/patches.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/42-patches-purge-idle-ready-front-three-quarter.png",
-      "source_sha256": "d2aa0fe6685a984ae56beb516a3540f51a225578ae052912f9dc3cdc94bc40e3",
-      "classification": "Actual in-engine crew render, idle-ready weapon pose",
-      "crop_box": [
-        560,
-        260,
-        1280,
-        1000
-      ],
-      "dimensions": [
-        720,
-        740
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 108282,
-      "sha256": "dbf456861c5be32a748f80b73166fedb0ba0316f9373a4fe56b34e65d7502d5f"
-    },
-    {
-      "asset": "assets/axi.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/weapons-final-tiles/48-axi-arc-idle-ready-front-three-quarter.png",
-      "source_sha256": "efcec3f5fb6e69d9c7a6ae70e05228c31eabd8baf22e833da240d83c0e76faac",
-      "classification": "Actual in-engine crew render, idle-ready weapon pose",
-      "crop_box": [
-        560,
-        260,
-        1280,
-        1000
-      ],
-      "dimensions": [
-        720,
-        740
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 103500,
-      "sha256": "9e06726fc0ce5bcb0c55cce06ed6cbfc024c1cc212da04424bd4488061133cd0"
-    },
-    {
-      "asset": "assets/scuttle.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/critic-creep-tiles/08-scuttle-creep-spider-idle-three-quarter.png",
-      "source_sha256": "95e2758bb07730e0d40903796e18135b86ec693fd306311323b0ea1714b04134",
-      "classification": "Actual in-engine Cyber Creep machine render with crew scale reference",
-      "crop_box": [
-        690,
-        90,
-        1770,
-        1060
-      ],
-      "dimensions": [
-        1080,
-        970
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 176126,
-      "sha256": "5210980ec04a32483097ec903541f8a660dbbbf3f41fdf4c1d1283c5ce3d11e9"
-    },
-    {
-      "asset": "assets/spool.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/critic-creep-tiles/20-spool-creep-hexapod-idle-three-quarter.png",
-      "source_sha256": "edebc3844df3cab680787faae3ab591dd7d30d8d65325995d07d6813705d5211",
-      "classification": "Actual in-engine Cyber Creep machine render with crew scale reference",
-      "crop_box": [
-        690,
-        90,
-        1770,
-        1060
-      ],
-      "dimensions": [
-        1080,
-        970
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 192202,
-      "sha256": "1582ce2c84423a467b72c93692cdba8d36bd7e6313f48da7acc7be4d1d003354"
-    },
-    {
-      "asset": "assets/chime.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/critic-creep-tiles/14-chime-creep-wasp-idle-three-quarter.png",
-      "source_sha256": "8d1fa9ec2cfeb1ee9db515489c8850ab24b1c0f015471862f420c10f977195e4",
-      "classification": "Actual in-engine Cyber Creep machine render with crew scale reference",
-      "crop_box": [
-        690,
-        90,
-        1770,
-        1060
-      ],
-      "dimensions": [
-        1080,
-        970
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 179420,
-      "sha256": "c9862c9ce118dd863d9e82a2956944ee56d15ba5fb9983156aec08ab8e732c87"
-    },
-    {
-      "asset": "assets/skip.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/critic-creep-tiles/26-skip-creep-fade-idle-three-quarter.png",
-      "source_sha256": "1ecfeb56cfb9c6f07f3e0b13047326879fbbd61a2180d0c4556787aa353b2225",
-      "classification": "Actual in-engine Cyber Creep machine render with crew scale reference",
-      "crop_box": [
-        690,
-        90,
-        1770,
-        1060
-      ],
-      "dimensions": [
-        1080,
-        970
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 192464,
-      "sha256": "0b3645a061eda78af6b275c174a0ef3a4229e2148f47a5d57999b49f71949394"
-    },
-    {
-      "asset": "assets/bastion.webp",
-      "source_host": "qinda",
-      "source_file": "/home/cabewse/work_SPaC3/Games/QindaOriginSpecies/validation/characters/critic-creep-tiles/32-bastion-creep-quadruped-idle-three-quarter.png",
-      "source_sha256": "41fffa61d63a8aa60faa604224cefc14f3c3ab401fe294a5453772a921bc20ed",
-      "classification": "Actual in-engine Cyber Creep machine render with crew scale reference",
-      "crop_box": [
-        690,
-        90,
-        1770,
-        1060
-      ],
-      "dimensions": [
-        1080,
-        970
-      ],
-      "encoding": "WebP, quality 88",
-      "bytes": 206584,
-      "sha256": "d9d1e1d1c87c1d85ac56ac1dd6543895aa97e46171dd760e34f556018e4ff69a"
-    },
     {
       "asset": "assets/hold-the-light.webp",
       "source_host": "qinda",
@@ -341,6 +68,340 @@
       "classification": "Existing Sloom website font, copied without alteration",
       "bytes": 22288,
       "sha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d"
+    },
+    {
+      "asset": "assets/characters/scene-axi.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 262754,
+      "sha256": "a7497ae2217f26eecbdb5e7eefe5af16d91000e22936fc96c356d316b2a46d76",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-bastion.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 179664,
+      "sha256": "fd469025dcd33d0a12ea8c7f729485ff0a03ff90a9f05609c1ab14e908dd2da4",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-cache.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 221052,
+      "sha256": "cb8fe53c946df3e552b5c01d73f69c1fb7b99d6b1c4eb232156282d7d77c8653",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-chime.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 337576,
+      "sha256": "08eb56b5befe4c6fccbb549441481ee5e611221c8df5e5adfc56fca6c83bd3ca",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-cyberpengu.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 206182,
+      "sha256": "30b6bbb4d6a97faf20d832ffa65304ac6f2ef952e9e1efda78e31f816d31bb7b",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-ducke.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 201582,
+      "sha256": "8dc9704eac6abd1c433d81b213515d70c44ab31930aa52ddcd82ec9f9fba341a",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-hex.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 178094,
+      "sha256": "0a10d3b662820d12ce1446577b339e9bff9b6d42becf92c888d1b517fe0fb340",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-mochi.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 206488,
+      "sha256": "44ebe760535e7e99c9cb8be64ba8f4bb0cf4fff53563e8df3f460b493049497c",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-patches.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 187452,
+      "sha256": "faa2bf406fdb83fe44240ff3330d6890cf87c612c78d74ffcbbec03b9f221411",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-scuttle.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 291750,
+      "sha256": "beb82ec08dc744d7ff3a721e9c4a120bba43c2af9dd54d27f84ca2123e88de1d",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-skip.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 192640,
+      "sha256": "63ce93e89d49cde3f1091b76bfa5bc7ac6a29b1ac8d4e5af380310b0e2c1955e",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-spool.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 242820,
+      "sha256": "e6c682b6f8810c1becda64742130d1dd694a1e86b7383430d2ae31629c15bcc7",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/characters/scene-vix.webp",
+      "classification": "Actual current-engine canonical full six-site Tideglass photograph",
+      "dimensions": [
+        1918,
+        1055
+      ],
+      "bytes": 198440,
+      "sha256": "fb644a92e65a57126c06d5a351ca27422ce0e241b01071e6c32ad4d2e295c6a5",
+      "source_record": "art-sources/in-engine-photos.json"
+    },
+    {
+      "asset": "assets/illustrated/chassis-bastion.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 203492,
+      "sha256": "af1d8bf459def10bee072aefb8e2a930f657f8a87c6620ed10bf812f92c27ecf",
+      "source_record": "art-sources/generated-chassis-assets.json"
+    },
+    {
+      "asset": "assets/illustrated/chassis-chime.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 213402,
+      "sha256": "cf3af71425aff1e47050f2bfdeec50054a3f493233320f941c5d979d21386bcd",
+      "source_record": "art-sources/generated-chassis-assets.json"
+    },
+    {
+      "asset": "assets/illustrated/chassis-scuttle.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 175674,
+      "sha256": "2aadf0f3699261b98694ede3d8e6e20d6480d35861f4cb39aa9ef897dbb05a80",
+      "source_record": "art-sources/generated-chassis-assets.json"
+    },
+    {
+      "asset": "assets/illustrated/chassis-skip.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 206516,
+      "sha256": "66c51e60dc9d2d7deff1b048c470fae6534dff6e2277e7e144493eb35315854b",
+      "source_record": "art-sources/generated-chassis-assets.json"
+    },
+    {
+      "asset": "assets/illustrated/chassis-spool.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 221558,
+      "sha256": "84b33c9c98a795c12cca01015197502e67179e150d6efcb81fb33e618772bc38",
+      "source_record": "art-sources/generated-chassis-assets.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-axi.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 233850,
+      "sha256": "e32c030923bb65193fc002b80a788b0075f8721b6e0375e559a17cf34dee63f5",
+      "source_record": "art-sources/crew-illustration-generation.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-cache.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 267670,
+      "sha256": "f9c140054768428f4e23f0427e3b261d05dc70fdaeb29fc338ebd96483dd9f48",
+      "source_record": "art-sources/crew-illustration-generation.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-cyberpengu.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 198660,
+      "sha256": "94cf2267a4cdc3d4e039243988c76c071e0e6ac153087d95de0c2877fc37687a",
+      "source_record": "art-sources/crew-illustration-generation.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-ducke.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 174534,
+      "sha256": "0fc122e6290f42965dbe2aa487ed25163bc9e322d5054ff42ff13079f7f9c09a",
+      "source_record": "art-sources/crew-illustration-generation.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-hex.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 180572,
+      "sha256": "e651c6b3b133c5eaf92982fd584fc67b56e4704684e366228e30e4f6b4e5f1c2",
+      "source_record": "art-sources/crew-illustration-generation.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-mochi.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 179780,
+      "sha256": "ea9d96e61177898b30cb27f58cffa7e4af835b4b008bc7688ca272487915b15c",
+      "source_record": "art-sources/crew-illustration-generation.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-patches.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 230570,
+      "sha256": "794fa8ab4f507bf47383f51912b3e2a48b71bc05501cd4421626da2c49e665d3",
+      "source_record": "art-sources/crew-illustration-generation.json"
+    },
+    {
+      "asset": "assets/illustrated/crew-vix.webp",
+      "classification": "Generated transparent illustrated character cutout; production-photo referenced",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 173026,
+      "sha256": "22dcfecb3ea8b57029d382a8cdf69cd2eadc99056fc0ec8a32412865f06fcf4c",
+      "source_record": "art-sources/crew-illustration-generation.json"
+    },
+    {
+      "asset": "assets/qompany-habitat-illustrated.webp",
+      "classification": "Generated illustrated habitat chapter art",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 372548,
+      "sha256": "c3fdcb15b9ec3154a1a959e01da6dba642fd6d49fa9177a9c11c6e411cd6786a",
+      "source_record": "art-sources/generated-environment-assets.json"
+    },
+    {
+      "asset": "assets/seedweb-habitat-illustrated.webp",
+      "classification": "Generated illustrated habitat chapter art",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "bytes": 437836,
+      "sha256": "6773e58f221d3935572e9ec466a37e9a054373dd359ca47511c02a62ad0f058f",
+      "source_record": "art-sources/generated-environment-assets.json"
+    },
+    {
+      "asset": "assets/seedweb-growth-illustrated.webp",
+      "classification": "Generated transparent manufactured Seedweb invasion fringe",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 360594,
+      "sha256": "208456dbf50023ce03f10ff51a559d4179b9dff8c80f16cadec542d3fa5a25f6",
+      "source_record": "art-sources/generated-environment-assets.json"
     }
-  ]
+  ],
+  "animation": {
+    "renderer": "rigs.js",
+    "configuration": "rig-configs.json",
+    "method": "Canvas 2D affine textured triangles on bone-weighted vertices; articulated chains, two-link ground-contact IK and pinned ground vertices.",
+    "characters": 13,
+    "hero_instances": 2,
+    "mesh_grid": [
+      18,
+      26
+    ],
+    "vertices_per_mesh": 513,
+    "frame_rate_cap": 24,
+    "behavior": "Reduced-motion and visible pause freeze the pose; offscreen and hidden documents stop RAF; active clocks resume without skipping hidden time.",
+    "evidence": "qa/rig-motion-preview.mp4"
+  }
 }

@@ -71,7 +71,16 @@
       "Salt Grotto",
       "Heat Exchange"
     ],
-    "capture_provenance": "Pending root audit; no new engine/map test or capture run after the correction."
+    "capture_provenance": "New thirteen-character production photo batch verified by root in the canonical full six-site Tideglass. Source/map/build hashes: art-sources/in-engine-photos.json. Earlier corrected films retained unchanged from the initial published website.",
+    "new_photo_map_sha256": "c07294151c907fb34d204b4fc17c952c2f1c337973b1113dd9db5cc9674e8c77",
+    "new_photo_binary_revision": "311be6cf81ad5be14c40d7b6c484a4640fcb213c"
   },
-  "corrected_welding_capture_revision": "af2e55b"
+  "corrected_welding_capture_revision": "af2e55b",
+  "visual_source_records": [
+    "art-sources/in-engine-photos.json",
+    "art-sources/generated-environment-assets.json",
+    "art-sources/crew-illustration-generation.json",
+    "art-sources/generated-chassis-assets.json",
+    "assets/illustrated/crew-rig-landmarks.json"
+  ]
 }
