@@ -33,14 +33,16 @@ Expected names:
 
 MP4s are intentionally ignored by Git. Durable masters and web files belong to the game's Qinda trailer lane, `/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/`. The trailer worker provides their verified production manifest. Record the actual deployed file hashes in `media-manifest.json` after receiving corrected finals.
 
-**Publication hold:** the initially delivered branding-correct films contain welding shots that must be replaced with the actual Arc shears welder. Do not publish that earlier copy. The manager and trailer worker are correcting these shots in both films. Site posters show the crew entering the pool room and the Seedweb-covered pool; neither portrays active welding. Patches's roster image is explicitly an idle-ready Purge kit pose, not a welding pose.
+**Corrected media verified:** both delivered films contain the checked forked Arc shears welder and attached working glow in A08, D06 and D07, captured from revision `af2e55b`. AAC packets are identical to the already verified “Kind Company” narration. Both final MP4 hashes, H264/AAC metadata, faststart and actual Firefox load/play/seek/decode/subtitle checks are recorded in `media-manifest.json`. Site posters show the crew entering the pool room and the Seedweb-covered pool; neither portrays active welding. Patches's roster caption explicitly says “Purge loadout, torch stowed.”
+
+**Root publication gate:** the user clarified that the full six-site Tideglass is the corrected canonical map. The smaller/broken map must never be used for tests, screenshots or play. Root is tracing the provenance of earlier movie body footage and environment/poster captures before publishing. The browser and welder checks prove playback and the repaired tool, not the map provenance of every earlier shot. No further engine/map tests or captures are authorized during that audit.
 
 ## Content and art
 
 - The user's written title is **Qind Qompany: Origin of Species**. Spoken narration says **Kind Company**.
 - All eight crew identities, five Cyber Creep chassis, seven crew structures and ten hive structures are documented.
 - Both actual tier paths, costs, timings, base prerequisites, Arms lab research, hive traits and offline behavior are explained.
-- Tideglass Baths, Seedweb/Custodian history and the supplied creator history are included.
+- The canonical full six-site Tideglass, its authored command-site names, Seedweb/Custodian history and the supplied creator history are included.
 - The page says **In development** and makes no release-date, download or finished-production promise.
 - Artwork is existing production material: the hero is labeled illustrated key art; world, crew, chassis and trailer images are actual in-engine renders/captures. See `asset-provenance.json` for original Qinda paths, operations and SHA-256 hashes.
 - `content-sources.json` records the authoritative game files and user-supplied account. Latest Patches input correction was verified by the manager against the simulation: **hold G** for the dedicated Arc shears welder; releasing G redraws the selected firearm. E remains use/service/build.

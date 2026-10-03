@@ -1,14 +1,304 @@
 {
+  "version": 2,
   "date": "2026-10-03",
-  "status": "awaiting_corrected_welding_shots_do_not_publish_earlier_mp4s",
+  "status": "corrected_media_browser_verified_pending_root_canonical_map_provenance_review",
+  "target": "https://sloom.studio/origin",
   "source_host": "qinda",
   "source_directory": "/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers",
-  "delivery": "Git tracks the subtitle text; large MP4s are separate durable production artifacts. Fill verified final MP4 hashes after corrected films arrive.",
-  "expected_files": [
-    "media/hold-the-light.mp4",
-    "media/send-another.mp4"
-  ],
-  "subtitles": "English narration only; field dialogue omitted.",
+  "producer_manifest": {
+    "file": "/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/media-manifest.json",
+    "sha256": "01f3c36657c0b05d943316509873208b6fddaf60451d093e36ec2f0ae3152d6a"
+  },
+  "welding_correction_proof": {
+    "file": "/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/corrected-welding/correction.json",
+    "sha256": "62c9710b961eb825541eab7d7e25dca2bdbdc5ff500dd4c683ba7596fc94a5b1",
+    "capture_revision": "af2e55b",
+    "audio_preserved": true,
+    "narration_verification": "Earlier delivered MP4 pronunciation checks remain valid: AAC packets identical."
+  },
   "spoken_title": "Kind Company",
-  "written_title": "Qind Qompany: Origin of Species"
+  "written_title": "Qind Qompany: Origin of Species",
+  "files": [
+    {
+      "file": "media/hold-the-light.mp4",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/hold-the-light.mp4",
+      "bytes": 116962257,
+      "sha256": "b7cee179347d98be2083d607aa7bf109eb7563ce8aa8e1373be8d62fc95d11ac",
+      "duration_seconds": 189.504,
+      "video": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "24/1",
+        "pixel_format": "yuv420p"
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": "48000",
+        "channels": 2
+      },
+      "faststart": true,
+      "mp4_boxes": [
+        {
+          "type": "ftyp",
+          "offset": 0,
+          "size": 32
+        },
+        {
+          "type": "moov",
+          "offset": 32,
+          "size": 129876
+        },
+        {
+          "type": "free",
+          "offset": 129908,
+          "size": 8
+        },
+        {
+          "type": "mdat",
+          "offset": 129916,
+          "size": 116832341
+        }
+      ]
+    },
+    {
+      "file": "media/send-another.mp4",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/send-another.mp4",
+      "bytes": 116440189,
+      "sha256": "de48a3a8e4b7e79358f9d6ad2a6820c09526d70a851939d9cc1f9ba5e4f7b148",
+      "duration_seconds": 189.504,
+      "video": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "24/1",
+        "pixel_format": "yuv420p"
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": "48000",
+        "channels": 2
+      },
+      "faststart": true,
+      "mp4_boxes": [
+        {
+          "type": "ftyp",
+          "offset": 0,
+          "size": 32
+        },
+        {
+          "type": "moov",
+          "offset": 32,
+          "size": 126250
+        },
+        {
+          "type": "free",
+          "offset": 126282,
+          "size": 8
+        },
+        {
+          "type": "mdat",
+          "offset": 126290,
+          "size": 116313899
+        }
+      ]
+    },
+    {
+      "file": "media/hold-the-light.vtt",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/hold-the-light.vtt",
+      "bytes": 1559,
+      "sha256": "1660aadb05bb1358722e36834358cf09119b687fc205ed0233995e2f54f870f7",
+      "kind": "English narration subtitles; field dialogue omitted"
+    },
+    {
+      "file": "media/send-another.vtt",
+      "source_host": "qinda",
+      "source_file": "/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/send-another.vtt",
+      "bytes": 1369,
+      "sha256": "365df74f35a7ea5ca8db3a837a86554bfcadd3290597f01f7e427cda1d8306e1",
+      "kind": "English narration subtitles; field dialogue omitted"
+    }
+  ],
+  "browser_verification": {
+    "passed": true,
+    "report": "qa/media-final.json",
+    "report_sha256": "424be1bbb9279971a20128ab506e8edd9e33416a7b0739b0c8dc2ff5c98f589f",
+    "method": "Actual Portage Firefox native video elements loaded metadata, played muted, sought and decoded frames via requestVideoFrameCallback; canvas pixel images were saved and visually inspected. Narration tracks loaded and parsed.",
+    "metadata": [
+      {
+        "file": "hold-the-light",
+        "duration": 189.504,
+        "width": 1920,
+        "height": 1080,
+        "readyState": 4,
+        "narrationCueCount": 19,
+        "error": null
+      },
+      {
+        "file": "send-another",
+        "duration": 189.504,
+        "width": 1920,
+        "height": 1080,
+        "readyState": 4,
+        "narrationCueCount": 20,
+        "error": null
+      }
+    ],
+    "welding_frame_checks": [
+      {
+        "shot": "A08",
+        "file": "hold-the-light",
+        "requestedTime": 43,
+        "currentTime": 43,
+        "decodedMediaTime": 43,
+        "width": 1920,
+        "height": 1080,
+        "capture": "media-final-A08.png",
+        "sha256": "7b2c6cd4b01c87ceedf56d6e98635e5de1e386a4572b523b5705f7e15f907b26"
+      },
+      {
+        "shot": "D06",
+        "file": "send-another",
+        "requestedTime": 147,
+        "currentTime": 147,
+        "decodedMediaTime": 147,
+        "width": 1920,
+        "height": 1080,
+        "capture": "media-final-D06.png",
+        "sha256": "e4ff546ee4659e1a083bbd446728144c5fd48d3e1f4e57c5aa2f1c7dfb1541fe"
+      },
+      {
+        "shot": "D07",
+        "file": "send-another",
+        "requestedTime": 148.38,
+        "currentTime": 148.38,
+        "decodedMediaTime": 148.38,
+        "width": 1920,
+        "height": 1080,
+        "capture": "media-final-D07.png",
+        "sha256": "3f9427adefd9d17c5d96898a41a52ed3ea5c8bfd22886fb57f16923717199f50"
+      }
+    ],
+    "checks": [
+      {
+        "name": "hold-the-light metadata loaded",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "hold-the-light real dimensions",
+        "passed": true,
+        "detail": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "name": "hold-the-light duration",
+        "passed": true,
+        "detail": 189.504
+      },
+      {
+        "name": "hold-the-light narration track loaded",
+        "passed": true,
+        "detail": {
+          "readyState": 2,
+          "cues": 19
+        }
+      },
+      {
+        "name": "hold-the-light subtitle timing within film",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "hold-the-light muted playback advanced",
+        "passed": true,
+        "detail": 0.208441
+      },
+      {
+        "name": "A08 decoded pixels are not blank",
+        "passed": true,
+        "detail": {
+          "range": 252.33333333333334,
+          "mean": 27.245949074074048
+        }
+      },
+      {
+        "name": "A08 no media error",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "send-another metadata loaded",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "send-another real dimensions",
+        "passed": true,
+        "detail": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "name": "send-another duration",
+        "passed": true,
+        "detail": 189.504
+      },
+      {
+        "name": "send-another narration track loaded",
+        "passed": true,
+        "detail": {
+          "readyState": 2,
+          "cues": 20
+        }
+      },
+      {
+        "name": "send-another subtitle timing within film",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "send-another muted playback advanced",
+        "passed": true,
+        "detail": 0.208435
+      },
+      {
+        "name": "D06 decoded pixels are not blank",
+        "passed": true,
+        "detail": {
+          "range": 218,
+          "mean": 18.318865740740726
+        }
+      },
+      {
+        "name": "D06 no media error",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "D07 decoded pixels are not blank",
+        "passed": true,
+        "detail": {
+          "range": 238.33333333333334,
+          "mean": 32.53096064814813
+        }
+      },
+      {
+        "name": "D07 no media error",
+        "passed": true,
+        "detail": null
+      }
+    ]
+  },
+  "canonical_map": {
+    "direction": "The full six-site Tideglass is the canonical map. The old smaller/broken map must never be used for testing, screenshots or play.",
+    "publication_owner": "Root manager",
+    "provenance_status": "Root tracing original movie body footage and environment/poster captures before publication. Browser playback and welding visuals are verified; those checks do not prove which map version was used to capture all earlier footage."
+  }
 }

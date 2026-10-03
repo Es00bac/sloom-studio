@@ -58,5 +58,20 @@
     "research_tiers_per_faction": 3,
     "trailers": 2
   },
-  "status": "In development; no release date, download promise, finished-production claim, or affiliation claimed."
+  "status": "In development; no release date, download promise, finished-production claim, or affiliation claimed.",
+  "canonical_map": {
+    "user_direction": "The full six-site Tideglass is the corrected canonical map, never an alternate; the old smaller/broken map is forbidden for play, tests and screenshots.",
+    "source_file": "assets/maps/tideglass-baths.json",
+    "source_sha256": "c07294151c907fb34d204b4fc17c952c2f1c337973b1113dd9db5cc9674e8c77",
+    "authored_sites": [
+      "Arrival Atrium",
+      "Desalination Intake",
+      "Filtration Core",
+      "Lower Pumps",
+      "Salt Grotto",
+      "Heat Exchange"
+    ],
+    "capture_provenance": "Pending root audit; no new engine/map test or capture run after the correction."
+  },
+  "corrected_welding_capture_revision": "af2e55b"
 }

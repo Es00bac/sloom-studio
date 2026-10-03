@@ -10,7 +10,9 @@
 - Both technology selectors switch to the correct faction path and accept focus.
 - The 17 native structure details are present in source, with every function and current cost.
 - Mobile navigation expands; Escape closes it and returns focus to the menu trigger.
-- Both native players expose controls, playsinline and preload=none; MP4 H264/AAC is supported. Both English tracks honestly say narration subtitles.
+- Both final MP4s match the producer SHA-256 hashes. File metadata verifies 1920×1080 H264/AAC, 24 fps, 4,548 frames, 189.504 seconds and moov-before-mdat faststart.
+- Actual Firefox native players loaded metadata, advanced muted playback, and decoded the corrected welding shots at A08 43.00 s, D06 147.00 s and D07 148.38 s. requestVideoFrameCallback reported the sought times; saved canvas pixels were inspected and show the forked Arc welder with attached glow. No media error occurred.
+- Both narration subtitle tracks loaded and parsed: 19 / 20 cues, all within the films. The production page retains native controls, playsinline and preload=none. Tracks honestly say narration subtitles.
 - Reduced-motion profiles have no motion-enabled class. The normal-motion profile initializes the enhancements.
 - No horizontal overflow at 1440, 390 or 320 px widths.
 - Text enlarged to twice every computed font size at 1440 and 390 px reflows without horizontal overflow. The hero, fixed header and scene footer were visually inspected and corrected to avoid overlap.
@@ -28,4 +30,6 @@ The isolated QA server injects finite DOM checks into a temporary response; it d
 
 Firefox's screenshot CLI with a fixed height clips the document origin, even after a script scrolls the viewport. Section evidence therefore uses real full-page images and coordinate-based crops. QA eagerly loads images to make offscreen capture evidence complete; production keeps normal lazy loading.
 
-The manager will verify the final live route, MIME and range responses, and corrected trailer playback after deployment. Current publication is held until the trailer worker replaces the erroneous welding shots and supplies the final hashes. This website source does not include an active-welding still.
+The manager will verify the final live route, MIME and range responses after deployment. Corrected movie browser evidence is `qa/media-final.json`, `media-final-A08.png`, `media-final-D06.png`, `media-final-D07.png` and `media-final-players.png`. Those are actual browser-decoded film pixels; the player screenshot uses a temporary QA stage holding the production native video elements.
+
+New user direction requires the canonical full six-site Tideglass for all play, tests and screenshots. The website now describes its six authored command sites. Publication awaits root’s map-provenance review of earlier film body footage and environment/poster captures. No engine/map test or capture was run after that instruction. The media gate proves actual playback, subtitles and the repaired welding tool; it does not independently establish the map source of all earlier imagery.
