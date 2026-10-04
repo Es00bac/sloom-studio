@@ -4,9 +4,10 @@
 .seedweb-hardware{opacity:.96}
 .dossier-copy,.dossier-toolbar,.roster-heading,.seedweb-note,.factions .section-heading{position:relative;z-index:6}
 .rig-canvas{z-index:6}
-.dossier.reveal{transform:none!important}.dossier-panel{isolation:auto}
+.dossier{z-index:auto}.dossier.reveal{transform:none!important;opacity:1!important}.dossier-panel{isolation:auto}
 .dossier-panel .illustration-stage{z-index:auto}
 .dossier-panel .illustration-stage .rig-canvas{z-index:6}
+.dossier-panel .illustration-stage .illustration-fallback{z-index:6}
 #factions,.hive-path,.hive-structures{--cyan:#e3ad59;--purple:#d0ac70}
 .hive-dossier{--faction:#e3ad59}.hive-path{--tech:#e3ad59}
 @media(prefers-reduced-motion:reduce){.seedweb-surface,.seedweb-hardware{transition:none}}

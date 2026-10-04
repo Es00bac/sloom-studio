@@ -1,0 +1,1491 @@
+{
+  "version": 2,
+  "method": "Original approved illustration source segmentation; joint/sole coordinates normalized to untrimmed image; source masks clipped rather than new anatomy. Atlas history remains intact.",
+  "crew": {
+    "cyberpengu": {
+      "neck": [
+        0.514,
+        0.318
+      ],
+      "head": [
+        [
+          0.24,
+          0
+        ],
+        [
+          0.83,
+          0
+        ],
+        [
+          0.82,
+          0.28
+        ],
+        [
+          0.72,
+          0.321
+        ],
+        [
+          0.46,
+          0.33
+        ],
+        [
+          0.284,
+          0.305
+        ]
+      ],
+      "wristL": [
+        0.202,
+        0.548
+      ],
+      "wristR": [
+        0.817,
+        0.564
+      ],
+      "handL": [
+        0.106,
+        0.53,
+        0.244,
+        0.657
+      ],
+      "handR": [
+        0.725,
+        0.55,
+        0.905,
+        0.68
+      ],
+      "upperL": [
+        [
+          0.216,
+          0.33
+        ],
+        [
+          0.315,
+          0.325
+        ],
+        [
+          0.348,
+          0.366
+        ],
+        [
+          0.345,
+          0.428
+        ],
+        [
+          0.287,
+          0.508
+        ],
+        [
+          0.173,
+          0.533
+        ],
+        [
+          0.165,
+          0.467
+        ],
+        [
+          0.206,
+          0.418
+        ]
+      ],
+      "upperR": [
+        [
+          0.703,
+          0.312
+        ],
+        [
+          0.79,
+          0.31
+        ],
+        [
+          0.867,
+          0.366
+        ],
+        [
+          0.907,
+          0.451
+        ],
+        [
+          0.92,
+          0.52
+        ],
+        [
+          0.815,
+          0.55
+        ],
+        [
+          0.745,
+          0.484
+        ],
+        [
+          0.705,
+          0.422
+        ]
+      ],
+      "armWidth": 0.075,
+      "legWidth": 0.092,
+      "bootsL": [
+        0.13,
+        0.818,
+        0.461,
+        0.952
+      ],
+      "bootsR": [
+        0.568,
+        0.84,
+        0.853,
+        0.982
+      ],
+      "gesture": "L",
+      "bend": -1.35,
+      "label": "Step into position, check forearm kit, acknowledge and return",
+      "duration": 8.6,
+      "step": 0.025,
+      "measuredContacts": [
+        {
+          "name": "foot-L",
+          "parent": "pelvis",
+          "upper": "thigh-L",
+          "lower": "shin-L",
+          "hip": [
+            0.396,
+            0.67
+          ],
+          "knee": [
+            0.332,
+            0.777
+          ],
+          "ankle": [
+            0.303,
+            0.853
+          ],
+          "foot": [
+            0.2642511917372881,
+            0.9231770833333334
+          ],
+          "pinWidth": 0.15
+        },
+        {
+          "name": "foot-R",
+          "parent": "pelvis",
+          "upper": "thigh-R",
+          "lower": "shin-R",
+          "hip": [
+            0.661,
+            0.675
+          ],
+          "knee": [
+            0.687,
+            0.796
+          ],
+          "ankle": [
+            0.714,
+            0.891
+          ],
+          "foot": [
+            0.7045633478682171,
+            0.9557291666666666
+          ],
+          "pinWidth": 0.15
+        }
+      ],
+      "actualSourceLandmarks": {
+        "head": [
+          0.523,
+          0.212
+        ],
+        "neck": [
+          0.514,
+          0.318
+        ],
+        "chest": [
+          0.53,
+          0.424
+        ],
+        "hips": [
+          0.522,
+          0.621
+        ],
+        "shoulderL": [
+          0.294,
+          0.372
+        ],
+        "elbowL": [
+          0.226,
+          0.488
+        ],
+        "handL": [
+          0.168,
+          0.598
+        ],
+        "shoulderR": [
+          0.764,
+          0.393
+        ],
+        "elbowR": [
+          0.819,
+          0.508
+        ],
+        "handR": [
+          0.814,
+          0.618
+        ],
+        "hipL": [
+          0.396,
+          0.67
+        ],
+        "kneeL": [
+          0.332,
+          0.777
+        ],
+        "ankleL": [
+          0.303,
+          0.853
+        ],
+        "footL": [
+          0.292,
+          0.904
+        ],
+        "hipR": [
+          0.661,
+          0.675
+        ],
+        "kneeR": [
+          0.687,
+          0.796
+        ],
+        "ankleR": [
+          0.714,
+          0.891
+        ],
+        "footR": [
+          0.718,
+          0.938
+        ],
+        "tuftRoot": [
+          0.5,
+          0.108
+        ],
+        "tuftTip": [
+          0.535,
+          0.062
+        ]
+      }
+    },
+    "ducke": {
+      "neck": [
+        0.515,
+        0.316
+      ],
+      "head": [
+        [
+          0.275,
+          0
+        ],
+        [
+          0.775,
+          0
+        ],
+        [
+          0.774,
+          0.25
+        ],
+        [
+          0.663,
+          0.318
+        ],
+        [
+          0.555,
+          0.345
+        ],
+        [
+          0.447,
+          0.333
+        ],
+        [
+          0.309,
+          0.275
+        ]
+      ],
+      "wristL": [
+        0.191,
+        0.578
+      ],
+      "wristR": [
+        0.826,
+        0.584
+      ],
+      "handL": [
+        0.107,
+        0.58,
+        0.246,
+        0.695
+      ],
+      "handR": [
+        0.743,
+        0.58,
+        0.903,
+        0.714
+      ],
+      "upperL": [
+        [
+          0.264,
+          0.317
+        ],
+        [
+          0.347,
+          0.303
+        ],
+        [
+          0.375,
+          0.384
+        ],
+        [
+          0.333,
+          0.451
+        ],
+        [
+          0.289,
+          0.501
+        ],
+        [
+          0.192,
+          0.514
+        ],
+        [
+          0.206,
+          0.45
+        ],
+        [
+          0.246,
+          0.394
+        ]
+      ],
+      "upperR": [
+        [
+          0.69,
+          0.296
+        ],
+        [
+          0.8,
+          0.303
+        ],
+        [
+          0.876,
+          0.366
+        ],
+        [
+          0.889,
+          0.456
+        ],
+        [
+          0.902,
+          0.507
+        ],
+        [
+          0.81,
+          0.542
+        ],
+        [
+          0.748,
+          0.47
+        ],
+        [
+          0.717,
+          0.404
+        ]
+      ],
+      "armWidth": 0.07,
+      "legWidth": 0.096,
+      "bootsL": [
+        0.145,
+        0.817,
+        0.49,
+        0.954
+      ],
+      "bootsR": [
+        0.54,
+        0.82,
+        0.87,
+        0.988
+      ],
+      "gesture": "L",
+      "bend": -1.04,
+      "label": "Plant a leading webbed foot, give an open-hand crew signal, settle",
+      "duration": 8.9,
+      "step": 0.034,
+      "measuredContacts": [
+        {
+          "name": "foot-L",
+          "parent": "pelvis",
+          "upper": "thigh-L",
+          "lower": "shin-L",
+          "hip": [
+            0.407,
+            0.671
+          ],
+          "knee": [
+            0.378,
+            0.761
+          ],
+          "ankle": [
+            0.387,
+            0.848
+          ],
+          "foot": [
+            0.3483139349489796,
+            0.93359375
+          ],
+          "pinWidth": 0.15
+        },
+        {
+          "name": "foot-R",
+          "parent": "pelvis",
+          "upper": "thigh-R",
+          "lower": "shin-R",
+          "hip": [
+            0.626,
+            0.671
+          ],
+          "knee": [
+            0.629,
+            0.773
+          ],
+          "ankle": [
+            0.647,
+            0.854
+          ],
+          "foot": [
+            0.71728515625,
+            0.9654947916666666
+          ],
+          "pinWidth": 0.15
+        }
+      ],
+      "actualSourceLandmarks": {
+        "head": [
+          0.518,
+          0.189
+        ],
+        "neck": [
+          0.515,
+          0.281
+        ],
+        "chest": [
+          0.529,
+          0.418
+        ],
+        "hips": [
+          0.522,
+          0.62
+        ],
+        "shoulderL": [
+          0.321,
+          0.363
+        ],
+        "elbowL": [
+          0.247,
+          0.507
+        ],
+        "handL": [
+          0.186,
+          0.643
+        ],
+        "shoulderR": [
+          0.759,
+          0.363
+        ],
+        "elbowR": [
+          0.802,
+          0.5
+        ],
+        "handR": [
+          0.83,
+          0.642
+        ],
+        "hipL": [
+          0.407,
+          0.671
+        ],
+        "kneeL": [
+          0.378,
+          0.761
+        ],
+        "ankleL": [
+          0.387,
+          0.848
+        ],
+        "footL": [
+          0.29,
+          0.921
+        ],
+        "hipR": [
+          0.626,
+          0.671
+        ],
+        "kneeR": [
+          0.629,
+          0.773
+        ],
+        "ankleR": [
+          0.647,
+          0.854
+        ],
+        "footR": [
+          0.712,
+          0.944
+        ],
+        "tuftRoot": [
+          0.52,
+          0.115
+        ],
+        "tuftTip": [
+          0.52,
+          0.027
+        ]
+      }
+    },
+    "patches": {
+      "neck": [
+        0.509,
+        0.276
+      ],
+      "head": [
+        [
+          0.175,
+          0.015
+        ],
+        [
+          0.785,
+          0.015
+        ],
+        [
+          0.797,
+          0.233
+        ],
+        [
+          0.686,
+          0.286
+        ],
+        [
+          0.532,
+          0.306
+        ],
+        [
+          0.32,
+          0.274
+        ],
+        [
+          0.185,
+          0.21
+        ]
+      ],
+      "wristL": [
+        0.154,
+        0.507
+      ],
+      "wristR": [
+        0.832,
+        0.503
+      ],
+      "handL": [
+        0.07,
+        0.514,
+        0.242,
+        0.615
+      ],
+      "handR": [
+        0.749,
+        0.51,
+        0.92,
+        0.61
+      ],
+      "upperL": [
+        [
+          0.204,
+          0.255
+        ],
+        [
+          0.316,
+          0.246
+        ],
+        [
+          0.353,
+          0.327
+        ],
+        [
+          0.279,
+          0.414
+        ],
+        [
+          0.225,
+          0.459
+        ],
+        [
+          0.133,
+          0.478
+        ],
+        [
+          0.132,
+          0.409
+        ],
+        [
+          0.176,
+          0.347
+        ]
+      ],
+      "upperR": [
+        [
+          0.712,
+          0.247
+        ],
+        [
+          0.812,
+          0.252
+        ],
+        [
+          0.895,
+          0.329
+        ],
+        [
+          0.932,
+          0.418
+        ],
+        [
+          0.92,
+          0.471
+        ],
+        [
+          0.807,
+          0.474
+        ],
+        [
+          0.765,
+          0.414
+        ],
+        [
+          0.711,
+          0.35
+        ]
+      ],
+      "armWidth": 0.071,
+      "legWidth": 0.105,
+      "bootsL": [
+        0.175,
+        0.801,
+        0.457,
+        0.966
+      ],
+      "bootsR": [
+        0.541,
+        0.808,
+        0.834,
+        0.983
+      ],
+      "gesture": "L",
+      "bend": -1.28,
+      "label": "Plant, inspect the empty-handed gauntlet and strap, ready stance",
+      "duration": 9.7,
+      "step": 0.023,
+      "measuredContacts": [
+        {
+          "name": "foot-L",
+          "parent": "pelvis",
+          "upper": "thigh-L",
+          "lower": "shin-L",
+          "hip": [
+            0.328,
+            0.618
+          ],
+          "knee": [
+            0.323,
+            0.745
+          ],
+          "ankle": [
+            0.297,
+            0.848
+          ],
+          "foot": [
+            0.25386379076086957,
+            0.9244791666666666
+          ],
+          "pinWidth": 0.15
+        },
+        {
+          "name": "foot-R",
+          "parent": "pelvis",
+          "upper": "thigh-R",
+          "lower": "shin-R",
+          "hip": [
+            0.678,
+            0.626
+          ],
+          "knee": [
+            0.678,
+            0.766
+          ],
+          "ankle": [
+            0.717,
+            0.859
+          ],
+          "foot": [
+            0.6599875057444853,
+            0.9446614583333334
+          ],
+          "pinWidth": 0.15
+        }
+      ],
+      "actualSourceLandmarks": {
+        "head": [
+          0.505,
+          0.157
+        ],
+        "neck": [
+          0.509,
+          0.256
+        ],
+        "chest": [
+          0.525,
+          0.354
+        ],
+        "hips": [
+          0.503,
+          0.563
+        ],
+        "shoulderL": [
+          0.279,
+          0.298
+        ],
+        "elbowL": [
+          0.175,
+          0.443
+        ],
+        "handL": [
+          0.149,
+          0.557
+        ],
+        "shoulderR": [
+          0.779,
+          0.303
+        ],
+        "elbowR": [
+          0.851,
+          0.434
+        ],
+        "handR": [
+          0.813,
+          0.56
+        ],
+        "hipL": [
+          0.328,
+          0.618
+        ],
+        "kneeL": [
+          0.323,
+          0.745
+        ],
+        "ankleL": [
+          0.297,
+          0.848
+        ],
+        "footL": [
+          0.259,
+          0.902
+        ],
+        "hipR": [
+          0.678,
+          0.626
+        ],
+        "kneeR": [
+          0.678,
+          0.766
+        ],
+        "ankleR": [
+          0.717,
+          0.859
+        ],
+        "footR": [
+          0.701,
+          0.926
+        ],
+        "tailRoot": [
+          0.726,
+          0.67
+        ],
+        "tailMid": [
+          0.827,
+          0.721
+        ],
+        "tailTip": [
+          0.891,
+          0.773
+        ],
+        "earLRoot": [
+          0.403,
+          0.096
+        ],
+        "earLTip": [
+          0.365,
+          0.073
+        ],
+        "earRRoot": [
+          0.58,
+          0.082
+        ],
+        "earRTip": [
+          0.656,
+          0.062
+        ]
+      }
+    }
+  },
+  "scuttle": {
+    "measuredJointsAndClawTips": {
+      "image_left_rear": {
+        "hip": [
+          0.369,
+          0.488
+        ],
+        "knee": [
+          0.241,
+          0.444
+        ],
+        "ankle": [
+          0.154,
+          0.531
+        ],
+        "foot": [
+          0.109109,
+          0.616211
+        ],
+        "r": 0.052
+      },
+      "image_left_middle": {
+        "hip": [
+          0.365,
+          0.539
+        ],
+        "knee": [
+          0.277,
+          0.517
+        ],
+        "ankle": [
+          0.193,
+          0.618
+        ],
+        "foot": [
+          0.157145,
+          0.737305
+        ],
+        "r": 0.059
+      },
+      "image_left_front": {
+        "hip": [
+          0.419,
+          0.63
+        ],
+        "knee": [
+          0.359,
+          0.582
+        ],
+        "ankle": [
+          0.282,
+          0.695
+        ],
+        "foot": [
+          0.253139,
+          0.827148
+        ],
+        "r": 0.063
+      },
+      "image_left_inner_rear": {
+        "hip": [
+          0.428,
+          0.592
+        ],
+        "knee": [
+          0.388,
+          0.615
+        ],
+        "ankle": [
+          0.374,
+          0.654
+        ],
+        "foot": [
+          0.37429,
+          0.676758
+        ],
+        "r": 0.019
+      },
+      "image_right_rear": {
+        "hip": [
+          0.718,
+          0.484
+        ],
+        "knee": [
+          0.786,
+          0.445
+        ],
+        "ankle": [
+          0.852,
+          0.525
+        ],
+        "foot": [
+          0.891868,
+          0.613281
+        ],
+        "r": 0.051
+      },
+      "image_right_middle": {
+        "hip": [
+          0.662,
+          0.552
+        ],
+        "knee": [
+          0.73,
+          0.517
+        ],
+        "ankle": [
+          0.807,
+          0.619
+        ],
+        "foot": [
+          0.870117,
+          0.734375
+        ],
+        "r": 0.054
+      },
+      "image_right_front": {
+        "hip": [
+          0.584,
+          0.63
+        ],
+        "knee": [
+          0.632,
+          0.582
+        ],
+        "ankle": [
+          0.712,
+          0.702
+        ],
+        "foot": [
+          0.752554,
+          0.827148
+        ],
+        "r": 0.061
+      },
+      "image_right_inner_rear": {
+        "hip": [
+          0.602,
+          0.59
+        ],
+        "knee": [
+          0.638,
+          0.615
+        ],
+        "ankle": [
+          0.634,
+          0.649
+        ],
+        "foot": [
+          0.62808,
+          0.676758
+        ],
+        "r": 0.018
+      }
+    },
+    "sourceAlphaThreshold": 200,
+    "supportDepthBand": [
+      0.613281,
+      0.827148
+    ],
+    "sourceShadowExcluded": true
+  },
+  "authoritativeScope": [
+    "cyberpengu",
+    "ducke",
+    "vix",
+    "patches",
+    "scuttle",
+    "spool"
+  ],
+  "note": "Early contour notes supplement the canonical accepted cutout configuration; corrected-primary-rigs.json contains final masks, joints, ownership and authored actions. Cache/Mochi/Hex/Axi are owned by corrected-crew-support-rigs.json, not these preliminary measurements.",
+  "sources": {
+    "cyberpengu": {
+      "path": "assets/illustrated/crew-cyberpengu.webp",
+      "sha256": "94cf2267a4cdc3d4e039243988c76c071e0e6ac153087d95de0c2877fc37687a",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "action": "Step into position, check forearm kit, acknowledge and return",
+      "duration": 8.6,
+      "fit": 0.88,
+      "sourceContactPoints": [
+        {
+          "name": "foot-L",
+          "sole": [
+            0.2642511917372881,
+            0.9231770833333334
+          ],
+          "hip": [
+            0.396,
+            0.67
+          ],
+          "knee": [
+            0.332,
+            0.777
+          ],
+          "ankle": [
+            0.303,
+            0.853
+          ]
+        },
+        {
+          "name": "foot-R",
+          "sole": [
+            0.7045633478682171,
+            0.9557291666666666
+          ],
+          "hip": [
+            0.661,
+            0.675
+          ],
+          "knee": [
+            0.687,
+            0.796
+          ],
+          "ankle": [
+            0.714,
+            0.891
+          ]
+        }
+      ]
+    },
+    "ducke": {
+      "path": "assets/illustrated/crew-ducke.webp",
+      "sha256": "0fc122e6290f42965dbe2aa487ed25163bc9e322d5054ff42ff13079f7f9c09a",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "action": "Plant a leading webbed foot, give an open-hand crew signal, settle",
+      "duration": 8.9,
+      "fit": 0.88,
+      "sourceContactPoints": [
+        {
+          "name": "foot-L",
+          "sole": [
+            0.3483139349489796,
+            0.93359375
+          ],
+          "hip": [
+            0.407,
+            0.671
+          ],
+          "knee": [
+            0.378,
+            0.761
+          ],
+          "ankle": [
+            0.387,
+            0.848
+          ]
+        },
+        {
+          "name": "foot-R",
+          "sole": [
+            0.71728515625,
+            0.9654947916666666
+          ],
+          "hip": [
+            0.626,
+            0.671
+          ],
+          "knee": [
+            0.629,
+            0.773
+          ],
+          "ankle": [
+            0.647,
+            0.854
+          ]
+        }
+      ]
+    },
+    "vix": {
+      "path": "assets/illustrated/crew-vix.webp",
+      "sha256": "22dcfecb3ea8b57029d382a8cdf69cd2eadc99056fc0ec8a32412865f06fcf4c",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "action": "Step, inspect the unobstructed right gauntlet, return to ready stance",
+      "duration": 9,
+      "fit": 0.88,
+      "sourceContactPoints": [
+        {
+          "name": "foot-L",
+          "sole": [
+            0.3338,
+            0.959
+          ],
+          "hip": [
+            0.493,
+            0.506
+          ],
+          "knee": [
+            0.46,
+            0.66
+          ],
+          "ankle": [
+            0.37,
+            0.853
+          ]
+        },
+        {
+          "name": "foot-R",
+          "sole": [
+            0.7763,
+            0.9479
+          ],
+          "hip": [
+            0.698,
+            0.518
+          ],
+          "knee": [
+            0.698,
+            0.675
+          ],
+          "ankle": [
+            0.723,
+            0.853
+          ]
+        }
+      ]
+    },
+    "patches": {
+      "path": "assets/illustrated/crew-patches.webp",
+      "sha256": "794fa8ab4f507bf47383f51912b3e2a48b71bc05501cd4421626da2c49e665d3",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "action": "Plant, inspect the empty-handed gauntlet and strap, ready stance",
+      "duration": 9.7,
+      "fit": 0.88,
+      "sourceContactPoints": [
+        {
+          "name": "foot-L",
+          "sole": [
+            0.25386379076086957,
+            0.9244791666666666
+          ],
+          "hip": [
+            0.328,
+            0.618
+          ],
+          "knee": [
+            0.323,
+            0.745
+          ],
+          "ankle": [
+            0.297,
+            0.848
+          ]
+        },
+        {
+          "name": "foot-R",
+          "sole": [
+            0.6599875057444853,
+            0.9446614583333334
+          ],
+          "hip": [
+            0.678,
+            0.626
+          ],
+          "knee": [
+            0.678,
+            0.766
+          ],
+          "ankle": [
+            0.717,
+            0.859
+          ]
+        }
+      ]
+    },
+    "scuttle": {
+      "path": "assets/illustrated/chassis-scuttle.webp",
+      "sha256": "2aadf0f3699261b98694ede3d8e6e20d6480d35861f4cb39aa9ef897dbb05a80",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "action": "Eight-claw supported crawl on the ledge, probe and clamp, return",
+      "duration": 10,
+      "fit": 0.85,
+      "sourceContactPoints": [
+        {
+          "name": "image_left_rear",
+          "sole": [
+            0.109109,
+            0.616211
+          ],
+          "hip": [
+            0.369,
+            0.488
+          ],
+          "knee": [
+            0.241,
+            0.444
+          ],
+          "ankle": [
+            0.154,
+            0.531
+          ]
+        },
+        {
+          "name": "image_left_middle",
+          "sole": [
+            0.157145,
+            0.737305
+          ],
+          "hip": [
+            0.365,
+            0.539
+          ],
+          "knee": [
+            0.277,
+            0.517
+          ],
+          "ankle": [
+            0.193,
+            0.618
+          ]
+        },
+        {
+          "name": "image_left_front",
+          "sole": [
+            0.253139,
+            0.827148
+          ],
+          "hip": [
+            0.419,
+            0.63
+          ],
+          "knee": [
+            0.359,
+            0.582
+          ],
+          "ankle": [
+            0.282,
+            0.695
+          ]
+        },
+        {
+          "name": "image_left_inner_rear",
+          "sole": [
+            0.37429,
+            0.676758
+          ],
+          "hip": [
+            0.428,
+            0.592
+          ],
+          "knee": [
+            0.388,
+            0.615
+          ],
+          "ankle": [
+            0.374,
+            0.654
+          ]
+        },
+        {
+          "name": "image_right_rear",
+          "sole": [
+            0.891868,
+            0.613281
+          ],
+          "hip": [
+            0.718,
+            0.484
+          ],
+          "knee": [
+            0.786,
+            0.445
+          ],
+          "ankle": [
+            0.852,
+            0.525
+          ]
+        },
+        {
+          "name": "image_right_middle",
+          "sole": [
+            0.870117,
+            0.734375
+          ],
+          "hip": [
+            0.662,
+            0.552
+          ],
+          "knee": [
+            0.73,
+            0.517
+          ],
+          "ankle": [
+            0.807,
+            0.619
+          ]
+        },
+        {
+          "name": "image_right_front",
+          "sole": [
+            0.752554,
+            0.827148
+          ],
+          "hip": [
+            0.584,
+            0.63
+          ],
+          "knee": [
+            0.632,
+            0.582
+          ],
+          "ankle": [
+            0.712,
+            0.702
+          ]
+        },
+        {
+          "name": "image_right_inner_rear",
+          "sole": [
+            0.62808,
+            0.676758
+          ],
+          "hip": [
+            0.602,
+            0.59
+          ],
+          "knee": [
+            0.638,
+            0.615
+          ],
+          "ankle": [
+            0.634,
+            0.649
+          ]
+        }
+      ]
+    },
+    "spool": {
+      "path": "assets/illustrated/chassis-spool.webp",
+      "sha256": "84b33c9c98a795c12cca01015197502e67179e150d6efcb81fb33e618772bc38",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "action": "Supported crawl, inspect with existing probes, retract and return",
+      "duration": 9.6,
+      "fit": 0.85,
+      "sourceContactPoints": [
+        {
+          "name": "image_left_front",
+          "sole": [
+            0.1389,
+            0.8135
+          ],
+          "hip": [
+            0.374,
+            0.663
+          ],
+          "knee": [
+            0.257,
+            0.594
+          ],
+          "ankle": [
+            0.167,
+            0.771
+          ]
+        },
+        {
+          "name": "image_left_middle",
+          "sole": [
+            0.2902,
+            0.7344
+          ],
+          "hip": [
+            0.395,
+            0.604
+          ],
+          "knee": [
+            0.335,
+            0.54
+          ],
+          "ankle": [
+            0.297,
+            0.689
+          ]
+        },
+        {
+          "name": "image_right_front",
+          "sole": [
+            0.6311,
+            0.8789
+          ],
+          "hip": [
+            0.516,
+            0.665
+          ],
+          "knee": [
+            0.555,
+            0.644
+          ],
+          "ankle": [
+            0.632,
+            0.83
+          ]
+        },
+        {
+          "name": "image_right_middle",
+          "sole": [
+            0.8243,
+            0.8242
+          ],
+          "hip": [
+            0.665,
+            0.635
+          ],
+          "knee": [
+            0.728,
+            0.572
+          ],
+          "ankle": [
+            0.811,
+            0.776
+          ]
+        },
+        {
+          "name": "image_right_rear",
+          "sole": [
+            0.902,
+            0.74
+          ],
+          "hip": [
+            0.754,
+            0.568
+          ],
+          "knee": [
+            0.817,
+            0.547
+          ],
+          "ankle": [
+            0.888,
+            0.7
+          ]
+        }
+      ]
+    }
+  }
+}

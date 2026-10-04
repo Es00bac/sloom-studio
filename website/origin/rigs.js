@@ -41,8 +41,8 @@ class OriginPortraitRig{
  constructor(canvas,config){
   this.canvas=canvas;this.context=canvas.getContext("2d");this.config=config;this.paused=false;this.active=false;this.inView=false;this.documentVisible=!document.hidden;this.frameId=null;this.lastFrame=0;this.clock=0;this.epoch=performance.now();this.loaded=false;
   this.ready=new Promise((resolve,reject)=>{
-   const finish=()=>{try{this.buildMesh();this.loaded=true;canvas.dataset.boneCount=this.bones.length;canvas.dataset.triangleCount=this.triangles.length;this.resize();this.draw(0);this.manage();resolve(this);}catch(error){reject(error);}};
-   const texture=new Image();texture.onload=()=>{this.texture=texture;if(config.parts?.image){const atlas=new Image();atlas.onload=()=>{this.atlas=atlas;finish();};atlas.onerror=()=>reject(Error(`Missing articulated atlas: ${config.parts.image}`));atlas.src=config.parts.image;}else finish();};texture.onerror=()=>reject(Error(`Missing illustrated rig texture: ${config.image}`));texture.src=config.image;
+   const finish=()=>{try{this.buildMesh();this.loaded=true;canvas.dataset.boneCount=this.bones.length;canvas.dataset.triangleCount=this.triangles.length;this.resize();this.manage();resolve(this);}catch(error){reject(error);}};
+   const texture=new Image();texture.onload=()=>{this.texture=texture;if(config.parts?.image&&config.parts.image!==config.image){const atlas=new Image();atlas.onload=()=>{this.atlas=atlas;finish();};atlas.onerror=()=>reject(Error(`Missing articulated atlas: ${config.parts.image}`));atlas.src=config.parts.image;}else{if(config.parts?.image)this.atlas=texture;finish();}};texture.onerror=()=>reject(Error(`Missing illustrated rig texture: ${config.image}`));texture.src=config.image;
   });
   if("IntersectionObserver" in window)this.visibilityObserver=new IntersectionObserver(entries=>{this.inView=entries[0].isIntersecting;this.manage();},{rootMargin:"80px",threshold:0});
   if(this.visibilityObserver)this.visibilityObserver.observe(canvas);else this.inView=true;
@@ -133,6 +133,8 @@ class OriginPortraitRig{
   if(!this.loaded||this.canvas.width<2)return;this.clock=time;
   const context=this.context,width=this.canvas.width,height=this.canvas.height,fit=Math.min(width/this.imageWidth,height/this.imageHeight)*(this.config.action?.fit||.94),ox=(width-this.imageWidth*fit)*.5,oy=height-this.imageHeight*fit;
   const posed=this.pose(time);context.setTransform(1,0,0,1,0,0);context.clearRect(0,0,width,height);context.imageSmoothingEnabled=true;context.imageSmoothingQuality="high";
+  const unchanged=[...posed.matrices,...posed.footMatrices].every(matrix=>Math.abs(matrix[0]-1)<1e-5&&Math.abs(matrix[1])<1e-5&&Math.abs(matrix[2])<1e-5&&Math.abs(matrix[3]-1)<1e-5&&Math.abs(matrix[4])<.02&&Math.abs(matrix[5])<.02);
+  if(unchanged){context.drawImage(this.texture,ox,oy,this.imageWidth*fit,this.imageHeight*fit);return;}
   if(this.atlas&&this.config.parts?.layers){
    for(const layer of [...this.config.parts.layers].sort((a,b)=>(a.order||0)-(b.order||0))){
     const matrix=layer.contact?posed.footMatrices[this.legs.findIndex(leg=>leg.name===layer.contact)]:posed.matrices[this.boneIndex[layer.bone]];
@@ -167,7 +169,7 @@ class OriginPortraitRig{
  }
  manage(){
   const run=this.loaded&&this.active&&this.inView&&this.documentVisible&&!this.paused;
-  if(!run){if(this.frameId)cancelAnimationFrame(this.frameId);this.frameId=null;if(this.loaded)this.draw(this.clock);return;}
+  if(!run){if(this.frameId)cancelAnimationFrame(this.frameId);this.frameId=null;return;}
   if(this.frameId)return;this.lastFrame=performance.now();const tick=timestamp=>{this.frameId=null;if(!this.active||!this.inView||!this.documentVisible||this.paused)return;
    const elapsed=timestamp-this.lastFrame;
    if(elapsed>1000/24){this.lastFrame=timestamp;this.draw(this.clock+Math.min(elapsed/1000,.1));}this.frameId=requestAnimationFrame(tick);

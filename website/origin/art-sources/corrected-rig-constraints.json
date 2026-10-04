@@ -1,0 +1,445 @@
+{
+  "method": "Actual OriginPortraitRig.pose sampled at 24 Hz through each complete authored cycle. Mask cache allocation omitted for this geometry-only diagnostic.",
+  "sampleRate": 24,
+  "characters": {
+    "cyberpengu": {
+      "action": "Step into position, check forearm kit, acknowledge and return",
+      "durationSeconds": 8.6,
+      "fit": 0.88,
+      "samples": 207,
+      "contactCount": 2,
+      "minimumPlantedSupport": 1,
+      "contacts": {
+        "foot-L": {
+          "maxReachErrorPixels": 5.684341886080802e-14,
+          "maxRequestedPlantErrorPixels": 5.684341886080802e-14,
+          "maxErrorAt": 0.041666666666666664,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 182
+        },
+        "foot-R": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 181
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 24,
+      "sourceImage": "assets/illustrated/crew-cyberpengu.webp"
+    },
+    "ducke": {
+      "action": "Plant a leading webbed foot, give an open-hand crew signal, settle",
+      "durationSeconds": 8.9,
+      "fit": 0.88,
+      "samples": 214,
+      "contactCount": 2,
+      "minimumPlantedSupport": 1,
+      "contacts": {
+        "foot-L": {
+          "maxReachErrorPixels": 5.684341886080802e-14,
+          "maxRequestedPlantErrorPixels": 5.684341886080802e-14,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 189
+        },
+        "foot-R": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 188
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 24,
+      "sourceImage": "assets/illustrated/crew-ducke.webp"
+    },
+    "vix": {
+      "action": "Step, inspect the unobstructed right gauntlet, return to ready stance",
+      "durationSeconds": 9,
+      "fit": 0.88,
+      "samples": 216,
+      "contactCount": 2,
+      "minimumPlantedSupport": 1,
+      "contacts": {
+        "foot-L": {
+          "maxReachErrorPixels": 2.3437142008433856e-13,
+          "maxRequestedPlantErrorPixels": 2.3437142008433856e-13,
+          "maxErrorAt": 0.6666666666666665,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 190
+        },
+        "foot-R": {
+          "maxReachErrorPixels": 1.1368683772161603e-13,
+          "maxRequestedPlantErrorPixels": 1.1368683772161603e-13,
+          "maxErrorAt": 0.08333333333333333,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 188
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 25,
+      "sourceImage": "assets/illustrated/crew-vix.webp"
+    },
+    "cache": {
+      "action": "Two planted steps, inspect the forward wrist kit, acknowledge and return",
+      "durationSeconds": 9.3,
+      "fit": 0.88,
+      "samples": 224,
+      "contactCount": 2,
+      "minimumPlantedSupport": 1,
+      "contacts": {
+        "foot-L": {
+          "maxReachErrorPixels": 5.684341886080802e-14,
+          "maxRequestedPlantErrorPixels": 5.684341886080802e-14,
+          "maxErrorAt": 0.041666666666666664,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 197
+        },
+        "foot-R": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 197
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 26,
+      "sourceImage": "assets/illustrated/crew-cache.webp"
+    },
+    "mochi": {
+      "action": "Two light planted steps, open-gauntlet acknowledgement, ears attend the transmission",
+      "durationSeconds": 8.2,
+      "fit": 0.88,
+      "samples": 197,
+      "contactCount": 2,
+      "minimumPlantedSupport": 1,
+      "contacts": {
+        "foot-L": {
+          "maxReachErrorPixels": 1.1368683772161603e-13,
+          "maxRequestedPlantErrorPixels": 1.1368683772161603e-13,
+          "maxErrorAt": 1.875000000000001,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 170
+        },
+        "foot-R": {
+          "maxReachErrorPixels": 1.1368683772161603e-13,
+          "maxRequestedPlantErrorPixels": 1.1368683772161603e-13,
+          "maxErrorAt": 0.833333333333333,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 169
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 27,
+      "sourceImage": "assets/illustrated/crew-mochi.webp"
+    },
+    "hex": {
+      "action": "Brace, inspect the right gauntlet, make a measured outward signal and reset",
+      "durationSeconds": 9.1,
+      "fit": 0.88,
+      "samples": 219,
+      "contactCount": 2,
+      "minimumPlantedSupport": 1,
+      "contacts": {
+        "foot-L": {
+          "maxReachErrorPixels": 2.3437142008433856e-13,
+          "maxRequestedPlantErrorPixels": 2.3437142008433856e-13,
+          "maxErrorAt": 1.7500000000000009,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 192
+        },
+        "foot-R": {
+          "maxReachErrorPixels": 2.2737367544323206e-13,
+          "maxRequestedPlantErrorPixels": 2.2737367544323206e-13,
+          "maxErrorAt": 0.16666666666666666,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 191
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 26,
+      "sourceImage": "assets/illustrated/crew-hex.webp"
+    },
+    "patches": {
+      "action": "Plant, inspect the empty-handed gauntlet and strap, ready stance",
+      "durationSeconds": 9.7,
+      "fit": 0.88,
+      "samples": 233,
+      "contactCount": 2,
+      "minimumPlantedSupport": 1,
+      "contacts": {
+        "foot-L": {
+          "maxReachErrorPixels": 5.684341886080802e-14,
+          "maxRequestedPlantErrorPixels": 5.684341886080802e-14,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 208
+        },
+        "foot-R": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 206
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 25,
+      "sourceImage": "assets/illustrated/crew-patches.webp"
+    },
+    "axi": {
+      "action": "Careful planted advance, inspect the forward seal, helmet confirmation and recovery",
+      "durationSeconds": 9.4,
+      "fit": 0.88,
+      "samples": 226,
+      "contactCount": 2,
+      "minimumPlantedSupport": 1,
+      "contacts": {
+        "foot-L": {
+          "maxReachErrorPixels": 5.684341886080802e-14,
+          "maxRequestedPlantErrorPixels": 5.684341886080802e-14,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 199
+        },
+        "foot-R": {
+          "maxReachErrorPixels": 1.1368683772161603e-13,
+          "maxRequestedPlantErrorPixels": 1.1368683772161603e-13,
+          "maxErrorAt": 1.9166666666666679,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 198
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 32,
+      "sourceImage": "assets/illustrated/crew-axi.webp"
+    },
+    "scuttle": {
+      "action": "Eight-claw supported crawl on the ledge, probe and clamp, return",
+      "durationSeconds": 10,
+      "fit": 0.85,
+      "samples": 241,
+      "contactCount": 8,
+      "minimumPlantedSupport": 7,
+      "contacts": {
+        "image_left_rear": {
+          "maxReachErrorPixels": 1.1718571004216928e-13,
+          "maxRequestedPlantErrorPixels": 1.1718571004216928e-13,
+          "maxErrorAt": 0.7083333333333331,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 231
+        },
+        "image_left_middle": {
+          "maxReachErrorPixels": 1.1718571004216928e-13,
+          "maxRequestedPlantErrorPixels": 1.1718571004216928e-13,
+          "maxErrorAt": 8.75000000000001,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 230
+        },
+        "image_left_front": {
+          "maxReachErrorPixels": 5.684341886080802e-14,
+          "maxRequestedPlantErrorPixels": 5.684341886080802e-14,
+          "maxErrorAt": 0.5,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 231
+        },
+        "image_left_inner_rear": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 231
+        },
+        "image_right_rear": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 230
+        },
+        "image_right_middle": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 230
+        },
+        "image_right_front": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 230
+        },
+        "image_right_inner_rear": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 231
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 36,
+      "sourceImage": "assets/illustrated/chassis-scuttle.webp"
+    },
+    "spool": {
+      "action": "Supported crawl, inspect with existing probes, retract and return",
+      "durationSeconds": 9.6,
+      "fit": 0.85,
+      "samples": 231,
+      "contactCount": 5,
+      "minimumPlantedSupport": 4,
+      "contacts": {
+        "image_left_front": {
+          "maxReachErrorPixels": 1.1718571004216928e-13,
+          "maxRequestedPlantErrorPixels": 1.1718571004216928e-13,
+          "maxErrorAt": 6.5000000000000115,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 218
+        },
+        "image_left_middle": {
+          "maxReachErrorPixels": 5.684341886080802e-14,
+          "maxRequestedPlantErrorPixels": 5.684341886080802e-14,
+          "maxErrorAt": 0.24999999999999997,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 217
+        },
+        "image_right_front": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 218
+        },
+        "image_right_middle": {
+          "maxReachErrorPixels": 1.1368683772161603e-13,
+          "maxRequestedPlantErrorPixels": 1.1368683772161603e-13,
+          "maxErrorAt": 4.416666666666663,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 218
+        },
+        "image_right_rear": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 218
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 23,
+      "sourceImage": "assets/illustrated/chassis-spool.webp"
+    },
+    "chime": {
+      "action": "Deploy paired wings, launch a short harassing pass, brake and fold to bind",
+      "durationSeconds": 7.8,
+      "fit": 0.86,
+      "samples": 188,
+      "contactCount": 0,
+      "minimumPlantedSupport": 0,
+      "contacts": {},
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 30,
+      "sourceImage": "assets/illustrated/chassis-chime.webp"
+    },
+    "skip": {
+      "action": "Plant both forked feet, chamber a scythe strike, lunge and recoil",
+      "durationSeconds": 6.5,
+      "fit": 0.84,
+      "samples": 156,
+      "contactCount": 2,
+      "minimumPlantedSupport": 2,
+      "contacts": {
+        "image_left": {
+          "maxReachErrorPixels": 1.2710574864626038e-13,
+          "maxRequestedPlantErrorPixels": 1.2710574864626038e-13,
+          "maxErrorAt": 0.041666666666666664,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 156
+        },
+        "image_right": {
+          "maxReachErrorPixels": 1.1368683772161603e-13,
+          "maxRequestedPlantErrorPixels": 1.1368683772161603e-13,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 156
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 30,
+      "sourceImage": "assets/illustrated/chassis-skip.webp"
+    },
+    "bastion": {
+      "action": "Set four supports, load the crusher, drive a weighted slam and recover",
+      "durationSeconds": 7.1,
+      "fit": 0.88,
+      "samples": 171,
+      "contactCount": 4,
+      "minimumPlantedSupport": 4,
+      "contacts": {
+        "image_left_front": {
+          "maxReachErrorPixels": 1.1718571004216928e-13,
+          "maxRequestedPlantErrorPixels": 1.1718571004216928e-13,
+          "maxErrorAt": 2.041666666666668,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 171
+        },
+        "image_right_front": {
+          "maxReachErrorPixels": 1.1368683772161603e-13,
+          "maxRequestedPlantErrorPixels": 1.1368683772161603e-13,
+          "maxErrorAt": 0.29166666666666663,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 171
+        },
+        "image_left_rear": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 171
+        },
+        "image_right_rear": {
+          "maxReachErrorPixels": 0,
+          "maxRequestedPlantErrorPixels": 0,
+          "maxErrorAt": 0,
+          "unreachableRequestedPlantSamples": 0,
+          "requestedPlantSamples": 171
+        }
+      },
+      "maxHandReachErrorPixels": 0,
+      "handConstraints": {},
+      "handMethod": "Authored parented forward-kinematic joints; no external hand target",
+      "layers": 22,
+      "sourceImage": "assets/illustrated/chassis-bastion.webp"
+    }
+  }
+}

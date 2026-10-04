@@ -3,9 +3,8 @@ const root=document.documentElement;
 root.classList.add("enhanced");
 const preference=matchMedia("(prefers-reduced-motion: reduce)");
 const motionButton=document.querySelector(".motion-toggle");
-const ambient=document.querySelector(".ambient-video");
 const films=[...document.querySelectorAll(".trailer-player video")];
-let motionPaused=preference.matches,heroVisible=true,rigs=[];
+let motionPaused=preference.matches,rigs=[];
 const clamp=value=>Math.max(0,Math.min(1,value));
 function measurePage(){
   window.OriginSeedweb?.measure();
@@ -29,15 +28,8 @@ menu.addEventListener("click",()=>{const open=menu.getAttribute("aria-expanded")
 nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",closeMenu));
 document.addEventListener("keydown",event=>{if(event.key==="Escape"&&menu.getAttribute("aria-expanded")==="true"){closeMenu();menu.focus();}});
 
-function manageAmbient(){
-  if(!ambient)return;
-  const allowed=!motionPaused&&heroVisible&&innerWidth>700&&!document.hidden&&!navigator.connection?.saveData&&!films.some(film=>!film.paused);
-  if(allowed){if(!ambient.src)ambient.src=ambient.dataset.src;ambient.play().catch(()=>{});}else if(!ambient.paused)ambient.pause();
-}
-ambient?.addEventListener("playing",()=>ambient.classList.add("has-played"));
 films.forEach(film=>{
-  film.addEventListener("play",()=>{films.forEach(other=>{if(other!==film)other.pause();});manageAmbient();});
-  film.addEventListener("pause",manageAmbient);film.addEventListener("ended",manageAmbient);
+  film.addEventListener("play",()=>{films.forEach(other=>{if(other!==film)other.pause();});});
 });
 function applyMotion(){
   root.classList.toggle("motion-enabled",!motionPaused);
@@ -49,15 +41,14 @@ function applyMotion(){
   rigs.forEach(rig=>rig.setPaused(motionPaused));
   window.OriginSeedweb?.setPaused(motionPaused);
   if(motionPaused)document.querySelectorAll(".reveal").forEach(item=>item.classList.add("is-visible"));
-  manageAmbient();updateScroll();
+  updateScroll();
 }
 motionButton.addEventListener("click",()=>{motionPaused=!motionPaused;applyMotion();});
 preference.addEventListener("change",()=>{motionPaused=preference.matches;applyMotion();});
-document.addEventListener("visibilitychange",()=>{manageAmbient();rigs.forEach(rig=>rig.setDocumentVisible(!document.hidden));window.OriginSeedweb?.setDocumentVisible(!document.hidden);});
+document.addEventListener("visibilitychange",()=>{rigs.forEach(rig=>rig.setDocumentVisible(!document.hidden));window.OriginSeedweb?.setDocumentVisible(!document.hidden);});
 
 const revealObserver="IntersectionObserver" in window?new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");revealObserver.unobserve(entry.target);}}),{threshold:.05,rootMargin:"0px 0px -15px 0px"}):null;
 document.querySelectorAll(".reveal").forEach(item=>{if(revealObserver)revealObserver.observe(item);else item.classList.add("is-visible");});
-if("IntersectionObserver" in window)new IntersectionObserver(entries=>{heroVisible=entries[0].isIntersecting;manageAmbient();},{threshold:0}).observe(document.querySelector(".hero"));
 
 const worldButtons=[...document.querySelectorAll("[data-world-select]")],worldImages=[...document.querySelectorAll("[data-world-image]")];
 worldButtons.forEach(button=>button.addEventListener("click",()=>{
@@ -80,9 +71,7 @@ groups.forEach(group=>{
   group.refreshRig();
 });
 
-const rigRepairPreview=new URLSearchParams(location.search).get("rig-preview")==="1";
-const castAnimationApproved=false;
-if(castAnimationApproved||rigRepairPreview)fetch("rig-configs.json?v=20261004-menu-anatomy-01").then(response=>{if(!response.ok)throw Error("Rig configuration unavailable");return response.json();}).then(configs=>{
+fetch("rig-configs.json?v=20261004-menu-anatomy-02").then(response=>{if(!response.ok)throw Error("Rig configuration unavailable");return response.json();}).then(configs=>{
   const mount=canvas=>{
     if(canvas.originRig)return;
     const config=configs.characters[canvas.dataset.rig||canvas.dataset.heroRig],panel=canvas.closest("[data-panel]"),group=canvas.closest("[data-dossier]");
@@ -90,7 +79,12 @@ if(castAnimationApproved||rigRepairPreview)fetch("rig-configs.json?v=20261004-me
     const rig=new window.OriginPortraitRig(canvas,config);canvas.originRig=rig;if(panel)panel.originRig=rig;rigs.push(rig);
     rig.setPaused(motionPaused);rig.setDocumentVisible(!document.hidden);
     if(!group)rig.setActive(true);
-    rig.ready.then(()=>{canvas.closest(".illustration-stage")?.style.setProperty("--portrait-fit",String(config.action?.fit||.94));canvas.classList.add("is-ready");group?.refreshRig();measurePage();}).catch(()=>{group?.classList.add("art-unavailable");});
+    rig.ready.then(()=>{
+      const stage=canvas.closest(".illustration-stage");stage?.style.setProperty("--portrait-fit",String(config.action?.fit||.94));
+      const soles=(config.contacts||[]).map(contact=>contact.foot?.[1]).filter(Number.isFinite);
+      if(stage?.dataset.seedwebNetwork&&soles.length){stage.style.setProperty("--contact-front",String(Math.max(...soles)));stage.style.setProperty("--contact-back",String(Math.min(...soles)));}
+      canvas.classList.add("is-ready");group?.refreshRig();measurePage();
+    }).catch(()=>{group?.classList.add("art-unavailable");});
   };
   const nearby="IntersectionObserver" in window?new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){nearby.unobserve(entry.target);mount(entry.target);}}),{rootMargin:"450px",threshold:0}):null;
   document.querySelectorAll("[data-rig],[data-hero-rig]").forEach(canvas=>{
