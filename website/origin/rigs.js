@@ -10,14 +10,16 @@ const rotation=(p,a)=>{const c=Math.cos(a),s=Math.sin(a);return[c,s,-s,c,p[0]-c*
 const distance=(a,b)=>Math.hypot(a[0]-b[0],a[1]-b[1]);
 const rigidMap=(a,b,c,d)=>{const angle=Math.atan2(d[1]-c[1],d[0]-c[0])-Math.atan2(b[1]-a[1],b[0]-a[0]);const cosine=Math.cos(angle),sine=Math.sin(angle);return[cosine,sine,-sine,cosine,c[0]-cosine*a[0]+sine*a[1],c[1]-sine*a[0]-cosine*a[1]];};
 function segmentDistance(p,a,b){const dx=b[0]-a[0],dy=b[1]-a[1],n=dx*dx+dy*dy;const t=n?Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/n)):0;return Math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dy);}
-function solveLeg(hip,knee,foot,posedHip,posedFoot=foot){
+function solveLeg(hip,knee,foot,posedHip,posedFoot=foot,bendSide){
   const l1=distance(hip,knee),l2=distance(knee,foot),length=distance(posedHip,posedFoot);
-  const reach=Math.max(.001,Math.min(l1+l2-.001,length));
-  const direction=Math.atan2(posedFoot[1]-posedHip[1],posedFoot[0]-posedHip[0]);
+  const epsilon=Math.max(l1+l2,1)*1e-6;
+  const reach=Math.max(Math.abs(l1-l2)+epsilon,Math.min(l1+l2-epsilon,length));
+  const direction=length>epsilon?Math.atan2(posedFoot[1]-posedHip[1],posedFoot[0]-posedHip[0]):Math.atan2(foot[1]-hip[1],foot[0]-hip[0]);
+  const resolvedFoot=[posedHip[0]+Math.cos(direction)*reach,posedHip[1]+Math.sin(direction)*reach];
   const cos=Math.max(-1,Math.min(1,(l1*l1+reach*reach-l2*l2)/(2*l1*reach)));
-  const side=((foot[0]-hip[0])*(knee[1]-hip[1])-(foot[1]-hip[1])*(knee[0]-hip[0]))>=0?1:-1;
+  const side=bendSide===1||bendSide===-1?bendSide:((foot[0]-hip[0])*(knee[1]-hip[1])-(foot[1]-hip[1])*(knee[0]-hip[0]))>=0?1:-1;
   const angle=direction+side*Math.acos(cos),posedKnee=[posedHip[0]+Math.cos(angle)*l1,posedHip[1]+Math.sin(angle)*l1];
-  return {upper:rigidMap(hip,knee,posedHip,posedKnee),lower:rigidMap(knee,foot,posedKnee,posedFoot),knee:posedKnee,foot:posedFoot};
+  return {upper:rigidMap(hip,knee,posedHip,posedKnee),lower:rigidMap(knee,foot,posedKnee,resolvedFoot),knee:posedKnee,foot:resolvedFoot,requestedFoot:posedFoot,reachError:distance(resolvedFoot,posedFoot)};
 }
 function sampleTrack(frames,time){
   if(!frames?.length)return[];
@@ -39,7 +41,7 @@ class OriginPortraitRig{
  constructor(canvas,config){
   this.canvas=canvas;this.context=canvas.getContext("2d");this.config=config;this.paused=false;this.active=false;this.inView=false;this.documentVisible=!document.hidden;this.frameId=null;this.lastFrame=0;this.clock=0;this.epoch=performance.now();this.loaded=false;
   this.ready=new Promise((resolve,reject)=>{
-   const finish=()=>{this.buildMesh();this.loaded=true;canvas.dataset.boneCount=this.bones.length;canvas.dataset.triangleCount=this.triangles.length;this.resize();this.draw(0);this.manage();resolve(this);};
+   const finish=()=>{try{this.buildMesh();this.loaded=true;canvas.dataset.boneCount=this.bones.length;canvas.dataset.triangleCount=this.triangles.length;this.resize();this.draw(0);this.manage();resolve(this);}catch(error){reject(error);}};
    const texture=new Image();texture.onload=()=>{this.texture=texture;if(config.parts?.image){const atlas=new Image();atlas.onload=()=>{this.atlas=atlas;finish();};atlas.onerror=()=>reject(Error(`Missing articulated atlas: ${config.parts.image}`));atlas.src=config.parts.image;}else finish();};texture.onerror=()=>reject(Error(`Missing illustrated rig texture: ${config.image}`));texture.src=config.image;
   });
   if("IntersectionObserver" in window)this.visibilityObserver=new IntersectionObserver(entries=>{this.inView=entries[0].isIntersecting;this.manage();},{rootMargin:"80px",threshold:0});
@@ -50,7 +52,24 @@ class OriginPortraitRig{
   const w=this.texture.naturalWidth,h=this.texture.naturalHeight,point=p=>[p[0]*w,p[1]*h];this.imageWidth=w;this.imageHeight=h;
   this.bones=this.config.bones.map(b=>({...b,pivot:point(b.pivot),end:point(b.end),radius:b.radius*Math.min(w,h)}));
   this.boneIndex=Object.fromEntries(this.bones.map((bone,index)=>[bone.name,index]));
+  if(Object.keys(this.boneIndex).length!==this.bones.length)throw Error("Duplicate character bone");
+  this.bones.forEach((bone,index)=>{if(index&&(!bone.parent||this.boneIndex[bone.parent]===undefined||this.boneIndex[bone.parent]>=index))throw Error("Invalid parent for "+bone.name);});
+  for(const name of Object.keys(this.config.action?.offsets||{}))if(this.boneIndex[name]===undefined)throw Error("Missing translated bone "+name);
   this.legs=(this.config.contacts||[]).map(leg=>({...leg,hip:point(leg.hip),knee:point(leg.knee),foot:point(leg.foot),ankle:point(leg.ankle||leg.foot)}));
+  for(const leg of this.legs)for(const name of [leg.parent,leg.upper,leg.lower])if(this.boneIndex[name]===undefined)throw Error("Missing contact bone "+name);
+  for(const side of Object.values(this.config.armBendSide||{}))if(side!==1&&side!==-1)throw Error("Arm bend side must be 1 or -1");
+  for(const leg of this.legs)if(leg.bendSide!==undefined&&leg.bendSide!==1&&leg.bendSide!==-1)throw Error("Contact bend side must be 1 or -1");
+  for(const layer of this.config.parts?.layers||[])if(layer.contact?!this.legs.some(leg=>leg.name===layer.contact):this.boneIndex[layer.bone]===undefined)throw Error("Missing atlas mount for "+layer.name);
+  // Cutouts retain the original painted pixels. Residual body layers subtract
+  // articulated source polygons once, so no static duplicate limb stays behind.
+  this.layerTextures=new Map();
+  for(const layer of this.config.parts?.layers||[]){
+   if(!layer.excludeMasks?.length)continue;
+   const [sx,sy,sw,sh]=layer.rect,cutout=document.createElement("canvas");cutout.width=sw;cutout.height=sh;
+   const context=cutout.getContext("2d");context.drawImage(this.atlas,sx,sy,sw,sh,0,0,sw,sh);context.globalCompositeOperation="destination-out";
+   for(const polygon of layer.excludeMasks){if(polygon.length<3)throw Error("Invalid source exclusion polygon");context.beginPath();polygon.forEach((p,index)=>{if(index)context.lineTo(p[0]*sw,p[1]*sh);else context.moveTo(p[0]*sw,p[1]*sh);});context.closePath();context.fill();}
+   this.layerTextures.set(layer,cutout);
+  }
   this.columns=18;this.rows=26;this.vertices=[];this.triangles=[];
   if(this.atlas)return;
   for(let row=0;row<=this.rows;row++)for(let column=0;column<=this.columns;column++){
@@ -71,33 +90,40 @@ class OriginPortraitRig{
  pose(time){
   const phase=time*2*Math.PI/this.config.cycle,w=this.imageWidth,h=this.imageHeight;
   const clip=this.config.action,clipTime=clip?time%clip.duration:time,authored=sampleTrack(clip?.root,clipTime);
-  const rootBone=this.bones[0],rootMatrix=rotation(rootBone.pivot,Math.sin(phase)*this.config.bodyAngle+(authored[2]||0));
-  rootMatrix[4]+=(Math.sin(phase)*this.config.shift[0]+(authored[0]||0))*w;rootMatrix[5]+=((1+Math.sin(phase))*.5*this.config.shift[1]+(authored[1]||0))*h;
-  const matrices=[];
-  this.bones.forEach((bone,index)=>{
-   if(index===0){matrices.push(rootMatrix);return;}
-   const parent=matrices[this.boneIndex[bone.parent]]||rootMatrix;
-   const angle=Math.sin(phase*(bone.frequency||1)+(bone.phase||0))*bone.amplitude+(sampleTrack(clip?.joints?.[bone.name],clipTime)[0]||0);
-   matrices.push(multiply(parent,rotation(bone.pivot,angle)));
+  const rootBone=this.bones[0],rootMatrix=rotation(rootBone.pivot,clip?(authored[2]||0):Math.sin(phase)*this.config.bodyAngle);
+  rootMatrix[4]+=(clip?(authored[0]||0):Math.sin(phase)*this.config.shift[0])*w;
+  rootMatrix[5]+=(clip?(authored[1]||0):(1+Math.sin(phase))*.5*this.config.shift[1])*h;
+  const matrices=[],overrides=new Set(),handConstraints=[];
+  const refreshHierarchy=()=>this.bones.forEach((bone,index)=>{
+   if(index===0){matrices[index]=rootMatrix;return;}if(overrides.has(index))return;
+   const parent=matrices[this.boneIndex[bone.parent]],offset=sampleTrack(clip?.offsets?.[bone.name],clipTime),angle=clip?(sampleTrack(clip.joints?.[bone.name],clipTime)[0]||0):Math.sin(phase*(bone.frequency||1)+(bone.phase||0))*bone.amplitude;
+   const local=rotation(bone.pivot,angle+(offset[2]||0));local[4]+=(offset[0]||0)*w;local[5]+=(offset[1]||0)*h;
+   matrices[index]=multiply(parent,local);
   });
+  refreshHierarchy();
   for(const side of ["L","R"]){
    const hand=sampleTrack(clip?.hands?.[side],clipTime),upper=this.bones[this.boneIndex["upper-arm-"+side]],lower=this.bones[this.boneIndex["forearm-"+side]];
    if(!hand.length||!upper||!lower)continue;
    const parent=matrices[this.boneIndex[upper.parent]],shoulder=transform(parent,upper.pivot),target=transform(parent,[hand[0]*w,hand[1]*h]);
-   const solved=solveLeg(upper.pivot,lower.pivot,lower.end,shoulder,target);
+   const solved=solveLeg(upper.pivot,lower.pivot,lower.end,shoulder,target,this.config.armBendSide?.[side]);
    matrices[this.boneIndex[upper.name]]=solved.upper;matrices[this.boneIndex[lower.name]]=solved.lower;
+   overrides.add(this.boneIndex[upper.name]);overrides.add(this.boneIndex[lower.name]);
+   handConstraints.push({side,target,resolved:solved.foot,reachError:solved.reachError});
   }
-  this.bones.forEach((bone,index)=>{if(bone.name.startsWith("hand-")){const parent=matrices[this.boneIndex[bone.parent]],angle=sampleTrack(clip?.joints?.[bone.name],clipTime)[0]||0;matrices[index]=multiply(parent,rotation(bone.pivot,angle));}});
+  refreshHierarchy();
   const contacts=[],footMatrices=[];
   this.legs.forEach(leg=>{
    const step=sampleTrack(clip?.feet?.[leg.name],clipTime),foot=[leg.foot[0]+(step[0]||0)*w,leg.foot[1]+(step[1]||0)*h];
-   const footMatrix=rotation(leg.foot,step[2]||0);footMatrix[4]+=foot[0]-leg.foot[0];footMatrix[5]+=foot[1]-leg.foot[1];footMatrices.push(footMatrix);
+   const footMatrix=rotation(leg.foot,step[2]||0);footMatrix[4]+=foot[0]-leg.foot[0];footMatrix[5]+=foot[1]-leg.foot[1];
    const endpoint=this.atlas?leg.ankle:leg.foot,targetEndpoint=this.atlas?transform(footMatrix,leg.ankle):foot;
-   const hip=transform(matrices[this.boneIndex[leg.parent]]||rootMatrix,leg.hip),solved=solveLeg(leg.hip,leg.knee,endpoint,hip,targetEndpoint);
+   const hip=transform(matrices[this.boneIndex[leg.parent]]||rootMatrix,leg.hip),solved=solveLeg(leg.hip,leg.knee,endpoint,hip,targetEndpoint,leg.bendSide);
    matrices[this.boneIndex[leg.upper]]=solved.upper;matrices[this.boneIndex[leg.lower]]=solved.lower;
-   contacts.push({name:leg.name,foot,planted:Math.abs(step[1]||0)<.001});
+   overrides.add(this.boneIndex[leg.upper]);overrides.add(this.boneIndex[leg.lower]);
+   footMatrix[4]+=solved.foot[0]-targetEndpoint[0];footMatrix[5]+=solved.foot[1]-targetEndpoint[1];footMatrices.push(footMatrix);
+   contacts.push({name:leg.name,foot:transform(footMatrix,leg.foot),requestedFoot:foot,reachError:solved.reachError,planted:Math.abs(step[1]||0)<.001&&solved.reachError<.25});
   });
-  return {matrices,footMatrices,contacts,clipTime,vertices:this.vertices.map(vertex=>vertex.pinned?transform(footMatrices[vertex.contactIndex],vertex.bind):vertex.weights.reduce((position,influence)=>{const p=transform(matrices[influence.bone],vertex.bind);position[0]+=p[0]*influence.weight;position[1]+=p[1]*influence.weight;return position;},[0,0]))};
+  refreshHierarchy();
+  return {matrices,footMatrices,contacts,handConstraints,clipTime,vertices:this.vertices.map(vertex=>vertex.pinned?transform(footMatrices[vertex.contactIndex],vertex.bind):vertex.weights.reduce((position,influence)=>{const p=transform(matrices[influence.bone],vertex.bind);position[0]+=p[0]*influence.weight;position[1]+=p[1]*influence.weight;return position;},[0,0]))};
  }
  resize(){
   if(!this.loaded)return;const rect=this.canvas.getBoundingClientRect(),ratio=Math.min(devicePixelRatio||1,1.5);this.pixelRatio=ratio;
@@ -123,7 +149,10 @@ class OriginPortraitRig{
      aligned=multiply(matrix,rotation(bindPoint,angle));
     }
     const targetX=bind[0]*this.imageWidth-localX*targetW,targetY=bind[1]*this.imageHeight-localY*targetH;
-    context.save();context.setTransform(aligned[0]*fit,aligned[1]*fit,aligned[2]*fit,aligned[3]*fit,aligned[4]*fit+ox,aligned[5]*fit+oy);context.drawImage(this.atlas,sx,sy,sw,sh,targetX,targetY,targetW,targetH);context.restore();
+    context.save();context.setTransform(aligned[0]*fit,aligned[1]*fit,aligned[2]*fit,aligned[3]*fit,aligned[4]*fit+ox,aligned[5]*fit+oy);
+    if(layer.mask?.length>=3){context.beginPath();layer.mask.forEach((p,index)=>{const x=targetX+p[0]*targetW,y=targetY+p[1]*targetH;if(index)context.lineTo(x,y);else context.moveTo(x,y);});context.closePath();context.clip();}
+    const cutout=this.layerTextures.get(layer);
+    if(cutout)context.drawImage(cutout,0,0,sw,sh,targetX,targetY,targetW,targetH);else context.drawImage(this.atlas,sx,sy,sw,sh,targetX,targetY,targetW,targetH);context.restore();
    }
    return;
   }

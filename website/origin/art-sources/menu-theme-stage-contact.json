@@ -1,0 +1,154 @@
+{
+  "purpose": "Physical stage decks matching source silhouettes and calibrated articulated rigs",
+  "measurements": "Actual painted sole alpha, not faint shadows or transparent image borders; supplied by anatomy worker",
+  "coordinateSystem": "Normalized original 1024x1024 source images",
+  "canvas": {
+    "desktop1440FirstFour": [
+      607.2333374023438,
+      405
+    ],
+    "desktopSourceExtent": 405,
+    "mobile390StageWidth": 356,
+    "mobileSourceExtent": 256.316650390625,
+    "mobile390CanvasMeasured": [
+      256.316650390625,
+      357
+    ]
+  },
+  "formula": {
+    "extent": "min(canvasWidth,canvasHeight) * portraitFit",
+    "nearSole": "stageInnerHeight - portraitBottom - (1-frontContact) * extent",
+    "deckFrontContact": "deckBottom - 9px",
+    "deckDepth": "(frontContact-backContact) * extent + 10px, bounded to the actual stage",
+    "fallbackFit": 1,
+    "rigFit": "origin.js sets --portrait-fit=config.action.fit after rig.ready; deck remeasures with the same fit",
+    "desktopPortraitBottom": 35,
+    "mobilePortraitBottom": 30
+  },
+  "scuttle": {
+    "front": 0.8271484375,
+    "back": 0.61328125,
+    "expectedApprovedRigFit": 0.85,
+    "measurementThreshold": "alpha>=200, mean of last3 solid rows in each isolated claw",
+    "feet": {
+      "leftRear": [
+        0.109109,
+        0.616211
+      ],
+      "leftMiddle": [
+        0.157145,
+        0.737305
+      ],
+      "leftFront": [
+        0.253139,
+        0.827148
+      ],
+      "leftInnerRear": [
+        0.37429,
+        0.676758
+      ],
+      "rightRear": [
+        0.891868,
+        0.613281
+      ],
+      "rightMiddle": [
+        0.870117,
+        0.734375
+      ],
+      "rightFront": [
+        0.752554,
+        0.827148
+      ],
+      "rightInnerRear": [
+        0.62808,
+        0.676758
+      ]
+    },
+    "desktopFallbackDeckDepth": 96.6162109375,
+    "desktopRigDeckDepthAt85Percent": 83.623779296875,
+    "mobileFallbackDeckDepth": 64.81772112846375,
+    "mobileRigDeckDepthAt85Percent": 56.59506295919418,
+    "measuredDesktopFrontContactError": -0.0048675537109375,
+    "measuredMobileFrontContactError": -0.0047304630279541016
+  },
+  "spool": {
+    "front": 0.87890625,
+    "back": 0.734375,
+    "expectedApprovedRigFit": 0.85,
+    "feet": {
+      "leftFront": [
+        0.1389,
+        0.8135
+      ],
+      "leftMiddle": [
+        0.2902,
+        0.7344
+      ],
+      "rightFront": [
+        0.6311,
+        0.8789
+      ],
+      "rightMiddle": [
+        0.8243,
+        0.8242
+      ],
+      "rightRear": [
+        0.902,
+        0.74
+      ]
+    },
+    "desktopFallbackDeckDepth": 68.53515625,
+    "desktopRigDeckDepthAt85Percent": 59.7548828125,
+    "mobileFallbackDeckDepth": 47.04576587677002,
+    "mobileRigDeckDepthAt85Percent": 41.48890099525451,
+    "measuredDesktopFrontContactError": -0.0096282958984375,
+    "measuredMobileFrontContactError": -0.004912376403808594
+  },
+  "geometry": {
+    "sourceCount": 6,
+    "supportCount": 30,
+    "networks": [
+      "threshold",
+      "scuttle",
+      "spool",
+      "chime",
+      "skip",
+      "bastion"
+    ],
+    "deckGrowthThickness": 48,
+    "material": "Existing exact game Seedweb albedo asset assets/seedweb-game-color.webp",
+    "connection": "Visible short caps connect frames to rails; conduits pass through socket centers and meet deck surfaces",
+    "finalDesktopGraph": {
+      "nodes": 362,
+      "branches": 387,
+      "supports": 30,
+      "sockets": 6,
+      "unmountedSockets": 0,
+      "protectedRegions": 47,
+      "materialReady": true,
+      "renderer": "Canvas material fallback",
+      "error": null,
+      "coverage": 1,
+      "clock": 0.20023333333333332,
+      "source": "Exact game Seedweb albedo/normal channels",
+      "coordinates": "document-attached hardware",
+      "paused": true
+    },
+    "finalMobileGraph": {
+      "nodes": 256,
+      "branches": 285,
+      "supports": 30,
+      "sockets": 6,
+      "unmountedSockets": 0,
+      "protectedRegions": 47,
+      "materialReady": true,
+      "renderer": "Canvas material fallback",
+      "error": null,
+      "coverage": 1,
+      "clock": 0.13333333333333333,
+      "source": "Exact game Seedweb albedo/normal channels",
+      "coordinates": "document-attached hardware",
+      "paused": true
+    }
+  }
+}

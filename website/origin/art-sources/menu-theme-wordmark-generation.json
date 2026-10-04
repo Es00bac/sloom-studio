@@ -1,0 +1,58 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "purpose": "QOMPANY and SEEDWEB transparent raster chapter wordmarks",
+  "references": [
+    "menu-theme-wordmark.png",
+    "menu-theme-button-normal.png"
+  ],
+  "outputs": [
+    {
+      "id": "qompany",
+      "sourcePath": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-8342b6de-501d-471b-8a47-400848f6bd75.png",
+      "prompt": "Use case: logo-brand\nAsset type: transparent illustrated chapter wordmark for the game Qind Qompany: Origin of Species.\nPrimary request: Create a single sharply readable painted industrial wordmark with exactly the one word \"QOMPANY\" for the reclamation and rescue company chapter.\nInput images: Image 1 is the existing game title logo: use its hand-painted material rendering, navy outlines, warm amber/ceramic/brass and compact industrial hardware language as STYLE REFERENCE ONLY; do not reproduce its title. Image 2 is the actual main-menu button: use its textured blue steel, worn brass and ceramic framing as material reference.\nText (verbatim): \"QOMPANY\". Spell it exactly Q-O-M-P-A-N-Y, uppercase, one horizontal line. No other text.\nStyle/medium: Premium hand-painted game interface bitmap lettering with dimensional manufactured bevels, crisp readable silhouettes and subtle believable surface scuffs, consistent with these exact references.\nComposition/framing: Wide transparent cutout approximately 3:1, word filling about 80% width with generous clear padding on all sides; modest supporting hardware contained tightly around the letters, no rectangular panel or giant backing plate. Straight-on front view, no perspective skew.\nColor palette/materials: Warm amber-gold and cream ceramic letter faces, deep navy beveled outlines, a short teal steel pipe spine, two discreet brass bolts. A tiny maintenance paw medallion echoes the existing logo. Letters have the bold readable manufactured industrial dignity of the game's menu logo.\nScene/backdrop: True transparent alpha outside letters and their tightly contained hardware. No background wash, no gradient backdrop, no floor shadowplate.\nConstraints: Exact text; comfortably legible at 420px width. No characters, environment, weapons, label, subtitle, watermark, border rectangle, or unrelated symbols.",
+      "publicAsset": "assets/menu-theme-qompany-title.webp",
+      "sourceAsset": "art-sources/menu-theme-qompany-title.png",
+      "transparent_background": true,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        57,
+        43,
+        2093,
+        700
+      ],
+      "transparentPixels": 829586,
+      "publicBytes": 282482
+    },
+    {
+      "id": "seedweb",
+      "sourcePath": "/home/cabewse/.codex/generated_images/01a102d8-e994-7200-b36b-6756fdd365a4/exec-3af99c2e-e28c-44e1-9357-a05797f02ffb.png",
+      "prompt": "Use case: logo-brand\nAsset type: transparent illustrated chapter wordmark for the game Qind Qompany: Origin of Species.\nPrimary request: Create a single sharply readable painted industrial wordmark with exactly the one word \"SEEDWEB\" for the manufactured machine ecology chapter.\nInput images: Image 1 is the existing game title logo: use its hand-painted material rendering, navy outlines, warm amber/ceramic/brass and compact industrial hardware language as STYLE REFERENCE ONLY; do not reproduce its title. Image 2 is the actual main-menu button: use its textured blue steel, worn brass and ceramic framing as material reference.\nText (verbatim): \"SEEDWEB\". Spell it exactly S-E-E-D-W-E-B, uppercase, one horizontal line. No other text.\nStyle/medium: Premium hand-painted game interface bitmap lettering with dimensional manufactured bevels, crisp readable silhouettes and subtle believable surface scuffs, consistent with these exact references.\nComposition/framing: Wide transparent cutout approximately 3:1, word filling about 80% width with generous clear padding on all sides; modest supporting hardware contained tightly around the letters, no rectangular panel or giant backing plate. Straight-on front view, no perspective skew.\nColor palette/materials: Warm ivory ceramic letter faces with muted teal/amber mechanical inlays and deep navy beveled outlines, a subtle segmented steel and brass cable rail supporting the lettering. Small controlled teal inspection-light details. Manufactured maintenance hardware, not flesh or organic tendrils.\nScene/backdrop: True transparent alpha outside letters and their tightly contained hardware. No background wash, no gradient backdrop, no floor shadowplate.\nConstraints: Exact text; comfortably legible at 420px width. No characters, environment, weapons, label, subtitle, watermark, border rectangle, or unrelated symbols.",
+      "publicAsset": "assets/menu-theme-seedweb-title.webp",
+      "sourceAsset": "art-sources/menu-theme-seedweb-title.png",
+      "transparent_background": true,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        24,
+        21,
+        2147,
+        706
+      ],
+      "transparentPixels": 617303,
+      "publicBytes": 326062
+    }
+  ]
+}

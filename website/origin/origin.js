@@ -80,16 +80,22 @@ groups.forEach(group=>{
   group.refreshRig();
 });
 
-fetch("rig-configs.json?v=20261003-actions-03").then(response=>{if(!response.ok)throw Error("Rig configuration unavailable");return response.json();}).then(configs=>{
-  document.querySelectorAll("[data-hero-rig]").forEach(canvas=>{
-    const rig=new window.OriginPortraitRig(canvas,configs.characters[canvas.dataset.heroRig]);rigs.push(rig);rig.setPaused(motionPaused);rig.setActive(true);rig.ready.then(()=>canvas.classList.add("is-ready")).catch(()=>{});
-  });
-  document.querySelectorAll("[data-rig]").forEach(canvas=>{
-    const config=configs.characters[canvas.dataset.rig],panel=canvas.closest("[data-panel]"),group=canvas.closest("[data-dossier]");
+const rigRepairPreview=new URLSearchParams(location.search).get("rig-preview")==="1";
+const castAnimationApproved=false;
+if(castAnimationApproved||rigRepairPreview)fetch("rig-configs.json?v=20261004-menu-anatomy-01").then(response=>{if(!response.ok)throw Error("Rig configuration unavailable");return response.json();}).then(configs=>{
+  const mount=canvas=>{
+    if(canvas.originRig)return;
+    const config=configs.characters[canvas.dataset.rig||canvas.dataset.heroRig],panel=canvas.closest("[data-panel]"),group=canvas.closest("[data-dossier]");
     if(!config)return;
-    const rig=new window.OriginPortraitRig(canvas,config);panel.originRig=rig;rigs.push(rig);
+    const rig=new window.OriginPortraitRig(canvas,config);canvas.originRig=rig;if(panel)panel.originRig=rig;rigs.push(rig);
     rig.setPaused(motionPaused);rig.setDocumentVisible(!document.hidden);
-    rig.ready.then(()=>{canvas.classList.add("is-ready");group.refreshRig();}).catch(()=>{group.classList.add("art-unavailable");});
+    if(!group)rig.setActive(true);
+    rig.ready.then(()=>{canvas.closest(".illustration-stage")?.style.setProperty("--portrait-fit",String(config.action?.fit||.94));canvas.classList.add("is-ready");group?.refreshRig();measurePage();}).catch(()=>{group?.classList.add("art-unavailable");});
+  };
+  const nearby="IntersectionObserver" in window?new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){nearby.unobserve(entry.target);mount(entry.target);}}),{rootMargin:"450px",threshold:0}):null;
+  document.querySelectorAll("[data-rig],[data-hero-rig]").forEach(canvas=>{
+    if(!canvas.getBoundingClientRect().width)return;
+    if(nearby)nearby.observe(canvas);else mount(canvas);
   });
   groups.forEach(group=>group.refreshRig());
 }).catch(()=>{});

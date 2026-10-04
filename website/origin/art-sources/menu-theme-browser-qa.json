@@ -1,0 +1,2089 @@
+{
+  "browser": "Native QindaFox/Firefox /opt/qindafox/firefox, headless, isolated profiles",
+  "mode": "Real HTML/CSS source preview with finite font/image load gate",
+  "previewServerPort": 18872,
+  "revision": "20261004-menu-anatomy-01",
+  "runtimeAnimation": "Intact source portraits while articulated anatomy is reviewed separately",
+  "cases": [
+    {
+      "name": "desktop-hero",
+      "passed": true,
+      "viewport": [
+        1440,
+        1000
+      ],
+      "scrollWidth": 1440,
+      "errors": [],
+      "missingImages": [],
+      "overflow": [],
+      "title": "Qind Qompany: Origin of Species \u00b7 Sloom Game Studio",
+      "headingFont": "Unbounded, sans-serif",
+      "bodyFont": "Barlow, sans-serif",
+      "cast": 13,
+      "photos": 13,
+      "trailers": 2,
+      "wordmarks": 2,
+      "scripts": [
+        "infestation.js?v=20261004-menu-anatomy-01",
+        "rigs.js?v=20261004-menu-anatomy-01",
+        "origin.js?v=20261004-menu-anatomy-01"
+      ]
+    },
+    {
+      "name": "mobile-hero",
+      "passed": true,
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollWidth": 390,
+      "errors": [],
+      "missingImages": [],
+      "overflow": [],
+      "title": "Qind Qompany: Origin of Species \u00b7 Sloom Game Studio",
+      "headingFont": "Unbounded, sans-serif",
+      "bodyFont": "Barlow, sans-serif",
+      "cast": 13,
+      "photos": 13,
+      "trailers": 2,
+      "wordmarks": 2,
+      "scripts": [
+        "infestation.js?v=20261004-menu-anatomy-01",
+        "rigs.js?v=20261004-menu-anatomy-01",
+        "origin.js?v=20261004-menu-anatomy-01"
+      ]
+    },
+    {
+      "name": "desktop-crew-final",
+      "passed": true,
+      "viewport": [
+        1440,
+        1000
+      ],
+      "scrollWidth": 1440,
+      "errors": [],
+      "missingImages": [],
+      "overflow": [],
+      "title": "Qind Qompany: Origin of Species \u00b7 Sloom Game Studio",
+      "headingFont": "Unbounded, sans-serif",
+      "bodyFont": "Barlow, sans-serif",
+      "cast": 13,
+      "photos": 13,
+      "trailers": 2,
+      "wordmarks": 2,
+      "scripts": [
+        "infestation.js?v=20261004-menu-anatomy-01",
+        "rigs.js?v=20261004-menu-anatomy-01",
+        "origin.js?v=20261004-menu-anatomy-01"
+      ]
+    },
+    {
+      "name": "desktop-threshold-textured",
+      "passed": true,
+      "viewport": [
+        1440,
+        1000
+      ],
+      "scrollWidth": 1440,
+      "errors": [],
+      "missingImages": [],
+      "overflow": [],
+      "title": "Qind Qompany: Origin of Species \u00b7 Sloom Game Studio",
+      "headingFont": "Unbounded, sans-serif",
+      "bodyFont": "Barlow, sans-serif",
+      "cast": 13,
+      "photos": 13,
+      "trailers": 2,
+      "wordmarks": 2,
+      "supports": [
+        {
+          "id": "seedweb-threshold-frame",
+          "kind": "frame",
+          "width": "18",
+          "rect": {
+            "x": 74,
+            "y": 117.35000610351562,
+            "w": 1292,
+            "h": 425.76666259765625
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-overhead-rail",
+          "kind": "rail",
+          "width": "22",
+          "rect": {
+            "x": 103,
+            "y": 150.35000610351562,
+            "w": 1234,
+            "h": 22
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-frame-cap",
+          "kind": "conduit",
+          "width": "17",
+          "rect": {
+            "x": 155,
+            "y": 126.35000610351562,
+            "w": 17,
+            "h": 40
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-feed-conduit",
+          "kind": "conduit",
+          "width": "19",
+          "rect": {
+            "x": 265,
+            "y": 161.35000610351562,
+            "w": 19,
+            "h": 328
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-fabrication-ledge",
+          "kind": "ledge",
+          "width": "19",
+          "rect": {
+            "x": 114,
+            "y": 483.3500061035156,
+            "w": 580.7999877929688,
+            "h": 19
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "scuttle-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 69,
+            "y": 956.5499877929688,
+            "w": 255.31666564941406,
+            "h": 432.8499755859375
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 78,
+            "y": 973.5499877929688,
+            "w": 237.31666564941406,
+            "h": 12
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 961.5499877929688,
+            "w": 10,
+            "h": 21
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 979.5499877929688,
+            "w": 10,
+            "h": 374.76666259765625
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-mounting-ledge",
+          "kind": "ledge",
+          "width": "14",
+          "rect": {
+            "x": 77,
+            "y": 1341.316650390625,
+            "w": 239.31666564941406,
+            "h": 14
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "spool-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 741,
+            "y": 956.5499877929688,
+            "w": 255.31666564941406,
+            "h": 410.3499755859375
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 750,
+            "y": 973.5499877929688,
+            "w": 237.31666564941406,
+            "h": 12
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 752,
+            "y": 961.5499877929688,
+            "w": 10,
+            "h": 21
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 752,
+            "y": 979.5499877929688,
+            "w": 10,
+            "h": 363.20001220703125
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-mounting-ledge",
+          "kind": "ledge",
+          "width": "14",
+          "rect": {
+            "x": 749,
+            "y": 1329.75,
+            "w": 239.31666564941406,
+            "h": 14
+          },
+          "network": "spool"
+        },
+        {
+          "id": "chime-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 69,
+            "y": 1856.7666015625,
+            "w": 255.31666564941406,
+            "h": 410.3500061035156
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 78,
+            "y": 1873.7666015625,
+            "w": 237.31666564941406,
+            "h": 12
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 1861.7666015625,
+            "w": 10,
+            "h": 21
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 1879.7666015625,
+            "w": 10,
+            "h": 375.3500061035156
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-mounting-ledge",
+          "kind": "ledge",
+          "width": "14",
+          "rect": {
+            "x": 77,
+            "y": 2242.11669921875,
+            "w": 239.31666564941406,
+            "h": 14
+          },
+          "network": "chime"
+        },
+        {
+          "id": "skip-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 741,
+            "y": 1856.7666015625,
+            "w": 255.31666564941406,
+            "h": 410.3500061035156
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 750,
+            "y": 1873.7666015625,
+            "w": 237.31666564941406,
+            "h": 12
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 752,
+            "y": 1861.7666015625,
+            "w": 10,
+            "h": 21
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 752,
+            "y": 1879.7666015625,
+            "w": 10,
+            "h": 375.3500061035156
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-mounting-ledge",
+          "kind": "ledge",
+          "width": "14",
+          "rect": {
+            "x": 749,
+            "y": 2242.11669921875,
+            "w": 239.31666564941406,
+            "h": 14
+          },
+          "network": "skip"
+        },
+        {
+          "id": "bastion-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 69,
+            "y": 2734.4833984375,
+            "w": 563.9166870117188,
+            "h": 401.8499755859375
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 78,
+            "y": 2751.4833984375,
+            "w": 545.9166870117188,
+            "h": 12
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 2739.4833984375,
+            "w": 10,
+            "h": 21
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 2757.4833984375,
+            "w": 10,
+            "h": 366.8499755859375
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-mounting-ledge",
+          "kind": "ledge",
+          "width": "14",
+          "rect": {
+            "x": 77,
+            "y": 3111.333251953125,
+            "w": 547.9166870117188,
+            "h": 14
+          },
+          "network": "bastion"
+        }
+      ],
+      "sources": [
+        {
+          "id": "seedweb-fabrication-socket",
+          "rect": {
+            "x": 189,
+            "y": 293.3500061035156,
+            "w": 172,
+            "h": 172
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "scuttle-fabrication-coupler",
+          "rect": {
+            "x": 73,
+            "y": 1309.316650390625,
+            "w": 25,
+            "h": 28
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "spool-fabrication-coupler",
+          "rect": {
+            "x": 745,
+            "y": 1297.75,
+            "w": 25,
+            "h": 28
+          },
+          "network": "spool"
+        },
+        {
+          "id": "chime-fabrication-coupler",
+          "rect": {
+            "x": 73,
+            "y": 2210.11669921875,
+            "w": 25,
+            "h": 28
+          },
+          "network": "chime"
+        },
+        {
+          "id": "skip-fabrication-coupler",
+          "rect": {
+            "x": 745,
+            "y": 2210.11669921875,
+            "w": 25,
+            "h": 28
+          },
+          "network": "skip"
+        },
+        {
+          "id": "bastion-fabrication-coupler",
+          "rect": {
+            "x": 73,
+            "y": 3079.333251953125,
+            "w": 25,
+            "h": 28
+          },
+          "network": "bastion"
+        }
+      ],
+      "seedweb": {
+        "nodes": 288,
+        "branches": 316,
+        "supports": 30,
+        "sockets": 6,
+        "unmountedSockets": 0,
+        "protectedRegions": 47,
+        "materialReady": true,
+        "renderer": "Canvas material fallback",
+        "error": null,
+        "coverage": 1,
+        "clock": 0.20013333333333333,
+        "source": "Exact game Seedweb albedo/normal channels",
+        "coordinates": "document-attached hardware",
+        "paused": true
+      },
+      "networks": [
+        {
+          "network": "threshold",
+          "reachableNodes": 77,
+          "edges": 77
+        },
+        {
+          "network": "scuttle",
+          "reachableNodes": 40,
+          "edges": 45
+        },
+        {
+          "network": "spool",
+          "reachableNodes": 38,
+          "edges": 43
+        },
+        {
+          "network": "chime",
+          "reachableNodes": 39,
+          "edges": 45
+        },
+        {
+          "network": "skip",
+          "reachableNodes": 39,
+          "edges": 45
+        },
+        {
+          "network": "bastion",
+          "reachableNodes": 55,
+          "edges": 61
+        }
+      ],
+      "contacts": [
+        {
+          "id": "scuttle",
+          "contact": 0.829098,
+          "size": 255.03334045410156,
+          "imageRect": {
+            "x": 69.13333129882812,
+            "y": 957.5499877929688,
+            "w": 255.03334045410156,
+            "h": 430.8499755859375
+          },
+          "ledgeRect": {
+            "x": 77,
+            "y": 1341.316650390625,
+            "w": 239.31666564941406,
+            "h": 14
+          },
+          "soleY": 1344.8142554286194,
+          "supportY": 1344.816650390625,
+          "error": -0.0023949620056100684
+        },
+        {
+          "id": "spool",
+          "contact": 0.872,
+          "size": 255.03334045410156,
+          "imageRect": {
+            "x": 741.13330078125,
+            "y": 957.5499877929688,
+            "w": 255.03334045410156,
+            "h": 408.3499755859375
+          },
+          "ledgeRect": {
+            "x": 749,
+            "y": 1329.75,
+            "w": 239.31666564941406,
+            "h": 14
+          },
+          "soleY": 1333.2556958007813,
+          "supportY": 1333.25,
+          "error": 0.00569580078126819
+        },
+        {
+          "id": "chime",
+          "size": 255.03334045410156,
+          "imageRect": {
+            "x": 69.13333129882812,
+            "y": 1857.7666015625,
+            "w": 255.03334045410156,
+            "h": 408.3500061035156
+          },
+          "ledgeRect": {
+            "x": 77,
+            "y": 2242.11669921875,
+            "w": 239.31666564941406,
+            "h": 14
+          },
+          "soleY": null,
+          "supportY": 2245.61669921875,
+          "error": null
+        },
+        {
+          "id": "skip",
+          "size": 255.03334045410156,
+          "imageRect": {
+            "x": 741.13330078125,
+            "y": 1857.7666015625,
+            "w": 255.03334045410156,
+            "h": 408.3500061035156
+          },
+          "ledgeRect": {
+            "x": 749,
+            "y": 2242.11669921875,
+            "w": 239.31666564941406,
+            "h": 14
+          },
+          "soleY": null,
+          "supportY": 2245.61669921875,
+          "error": null
+        },
+        {
+          "id": "bastion",
+          "size": 399.8499755859375,
+          "imageRect": {
+            "x": 78.38333129882812,
+            "y": 2735.4833984375,
+            "w": 545.11669921875,
+            "h": 399.8499755859375
+          },
+          "ledgeRect": {
+            "x": 77,
+            "y": 3111.333251953125,
+            "w": 547.9166870117188,
+            "h": 14
+          },
+          "soleY": null,
+          "supportY": 3114.833251953125,
+          "error": null
+        }
+      ],
+      "scripts": [
+        "infestation.js?v=20261004-menu-anatomy-01",
+        "rigs.js?v=20261004-menu-anatomy-01",
+        "origin.js?v=20261004-menu-anatomy-01"
+      ]
+    },
+    {
+      "name": "desktop-guide-title-fit",
+      "passed": true,
+      "viewport": [
+        1440,
+        1000
+      ],
+      "scrollWidth": 1440,
+      "errors": [],
+      "missingImages": [],
+      "overflow": [],
+      "title": "Qind Qompany: Origin of Species \u00b7 Sloom Game Studio",
+      "headingFont": "Unbounded, sans-serif",
+      "bodyFont": "Barlow, sans-serif",
+      "cast": 13,
+      "photos": 13,
+      "trailers": 2,
+      "wordmarks": 2,
+      "supports": [
+        {
+          "id": "seedweb-threshold-frame",
+          "kind": "frame",
+          "width": "18",
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-overhead-rail",
+          "kind": "rail",
+          "width": "22",
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-feed-conduit",
+          "kind": "conduit",
+          "width": "19",
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-fabrication-ledge",
+          "kind": "ledge",
+          "width": "19",
+          "network": "threshold"
+        },
+        {
+          "id": "scuttle-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-mounting-ledge",
+          "kind": "ledge",
+          "width": "14",
+          "network": "scuttle"
+        },
+        {
+          "id": "spool-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "network": "spool"
+        },
+        {
+          "id": "spool-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "network": "spool"
+        },
+        {
+          "id": "spool-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "network": "spool"
+        },
+        {
+          "id": "spool-mounting-ledge",
+          "kind": "ledge",
+          "width": "14",
+          "network": "spool"
+        },
+        {
+          "id": "chime-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "network": "chime"
+        },
+        {
+          "id": "chime-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "network": "chime"
+        },
+        {
+          "id": "chime-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "network": "chime"
+        },
+        {
+          "id": "chime-mounting-ledge",
+          "kind": "ledge",
+          "width": "14",
+          "network": "chime"
+        },
+        {
+          "id": "skip-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "network": "skip"
+        },
+        {
+          "id": "skip-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "network": "skip"
+        },
+        {
+          "id": "skip-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "network": "skip"
+        },
+        {
+          "id": "skip-mounting-ledge",
+          "kind": "ledge",
+          "width": "14",
+          "network": "skip"
+        },
+        {
+          "id": "bastion-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-mounting-ledge",
+          "kind": "ledge",
+          "width": "14",
+          "network": "bastion"
+        }
+      ],
+      "sources": [
+        {
+          "id": "seedweb-fabrication-socket",
+          "network": "threshold"
+        },
+        {
+          "id": "scuttle-fabrication-coupler",
+          "network": "scuttle"
+        },
+        {
+          "id": "spool-fabrication-coupler",
+          "network": "spool"
+        },
+        {
+          "id": "chime-fabrication-coupler",
+          "network": "chime"
+        },
+        {
+          "id": "skip-fabrication-coupler",
+          "network": "skip"
+        },
+        {
+          "id": "bastion-fabrication-coupler",
+          "network": "bastion"
+        }
+      ],
+      "scripts": [
+        "infestation.js?v=20261004-menu-anatomy-01",
+        "rigs.js?v=20261004-menu-anatomy-01",
+        "origin.js?v=20261004-menu-anatomy-01"
+      ]
+    },
+    {
+      "name": "desktop-seedweb-final",
+      "passed": true,
+      "viewport": [
+        1440,
+        1000
+      ],
+      "scrollWidth": 1440,
+      "errors": [],
+      "missingImages": [],
+      "overflow": [],
+      "title": "Qind Qompany: Origin of Species \u00b7 Sloom Game Studio",
+      "headingFont": "Unbounded, sans-serif",
+      "bodyFont": "Barlow, sans-serif",
+      "cast": 13,
+      "photos": 13,
+      "trailers": 2,
+      "wordmarks": 2,
+      "supports": [
+        {
+          "id": "seedweb-threshold-frame",
+          "kind": "frame",
+          "width": "18",
+          "rect": {
+            "x": 74,
+            "y": -408.566650390625,
+            "w": 1292,
+            "h": 425.76666259765625
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-overhead-rail",
+          "kind": "rail",
+          "width": "22",
+          "rect": {
+            "x": 103,
+            "y": -375.566650390625,
+            "w": 1234,
+            "h": 22
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-frame-cap",
+          "kind": "conduit",
+          "width": "17",
+          "rect": {
+            "x": 155,
+            "y": -399.566650390625,
+            "w": 17,
+            "h": 40
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-feed-conduit",
+          "kind": "conduit",
+          "width": "19",
+          "rect": {
+            "x": 265,
+            "y": -364.566650390625,
+            "w": 19,
+            "h": 328
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-fabrication-ledge",
+          "kind": "ledge",
+          "width": "19",
+          "rect": {
+            "x": 114,
+            "y": -42.56666564941406,
+            "w": 580.7999877929688,
+            "h": 19
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "scuttle-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 69,
+            "y": 430.6333312988281,
+            "w": 630,
+            "h": 407
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 78,
+            "y": 447.6333312988281,
+            "w": 612,
+            "h": 12
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 435.6333312988281,
+            "w": 10,
+            "h": 21
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 453.6333312988281,
+            "w": 10,
+            "h": 321
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-mounting-ledge",
+          "kind": "ledge",
+          "width": "48",
+          "rect": {
+            "x": 77,
+            "y": 679.0333251953125,
+            "w": 614,
+            "h": 96.59999084472656
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "spool-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 741,
+            "y": 430.6333312988281,
+            "w": 630,
+            "h": 407
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 750,
+            "y": 447.6333312988281,
+            "w": 612,
+            "h": 12
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 752,
+            "y": 435.6333312988281,
+            "w": 10,
+            "h": 21
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 752,
+            "y": 453.6333312988281,
+            "w": 10,
+            "h": 341.9666748046875
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-mounting-ledge",
+          "kind": "ledge",
+          "width": "48",
+          "rect": {
+            "x": 749,
+            "y": 728.066650390625,
+            "w": 614,
+            "h": 68.53334045410156
+          },
+          "network": "spool"
+        },
+        {
+          "id": "chime-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 69,
+            "y": 1645.566650390625,
+            "w": 630,
+            "h": 407
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 78,
+            "y": 1662.566650390625,
+            "w": 612,
+            "h": 12
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 1650.566650390625,
+            "w": 10,
+            "h": 21
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 1668.566650390625,
+            "w": 10,
+            "h": 342.3999938964844
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-mounting-ledge",
+          "kind": "ledge",
+          "width": "48",
+          "rect": {
+            "x": 77,
+            "y": 1945.2833251953125,
+            "w": 614,
+            "h": 66.68331909179688
+          },
+          "network": "chime"
+        },
+        {
+          "id": "skip-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 741,
+            "y": 1645.566650390625,
+            "w": 630,
+            "h": 407
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 750,
+            "y": 1662.566650390625,
+            "w": 612,
+            "h": 12
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 752,
+            "y": 1650.566650390625,
+            "w": 10,
+            "h": 21
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 752,
+            "y": 1668.566650390625,
+            "w": 10,
+            "h": 342.3999938964844
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-mounting-ledge",
+          "kind": "ledge",
+          "width": "48",
+          "rect": {
+            "x": 749,
+            "y": 1945.2833251953125,
+            "w": 614,
+            "h": 66.68331909179688
+          },
+          "network": "skip"
+        },
+        {
+          "id": "bastion-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 69,
+            "y": 2883.75,
+            "w": 563.9166870117188,
+            "h": 401.8500061035156
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 78,
+            "y": 2900.75,
+            "w": 545.9166870117188,
+            "h": 12
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 2888.75,
+            "w": 10,
+            "h": 21
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 80,
+            "y": 2906.75,
+            "w": 10,
+            "h": 337.8833312988281
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-mounting-ledge",
+          "kind": "ledge",
+          "width": "48",
+          "rect": {
+            "x": 77,
+            "y": 3179.666748046875,
+            "w": 547.9166870117188,
+            "h": 65.96665954589844
+          },
+          "network": "bastion"
+        }
+      ],
+      "sources": [
+        {
+          "id": "seedweb-fabrication-socket",
+          "rect": {
+            "x": 189,
+            "y": -232.56666564941406,
+            "w": 172,
+            "h": 172
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "scuttle-fabrication-coupler",
+          "rect": {
+            "x": 73,
+            "y": 729.63330078125,
+            "w": 25,
+            "h": 28
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "spool-fabrication-coupler",
+          "rect": {
+            "x": 745,
+            "y": 750.5999755859375,
+            "w": 25,
+            "h": 28
+          },
+          "network": "spool"
+        },
+        {
+          "id": "chime-fabrication-coupler",
+          "rect": {
+            "x": 73,
+            "y": 1965.9666748046875,
+            "w": 25,
+            "h": 28
+          },
+          "network": "chime"
+        },
+        {
+          "id": "skip-fabrication-coupler",
+          "rect": {
+            "x": 745,
+            "y": 1965.9666748046875,
+            "w": 25,
+            "h": 28
+          },
+          "network": "skip"
+        },
+        {
+          "id": "bastion-fabrication-coupler",
+          "rect": {
+            "x": 73,
+            "y": 3199.63330078125,
+            "w": 25,
+            "h": 28
+          },
+          "network": "bastion"
+        }
+      ],
+      "seedweb": {
+        "nodes": 362,
+        "branches": 387,
+        "supports": 30,
+        "sockets": 6,
+        "unmountedSockets": 0,
+        "protectedRegions": 47,
+        "materialReady": true,
+        "renderer": "Canvas material fallback",
+        "error": null,
+        "coverage": 1,
+        "clock": 0.20023333333333332,
+        "source": "Exact game Seedweb albedo/normal channels",
+        "coordinates": "document-attached hardware",
+        "paused": true
+      },
+      "networks": [
+        {
+          "network": "threshold",
+          "reachableNodes": 77,
+          "edges": 77
+        },
+        {
+          "network": "scuttle",
+          "reachableNodes": 57,
+          "edges": 62
+        },
+        {
+          "network": "spool",
+          "reachableNodes": 58,
+          "edges": 63
+        },
+        {
+          "network": "chime",
+          "reachableNodes": 58,
+          "edges": 63
+        },
+        {
+          "network": "skip",
+          "reachableNodes": 58,
+          "edges": 63
+        },
+        {
+          "network": "bastion",
+          "reachableNodes": 54,
+          "edges": 59
+        }
+      ],
+      "contacts": [
+        {
+          "id": "scuttle",
+          "contact": 0.8271484375,
+          "size": 405,
+          "imageRect": {
+            "x": 80.36666870117188,
+            "y": 431.6333312988281,
+            "w": 607.2333374023438,
+            "h": 405
+          },
+          "ledgeRect": {
+            "x": 77,
+            "y": 679.0333251953125,
+            "w": 614,
+            "h": 96.59999084472656
+          },
+          "soleY": 766.6284484863281,
+          "supportY": 703.1833229064941,
+          "frontContactY": 766.6333160400391,
+          "deckDepth": 96.59999084472656,
+          "error": -0.0048675537109375
+        },
+        {
+          "id": "spool",
+          "contact": 0.87890625,
+          "size": 405,
+          "imageRect": {
+            "x": 752.36669921875,
+            "y": 431.6333312988281,
+            "w": 607.2333374023438,
+            "h": 405
+          },
+          "ledgeRect": {
+            "x": 749,
+            "y": 728.066650390625,
+            "w": 614,
+            "h": 68.53334045410156
+          },
+          "soleY": 787.5903625488281,
+          "supportY": 745.1999855041504,
+          "frontContactY": 787.5999908447266,
+          "deckDepth": 68.53334045410156,
+          "error": -0.0096282958984375
+        },
+        {
+          "id": "chime",
+          "contact": null,
+          "size": 405,
+          "imageRect": {
+            "x": 80.36666870117188,
+            "y": 1646.566650390625,
+            "w": 607.2333374023438,
+            "h": 405
+          },
+          "ledgeRect": {
+            "x": 77,
+            "y": 1945.2833251953125,
+            "w": 614,
+            "h": 66.68331909179688
+          },
+          "soleY": null,
+          "supportY": 1961.9541549682617,
+          "frontContactY": 2002.9666442871094,
+          "deckDepth": 66.68331909179688,
+          "error": null
+        },
+        {
+          "id": "skip",
+          "contact": null,
+          "size": 405,
+          "imageRect": {
+            "x": 752.36669921875,
+            "y": 1646.566650390625,
+            "w": 607.2333374023438,
+            "h": 405
+          },
+          "ledgeRect": {
+            "x": 749,
+            "y": 1945.2833251953125,
+            "w": 614,
+            "h": 66.68331909179688
+          },
+          "soleY": null,
+          "supportY": 1961.9541549682617,
+          "frontContactY": 2002.9666442871094,
+          "deckDepth": 66.68331909179688,
+          "error": null
+        },
+        {
+          "id": "bastion",
+          "contact": null,
+          "size": 399.8500061035156,
+          "imageRect": {
+            "x": 78.38333129882812,
+            "y": 2884.75,
+            "w": 545.11669921875,
+            "h": 399.8500061035156
+          },
+          "ledgeRect": {
+            "x": 77,
+            "y": 3179.666748046875,
+            "w": 547.9166870117188,
+            "h": 65.96665954589844
+          },
+          "soleY": null,
+          "supportY": 3196.1584129333496,
+          "frontContactY": 3236.6334075927734,
+          "deckDepth": 65.96665954589844,
+          "error": null
+        }
+      ],
+      "scripts": [
+        "infestation.js?v=20261004-menu-anatomy-01",
+        "rigs.js?v=20261004-menu-anatomy-01",
+        "origin.js?v=20261004-menu-anatomy-01"
+      ]
+    },
+    {
+      "name": "mobile-seedweb-contact-final",
+      "passed": true,
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollWidth": 390,
+      "errors": [],
+      "missingImages": [],
+      "overflow": [],
+      "title": "Qind Qompany: Origin of Species \u00b7 Sloom Game Studio",
+      "headingFont": "Unbounded, sans-serif",
+      "bodyFont": "Barlow, sans-serif",
+      "cast": 13,
+      "photos": 13,
+      "trailers": 2,
+      "wordmarks": 2,
+      "supports": [
+        {
+          "id": "seedweb-threshold-frame",
+          "kind": "frame",
+          "width": "18",
+          "rect": {
+            "x": 23,
+            "y": -535.5,
+            "w": 344,
+            "h": 589.7833251953125
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-overhead-rail",
+          "kind": "rail",
+          "width": "22",
+          "rect": {
+            "x": 39,
+            "y": -514.5,
+            "w": 312,
+            "h": 17
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-frame-cap",
+          "kind": "conduit",
+          "width": "17",
+          "rect": {
+            "x": 60,
+            "y": -526.5,
+            "w": 14,
+            "h": 25
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-feed-conduit",
+          "kind": "conduit",
+          "width": "19",
+          "rect": {
+            "x": 97,
+            "y": -506.5,
+            "w": 14,
+            "h": 203
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "seedweb-fabrication-ledge",
+          "kind": "ledge",
+          "width": "19",
+          "rect": {
+            "x": 39,
+            "y": -311.5,
+            "w": 312,
+            "h": 15
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "scuttle-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 28,
+            "y": 496.3666687011719,
+            "w": 334,
+            "h": 360
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 36,
+            "y": 514.36669921875,
+            "w": 318,
+            "h": 12
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 39,
+            "y": 501.3666687011719,
+            "w": 10,
+            "h": 21
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 39,
+            "y": 520.36669921875,
+            "w": 10,
+            "h": 298.70001220703125
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "scuttle-mounting-ledge",
+          "kind": "ledge",
+          "width": "48",
+          "rect": {
+            "x": 37,
+            "y": 755.25,
+            "w": 316,
+            "h": 64.81666564941406
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "spool-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 28,
+            "y": 1726.5833740234375,
+            "w": 334,
+            "h": 360
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 36,
+            "y": 1744.5833740234375,
+            "w": 318,
+            "h": 12
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 39,
+            "y": 1731.5833740234375,
+            "w": 10,
+            "h": 21
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 39,
+            "y": 1750.5833740234375,
+            "w": 10,
+            "h": 311.9666748046875
+          },
+          "network": "spool"
+        },
+        {
+          "id": "spool-mounting-ledge",
+          "kind": "ledge",
+          "width": "48",
+          "rect": {
+            "x": 37,
+            "y": 2016.5166015625,
+            "w": 316,
+            "h": 47.03334045410156
+          },
+          "network": "spool"
+        },
+        {
+          "id": "chime-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 28,
+            "y": 2956.800048828125,
+            "w": 334,
+            "h": 360
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 36,
+            "y": 2974.800048828125,
+            "w": 318,
+            "h": 12
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 39,
+            "y": 2961.800048828125,
+            "w": 10,
+            "h": 21
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 39,
+            "y": 2980.800048828125,
+            "w": 10,
+            "h": 312.25
+          },
+          "network": "chime"
+        },
+        {
+          "id": "chime-mounting-ledge",
+          "kind": "ledge",
+          "width": "48",
+          "rect": {
+            "x": 37,
+            "y": 3248.166748046875,
+            "w": 316,
+            "h": 45.883331298828125
+          },
+          "network": "chime"
+        },
+        {
+          "id": "skip-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 28,
+            "y": 4160.66650390625,
+            "w": 334,
+            "h": 360
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 36,
+            "y": 4178.66650390625,
+            "w": 318,
+            "h": 12
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 39,
+            "y": 4165.66650390625,
+            "w": 10,
+            "h": 21
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 39,
+            "y": 4184.66650390625,
+            "w": 10,
+            "h": 312.25
+          },
+          "network": "skip"
+        },
+        {
+          "id": "skip-mounting-ledge",
+          "kind": "ledge",
+          "width": "48",
+          "rect": {
+            "x": 37,
+            "y": 4452.033203125,
+            "w": 316,
+            "h": 45.883331298828125
+          },
+          "network": "skip"
+        },
+        {
+          "id": "bastion-mounting-frame",
+          "kind": "frame",
+          "width": "14",
+          "rect": {
+            "x": 28,
+            "y": 5390.88330078125,
+            "w": 334,
+            "h": 360
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-overhead-rail",
+          "kind": "rail",
+          "width": "12",
+          "rect": {
+            "x": 36,
+            "y": 5408.88330078125,
+            "w": 318,
+            "h": 12
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-frame-cap",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 39,
+            "y": 5395.88330078125,
+            "w": 10,
+            "h": 21
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-feed-conduit",
+          "kind": "conduit",
+          "width": "10",
+          "rect": {
+            "x": 39,
+            "y": 5414.88330078125,
+            "w": 10,
+            "h": 312.25
+          },
+          "network": "bastion"
+        },
+        {
+          "id": "bastion-mounting-ledge",
+          "kind": "ledge",
+          "width": "48",
+          "rect": {
+            "x": 37,
+            "y": 5682.25,
+            "w": 316,
+            "h": 45.883331298828125
+          },
+          "network": "bastion"
+        }
+      ],
+      "sources": [
+        {
+          "id": "seedweb-fabrication-socket",
+          "rect": {
+            "x": 51,
+            "y": -440.5,
+            "w": 112,
+            "h": 112
+          },
+          "network": "threshold"
+        },
+        {
+          "id": "scuttle-fabrication-coupler",
+          "rect": {
+            "x": 33,
+            "y": 774.066650390625,
+            "w": 25,
+            "h": 28
+          },
+          "network": "scuttle"
+        },
+        {
+          "id": "spool-fabrication-coupler",
+          "rect": {
+            "x": 33,
+            "y": 2017.550048828125,
+            "w": 25,
+            "h": 28
+          },
+          "network": "spool"
+        },
+        {
+          "id": "chime-fabrication-coupler",
+          "rect": {
+            "x": 33,
+            "y": 3248.050048828125,
+            "w": 25,
+            "h": 28
+          },
+          "network": "chime"
+        },
+        {
+          "id": "skip-fabrication-coupler",
+          "rect": {
+            "x": 33,
+            "y": 4451.91650390625,
+            "w": 25,
+            "h": 28
+          },
+          "network": "skip"
+        },
+        {
+          "id": "bastion-fabrication-coupler",
+          "rect": {
+            "x": 33,
+            "y": 5682.13330078125,
+            "w": 25,
+            "h": 28
+          },
+          "network": "bastion"
+        }
+      ],
+      "seedweb": {
+        "nodes": 256,
+        "branches": 285,
+        "supports": 30,
+        "sockets": 6,
+        "unmountedSockets": 0,
+        "protectedRegions": 47,
+        "materialReady": true,
+        "renderer": "Canvas material fallback",
+        "error": null,
+        "coverage": 1,
+        "clock": 0.13333333333333333,
+        "source": "Exact game Seedweb albedo/normal channels",
+        "coordinates": "document-attached hardware",
+        "paused": true
+      },
+      "networks": [
+        {
+          "network": "threshold",
+          "reachableNodes": 46,
+          "edges": 50
+        },
+        {
+          "network": "scuttle",
+          "reachableNodes": 42,
+          "edges": 47
+        },
+        {
+          "network": "spool",
+          "reachableNodes": 42,
+          "edges": 47
+        },
+        {
+          "network": "chime",
+          "reachableNodes": 42,
+          "edges": 47
+        },
+        {
+          "network": "skip",
+          "reachableNodes": 42,
+          "edges": 47
+        },
+        {
+          "network": "bastion",
+          "reachableNodes": 42,
+          "edges": 47
+        }
+      ],
+      "contacts": [
+        {
+          "id": "scuttle",
+          "contact": 0.8271484375,
+          "size": 256.316650390625,
+          "imageRect": {
+            "x": 66.83332824707031,
+            "y": 498.3666687011719,
+            "w": 256.316650390625,
+            "h": 357
+          },
+          "ledgeRect": {
+            "x": 37,
+            "y": 755.25,
+            "w": 316,
+            "h": 64.81666564941406
+          },
+          "soleY": 811.0619351863861,
+          "supportY": 771.4541664123535,
+          "frontContactY": 811.0666656494141,
+          "deckDepth": 64.81666564941406,
+          "error": -0.0047304630279541016
+        },
+        {
+          "id": "spool",
+          "contact": 0.87890625,
+          "size": 256.316650390625,
+          "imageRect": {
+            "x": 66.83332824707031,
+            "y": 1728.5833740234375,
+            "w": 256.316650390625,
+            "h": 357
+          },
+          "ledgeRect": {
+            "x": 37,
+            "y": 2016.5166015625,
+            "w": 316,
+            "h": 47.03334045410156
+          },
+          "soleY": 2054.5450296401978,
+          "supportY": 2028.2749366760254,
+          "frontContactY": 2054.5499420166016,
+          "deckDepth": 47.03334045410156,
+          "error": -0.004912376403808594
+        },
+        {
+          "id": "chime",
+          "contact": null,
+          "size": 256.316650390625,
+          "imageRect": {
+            "x": 66.83332824707031,
+            "y": 2958.800048828125,
+            "w": 256.316650390625,
+            "h": 357
+          },
+          "ledgeRect": {
+            "x": 37,
+            "y": 3248.166748046875,
+            "w": 316,
+            "h": 45.883331298828125
+          },
+          "soleY": null,
+          "supportY": 3259.637580871582,
+          "frontContactY": 3285.050079345703,
+          "deckDepth": 45.883331298828125,
+          "error": null
+        },
+        {
+          "id": "skip",
+          "contact": null,
+          "size": 256.316650390625,
+          "imageRect": {
+            "x": 66.83332824707031,
+            "y": 4162.66650390625,
+            "w": 256.316650390625,
+            "h": 357
+          },
+          "ledgeRect": {
+            "x": 37,
+            "y": 4452.033203125,
+            "w": 316,
+            "h": 45.883331298828125
+          },
+          "soleY": null,
+          "supportY": 4463.504035949707,
+          "frontContactY": 4488.916534423828,
+          "deckDepth": 45.883331298828125,
+          "error": null
+        },
+        {
+          "id": "bastion",
+          "contact": null,
+          "size": 256.316650390625,
+          "imageRect": {
+            "x": 66.83332824707031,
+            "y": 5392.88330078125,
+            "w": 256.316650390625,
+            "h": 357
+          },
+          "ledgeRect": {
+            "x": 37,
+            "y": 5682.25,
+            "w": 316,
+            "h": 45.883331298828125
+          },
+          "soleY": null,
+          "supportY": 5693.720832824707,
+          "frontContactY": 5719.133331298828,
+          "deckDepth": 45.883331298828125,
+          "error": null
+        }
+      ],
+      "scripts": [
+        "infestation.js?v=20261004-menu-anatomy-01",
+        "rigs.js?v=20261004-menu-anatomy-01",
+        "origin.js?v=20261004-menu-anatomy-01"
+      ]
+    }
+  ],
+  "rendererLimit": "Native headless session cannot create WebGL context; Seedweb reports materialReady=true and Canvas material fallback with error=null. Layout reports capture no in-page errors. Firefox process emits shutdown-only warnings after screenshots."
+}

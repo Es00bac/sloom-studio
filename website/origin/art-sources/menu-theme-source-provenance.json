@@ -1,0 +1,121 @@
+{
+  "purpose": "Website presentation based on the actual game main menu",
+  "sourceRepository": "qinda:/home/cabewse/work_SPaC3/Games/QindaOriginSpecies",
+  "referenceScreenshot": "validation/vulkan/menu-vk.png",
+  "runtimeVersion": "20261004-menu-anatomy-01",
+  "images": [
+    {
+      "source": "assets/ui/illustrated/title-painting.png",
+      "original": "art-sources/menu-theme-title-painting.png",
+      "public": "assets/menu-theme-title-painting.webp",
+      "sha256": "aa3b400d9c1c289c364690efef65374507532ee9b6034e2b11611cbb17d1644b",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "assets/ui/illustrated/button-normal.png",
+      "original": "art-sources/menu-theme-button-normal.png",
+      "public": "assets/menu-theme-button-normal.webp",
+      "sha256": "2cfd194719e7bbe6344156e801736015920edd870eaf5356271ee8ea37102725",
+      "dimensions": [
+        1369,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "source": "assets/ui/illustrated/button-hover.png",
+      "original": "art-sources/menu-theme-button-hover.png",
+      "public": "assets/menu-theme-button-hover.webp",
+      "sha256": "263cf81baf8248b0d51f5590393223f90ba6bdc0872a811a941effff84866c10",
+      "dimensions": [
+        1369,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "source": "assets/ui/illustrated/button-pressed.png",
+      "original": "art-sources/menu-theme-button-pressed.png",
+      "public": "assets/menu-theme-button-pressed.webp",
+      "sha256": "5aa9d0d1974db4bcccd62c75e89b1afb6ab06a2d6bf3314a445ffa4edd39f693",
+      "dimensions": [
+        1369,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "source": "assets/ui/illustrated/control-atlas.png",
+      "original": "art-sources/menu-theme-control-atlas.png",
+      "public": "assets/menu-theme-control-atlas.webp",
+      "sha256": "bd41cab6d49fc180879379cd738e6ff87cf54000a419b318a4188850af1f2576",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "source": "assets/ui/splash/title-logo-qind-qompany-origin-of-species-transparent.png",
+      "original": "art-sources/menu-theme-wordmark.png",
+      "public": "assets/menu-theme-wordmark.webp",
+      "sha256": "159975c67322a6b0346ba1a856bd8739add5dacbaee309f92cafad15f178612e",
+      "dimensions": [
+        2048,
+        768
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "source": "assets/fonts/unbounded/Unbounded-Variable.ttf",
+      "public": "assets/menu-theme-unbounded.ttf",
+      "sha256": "323b511be380c8d474ef030686b71aedde501f8d9cd46da558b7c40454372c3f",
+      "license": "SIL Open Font License; companion OFL files included"
+    },
+    {
+      "source": "assets/fonts/barlow/Barlow-Medium.ttf",
+      "public": "assets/menu-theme-barlow-medium.ttf",
+      "sha256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4",
+      "license": "SIL Open Font License; companion OFL files included"
+    },
+    {
+      "source": "assets/fonts/barlow/Barlow-SemiBold.ttf",
+      "public": "assets/menu-theme-barlow-semibold.ttf",
+      "sha256": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5",
+      "license": "SIL Open Font License; companion OFL files included"
+    },
+    {
+      "source": "assets/fonts/barlow/Barlow-Bold.ttf",
+      "public": "assets/menu-theme-barlow-bold.ttf",
+      "sha256": "84e6a4d61e7c3e21f3c50ea6a4f7e5303a3467864c038be6ea3759bab8d547f9",
+      "license": "SIL Open Font License; companion OFL files included"
+    }
+  ],
+  "encoding": "Original PNGs preserved; cwebp quality91, alpha100, method6. Generated chapter wordmarks use quality92."
+}
