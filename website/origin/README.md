@@ -1,61 +1,28 @@
-# Qind Qompany: Origin of Species website
+# Origin multiplayer website
 
-Public target: **https://sloom.studio/origin**. This is a static directory in the existing Sloom website: plain HTML, CSS and JavaScript, no build step or new dependencies.
+The live static page is https://sloom.studio/origin/. Source lives in this
+repository under website/origin; preserve every other Sloom route.
 
-## Preview
+The 16 October 2026 design replaces the earlier illustrated rig/infestation
+presentation at the owner's request. It uses the established bitmap title,
+Unbounded/Barlow fonts, current native map photography and eight newly captured
+adult crew portraits. current-imagery.json records the exact source captures.
+The two released films and their narration subtitles remain unchanged.
 
-From the repository root:
+index.html presents the multiplayer game, both factions, three current maps,
+all eight crew, five chassis, closed testing status and the supplied NS/NS2
+history. field-guide.html retains detailed abilities, controls, structures and
+technology. No App ID, Steam store link, release date or Deck certification is
+invented. No private download URL is embedded in the public site.
 
-```sh
-python3 -m http.server 18867 --bind 127.0.0.1 --directory website
-```
+Preview on qinda with python3 -m http.server 18874 --bind 127.0.0.1 --directory
+website. Publish index.html, field-guide.html, origin.css, origin.js and
+assets/current/ to the existing VPS /var/www/sloom.studio/html/origin/. Keep
+existing assets/media, subtitle MIME rules and the rest of Sloom unchanged.
+Old artwork, motion sources and scripts remain in history and on disk.
 
-Visit `http://127.0.0.1:18867/origin/`. Fonts, illustrations, photographs and films use relative local paths.
-
-## Publication
-
-Root owns scoped deployment to `hostinger-vps:/var/www/sloom.studio/html/origin/`. Preserve the Sloom homepage and every other route.
-
-Publish **only** `index.html`, `origin.css`, `origin.js`, `infestation.js`, `infestation.css`, `rigs.js`, `rig-configs.json`, `assets/` and `media/`. Do not publish `art-sources/`, source notes or ignored `qa/` browser evidence. Original generated PNGs, prompts and reference hashes belong to the source history, not the runtime bundle.
-
-Directory routing already serves `/origin/`. Root added this scoped nginx rule so both narration tracks are served as `text/vtt`:
-
-```nginx
-location ~ ^/origin/media/(hold-the-light|send-another)\.vtt$ {
-    default_type text/vtt;
-    try_files $uri =404;
-}
-```
-
-The live configuration was validated and reloaded; no nginx source file exists in this repository. Preserve that rule during deployment. CSS, JavaScript and rig-config URLs carry a new version query; actual character photos have fresh `scene-` filenames to avoid stale cached renders.
-
-## Artwork and motion
-
-The opening composition uses the illustrated Qompany habitat with articulated Ducké and Vix foreground figures. Matched Qompany/Seedweb habitat paintings form the world and faction chapters.
-
-All eight crew and five chassis appear in normal-scroll editorial folios: illustrated action and actual current-engine canonical full six-site Tideglass photography are visible together. No character selector or view switch is required. Patches's actual photograph holds the dedicated Arc shears **at rest**; illustrated crew are empty-handed. Rejected development-room renders are removed.
-
-`rigs.js` draws separate rigid painted atlas pieces on parented Canvas 2D bones. `rig-configs.json` contains authored action tracks with anticipation, actual steps/weight transfer, individual swing/plant phases, wrist/leg IK, gear gestures, machine tool/wing/claw/crusher cycles, return and settle. This replaces the rejected small idle performance. No texture stretches around a folded forearm. The visible Pause/Play control and reduced-motion preference freeze poses; offscreen and hidden pages stop animation, and resumed clocks do not jump. See `RIGGING.md`.
-
-`infestation.js`, `infestation.css` and `assets/seedweb-surface.frag` attach manufactured Seedweb to page surfaces. The real game's material channels shade graphite cable beds, ceramic deposits, brass clamps and amber signals. Growth spreads through the faction chapter and recedes before the guide; protected copy and real photographs remain readable. A Canvas material fallback remains when WebGL is unavailable. This replaces the former decorative cyan SVG screen frame.
-
-Originals, exact prompts, reference/map/build hashes and landmarks are recorded under `art-sources/` and indexed in `asset-provenance.json`. Illustrations are explicitly labeled and never presented as gameplay.
-
-## Films and game content
-
-Both corrected full films remain unchanged from the initial published site:
-
-- `media/hold-the-light.mp4` and `.vtt`
-- `media/send-another.mp4` and `.vtt`
-
-The MP4s are ignored by Git. Durable verified production files belong to the game's Qinda trailer lane, `/home/cabewse/work_SPaC3/Games/origin-lanes/vulkan/validation/branded-trailers/`; the site worktree also holds the runtime copies. Final hashes, actual Firefox playback/seek/decode checks and 19/20 parsed narration cues are recorded in `media-manifest.json`. Films have correct Arc shears welding footage and verified **Kind Company** narration. Native controls, `playsinline` and `preload=none` are retained. Tracks honestly say narration subtitles because field dialogue is not fully transcribed.
-
-The site retains the complete accurate world/history, all eight crew, five chassis, seven crew structures, ten hive structures, both three-tier tech paths with costs/timings/base prerequisites, Arms lab/trait research, offline behavior and field/commander controls. The full six-site Tideglass is canonical. Patches **holds G** to draw the dedicated welder alongside any selected gun kit; releasing G redraws that gun. E remains use/service/build; commander research controls are separate.
-
-The creator's supplied NS/NS2 history is preserved. The game is independent and **In development**, with no release-date, download or finished-production promise. Written title: **Qind Qompany: Origin of Species**; spoken title: **Kind Company**. `content-sources.json` records authoritative sources and the supplied personal account.
-
-## Access and verification
-
-All 13 cast dossiers, animated illustrations and actual photographs are in document flow. Native technology buttons expose pressed state. Manuals use native details/summary. Without JavaScript, every dossier and both technology paths remain readable, with static illustrated cast and hero art. Mobile navigation exposes expanded state and Escape closes it and restores focus. Main/header resize observers keep scroll geometry correct after reflow.
-
-See `QA-CHECKS.md` for the bounded changed-page verification and actual browser motion evidence. Root owns final live verification and publication.
+Browser verification used native Firefox on qinda at 1440 pixels and a real
+390-pixel child viewport (desktop Firefox has a 500-pixel minimum window).
+Both pages have no broken images or horizontal overflow, all 13 cast files
+and local links resolve, mobile navigation opens/closes, reduced motion is
+honored, and both films decode metadata. Evidence lives under validation/.

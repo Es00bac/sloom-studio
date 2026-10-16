@@ -1,0 +1,82 @@
+[
+  {
+    "asset": "assets/current/tideglass.webp",
+    "source": "/home/cabewse/work_SPaC3/Games/origin-lanes/engine-performance-20261014/validation/engine-performance-20261014/acceptance-verified/vulkan-ultra-pool.png",
+    "source_sha256": "a7cd59f3a971008bb2b7ea93aeba7f49019db8d68ee714c6542ebebde994c8ed",
+    "native_capture": true
+  },
+  {
+    "asset": "assets/current/cinderwell.webp",
+    "source": "/mnt/storage/origin-beta/art/cinderwell-00000.jpg",
+    "source_sha256": "36e06bbf17035b42e9bc77fe1370555228781065d7c36d2539f51eb084616321",
+    "native_capture": true
+  },
+  {
+    "asset": "assets/current/sunward.webp",
+    "source": "/mnt/storage/origin-beta/art/sunward-00000.jpg",
+    "source_sha256": "cef80358d86735fcc126fa6571668f8088b765d88d3214f1022676de7ab1dcf9",
+    "native_capture": true
+  },
+  {
+    "asset": "assets/current/sunward-airside.webp",
+    "source": "/mnt/storage/origin-beta/art/sunward-00002.jpg",
+    "source_sha256": "6951b93f797996da16582d5c12d0d262ae8e66d092cd6490fc0ab73834f02fb0",
+    "native_capture": true
+  },
+  {
+    "asset": "assets/current/crew-cyberpengu.webp",
+    "source": "/mnt/storage/origin-beta/art/portraits/raw/photo-00000.jpg",
+    "source_sha256": "99d100fb0ca0a5f24acd8fc2b261b893129e20745314c98c1b5e8e427f4236e9",
+    "native_capture": true,
+    "staged_portrait": true
+  },
+  {
+    "asset": "assets/current/crew-ducke.webp",
+    "source": "/mnt/storage/origin-beta/art/portraits/raw/photo-00001.jpg",
+    "source_sha256": "8bb3cc022ca8a6f41ba4d49857eb4166df123c2611a7d1d3741cade2bc1426c9",
+    "native_capture": true,
+    "staged_portrait": true
+  },
+  {
+    "asset": "assets/current/crew-vix.webp",
+    "source": "/mnt/storage/origin-beta/art/portraits/raw/photo-00002.jpg",
+    "source_sha256": "922cd01c0cda6bbb7a6c976308c31d194e96fe1299cf233d4b646428b3757cd5",
+    "native_capture": true,
+    "staged_portrait": true
+  },
+  {
+    "asset": "assets/current/crew-cache.webp",
+    "source": "/mnt/storage/origin-beta/art/portraits/raw/photo-00003.jpg",
+    "source_sha256": "1271b86de2285d05f60927239b4fc9f5a65f6826f673f9f6ad28a56ed5f725bb",
+    "native_capture": true,
+    "staged_portrait": true
+  },
+  {
+    "asset": "assets/current/crew-mochi.webp",
+    "source": "/mnt/storage/origin-beta/art/portraits/raw/photo-00004.jpg",
+    "source_sha256": "7e31a78fc2a75485e0720a214c397a0e7bbf7142f5a6ae10874d073dc440868f",
+    "native_capture": true,
+    "staged_portrait": true
+  },
+  {
+    "asset": "assets/current/crew-hex.webp",
+    "source": "/mnt/storage/origin-beta/art/portraits/raw/photo-00005.jpg",
+    "source_sha256": "a9d01347360aad921abf26b1a7f4acd75556867b8ccd3fad8fbb840e085e04e7",
+    "native_capture": true,
+    "staged_portrait": true
+  },
+  {
+    "asset": "assets/current/crew-patches.webp",
+    "source": "/mnt/storage/origin-beta/art/portraits/raw/photo-00006.jpg",
+    "source_sha256": "7d7622300632239a361f5d5d3906604f771b0d62f1f44f53a79dacda43b17fc6",
+    "native_capture": true,
+    "staged_portrait": true
+  },
+  {
+    "asset": "assets/current/crew-axi.webp",
+    "source": "/mnt/storage/origin-beta/art/portraits/raw/photo-00007.jpg",
+    "source_sha256": "9d0c53ab7bb6d48283151e31038c0e4a2a25bf7cdb9086ed65f581425f6352c7",
+    "native_capture": true,
+    "staged_portrait": true
+  }
+]

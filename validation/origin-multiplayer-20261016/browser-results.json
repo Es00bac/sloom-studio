@@ -1,0 +1,50 @@
+{
+  "pages": [
+    {
+      "width": 1440,
+      "actual_viewport": [
+        1440,
+        950
+      ],
+      "page": "index.html",
+      "images": 20,
+      "broken_images": [],
+      "overflow": [],
+      "reduced_motion": true
+    },
+    {
+      "width": 390,
+      "actual_viewport": [
+        390,
+        844
+      ],
+      "page": "index.html",
+      "images": 20,
+      "broken_images": [],
+      "overflow": [],
+      "reduced_motion": true
+    },
+    {
+      "width": 390,
+      "actual_viewport": [
+        390,
+        844
+      ],
+      "page": "field-guide.html",
+      "images": 13,
+      "broken_images": [],
+      "overflow": [],
+      "reduced_motion": true
+    }
+  ],
+  "videos": [
+    {
+      "duration": 189.504,
+      "error": ""
+    },
+    {
+      "duration": 189.504,
+      "error": ""
+    }
+  ]
+}
