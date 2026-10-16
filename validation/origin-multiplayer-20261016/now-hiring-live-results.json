@@ -1,0 +1,38 @@
+{
+  "url": "https://sloom.studio/origin/#now-hiring",
+  "featured_film": "Now Hiring",
+  "retained_films": [
+    "Hold the Light",
+    "Send Another"
+  ],
+  "metadata": {
+    "cues": 46,
+    "duration": 180,
+    "error": "",
+    "height": 1080,
+    "ready": 3,
+    "width": 1920
+  },
+  "playback_advanced": true,
+  "seek_frames": [
+    {
+      "error": "",
+      "ready": 4,
+      "seeking": false,
+      "time": 20
+    },
+    {
+      "error": "",
+      "ready": 4,
+      "seeking": false,
+      "time": 90
+    },
+    {
+      "error": "",
+      "ready": 4,
+      "seeking": false,
+      "time": 166
+    }
+  ],
+  "mobile_overflow": false
+}

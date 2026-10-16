@@ -8,3 +8,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
 .map-story>*{min-width:0}
+
+/* The current three-station film leads; earlier faction films remain available. */
+.film-grid .featured-film{grid-column:1/-1;margin-bottom:20px}.featured-film figcaption{padding-bottom:24px;border-bottom:1px solid var(--line)}

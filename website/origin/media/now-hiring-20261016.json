@@ -1,0 +1,18 @@
+{
+  "title": "Qind Qompany: Origin of Species \u2014 Now Hiring",
+  "file": "media/now-hiring-20261016.mp4",
+  "sha256": "0f26fc2ec65f3b2fa16ec6922989ab19c3fb9e163451081ddc12cac8dfb5fd71",
+  "bytes": 313834361,
+  "duration_seconds": 180,
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "published_date": "2026-10-16",
+  "source": "Game repository branch claude/three-stations-ad-20261016, commit 4ac62e0; completed film production 2026-10-16",
+  "poster_time_seconds": 166.5,
+  "subtitles": {
+    "file": "media/now-hiring-20261016.vtt",
+    "cues": 46,
+    "source": "Final mix cue timings and original dialogue scripts; 4.5-second opening offset"
+  }
+}
